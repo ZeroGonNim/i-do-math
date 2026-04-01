@@ -71,9 +71,14 @@ export function ResultRoute() {
                     <span className="shrink-0 w-6 h-6 rounded-full bg-indigo-500 text-white text-xs flex items-center justify-center font-bold">
                       {i + 1}
                     </span>
-                    <div>
-                      <p className="text-gray-500 text-sm">{s.desc}</p>
-                      <p className="font-bold text-lg text-indigo-800">{s.expression}</p>
+                    <div className="flex-1">
+                      <p className="text-gray-500 text-sm font-medium">{s.desc}</p>
+                      {s.narrative && (
+                        <p className="text-gray-600 text-sm mt-0.5 bg-white rounded-lg px-2 py-1 border border-indigo-100">
+                          {s.narrative}
+                        </p>
+                      )}
+                      <p className="font-bold text-xl text-indigo-800 mt-1">{s.expression}</p>
                     </div>
                   </div>
                 ))}
@@ -138,9 +143,14 @@ export function ResultRoute() {
                     <span className="shrink-0 w-6 h-6 rounded-full bg-indigo-500 text-white text-xs flex items-center justify-center font-bold">
                       {i + 1}
                     </span>
-                    <div>
-                      <p className="text-gray-500 text-sm">{s.desc}</p>
-                      <p className="font-bold text-lg text-indigo-800">{s.expression}</p>
+                    <div className="flex-1">
+                      <p className="text-gray-500 text-sm font-medium">{s.desc}</p>
+                      {s.narrative && (
+                        <p className="text-gray-600 text-sm mt-0.5 bg-white rounded-lg px-2 py-1 border border-indigo-100">
+                          {s.narrative}
+                        </p>
+                      )}
+                      <p className="font-bold text-xl text-indigo-800 mt-1">{s.expression}</p>
                     </div>
                   </div>
                 ))}

@@ -13,12 +13,24 @@
       "question": "피자 한 판을 8조각으로 나누었습니다. 3조각을 먹고 2조각을 더 먹었다면 먹은 피자는 전체의 얼마인가요?",
       "answer": { "numerator": 5, "denominator": 8 },
       "steps": [
-        { "desc": "처음에 먹은 피자", "expression": "3/8" },
-        { "desc": "나중에 먹은 피자", "expression": "2/8" },
-        { "desc": "합산", "expression": "3/8 + 2/8 = 5/8" }
+        {
+          "desc": "처음에 먹은 피자",
+          "narrative": "피자 한 판은 8조각 → 그 중 처음 먹은 조각은 3개예요",
+          "expression": "3/8"
+        },
+        {
+          "desc": "나중에 먹은 피자",
+          "narrative": "피자 한 판은 여전히 8조각 → 나중에 더 먹은 조각은 2개예요",
+          "expression": "2/8"
+        },
+        {
+          "desc": "두 번 먹은 피자를 합산",
+          "narrative": "분모(전체 조각 수)는 같으니 분자(먹은 조각 수)끼리만 더해요 → 3 + 2 = 5",
+          "expression": "3/8 + 2/8 = 5/8"
+        }
       ],
       "animationAsset": "fraction-pizza-add.lottie",
-      "conceptExplanation": "분모가 같은 분수는 분자끼리만 더합니다."
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
       "id": "g4-s1-u2-fraction-add-002",
@@ -32,12 +44,24 @@
       "question": "색종이 한 장을 6칸으로 나누었습니다. 1칸을 색칠하고 2칸을 더 색칠했다면 색칠한 부분은 전체의 얼마인가요?",
       "answer": { "numerator": 3, "denominator": 6 },
       "steps": [
-        { "desc": "처음 색칠한 칸", "expression": "1/6" },
-        { "desc": "추가로 색칠한 칸", "expression": "2/6" },
-        { "desc": "합산", "expression": "1/6 + 2/6 = 3/6" }
+        {
+          "desc": "처음에 색칠한 칸",
+          "narrative": "색종이는 6칸으로 나뉘어요 → 처음 색칠한 칸은 1칸이에요",
+          "expression": "1/6"
+        },
+        {
+          "desc": "추가로 색칠한 칸",
+          "narrative": "색종이는 여전히 6칸 → 추가로 색칠한 칸은 2칸이에요",
+          "expression": "2/6"
+        },
+        {
+          "desc": "색칠한 칸 합산",
+          "narrative": "전체 칸 수(분모)는 같으니 색칠한 칸 수(분자)끼리만 더해요 → 1 + 2 = 3",
+          "expression": "1/6 + 2/6 = 3/6"
+        }
       ],
       "animationAsset": "fraction-bar-add.lottie",
-      "conceptExplanation": "분모가 같은 분수는 분자끼리만 더합니다."
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
       "id": "g4-s1-u2-fraction-sub-001",
@@ -51,12 +75,24 @@
       "question": "물이 5/9 리터 있었습니다. 2/9 리터를 마셨다면 남은 물은 몇 리터인가요?",
       "answer": { "numerator": 3, "denominator": 9 },
       "steps": [
-        { "desc": "처음 물의 양", "expression": "5/9" },
-        { "desc": "마신 물의 양", "expression": "2/9" },
-        { "desc": "뺄셈", "expression": "5/9 - 2/9 = 3/9" }
+        {
+          "desc": "처음 물의 양",
+          "narrative": "물통을 9칸으로 나누면 처음에는 5칸만큼 물이 있었어요",
+          "expression": "5/9"
+        },
+        {
+          "desc": "마신 물의 양",
+          "narrative": "그 중 2칸만큼 마셨어요 → 2/9를 빼줘야 해요",
+          "expression": "2/9"
+        },
+        {
+          "desc": "남은 물 계산",
+          "narrative": "전체 칸 수(분모)는 같으니 남은 칸 수(분자)끼리만 빼요 → 5 - 2 = 3",
+          "expression": "5/9 - 2/9 = 3/9"
+        }
       ],
       "animationAsset": "fraction-water-sub.lottie",
-      "conceptExplanation": "분모가 같은 분수의 뺄셈은 분자끼리만 뺍니다."
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
     }
   ],
   "templates": [
@@ -72,7 +108,7 @@
       "variables": { "a": [1,2,3,4], "b": [5,6,7,8,9], "c": [1,2,3] },
       "constraints": ["a + c < b"],
       "animationAsset": "fraction-pizza-add.lottie",
-      "conceptExplanation": "분모가 같은 분수는 분자끼리만 더합니다."
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
       "templateId": "g4-s1-u2-fraction-sub-tpl-001",
@@ -86,7 +122,7 @@
       "variables": { "a": [3,4,5,6,7], "b": [8,9,10], "c": [1,2,3] },
       "constraints": ["a > c"],
       "animationAsset": "fraction-water-sub.lottie",
-      "conceptExplanation": "분모가 같은 분수의 뺄셈은 분자끼리만 뺍니다."
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
     }
   ]
 }

@@ -17,6 +17,7 @@ export interface FractionAnswer {
 export interface ProblemStep {
   desc: string
   expression: string
+  narrative?: string  // "피자 한 판 8조각 중 처음 먹은 3조각" 형태의 스토리 연결 문장
 }
 
 export interface Problem {
