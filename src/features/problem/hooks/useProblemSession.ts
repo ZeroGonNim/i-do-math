@@ -30,7 +30,13 @@ export function useProblemSession(problem: Problem) {
       return
     }
     if (activeField === 'numerator') {
-      setNumerator(n => (n.length >= 3 ? n : n + key))
+      setNumerator(n => {
+        if (n.length >= 3) return n
+        const next = n + key
+        // 분자 1자리 입력 후 자동으로 분모 필드로 이동
+        if (next.length === 1) setActiveField('denominator')
+        return next
+      })
     } else {
       setDenominator(d => (d.length >= 3 ? d : d + key))
     }
