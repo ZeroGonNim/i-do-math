@@ -5,7 +5,12 @@ import { selectRecommendedProblem } from '@/shared/utils/recommendEngine'
 import { loadProblems } from '@/shared/services/problemLoader'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
-import type { Problem, FractionAnswer } from '@/types/problem'
+import { LevelUpModal } from '@/shared/components/LevelUpModal'
+import { DifficultyUnlockModal } from '@/shared/components/DifficultyUnlockModal'
+import { CorrectOverlay } from '@/features/result/components/CorrectOverlay'
+import { WrongOverlay } from '@/features/result/components/WrongOverlay'
+import type { Problem, Answer } from '@/types/problem'
+import { isIntegerAnswer } from '@/types/problem'
 
 export function ResultRoute() {
   const { state } = useLocation()
@@ -14,7 +19,7 @@ export function ResultRoute() {
 
   const { problem, userAnswer, isCorrect, timeSpent, hintUsed, inputSequence } = state as {
     problem: Problem
-    userAnswer: FractionAnswer
+    userAnswer: Answer
     isCorrect: boolean
     timeSpent: number
     hintUsed: boolean
@@ -22,8 +27,13 @@ export function ResultRoute() {
   }
 
   const [recommended, setRecommended] = useState<Problem | null>(null)
+  const [showLevelUp, setShowLevelUp] = useState(false)
+  const [showDifficultyUnlock, setShowDifficultyUnlock] = useState(false)
+  const [showOverlay, setShowOverlay] = useState(true)
 
-  useResultFeedback({ problem, userAnswer, isCorrect, timeSpent, hintUsed, inputSequence })
+  const { leveledUp, newLevel, difficultyUnlocked } = useResultFeedback({ problem, userAnswer, isCorrect, timeSpent, hintUsed, inputSequence })
+
+  // 모달 순서: CorrectOverlay → LevelUpModal → DifficultyUnlockModal
 
   useEffect(() => {
     if (isCorrect || !profile) return
@@ -44,6 +54,35 @@ export function ResultRoute() {
 
   return (
     <div className="flex min-h-screen flex-col gap-5 p-6 bg-white pt-10">
+      {showOverlay && isCorrect && (
+        <CorrectOverlay
+          stars={hintUsed ? 5 : 10}
+          onDone={() => {
+            setShowOverlay(false)
+            if (leveledUp) setShowLevelUp(true)
+            else if (difficultyUnlocked) setShowDifficultyUnlock(true)
+          }}
+        />
+      )}
+      {showOverlay && !isCorrect && (
+        <WrongOverlay
+          userNumerator={isIntegerAnswer(userAnswer) ? userAnswer.value : userAnswer.numerator}
+          userDenominator={isIntegerAnswer(userAnswer) ? undefined : userAnswer.denominator}
+          onDone={() => setShowOverlay(false)}
+        />
+      )}
+      {!showOverlay && showLevelUp && newLevel && (
+        <LevelUpModal
+          newLevel={newLevel}
+          onClose={() => {
+            setShowLevelUp(false)
+            if (difficultyUnlocked) setShowDifficultyUnlock(true)
+          }}
+        />
+      )}
+      {!showOverlay && !showLevelUp && showDifficultyUnlock && (
+        <DifficultyUnlockModal onClose={() => setShowDifficultyUnlock(false)} />
+      )}
       {isCorrect ? (
         <>
           {/* 정답 헤더 */}
@@ -57,7 +96,9 @@ export function ResultRoute() {
           <div className="rounded-2xl bg-green-50 border border-green-200 p-4">
             <p className="text-sm font-bold text-green-700 mb-2">✅ 정답</p>
             <p className="text-2xl font-bold text-center text-green-800">
-              {problem.answer.numerator}/{problem.answer.denominator}
+              {isIntegerAnswer(problem.answer)
+                ? problem.answer.value
+                : `${problem.answer.numerator}/${problem.answer.denominator}`}
             </p>
           </div>
 
@@ -114,14 +155,18 @@ export function ResultRoute() {
               <div>
                 <p className="text-xs text-gray-400 mb-1">내가 쓴 답</p>
                 <p className="text-2xl font-bold text-red-500">
-                  {userAnswer.numerator}/{userAnswer.denominator}
+                  {isIntegerAnswer(userAnswer)
+                    ? userAnswer.value
+                    : `${userAnswer.numerator}/${userAnswer.denominator}`}
                 </p>
               </div>
               <div className="text-2xl text-gray-300 self-center">→</div>
               <div>
                 <p className="text-xs text-gray-400 mb-1">정답</p>
                 <p className="text-2xl font-bold text-green-600">
-                  {problem.answer.numerator}/{problem.answer.denominator}
+                  {isIntegerAnswer(problem.answer)
+                    ? problem.answer.value
+                    : `${problem.answer.numerator}/${problem.answer.denominator}`}
                 </p>
               </div>
             </div>

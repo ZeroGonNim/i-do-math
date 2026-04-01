@@ -28,7 +28,8 @@ describe('generateFromTemplate', () => {
   it('produces valid answer with positive denominator', () => {
     const p1 = generateFromTemplate(template, 'u', 0)
     const p2 = generateFromTemplate(template, 'u', 10)
-    expect(p1.answer.denominator).toBeGreaterThan(0)
-    expect(p2.answer.denominator).toBeGreaterThan(0)
+    // 템플릿 문제는 항상 분수 답
+    expect((p1.answer as { numerator: number; denominator: number }).denominator).toBeGreaterThan(0)
+    expect((p2.answer as { numerator: number; denominator: number }).denominator).toBeGreaterThan(0)
   })
 })

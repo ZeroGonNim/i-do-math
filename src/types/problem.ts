@@ -7,11 +7,28 @@ export type MistakeType =
   | 'precision_error'
   | 'guess_error'
   | 'hint_dependent_error'
+  | 'calculation_error'
   | null
+
+export type AnswerType = 'fraction' | 'integer'
 
 export interface FractionAnswer {
   numerator: number
   denominator: number
+}
+
+export interface IntegerAnswer {
+  value: number
+}
+
+export type Answer = FractionAnswer | IntegerAnswer
+
+export function isIntegerAnswer(a: Answer): a is IntegerAnswer {
+  return 'value' in a
+}
+
+export function isFractionAnswer(a: Answer): a is FractionAnswer {
+  return 'numerator' in a
 }
 
 export interface ProblemStep {
@@ -32,7 +49,8 @@ export interface Problem {
   skills: string[]
   mistakeTypes: MistakeType[]
   question: string
-  answer: FractionAnswer
+  answerType?: AnswerType  // 생략 시 'fraction'으로 간주
+  answer: Answer
   steps: ProblemStep[]
   animationAsset: string
   conceptExplanation: string

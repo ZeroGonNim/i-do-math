@@ -1,4 +1,4 @@
-import type { MistakeType, FractionAnswer } from './problem'
+import type { MistakeType, Answer } from './problem'
 
 export interface LearningLog {
   logId: string
@@ -8,7 +8,7 @@ export interface LearningLog {
   concept: string
   mistakeType: MistakeType
   isCorrect: boolean
-  userAnswer: FractionAnswer
+  userAnswer: Answer
   timeSpent: number
   hintUsed: boolean
   retryCount: number

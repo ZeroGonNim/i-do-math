@@ -1,6 +1,4 @@
-import type { LearningLog } from '@/types/learningLog'
-
-export function canUnlockNextDifficulty(logs: LearningLog[]): boolean {
+export function canUnlockNextDifficulty(logs: { isCorrect: boolean }[]): boolean {
   if (logs.length < 15) return false
   const accuracy = logs.filter(l => l.isCorrect).length / logs.length
   if (accuracy < 0.7) return false

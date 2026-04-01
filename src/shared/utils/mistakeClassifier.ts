@@ -1,16 +1,27 @@
-import type { FractionAnswer, MistakeType, ProblemType } from '@/types/problem'
+import type { Answer, FractionAnswer, MistakeType, ProblemType } from '@/types/problem'
+import { isIntegerAnswer } from '@/types/problem'
 import { normalizeFraction } from './fractionUtils'
 
 export function classifyMistake(
   problemType: ProblemType,
-  correct: FractionAnswer,
-  userAnswer: FractionAnswer,
+  correct: Answer,
+  userAnswer: Answer,
   timeSpent: number
 ): MistakeType {
   if (timeSpent < 3) return 'guess_error'
 
-  const nc = normalizeFraction(correct.numerator, correct.denominator)
-  const nu = normalizeFraction(userAnswer.numerator, userAnswer.denominator)
+  if (isIntegerAnswer(correct) && isIntegerAnswer(userAnswer)) {
+    return 'calculation_error'
+  }
+
+  const nc = normalizeFraction(
+    (correct as FractionAnswer).numerator,
+    (correct as FractionAnswer).denominator
+  )
+  const nu = normalizeFraction(
+    (userAnswer as FractionAnswer).numerator,
+    (userAnswer as FractionAnswer).denominator
+  )
 
   if (problemType === 'calculation') {
     const denomMatch = nc.denominator === nu.denominator

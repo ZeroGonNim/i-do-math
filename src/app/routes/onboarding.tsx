@@ -1,12 +1,5 @@
 import { useOnboarding } from '@/features/onboarding/hooks/useOnboarding'
-import type { CharacterId } from '@/types/user'
-
-const CHARACTERS: Array<{ id: CharacterId; label: string; emoji: string }> = [
-  { id: 'char-01', label: '호기심 토끼', emoji: '🐰' },
-  { id: 'char-02', label: '용감한 곰', emoji: '🐻' },
-  { id: 'char-03', label: '똑똑한 부엉이', emoji: '🦉' },
-  { id: 'char-04', label: '씩씩한 사자', emoji: '🦁' },
-]
+import { CharacterSelectCard, CHARACTERS } from '@/shared/components/CharacterSelectCard'
 
 export function OnboardingRoute() {
   const { step, setStep, name, setName, grade, setGrade, characterId, setCharacterId, complete } =
@@ -66,22 +59,17 @@ export function OnboardingRoute() {
           <h1 className="text-2xl font-bold text-gray-800">함께할 친구를 골라봐! 🌟</h1>
           <div className="grid grid-cols-2 gap-4 w-full max-w-xs">
             {CHARACTERS.map(c => (
-              <button
+              <CharacterSelectCard
                 key={c.id}
-                className={`min-h-[48px] rounded-2xl border-2 p-4 text-center transition-colors ${
-                  characterId === c.id
-                    ? 'border-indigo-500 bg-indigo-50'
-                    : 'border-gray-200 bg-white'
-                }`}
-                onClick={() => setCharacterId(c.id)}
-              >
-                <div className="text-4xl">{c.emoji}</div>
-                <div className="mt-1 font-bold text-gray-700">{c.label}</div>
-              </button>
+                char={c}
+                selected={characterId === c.id}
+                onSelect={setCharacterId}
+              />
             ))}
           </div>
           <button
-            className="min-h-[48px] w-full max-w-xs rounded-2xl bg-green-500 text-white text-xl font-bold"
+            className="min-h-[48px] w-full max-w-xs rounded-2xl bg-green-500 text-white text-xl font-bold disabled:opacity-40 transition-opacity"
+            disabled={!characterId}
             onClick={complete}
           >
             🟢 시작하기!

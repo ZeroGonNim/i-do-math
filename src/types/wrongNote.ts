@@ -1,4 +1,4 @@
-import type { MistakeType, FractionAnswer } from './problem'
+import type { MistakeType, Answer } from './problem'
 
 export interface WrongNote {
   id: string               // `${userId}::${concept}::${mistakeType}`
@@ -9,7 +9,7 @@ export interface WrongNote {
   consecutiveWrong: number
   consecutiveCorrect: number
   isWeak: boolean
-  lastWrongAnswer: FractionAnswer
+  lastWrongAnswer: Answer
   replayData: { inputSequence: string[] }
   lastAttemptAt: number
 }

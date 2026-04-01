@@ -28,6 +28,7 @@ export function useOnboarding() {
       missionDate: today,
       missionProblemsSolved: 0,
       missionWrongReviewed: false,
+      unlockedDifficulty: 'basic',
     })
     navigate('/home', { replace: true })
   }

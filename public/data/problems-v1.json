@@ -29,7 +29,7 @@
           "expression": "3/8 + 2/8 = 5/8"
         }
       ],
-      "animationAsset": "fraction-pizza-add.lottie",
+      "animationAsset": "fraction-pizza-add",
       "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
@@ -60,7 +60,100 @@
           "expression": "1/6 + 2/6 = 3/6"
         }
       ],
-      "animationAsset": "fraction-bar-add.lottie",
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-add-003",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 덧셈",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "fraction_add_same_denominator",
+      "skills": ["numerator_add"],
+      "mistakeTypes": ["numerator_error"],
+      "question": "리본 테이프가 있습니다. 2/9미터를 쓰고 나서 4/9미터를 더 썼다면 사용한 테이프는 모두 몇 미터인가요?",
+      "answer": { "numerator": 6, "denominator": 9 },
+      "steps": [
+        {
+          "desc": "처음 사용한 테이프",
+          "narrative": "전체 테이프를 9칸으로 나누면 → 처음 사용한 칸은 2칸이에요",
+          "expression": "2/9"
+        },
+        {
+          "desc": "추가로 사용한 테이프",
+          "narrative": "분모는 여전히 9 → 더 사용한 칸은 4칸이에요",
+          "expression": "4/9"
+        },
+        {
+          "desc": "전체 사용량 합산",
+          "narrative": "분모가 같으니 분자끼리만 더해요 → 2 + 4 = 6",
+          "expression": "2/9 + 4/9 = 6/9"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-add-004",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 덧셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_add_same_denominator",
+      "skills": ["numerator_add", "concept_understanding"],
+      "mistakeTypes": ["denominator_error", "numerator_error"],
+      "question": "지수는 오늘 수학 공부를 3/10시간, 영어 공부를 4/10시간 했습니다. 지수가 오늘 공부한 시간은 모두 얼마인가요?",
+      "answer": { "numerator": 7, "denominator": 10 },
+      "steps": [
+        {
+          "desc": "수학 공부 시간",
+          "narrative": "하루를 10칸으로 나누면 → 수학 공부는 3칸이에요",
+          "expression": "3/10"
+        },
+        {
+          "desc": "영어 공부 시간",
+          "narrative": "분모는 10으로 같아요 → 영어 공부는 4칸이에요",
+          "expression": "4/10"
+        },
+        {
+          "desc": "전체 공부 시간",
+          "narrative": "분모가 같으니 분자끼리 더해요 → 3 + 4 = 7",
+          "expression": "3/10 + 4/10 = 7/10"
+        }
+      ],
+      "animationAsset": "fraction-clock-add",
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-add-005",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 덧셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_add_same_denominator",
+      "skills": ["numerator_add"],
+      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "question": "빨간색 구슬이 전체의 2/7이고, 파란색 구슬이 전체의 3/7입니다. 빨간색과 파란색 구슬은 전체의 얼마인가요?",
+      "answer": { "numerator": 5, "denominator": 7 },
+      "steps": [
+        {
+          "desc": "빨간색 구슬의 비율",
+          "narrative": "전체 구슬 7개 중 빨간색 구슬은 2개예요",
+          "expression": "2/7"
+        },
+        {
+          "desc": "파란색 구슬의 비율",
+          "narrative": "전체 구슬 7개 중 파란색 구슬은 3개예요",
+          "expression": "3/7"
+        },
+        {
+          "desc": "두 색 구슬 합산",
+          "narrative": "분모가 7로 같아요 → 분자끼리 더해요 2 + 3 = 5",
+          "expression": "2/7 + 3/7 = 5/7"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
       "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
@@ -87,12 +180,411 @@
         },
         {
           "desc": "남은 물 계산",
-          "narrative": "전체 칸 수(분모)는 같으니 남은 칸 수(분자)끼리만 빼요 → 5 - 2 = 3",
+          "narrative": "분모(전체 칸 수)는 같으니 분자(남은 칸 수)끼리만 빼요 → 5 - 2 = 3",
           "expression": "5/9 - 2/9 = 3/9"
         }
       ],
-      "animationAsset": "fraction-water-sub.lottie",
+      "animationAsset": "fraction-water-sub",
       "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-sub-002",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 뺄셈",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "fraction_sub_same_denominator",
+      "skills": ["numerator_sub"],
+      "mistakeTypes": ["numerator_error"],
+      "question": "초콜릿 바를 10조각으로 나누었습니다. 8조각 중에서 3조각을 먹었다면 남은 초콜릿은 전체의 얼마인가요?",
+      "answer": { "numerator": 5, "denominator": 10 },
+      "steps": [
+        {
+          "desc": "가지고 있던 초콜릿",
+          "narrative": "초콜릿 바는 10조각 → 처음에는 8조각을 가지고 있었어요",
+          "expression": "8/10"
+        },
+        {
+          "desc": "먹은 초콜릿",
+          "narrative": "그 중 3조각을 먹었어요 → 3/10을 빼줘야 해요",
+          "expression": "3/10"
+        },
+        {
+          "desc": "남은 초콜릿 계산",
+          "narrative": "분모가 10으로 같아요 → 분자끼리만 빼요 8 - 3 = 5",
+          "expression": "8/10 - 3/10 = 5/10"
+        }
+      ],
+      "animationAsset": "fraction-bar-sub",
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-sub-003",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 뺄셈",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "fraction_sub_same_denominator",
+      "skills": ["numerator_sub"],
+      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "question": "끈이 7/12미터 있습니다. 선물 포장에 4/12미터를 사용했다면 남은 끈은 몇 미터인가요?",
+      "answer": { "numerator": 3, "denominator": 12 },
+      "steps": [
+        {
+          "desc": "처음 끈의 길이",
+          "narrative": "끈 전체를 12칸으로 나누면 → 처음에는 7칸이에요",
+          "expression": "7/12"
+        },
+        {
+          "desc": "사용한 끈의 길이",
+          "narrative": "선물 포장에 4칸을 사용했어요 → 4/12를 빼요",
+          "expression": "4/12"
+        },
+        {
+          "desc": "남은 끈 계산",
+          "narrative": "분모가 12로 같아요 → 분자끼리 빼요 7 - 4 = 3",
+          "expression": "7/12 - 4/12 = 3/12"
+        }
+      ],
+      "animationAsset": "fraction-bar-sub",
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-sub-004",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 뺄셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_sub_same_denominator",
+      "skills": ["numerator_sub", "concept_understanding"],
+      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "question": "주스가 11/15리터 있었습니다. 아침에 4/15리터를 마셨다면 남은 주스는 몇 리터인가요?",
+      "answer": { "numerator": 7, "denominator": 15 },
+      "steps": [
+        {
+          "desc": "처음 주스의 양",
+          "narrative": "주스를 15칸으로 나누면 → 처음에는 11칸만큼 있었어요",
+          "expression": "11/15"
+        },
+        {
+          "desc": "마신 주스의 양",
+          "narrative": "아침에 4칸만큼 마셨어요 → 4/15를 빼요",
+          "expression": "4/15"
+        },
+        {
+          "desc": "남은 주스 계산",
+          "narrative": "분모가 15로 같아요 → 분자끼리만 빼요 11 - 4 = 7",
+          "expression": "11/15 - 4/15 = 7/15"
+        }
+      ],
+      "animationAsset": "fraction-water-sub",
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "id": "g4-s1-u2-fraction-sub-005",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 같은 분수의 뺄셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_sub_same_denominator",
+      "skills": ["numerator_sub"],
+      "mistakeTypes": ["numerator_error"],
+      "question": "과수원에서 사과를 땄습니다. 전체의 9/13을 수확했고, 그 중 2/13을 이웃에게 나누어 주었습니다. 남은 사과는 전체의 얼마인가요?",
+      "answer": { "numerator": 7, "denominator": 13 },
+      "steps": [
+        {
+          "desc": "수확한 사과",
+          "narrative": "전체 사과를 13칸으로 나누면 → 수확한 사과는 9칸이에요",
+          "expression": "9/13"
+        },
+        {
+          "desc": "이웃에게 준 사과",
+          "narrative": "이웃에게 2칸만큼 나누어 주었어요 → 2/13을 빼요",
+          "expression": "2/13"
+        },
+        {
+          "desc": "남은 사과 계산",
+          "narrative": "분모가 13으로 같아요 → 분자끼리만 빼요 9 - 2 = 7",
+          "expression": "9/13 - 2/13 = 7/13"
+        }
+      ],
+      "animationAsset": "fraction-bar-sub",
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "id": "g4-s1-u3-multiply-basic-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(세 자리 수) × (몇십)",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "multiply_3digit_tens",
+      "answerType": "integer",
+      "skills": ["multiply_tens"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "375 × 50을 계산하세요.",
+      "answer": { "value": 18750 },
+      "steps": [
+        {
+          "desc": "375 × 5 먼저 계산",
+          "narrative": "375 × 5 = 1875",
+          "expression": "375 × 5 = 1875"
+        },
+        {
+          "desc": "× 50은 × 5 한 뒤 × 10",
+          "narrative": "375 × 50 = 1875 × 10 = 18750",
+          "expression": "375 × 50 = 18750"
+        }
+      ],
+      "animationAsset": "multiply-basic",
+      "conceptExplanation": "(세 자리 수) × (몇십)은 (세 자리 수) × (몇)을 먼저 구한 뒤 10을 곱합니다."
+    },
+    {
+      "id": "g4-s1-u3-multiply-basic-002",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(세 자리 수) × (두 자리 수)",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "multiply_3digit_2digit",
+      "answerType": "integer",
+      "skills": ["multiply_2digit"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "184 × 36을 계산하세요.",
+      "answer": { "value": 6624 },
+      "steps": [
+        {
+          "desc": "184 × 6 (일의 자리)",
+          "narrative": "184 × 6 = 1104",
+          "expression": "184 × 6 = 1104"
+        },
+        {
+          "desc": "184 × 30 (십의 자리)",
+          "narrative": "184 × 30 = 5520",
+          "expression": "184 × 30 = 5520"
+        },
+        {
+          "desc": "두 결과 더하기",
+          "narrative": "1104 + 5520 = 6624",
+          "expression": "184 × 36 = 6624"
+        }
+      ],
+      "animationAsset": "multiply-basic",
+      "conceptExplanation": "(세 자리 수) × (두 자리 수)는 일의 자리, 십의 자리로 나누어 곱한 뒤 더합니다."
+    },
+    {
+      "id": "g4-s1-u3-multiply-applied-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(세 자리 수) × (두 자리 수) 응용",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "multiply_3digit_2digit",
+      "answerType": "integer",
+      "skills": ["multiply_2digit", "concept_understanding"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "희진이는 1년(365일) 동안 매일 45분씩 운동했습니다. 희진이가 1년 동안 운동한 시간은 모두 몇 분인가요?",
+      "answer": { "value": 16425 },
+      "steps": [
+        {
+          "desc": "하루 운동 시간",
+          "narrative": "하루에 45분씩 운동해요",
+          "expression": "45분"
+        },
+        {
+          "desc": "1년(365일) 동안의 총 운동 시간",
+          "narrative": "45 × 365를 계산해요",
+          "expression": "45 × 365 = 16425분"
+        }
+      ],
+      "animationAsset": "multiply-applied",
+      "conceptExplanation": "매일 같은 양이 반복될 때는 (하루 양) × (날 수)로 전체 양을 구합니다."
+    },
+    {
+      "id": "g4-s1-u3-multiply-applied-002",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(세 자리 수) × (두 자리 수) 응용",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "multiply_3digit_2digit",
+      "answerType": "integer",
+      "skills": ["multiply_2digit", "concept_understanding"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "범민이는 매일 주스를 130mL씩 2번 마십니다. 범민이가 14일 동안 마시는 주스는 모두 몇 mL인가요?",
+      "answer": { "value": 3640 },
+      "steps": [
+        {
+          "desc": "하루에 마시는 주스",
+          "narrative": "130mL씩 2번 → 하루에 130 × 2 = 260mL",
+          "expression": "130 × 2 = 260mL"
+        },
+        {
+          "desc": "14일 동안 마시는 주스",
+          "narrative": "260mL × 14일 = 3640mL",
+          "expression": "260 × 14 = 3640mL"
+        }
+      ],
+      "animationAsset": "multiply-applied",
+      "conceptExplanation": "여러 단계로 이루어진 문제는 순서대로 곱셈을 나누어 계산합니다."
+    },
+    {
+      "id": "g4-s1-u3-multiply-reverse-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "바르게 계산한 값 구하기",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "multiply_reverse",
+      "answerType": "integer",
+      "skills": ["inverse_operation", "multiply_2digit"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "어떤 수에 50을 곱해야 할 것을 잘못하여 더했더니 812가 되었습니다. 바르게 계산한 값은 얼마입니까?",
+      "answer": { "value": 38100 },
+      "steps": [
+        {
+          "desc": "잘못 계산한 식으로 어떤 수 구하기",
+          "narrative": "어떤 수 + 50 = 812이므로 어떤 수 = 812 - 50 = 762",
+          "expression": "어떤 수 = 812 - 50 = 762"
+        },
+        {
+          "desc": "바르게 계산하기",
+          "narrative": "762에 50을 곱해야 하므로 762 × 50 = 38100",
+          "expression": "762 × 50 = 38100"
+        }
+      ],
+      "animationAsset": "multiply-reverse",
+      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다."
+    },
+    {
+      "id": "g4-s1-u3-divide-basic-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(몇백몇십) ÷ (몇십)",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "divide_hundreds_tens",
+      "answerType": "integer",
+      "skills": ["divide_tens"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "420 ÷ 70을 계산하세요.",
+      "answer": { "value": 6 },
+      "steps": [
+        {
+          "desc": "42 ÷ 7 먼저 계산",
+          "narrative": "42 ÷ 7 = 6",
+          "expression": "42 ÷ 7 = 6"
+        },
+        {
+          "desc": "420 ÷ 70은 42 ÷ 7과 같음",
+          "narrative": "두 수에 같은 수(10)로 나누어도 몫은 변하지 않아요",
+          "expression": "420 ÷ 70 = 6"
+        }
+      ],
+      "animationAsset": "divide-basic",
+      "conceptExplanation": "(몇백몇십) ÷ (몇십)은 0을 지우고 (몇십) ÷ (몇)으로 계산합니다."
+    },
+    {
+      "id": "g4-s1-u3-divide-basic-002",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "(몇백몇십) ÷ (몇십)",
+      "type": "calculation", "difficulty": "basic",
+      "concept": "divide_hundreds_tens",
+      "answerType": "integer",
+      "skills": ["divide_tens"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "560 ÷ 80을 계산하세요.",
+      "answer": { "value": 7 },
+      "steps": [
+        {
+          "desc": "56 ÷ 8 먼저 계산",
+          "narrative": "56 ÷ 8 = 7",
+          "expression": "56 ÷ 8 = 7"
+        },
+        {
+          "desc": "560 ÷ 80은 56 ÷ 8과 같음",
+          "narrative": "두 수에서 0을 하나씩 지워도 몫은 같아요",
+          "expression": "560 ÷ 80 = 7"
+        }
+      ],
+      "animationAsset": "divide-basic",
+      "conceptExplanation": "(몇백몇십) ÷ (몇십)은 0을 지우고 (몇십) ÷ (몇)으로 계산합니다."
+    },
+    {
+      "id": "g4-s1-u3-divide-applied-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 응용",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "divide_hundreds_tens",
+      "answerType": "integer",
+      "skills": ["divide_tens", "concept_understanding"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "사탕 240개를 60명에게 똑같이 나누어 주려고 합니다. 한 명이 받는 사탕은 몇 개인가요?",
+      "answer": { "value": 4 },
+      "steps": [
+        {
+          "desc": "전체 사탕 ÷ 사람 수",
+          "narrative": "240개를 60명에게 나누면 240 ÷ 60을 계산해요",
+          "expression": "240 ÷ 60 = ?"
+        },
+        {
+          "desc": "24 ÷ 6으로 계산",
+          "narrative": "24 ÷ 6 = 4이므로 한 명이 4개를 받아요",
+          "expression": "240 ÷ 60 = 4개"
+        }
+      ],
+      "animationAsset": "divide-applied",
+      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)"
+    },
+    {
+      "id": "g4-s1-u3-divide-applied-002",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 응용",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "divide_hundreds_tens",
+      "answerType": "integer",
+      "skills": ["divide_tens", "concept_understanding"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "구슬 270개를 30명의 친구들에게 똑같이 나누어 준다면, 한 사람이 받는 구슬은 몇 개인가요?",
+      "answer": { "value": 9 },
+      "steps": [
+        {
+          "desc": "전체 구슬 ÷ 친구 수",
+          "narrative": "270개를 30명에게 나누면 270 ÷ 30을 계산해요",
+          "expression": "270 ÷ 30 = ?"
+        },
+        {
+          "desc": "27 ÷ 3으로 계산",
+          "narrative": "27 ÷ 3 = 9이므로 한 명이 9개를 받아요",
+          "expression": "270 ÷ 30 = 9개"
+        }
+      ],
+      "animationAsset": "divide-applied",
+      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)"
+    },
+    {
+      "id": "g4-s1-u3-divide-reverse-001",
+      "grade": 4, "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "바르게 계산한 값 구하기",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "divide_reverse",
+      "answerType": "integer",
+      "skills": ["inverse_operation", "divide_tens"],
+      "mistakeTypes": ["calculation_error"],
+      "question": "어떤 수를 30으로 나누어야 할 것을 잘못하여 곱했더니 2700이 되었습니다. 바르게 계산한 값은 얼마인가요?",
+      "answer": { "value": 3 },
+      "steps": [
+        {
+          "desc": "잘못 계산한 식으로 어떤 수 구하기",
+          "narrative": "어떤 수 × 30 = 2700이므로 어떤 수 = 2700 ÷ 30 = 90",
+          "expression": "어떤 수 = 2700 ÷ 30 = 90"
+        },
+        {
+          "desc": "바르게 계산하기",
+          "narrative": "90을 30으로 나누어야 하므로 90 ÷ 30 = 3",
+          "expression": "90 ÷ 30 = 3"
+        }
+      ],
+      "animationAsset": "divide-reverse",
+      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다."
     }
   ],
   "templates": [
@@ -107,7 +599,7 @@
       "template": "{a}/{b} + {c}/{b} = ?",
       "variables": { "a": [1,2,3,4], "b": [5,6,7,8,9], "c": [1,2,3] },
       "constraints": ["a + c < b"],
-      "animationAsset": "fraction-pizza-add.lottie",
+      "animationAsset": "fraction-pizza-add",
       "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
@@ -121,7 +613,35 @@
       "template": "{a}/{b} - {c}/{b} = ?",
       "variables": { "a": [3,4,5,6,7], "b": [8,9,10], "c": [1,2,3] },
       "constraints": ["a > c"],
-      "animationAsset": "fraction-water-sub.lottie",
+      "animationAsset": "fraction-water-sub",
+      "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
+    },
+    {
+      "templateId": "g4-s1-u2-fraction-add-tpl-002",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_add_same_denominator",
+      "skills": ["numerator_add", "concept_understanding"],
+      "mistakeTypes": ["denominator_error", "numerator_error"],
+      "template": "{a}/{b} + {c}/{b} = ?",
+      "variables": { "a": [2,3,4,5], "b": [10,12,15], "c": [2,3,4,5] },
+      "constraints": ["a + c < b"],
+      "animationAsset": "fraction-clock-add",
+      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+    },
+    {
+      "templateId": "g4-s1-u2-fraction-sub-tpl-002",
+      "grade": 4, "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "type": "calculation", "difficulty": "applied",
+      "concept": "fraction_sub_same_denominator",
+      "skills": ["numerator_sub"],
+      "mistakeTypes": ["numerator_error"],
+      "template": "{a}/{b} - {c}/{b} = ?",
+      "variables": { "a": [6,7,8,9,10], "b": [11,12,13,15], "c": [1,2,3,4] },
+      "constraints": ["a > c"],
+      "animationAsset": "fraction-bar-sub",
       "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
     }
   ]

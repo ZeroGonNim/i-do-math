@@ -25,6 +25,7 @@ const mockProfile: UserProfile = {
   missionDate: '2026-03-31',
   missionProblemsSolved: 0,
   missionWrongReviewed: false,
+  unlockedDifficulty: 'basic',
 }
 
 beforeEach(async () => {
