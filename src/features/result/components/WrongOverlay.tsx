@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
 
 interface Props {
-  userNumerator: number
+  userNumerator?: number
   userDenominator?: number
   onDone: () => void
 }
@@ -46,7 +46,11 @@ export function WrongOverlay({ userNumerator, userDenominator, onDone }: Props) 
         >
           <p className="text-xs text-gray-400 text-center mb-1">내가 쓴 답</p>
           <p className="text-4xl font-black text-red-500 text-center">
-            {userDenominator !== undefined ? `${userNumerator}/${userDenominator}` : userNumerator}
+            {userNumerator !== undefined
+              ? userDenominator !== undefined
+                ? `${userNumerator}/${userDenominator}`
+                : userNumerator
+              : '?'}
           </p>
         </div>
 

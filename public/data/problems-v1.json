@@ -3,15 +3,26 @@
   "problems": [
     {
       "id": "g4-s1-u2-fraction-add-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 덧셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add", "concept_understanding"],
-      "mistakeTypes": ["denominator_error", "numerator_error"],
+      "skills": [
+        "numerator_add",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "denominator_error",
+        "numerator_error"
+      ],
       "question": "피자 한 판을 8조각으로 나누었습니다. 3조각을 먹고 2조각을 더 먹었다면 먹은 피자는 전체의 얼마인가요?",
-      "answer": { "numerator": 5, "denominator": 8 },
+      "answer": {
+        "numerator": 5,
+        "denominator": 8
+      },
       "steps": [
         {
           "desc": "처음에 먹은 피자",
@@ -34,15 +45,24 @@
     },
     {
       "id": "g4-s1-u2-fraction-add-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 덧셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add"],
-      "mistakeTypes": ["denominator_error"],
+      "skills": [
+        "numerator_add"
+      ],
+      "mistakeTypes": [
+        "denominator_error"
+      ],
       "question": "색종이 한 장을 6칸으로 나누었습니다. 1칸을 색칠하고 2칸을 더 색칠했다면 색칠한 부분은 전체의 얼마인가요?",
-      "answer": { "numerator": 3, "denominator": 6 },
+      "answer": {
+        "numerator": 3,
+        "denominator": 6
+      },
       "steps": [
         {
           "desc": "처음에 색칠한 칸",
@@ -65,15 +85,24 @@
     },
     {
       "id": "g4-s1-u2-fraction-add-003",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 덧셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add"],
-      "mistakeTypes": ["numerator_error"],
+      "skills": [
+        "numerator_add"
+      ],
+      "mistakeTypes": [
+        "numerator_error"
+      ],
       "question": "리본 테이프가 있습니다. 2/9미터를 쓰고 나서 4/9미터를 더 썼다면 사용한 테이프는 모두 몇 미터인가요?",
-      "answer": { "numerator": 6, "denominator": 9 },
+      "answer": {
+        "numerator": 6,
+        "denominator": 9
+      },
       "steps": [
         {
           "desc": "처음 사용한 테이프",
@@ -96,15 +125,26 @@
     },
     {
       "id": "g4-s1-u2-fraction-add-004",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 덧셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add", "concept_understanding"],
-      "mistakeTypes": ["denominator_error", "numerator_error"],
+      "skills": [
+        "numerator_add",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "denominator_error",
+        "numerator_error"
+      ],
       "question": "지수는 오늘 수학 공부를 3/10시간, 영어 공부를 4/10시간 했습니다. 지수가 오늘 공부한 시간은 모두 얼마인가요?",
-      "answer": { "numerator": 7, "denominator": 10 },
+      "answer": {
+        "numerator": 7,
+        "denominator": 10
+      },
       "steps": [
         {
           "desc": "수학 공부 시간",
@@ -127,15 +167,25 @@
     },
     {
       "id": "g4-s1-u2-fraction-add-005",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 덧셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add"],
-      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "skills": [
+        "numerator_add"
+      ],
+      "mistakeTypes": [
+        "numerator_error",
+        "denominator_error"
+      ],
       "question": "빨간색 구슬이 전체의 2/7이고, 파란색 구슬이 전체의 3/7입니다. 빨간색과 파란색 구슬은 전체의 얼마인가요?",
-      "answer": { "numerator": 5, "denominator": 7 },
+      "answer": {
+        "numerator": 5,
+        "denominator": 7
+      },
       "steps": [
         {
           "desc": "빨간색 구슬의 비율",
@@ -158,15 +208,25 @@
     },
     {
       "id": "g4-s1-u2-fraction-sub-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 뺄셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error",
+        "denominator_error"
+      ],
       "question": "물이 5/9 리터 있었습니다. 2/9 리터를 마셨다면 남은 물은 몇 리터인가요?",
-      "answer": { "numerator": 3, "denominator": 9 },
+      "answer": {
+        "numerator": 3,
+        "denominator": 9
+      },
       "steps": [
         {
           "desc": "처음 물의 양",
@@ -189,15 +249,24 @@
     },
     {
       "id": "g4-s1-u2-fraction-sub-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 뺄셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error"
+      ],
       "question": "초콜릿 바를 10조각으로 나누었습니다. 8조각 중에서 3조각을 먹었다면 남은 초콜릿은 전체의 얼마인가요?",
-      "answer": { "numerator": 5, "denominator": 10 },
+      "answer": {
+        "numerator": 5,
+        "denominator": 10
+      },
       "steps": [
         {
           "desc": "가지고 있던 초콜릿",
@@ -220,15 +289,25 @@
     },
     {
       "id": "g4-s1-u2-fraction-sub-003",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 뺄셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error",
+        "denominator_error"
+      ],
       "question": "끈이 7/12미터 있습니다. 선물 포장에 4/12미터를 사용했다면 남은 끈은 몇 미터인가요?",
-      "answer": { "numerator": 3, "denominator": 12 },
+      "answer": {
+        "numerator": 3,
+        "denominator": 12
+      },
       "steps": [
         {
           "desc": "처음 끈의 길이",
@@ -251,15 +330,26 @@
     },
     {
       "id": "g4-s1-u2-fraction-sub-004",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 뺄셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub", "concept_understanding"],
-      "mistakeTypes": ["numerator_error", "denominator_error"],
+      "skills": [
+        "numerator_sub",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "numerator_error",
+        "denominator_error"
+      ],
       "question": "주스가 11/15리터 있었습니다. 아침에 4/15리터를 마셨다면 남은 주스는 몇 리터인가요?",
-      "answer": { "numerator": 7, "denominator": 15 },
+      "answer": {
+        "numerator": 7,
+        "denominator": 15
+      },
       "steps": [
         {
           "desc": "처음 주스의 양",
@@ -282,15 +372,24 @@
     },
     {
       "id": "g4-s1-u2-fraction-sub-005",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
       "subUnit": "분모가 같은 분수의 뺄셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error"
+      ],
       "question": "과수원에서 사과를 땄습니다. 전체의 9/13을 수확했고, 그 중 2/13을 이웃에게 나누어 주었습니다. 남은 사과는 전체의 얼마인가요?",
-      "answer": { "numerator": 7, "denominator": 13 },
+      "answer": {
+        "numerator": 7,
+        "denominator": 13
+      },
       "steps": [
         {
           "desc": "수확한 사과",
@@ -313,16 +412,24 @@
     },
     {
       "id": "g4-s1-u3-multiply-basic-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(세 자리 수) × (몇십)",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "multiply_3digit_tens",
       "answerType": "integer",
-      "skills": ["multiply_tens"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "multiply_tens"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "375 × 50을 계산하세요.",
-      "answer": { "value": 18750 },
+      "answer": {
+        "value": 18750
+      },
       "steps": [
         {
           "desc": "375 × 5 먼저 계산",
@@ -340,16 +447,24 @@
     },
     {
       "id": "g4-s1-u3-multiply-basic-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(세 자리 수) × (두 자리 수)",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "multiply_3digit_2digit",
       "answerType": "integer",
-      "skills": ["multiply_2digit"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "multiply_2digit"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "184 × 36을 계산하세요.",
-      "answer": { "value": 6624 },
+      "answer": {
+        "value": 6624
+      },
       "steps": [
         {
           "desc": "184 × 6 (일의 자리)",
@@ -372,16 +487,25 @@
     },
     {
       "id": "g4-s1-u3-multiply-applied-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(세 자리 수) × (두 자리 수) 응용",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "multiply_3digit_2digit",
       "answerType": "integer",
-      "skills": ["multiply_2digit", "concept_understanding"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "multiply_2digit",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "희진이는 1년(365일) 동안 매일 45분씩 운동했습니다. 희진이가 1년 동안 운동한 시간은 모두 몇 분인가요?",
-      "answer": { "value": 16425 },
+      "answer": {
+        "value": 16425
+      },
       "steps": [
         {
           "desc": "하루 운동 시간",
@@ -399,16 +523,25 @@
     },
     {
       "id": "g4-s1-u3-multiply-applied-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(세 자리 수) × (두 자리 수) 응용",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "multiply_3digit_2digit",
       "answerType": "integer",
-      "skills": ["multiply_2digit", "concept_understanding"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "multiply_2digit",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "범민이는 매일 주스를 130mL씩 2번 마십니다. 범민이가 14일 동안 마시는 주스는 모두 몇 mL인가요?",
-      "answer": { "value": 3640 },
+      "answer": {
+        "value": 3640
+      },
       "steps": [
         {
           "desc": "하루에 마시는 주스",
@@ -426,16 +559,25 @@
     },
     {
       "id": "g4-s1-u3-multiply-reverse-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "바르게 계산한 값 구하기",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "multiply_reverse",
       "answerType": "integer",
-      "skills": ["inverse_operation", "multiply_2digit"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "inverse_operation",
+        "multiply_2digit"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "어떤 수에 50을 곱해야 할 것을 잘못하여 더했더니 812가 되었습니다. 바르게 계산한 값은 얼마입니까?",
-      "answer": { "value": 38100 },
+      "answer": {
+        "value": 38100
+      },
       "steps": [
         {
           "desc": "잘못 계산한 식으로 어떤 수 구하기",
@@ -453,16 +595,24 @@
     },
     {
       "id": "g4-s1-u3-divide-basic-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(몇백몇십) ÷ (몇십)",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "divide_hundreds_tens",
       "answerType": "integer",
-      "skills": ["divide_tens"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "divide_tens"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "420 ÷ 70을 계산하세요.",
-      "answer": { "value": 6 },
+      "answer": {
+        "value": 6
+      },
       "steps": [
         {
           "desc": "42 ÷ 7 먼저 계산",
@@ -480,16 +630,24 @@
     },
     {
       "id": "g4-s1-u3-divide-basic-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "(몇백몇십) ÷ (몇십)",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "divide_hundreds_tens",
       "answerType": "integer",
-      "skills": ["divide_tens"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "divide_tens"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "560 ÷ 80을 계산하세요.",
-      "answer": { "value": 7 },
+      "answer": {
+        "value": 7
+      },
       "steps": [
         {
           "desc": "56 ÷ 8 먼저 계산",
@@ -507,16 +665,25 @@
     },
     {
       "id": "g4-s1-u3-divide-applied-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "나눗셈 응용",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "divide_hundreds_tens",
       "answerType": "integer",
-      "skills": ["divide_tens", "concept_understanding"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "divide_tens",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "사탕 240개를 60명에게 똑같이 나누어 주려고 합니다. 한 명이 받는 사탕은 몇 개인가요?",
-      "answer": { "value": 4 },
+      "answer": {
+        "value": 4
+      },
       "steps": [
         {
           "desc": "전체 사탕 ÷ 사람 수",
@@ -534,16 +701,25 @@
     },
     {
       "id": "g4-s1-u3-divide-applied-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "나눗셈 응용",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "divide_hundreds_tens",
       "answerType": "integer",
-      "skills": ["divide_tens", "concept_understanding"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "divide_tens",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "구슬 270개를 30명의 친구들에게 똑같이 나누어 준다면, 한 사람이 받는 구슬은 몇 개인가요?",
-      "answer": { "value": 9 },
+      "answer": {
+        "value": 9
+      },
       "steps": [
         {
           "desc": "전체 구슬 ÷ 친구 수",
@@ -561,16 +737,25 @@
     },
     {
       "id": "g4-s1-u3-divide-reverse-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "곱셈과 나눗셈",
       "subUnit": "바르게 계산한 값 구하기",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "divide_reverse",
       "answerType": "integer",
-      "skills": ["inverse_operation", "divide_tens"],
-      "mistakeTypes": ["calculation_error"],
+      "skills": [
+        "inverse_operation",
+        "divide_tens"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
       "question": "어떤 수를 30으로 나누어야 할 것을 잘못하여 곱했더니 2700이 되었습니다. 바르게 계산한 값은 얼마인가요?",
-      "answer": { "value": 3 },
+      "answer": {
+        "value": 3
+      },
       "steps": [
         {
           "desc": "잘못 계산한 식으로 어떤 수 구하기",
@@ -585,62 +770,5677 @@
       ],
       "animationAsset": "divide-reverse",
       "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-001",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_read_write",
+      "skills": [
+        "place_value_understanding",
+        "number_notation"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "설명하는 수를 수로 쓴 것을 고르세요.\n억이 3061개, 만이 290개, 일이 8630개인 수",
+      "answerType": "multiple_choice",
+      "choices": [
+        "306102908630",
+        "306186300290",
+        "863002903061",
+        "30612908630",
+        "29030618630"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "억의 자리",
+          "expression": "3061 × 1억 = 3061 0000 0000"
+        },
+        {
+          "desc": "만의 자리",
+          "expression": "290 × 1만 = 290 0000"
+        },
+        {
+          "desc": "일의 자리",
+          "expression": "8630"
+        },
+        {
+          "desc": "합산",
+          "expression": "306100000000 + 2900000 + 8630 = 306102908630"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "큰 수는 억, 만, 일 자리를 구분해서 씁니다. 억이 3061개면 306100000000, 만이 290개면 2900000, 일이 8630이면 8630입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-002",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 크기 비교",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_compare",
+      "skills": [
+        "number_comparison",
+        "digit_count"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "두 수의 크기를 비교하여 >, =, < 중 알맞은 기호를 쓰세요.\n40403209 ○ 128030926",
+      "answerType": "symbol",
+      "answer": {
+        "symbol": "<"
+      },
+      "steps": [
+        {
+          "desc": "자릿수 세기",
+          "expression": "40403209 → 8자리, 128030926 → 9자리"
+        },
+        {
+          "desc": "비교",
+          "expression": "자릿수가 더 많은 쪽이 더 큽니다 → 40403209 < 128030926"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "자릿수가 다른 두 수를 비교할 때는 자릿수가 더 많은 쪽이 큽니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-003",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 크기 비교",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_compare",
+      "skills": [
+        "number_comparison",
+        "large_unit_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "두 수의 크기를 비교하여 >, =, < 중 알맞은 기호를 쓰세요.\n361억 428만 ○ 363억 6080만",
+      "answerType": "symbol",
+      "answer": {
+        "symbol": "<"
+      },
+      "steps": [
+        {
+          "desc": "억의 자리 비교",
+          "expression": "361억 vs 363억"
+        },
+        {
+          "desc": "결론",
+          "expression": "361 < 363이므로 361억 428만 < 363억 6080만"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "자릿수가 같을 때는 높은 자리부터 차례로 비교합니다. 억의 자리에서 361 < 363이므로 왼쪽 수가 더 작습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-004",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "83764605는 만이 □개, 일이 □개인 수입니다.\n빈칸에 알맞은 수를 써넣으세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          8376,
+          4605
+        ],
+        "labels": [
+          "만이",
+          "일이"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "만 단위 분리",
+          "expression": "83764605 → 만이 8376개, 일이 4605개"
+        },
+        {
+          "desc": "확인",
+          "expression": "8376 × 10000 + 4605 = 83764605"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "83764605에서 만의 자리 이상(83760000)을 만으로 나누면 8376개, 나머지 일의 자리(4605)가 일의 개수입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-005",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_read_write",
+      "skills": [
+        "number_reading"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "19747을 바르게 읽은 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "일만 구천칠백사십칠",
+        "일구칠사칠",
+        "일만 구천칠십사",
+        "구천칠백사십칠",
+        "이만 구천칠백사십칠"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "만 자리 읽기",
+          "expression": "10000 → 일만"
+        },
+        {
+          "desc": "나머지 읽기",
+          "expression": "9747 → 구천칠백사십칠"
+        },
+        {
+          "desc": "합치기",
+          "expression": "일만 구천칠백사십칠"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "수를 읽을 때는 일의 자리부터 네 자리씩 묶어 만, 억, 조 단위로 읽습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-006",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "big_number_addition",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "설명하는 수를 수로 써 보세요.\n7930억보다 2070억 큰 수",
+      "answerType": "integer",
+      "answer": {
+        "value": 1000000000000
+      },
+      "steps": [
+        {
+          "desc": "덧셈",
+          "expression": "7930억 + 2070억 = 10000억"
+        },
+        {
+          "desc": "단위 변환",
+          "expression": "10000억 = 1조 = 1000000000000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000억 = 1조입니다. 7930억 + 2070억 = 10000억 = 1조"
+    },
+    {
+      "id": "g4-s1-u1-big-number-007",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "10000이 644개인 수를 수로 써 보세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 6440000
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "10000 × 644 = 6,440,000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000이 644개이면 10000 × 644 = 6440000입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-008",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "10000이 6개인 수를 수로 써 보세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 60000
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "10000 × 6 = 60,000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000이 6개이면 10000 × 6 = 60000입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-009",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_read_write",
+      "skills": [
+        "large_unit_understanding",
+        "number_reading"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "조가 83267개, 억이 2426개, 만이 3357개인 수를 바르게 읽은 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "팔천삼백이십육조 이천사백이십육억 삼천삼백오십칠만",
+        "팔백삼십이조 이천사백이십육억 삼천삼백오십칠만",
+        "팔천삼백이십칠조 이천사백이십육억 삼천삼백오십칠만",
+        "팔천삼백이십육조 이천사백이십억 삼천삼백오십칠만",
+        "팔천삼백이십육조 이천사백이십육억 삼백오십칠만"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "조 단위",
+          "expression": "83267조 → 팔만삼천이백육십칠조"
+        },
+        {
+          "desc": "억 단위",
+          "expression": "2426억 → 이천사백이십육억"
+        },
+        {
+          "desc": "만 단위",
+          "expression": "3357만 → 삼천삼백오십칠만"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "조가 83267개이면 팔만삼천이백육십칠조, 억이 2426개이면 이천사백이십육억, 만이 3357개이면 삼천삼백오십칠만입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-010",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 크기 비교",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "big_number_compare",
+      "skills": [
+        "number_comparison"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "두 수 중 더 작은 수를 써 보세요.\n240815020     8664448354",
+      "answerType": "integer",
+      "answer": {
+        "value": 240815020
+      },
+      "steps": [
+        {
+          "desc": "자릿수 비교",
+          "expression": "240815020 → 9자리, 8664448354 → 10자리"
+        },
+        {
+          "desc": "결론",
+          "expression": "자릿수가 적은 240815020이 더 작습니다."
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "자릿수가 다른 두 수를 비교할 때는 자릿수가 더 적은 쪽이 작습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-011",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "10000이 8391개인 수를 수로 써 보세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 83910000
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "10000 × 8391 = 83,910,000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000이 8391개이면 10000 × 8391 = 83910000입니다. 팔천삼백구십일만이라고 읽습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-012",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_read_write",
+      "skills": [
+        "number_notation",
+        "zero_counting"
+      ],
+      "mistakeTypes": [
+        "precision_error"
+      ],
+      "question": "6686만을 수로 나타낼 때 0은 모두 몇 개인지 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 4
+      },
+      "steps": [
+        {
+          "desc": "수로 나타내기",
+          "expression": "6686만 = 66860000"
+        },
+        {
+          "desc": "0의 개수",
+          "expression": "66860000 → 0이 4개"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "6686만 = 66860000입니다. 숫자 0은 4개 들어있습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-013",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "천만의 자리 숫자가 다른 수를 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "58167197",
+        "61411144",
+        "67180543",
+        "63698469",
+        "66097742"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "각 수의 천만 자리 확인",
+          "expression": "① 5, ② 6, ③ 6, ④ 6, ⑤ 6"
+        },
+        {
+          "desc": "결론",
+          "expression": "①만 천만 자리가 5로 다릅니다."
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "8자리 수에서 천만의 자리는 맨 앞(왼쪽 첫 번째) 자리입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-014",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_read_write",
+      "skills": [
+        "number_reading"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "87446을 바르게 읽은 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "팔만 칠천사백사십육",
+        "팔만 칠백사십육",
+        "팔십칠만 사천사백사십육",
+        "팔만 칠사사사육",
+        "팔천칠백사십사육"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "만 자리",
+          "expression": "80000 → 팔만"
+        },
+        {
+          "desc": "나머지",
+          "expression": "7446 → 칠천사백사십육"
+        },
+        {
+          "desc": "합치기",
+          "expression": "팔만 칠천사백사십육"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "87446에서 8만은 팔만, 7천은 칠천, 4백은 사백, 40은 사십, 6은 육입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-015",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "수의 순서",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_sequence",
+      "skills": [
+        "number_sequence",
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "calculation_error"
+      ],
+      "question": "빈칸에 알맞은 수를 써넣으세요.\n9940보다 □ 큰 수는 10000이고, 9910은 10000보다 □ 작은 수입니다.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          60,
+          90
+        ],
+        "labels": [
+          "큰 수",
+          "작은 수"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "첫 번째 빈칸",
+          "expression": "10000 − 9940 = 60"
+        },
+        {
+          "desc": "두 번째 빈칸",
+          "expression": "10000 − 9910 = 90"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "9940보다 60 크면 10000이고, 10000보다 90 작으면 9910입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-016",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_decomposition"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "61550000을 각 자리 숫자가 나타내는 값의 합으로 나타낼 때 가장 큰 값은 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 60000000
+      },
+      "steps": [
+        {
+          "desc": "분해",
+          "expression": "61550000 = 60000000 + 1000000 + 500000 + 50000"
+        },
+        {
+          "desc": "가장 큰 값",
+          "expression": "60000000 (천만 자리)"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "61550000에서 각 자리 값은 60000000, 1000000, 500000, 50000이며 가장 큰 값은 6이 나타내는 60000000입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-017",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "1000원짜리 지폐 2장과 100원짜리 동전 921개가 있습니다. 모두 얼마인가요? (원)",
+      "answerType": "integer",
+      "answer": {
+        "value": 94100
+      },
+      "steps": [
+        {
+          "desc": "지폐",
+          "expression": "1000 × 2 = 2000원"
+        },
+        {
+          "desc": "동전",
+          "expression": "100 × 921 = 92100원"
+        },
+        {
+          "desc": "합계",
+          "expression": "2000 + 92100 = 94100원"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "1000원짜리 2장 = 2000원, 100원짜리 921개 = 92100원. 합산하면 94100원입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-018",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "10000원짜리 귀걸이를 사려고 합니다. 지갑에 1000원짜리 지폐 2장이 있다면 얼마가 더 있어야 귀걸이를 살 수 있나요? (원)",
+      "answerType": "integer",
+      "answer": {
+        "value": 8000
+      },
+      "steps": [
+        {
+          "desc": "가진 돈",
+          "expression": "1000 × 2 = 2000원"
+        },
+        {
+          "desc": "필요한 추가 금액",
+          "expression": "10000 − 2000 = 8000원"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000원에서 2000원을 빼면 8000원이 더 필요합니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-019",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "쓰레기 버리기를 27번(1번 500원), 분리수거를 11번(1번 100원) 하면 이번 주 용돈은 모두 얼마인가요? (원)",
+      "answerType": "integer",
+      "answer": {
+        "value": 14600
+      },
+      "steps": [
+        {
+          "desc": "쓰레기 버리기",
+          "expression": "500 × 27 = 13500원"
+        },
+        {
+          "desc": "분리수거",
+          "expression": "100 × 11 = 1100원"
+        },
+        {
+          "desc": "합계",
+          "expression": "13500 + 1100 = 14600원"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "500원씩 27번 = 13500원, 100원씩 11번 = 1100원. 합산하면 14600원입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-020",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "100원이 몇 개 있으면 10000원이 되나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 100
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "10000 ÷ 100 = 100개"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000 = 100 × 100이므로 100원이 100개 있으면 10000원이 됩니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-021",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수 읽고 쓰기",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_read_write",
+      "skills": [
+        "large_unit_understanding",
+        "number_reading"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "억이 2960개인 수를 바르게 읽은 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "이천구백육십억",
+        "이천구백육십만",
+        "이천구백육억",
+        "이백구십육십억",
+        "삼천구백육십억"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "수로 나타내기",
+          "expression": "2960 × 1억 = 296000000000"
+        },
+        {
+          "desc": "읽기",
+          "expression": "이천구백육십억"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "억이 2960개 = 2960억 = 이천구백육십억입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-022",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_decomposition"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "7920000을 각 자리 숫자가 나타내는 값의 합으로 나타내세요.\n7920000 = □ + □ + □",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          7000000,
+          900000,
+          20000
+        ],
+        "labels": [
+          "백만",
+          "십만",
+          "만"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "분해",
+          "expression": "7920000 = 7000000 + 900000 + 20000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "7920000에서 7은 백만 자리(7000000), 9는 십만 자리(900000), 2는 만 자리(20000)를 나타냅니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-023",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "수의 순서",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_sequence",
+      "skills": [
+        "number_sequence",
+        "reverse_thinking"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "어떤 수에서 10억씩 거꾸로 5번 세었더니 5220억이 되었습니다. 어떤 수는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 517000000000
+      },
+      "steps": [
+        {
+          "desc": "역산",
+          "expression": "5220억 + 10억 × 5 = 5220억 + 50억 = 5270억"
+        },
+        {
+          "desc": "확인",
+          "expression": "5270→5260→5250→5240→5230→5220억 ✓"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "거꾸로 5번 뺐다면, 반대로 5번 더하면 처음 수를 구할 수 있습니다. 5220억 + 50억 = 5270억"
+    },
+    {
+      "id": "g4-s1-u1-big-number-024",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "15674768654 8476에서 조의 자리 숫자와 천억의 자리 숫자의 합을 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 5
+      },
+      "steps": [
+        {
+          "desc": "조 단위 분리",
+          "expression": "1567 | 4768 | 6544 | 8476 (조|억|만|일)"
+        },
+        {
+          "desc": "조의 자리",
+          "expression": "1567조 → 조의 자리 숫자: 1"
+        },
+        {
+          "desc": "천억의 자리",
+          "expression": "4768억 → 천억의 자리 숫자: 4"
+        },
+        {
+          "desc": "합산",
+          "expression": "1 + 4 = 5"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "큰 수는 네 자리씩 묶어 조, 억, 만, 일 단위로 구분합니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-025",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "10원이 몇 개 있으면 10000원이 되나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 1000
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "10000 ÷ 10 = 1000개"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000 = 10 × 1000이므로 10원이 1000개 있으면 10000원이 됩니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-026",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "1000원짜리 지폐 23장과 100원짜리 동전 628개가 있습니다. 모두 얼마인가요? (원)",
+      "answerType": "integer",
+      "answer": {
+        "value": 85800
+      },
+      "steps": [
+        {
+          "desc": "지폐",
+          "expression": "1000 × 23 = 23000원"
+        },
+        {
+          "desc": "동전",
+          "expression": "100 × 628 = 62800원"
+        },
+        {
+          "desc": "합계",
+          "expression": "23000 + 62800 = 85800원"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "1000원짜리 23장 = 23000원, 100원짜리 628개 = 62800원. 합산하면 85800원입니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-027",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation",
+        "unit_conversion"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "1000만 원짜리 수표 8장과 5000원짜리 지폐 380장이 있습니다. 이 돈을 모두 10만 원짜리 수표로 바꾼다면 몇 장으로 바꿀 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 819
+      },
+      "steps": [
+        {
+          "desc": "수표 합계",
+          "expression": "10000000 × 8 = 80000000원"
+        },
+        {
+          "desc": "지폐 합계",
+          "expression": "5000 × 380 = 1900000원"
+        },
+        {
+          "desc": "전체 합계",
+          "expression": "80000000 + 1900000 = 81900000원"
+        },
+        {
+          "desc": "10만원짜리로 환산",
+          "expression": "81900000 ÷ 100000 = 819장"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "전체 금액을 구한 뒤 10만 원짜리 수표 한 장의 금액(100000원)으로 나눕니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-028",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "자릿값",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_place_value",
+      "skills": [
+        "place_value_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "precision_error"
+      ],
+      "question": "17544에서 ㉠은 만의 자리 1이 나타내는 값이고, 75514에서 ㉡은 천의 자리 5가 나타내는 값입니다. ㉠과 ㉡의 차는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 5000
+      },
+      "steps": [
+        {
+          "desc": "㉠ 계산",
+          "expression": "17544에서 만의 자리 1 → ㉠ = 10000"
+        },
+        {
+          "desc": "㉡ 계산",
+          "expression": "75514에서 천의 자리 5 → ㉡ = 5000"
+        },
+        {
+          "desc": "차",
+          "expression": "10000 − 5000 = 5000"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "만의 자리 1은 10000을 나타내고, 천의 자리 5는 5000을 나타냅니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-029",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 크기 비교",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "big_number_compare",
+      "skills": [
+        "number_comparison",
+        "digit_count"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "두 기업 중 더 많이 기부한 기업을 고르세요.\n청솔 기업: 1787579512895원\n별님 기업: 26366550239501원",
+      "answerType": "multiple_choice",
+      "choices": [
+        "청솔 기업",
+        "별님 기업"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "자릿수 비교",
+          "expression": "1787579512895 → 13자리, 26366550239501 → 14자리"
+        },
+        {
+          "desc": "결론",
+          "expression": "14자리인 별님 기업이 더 큰 수 → 더 많이 기부"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "자릿수가 많을수록 더 큰 수입니다. 14자리인 별님 기업이 더 많이 기부했습니다."
+    },
+    {
+      "id": "g4-s1-u1-big-number-030",
+      "grade": 4,
+      "semester": 1,
+      "unit": "큰 수",
+      "subUnit": "큰 수의 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "big_number_money_calc",
+      "skills": [
+        "large_number_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "수학 캠프 참가비로 10000원짜리 지폐 6장과 1000원짜리 지폐 30장을 냈습니다. 수학 캠프 참가비는 얼마인가요? (원)",
+      "answerType": "integer",
+      "answer": {
+        "value": 90000
+      },
+      "steps": [
+        {
+          "desc": "10000원짜리",
+          "expression": "10000 × 6 = 60000원"
+        },
+        {
+          "desc": "1000원짜리",
+          "expression": "1000 × 30 = 30000원"
+        },
+        {
+          "desc": "합계",
+          "expression": "60000 + 30000 = 90000원"
+        }
+      ],
+      "animationAsset": "big-number",
+      "conceptExplanation": "10000원짜리 6장 = 60000원, 1000원짜리 30장 = 30000원. 합산하면 90000원입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-001",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "quadrilateral_angle_sum",
+      "skills": [
+        "angle_calculation",
+        "straight_line_angle"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "사각형에서 ㉠의 각도는 몇 도인지 구하세요.\n(세 각: 154°, 90°, 122° / 단, 122°와 ㉡은 직선 위에 있음)",
+      "answerType": "integer",
+      "answer": {
+        "value": 58
+      },
+      "steps": [
+        {
+          "desc": "직선 위의 각",
+          "expression": "㉡ + 122° = 180°  →  ㉡ = 58°"
+        },
+        {
+          "desc": "사각형 네 각의 합",
+          "expression": "154° + 90° + ㉡ + ㉠ = 360°"
+        },
+        {
+          "desc": "계산",
+          "expression": "㉠ = 360° − 154° − 90° − 58° = 58°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다. 한 직선이 이루는 각도는 180°이므로 먼저 ㉡을 구한 뒤 ㉠을 계산합니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-002",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_classification",
+      "skills": [
+        "visual_angle_comparison"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 그림에서 가장 큰 각을 고르세요.\n(각: ㄱ - 직각보다 약간 작은 예각, ㄴ - 매우 작은 예각, ㄷ - 넓게 벌어진 둔각)",
+      "answerType": "multiple_choice",
+      "choices": [
+        "ㄱ",
+        "ㄴ",
+        "ㄷ"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "각의 크기 비교",
+          "expression": "ㄷ가 가장 넓게 벌어진 각"
+        },
+        {
+          "desc": "결론",
+          "expression": "가장 큰 각은 ㄷ"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "두 변이 더 많이 벌어질수록 큰 각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-003",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_classification",
+      "skills": [
+        "visual_angle_comparison"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "두 그림의 각 중에서 더 작은 각을 고르세요.\n(㉠: 좁게 벌어진 예각, ㉡: 넓게 벌어진 둔각)",
+      "answerType": "multiple_choice",
+      "choices": [
+        "㉠",
+        "㉡"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "비교",
+          "expression": "㉠이 더 좁게 벌어져 있으므로 더 작은 각"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "두 변이 덜 벌어질수록 작은 각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-004",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "quadrilateral_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "사각형에서 ㉠의 각도를 구하세요.\n(세 각: 52°, 105°, 75°, 나머지 ㉠)",
+      "answerType": "integer",
+      "answer": {
+        "value": 128
+      },
+      "steps": [
+        {
+          "desc": "사각형 네 각의 합",
+          "expression": "52° + 105° + 75° + ㉠ = 360°"
+        },
+        {
+          "desc": "계산",
+          "expression": "㉠ = 360° − 232° = 128°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-005",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "quadrilateral_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "사각형의 네 각의 크기의 합을 구하세요.\n세 각이 90°, 90°, 75°이고 나머지 한 각이 □°일 때, 합은 몇 도인가요?",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          105,
+          360
+        ],
+        "labels": [
+          "나머지 각(°)",
+          "네 각의 합(°)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "나머지 각",
+          "expression": "360° − 90° − 90° − 75° = 105°"
+        },
+        {
+          "desc": "네 각의 합",
+          "expression": "90° + 90° + 75° + 105° = 360°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-006",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_classification",
+      "skills": [
+        "angle_ordering"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "각의 크기가 큰 것부터 차례로 고를 때, 올바른 순서를 고르세요.\n(ㄱ: 가장 넓게 벌어진 둔각, ㄴ: 중간 크기 예각, ㄷ: 작은 예각)",
+      "answerType": "multiple_choice",
+      "choices": [
+        "ㄱ, ㄴ, ㄷ",
+        "ㄱ, ㄷ, ㄴ",
+        "ㄴ, ㄱ, ㄷ",
+        "ㄷ, ㄴ, ㄱ",
+        "ㄴ, ㄷ, ㄱ"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "각의 크기",
+          "expression": "ㄱ(둔각) > ㄴ(예각) > ㄷ(작은 예각)"
+        },
+        {
+          "desc": "순서",
+          "expression": "ㄱ, ㄴ, ㄷ"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "두 변이 벌어진 정도로 각의 크기를 비교합니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-007",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_classification",
+      "skills": [
+        "clock_angle",
+        "obtuse_angle"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "시계의 긴바늘과 짧은바늘이 이루는 작은 쪽의 각이 둔각인 것을 모두 고르세요.\n(가: 2시, 나: 4시, 다: 6시, 라: 10시)",
+      "answerType": "multiple_choice",
+      "choices": [
+        "가, 나",
+        "가, 라",
+        "나, 다",
+        "나, 라",
+        "다, 라"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "각 시각의 각도 분류",
+          "expression": "가(2시): 60° 예각, 나(4시): 120° 둔각, 다(6시): 180° 평각, 라(10시): 60° 예각"
+        },
+        {
+          "desc": "둔각인 것",
+          "expression": "나(4시)만 둔각 → 가, 라는 예각"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "둔각은 90°보다 크고 180°보다 작은 각입니다. 4시는 두 바늘이 120°를 이루므로 둔각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-008",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_calculation",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "□° − 179° = 20°일 때, □에 알맞은 수를 쓰세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 199
+      },
+      "steps": [
+        {
+          "desc": "역산",
+          "expression": "□ = 179° + 20° = 199°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "□ − 179° = 20°이면 □ = 20° + 179° = 199°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-009",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 그리기",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_drawing",
+      "skills": [
+        "protractor_use",
+        "angle_drawing"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "자와 각도기를 이용하여 각도가 160°인 각을 그리려고 합니다. 아래 캔버스에 그려 보세요.",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u2-angle-draw-160.png"
+      },
+      "steps": [
+        {
+          "desc": "각도기 중심 맞추기",
+          "expression": "각도기의 중심을 각의 꼭짓점에 맞춥니다."
+        },
+        {
+          "desc": "밑금 맞추기",
+          "expression": "각도기의 밑금을 각의 한 변에 맞춥니다."
+        },
+        {
+          "desc": "점 표시",
+          "expression": "각도가 160°가 되는 눈금에 점을 표시합니다."
+        },
+        {
+          "desc": "선 긋기",
+          "expression": "꼭짓점과 표시한 점을 이어 각을 완성합니다."
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 160° 눈금에 점을 찍은 후 선으로 연결합니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-010",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "straight_line_angle",
+      "skills": [
+        "angle_calculation",
+        "straight_line_angle"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직선 위에 40°의 각이 있을 때, ㉠의 각도를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 140
+      },
+      "steps": [
+        {
+          "desc": "직선의 각도",
+          "expression": "직선이 이루는 각도 = 180°"
+        },
+        {
+          "desc": "계산",
+          "expression": "㉠ = 180° − 40° = 140°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "직선이 이루는 각도는 180°입니다. 따라서 ㉠ = 180° − 40° = 140°"
+    },
+    {
+      "id": "g4-s1-u2-angle-011",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "quadrilateral_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "사각형의 네 각의 합을 구하세요.\n세 각이 105°, 90°, 75°일 때, 나머지 각(□°)과 합(□°)을 구하세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          90,
+          360
+        ],
+        "labels": [
+          "나머지 각(°)",
+          "네 각의 합(°)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "나머지 각",
+          "expression": "360° − 105° − 90° − 75° = 90°"
+        },
+        {
+          "desc": "네 각의 합",
+          "expression": "105° + 90° + 90° + 75° = 360°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-012",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "삼각형의 각도",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "triangle_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "삼각형의 세 각의 크기를 잘못 잰 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "65°, 25°, 90°",
+        "50°, 80°, 60°",
+        "100°, 65°, 15°",
+        "70°, 80°, 30°",
+        "120°, 20°, 40°"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "삼각형 세 각의 합 = 180°",
+          "expression": "각 보기의 합 확인"
+        },
+        {
+          "desc": "검증",
+          "expression": "① 65+25+90=180✓  ② 50+80+60=190✗  ③ 100+65+15=180✓"
+        },
+        {
+          "desc": "오답",
+          "expression": "② 50°+80°+60° = 190° ≠ 180° → 잘못된 것"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "삼각형의 세 각의 합은 항상 180°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-013",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "angle_calculation",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직각보다 85°만큼 더 작은 각은 몇 도인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 5
+      },
+      "steps": [
+        {
+          "desc": "직각",
+          "expression": "직각 = 90°"
+        },
+        {
+          "desc": "계산",
+          "expression": "90° − 85° = 5°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "직각은 90°이므로 직각보다 85° 작으면 90° − 85° = 5°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-014",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "angle_classification",
+      "skills": [
+        "acute_obtuse_classification"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "세 각 A(약 40°), B(약 50°), C(약 30°)를 보고 예각과 둔각을 올바르게 분류한 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "A: 예각, B: 예각, C: 예각",
+        "A: 둔각, B: 예각, C: 예각",
+        "A: 예각, B: 둔각, C: 예각",
+        "A: 예각, B: 예각, C: 둔각",
+        "A: 둔각, B: 둔각, C: 예각"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "예각 정의",
+          "expression": "0°보다 크고 90°보다 작은 각 = 예각"
+        },
+        {
+          "desc": "분류",
+          "expression": "A(40°): 예각, B(50°): 예각, C(30°): 예각"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "0°보다 크고 90°보다 작은 각은 예각, 90°보다 크고 180°보다 작은 각은 둔각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-015",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 그리기",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "angle_drawing",
+      "skills": [
+        "protractor_use",
+        "angle_drawing"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "자와 각도기를 이용하여 각도가 140°인 각을 그려 보세요.",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u2-angle-draw-140.png"
+      },
+      "steps": [
+        {
+          "desc": "각도기 중심 맞추기",
+          "expression": "각도기의 중심을 꼭짓점에 맞춥니다."
+        },
+        {
+          "desc": "밑금 맞추기",
+          "expression": "각도기의 밑금을 한 변에 맞춥니다."
+        },
+        {
+          "desc": "점 표시",
+          "expression": "140°가 되는 눈금에 점을 표시합니다."
+        },
+        {
+          "desc": "선 긋기",
+          "expression": "꼭짓점과 표시한 점을 이어 각을 완성합니다."
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 140° 눈금에 점을 찍어 선으로 연결합니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-016",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "straight_line_angle",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직선 위에서 130°의 각이 있을 때, ㉠의 각도를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 50
+      },
+      "steps": [
+        {
+          "desc": "직선의 각도",
+          "expression": "직선 = 180°"
+        },
+        {
+          "desc": "계산",
+          "expression": "㉠ = 180° − 130° = 50°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "직선이 이루는 각도는 180°이므로 ㉠ = 180° − 130° = 50°"
+    },
+    {
+      "id": "g4-s1-u2-angle-017",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "angle_calculation",
+      "skills": [
+        "angle_calculation",
+        "max_min"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "80°, 135°, 70° 중 가장 큰 각도와 가장 작은 각도의 차를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 65
+      },
+      "steps": [
+        {
+          "desc": "최대·최소",
+          "expression": "최대 135°, 최소 70°"
+        },
+        {
+          "desc": "차",
+          "expression": "135° − 70° = 65°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "가장 큰 135°에서 가장 작은 70°를 빼면 65°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-018",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "angle_classification",
+      "skills": [
+        "visual_angle_comparison"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "우리 주위에서 볼 수 있는 각 중 더 작은 각의 기호를 쓰세요.\n(가: 책의 모서리 직각, 나: 피자 조각의 뾰족한 각(예각))",
+      "answerType": "multiple_choice",
+      "choices": [
+        "가",
+        "나"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "가",
+          "expression": "책 모서리 = 직각(90°)"
+        },
+        {
+          "desc": "나",
+          "expression": "피자 조각 = 예각(90°보다 작음)"
+        },
+        {
+          "desc": "결론",
+          "expression": "나가 더 작은 각"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "예각(나)은 직각(가)보다 작은 각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-019",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "angle_division",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "60°를 크기가 같은 각 3개로 나눌 때, 각 ㄱㅇㄴ의 크기는 몇 도인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 20
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "60° ÷ 3 = 20°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "60°를 똑같이 3개로 나누면 각각 20°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-020",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "angle_classification",
+      "skills": [
+        "acute_obtuse_classification",
+        "counting"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음에서 예각은 모두 몇 개인가요?\n50°  10°  150°  20°  120°",
+      "answerType": "integer",
+      "answer": {
+        "value": 3
+      },
+      "steps": [
+        {
+          "desc": "예각 정의",
+          "expression": "0° < 예각 < 90°"
+        },
+        {
+          "desc": "분류",
+          "expression": "50°(예각), 10°(예각), 150°(둔각), 20°(예각), 120°(둔각)"
+        },
+        {
+          "desc": "개수",
+          "expression": "예각 3개: 50°, 10°, 20°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "예각은 0°보다 크고 90°보다 작은 각입니다. 50°, 10°, 20°가 예각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-021",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 그리기",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "angle_drawing",
+      "skills": [
+        "protractor_use",
+        "angle_drawing"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "자와 각도기를 이용하여 각도가 45°인 각을 그려 보세요.",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u2-angle-draw-45.png"
+      },
+      "steps": [
+        {
+          "desc": "각도기 중심 맞추기",
+          "expression": "각도기의 중심을 꼭짓점에 맞춥니다."
+        },
+        {
+          "desc": "밑금 맞추기",
+          "expression": "각도기의 밑금을 한 변에 맞춥니다."
+        },
+        {
+          "desc": "점 표시",
+          "expression": "45°가 되는 눈금에 점을 표시합니다."
+        },
+        {
+          "desc": "선 긋기",
+          "expression": "꼭짓점과 표시한 점을 이어 완성합니다."
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "각도기로 45° 눈금을 찾아 점을 찍고, 꼭짓점과 이어 각을 그립니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-022",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "angle_calculation",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "148°와 104°, 두 각도의 차를 구하세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "34°",
+        "44°",
+        "54°",
+        "104°",
+        "148°"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "148° − 104° = 44°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "두 각도의 차를 구할 때는 큰 각에서 작은 각을 뺍니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-023",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "quadrilateral_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "사각형에서 세 각이 100°, 70°, 70°일 때, A에 알맞은 각도를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 120
+      },
+      "steps": [
+        {
+          "desc": "사각형 네 각의 합",
+          "expression": "100° + 70° + 70° + A = 360°"
+        },
+        {
+          "desc": "계산",
+          "expression": "A = 360° − 240° = 120°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-024",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "angle_classification",
+      "skills": [
+        "angle_comparison_reasoning"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "삼각형의 각의 크기에 대한 설명 중 옳은 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "두 변이 벌어진 정도가 가장 큰 가의 각의 크기가 가장 큽니다.",
+        "각의 크기는 삼각형의 높이에 따라 결정됩니다.",
+        "변의 길이와 관계없이 각의 크기는 모두 같습니다."
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "각의 크기",
+          "expression": "각의 크기는 두 변이 벌어진 정도로 결정됩니다."
+        },
+        {
+          "desc": "오답 이유",
+          "expression": "변의 길이나 삼각형의 높이와는 무관합니다."
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "각의 크기는 두 변이 벌어진 정도에 의해 결정됩니다. 변의 길이나 삼각형의 높이와 관계없습니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-025",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "angle_division",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "60°를 크기가 같은 각 2개로 나눌 때, 각 ㄱㅇㄴ의 크기는 몇 도인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 30
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "60° ÷ 2 = 30°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "60°를 2등분하면 각각 30°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-026",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "angle_classification",
+      "skills": [
+        "visual_angle_comparison"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "우리 주위에서 볼 수 있는 각 중 더 작은 각의 기호를 쓰세요.\n(가: 책의 모서리 직각, 나: 피자 조각의 뾰족한 각(예각))",
+      "answerType": "multiple_choice",
+      "choices": [
+        "가",
+        "나"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "비교",
+          "expression": "가(직각 90°) > 나(예각) → 나가 더 작음"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "예각은 직각보다 작은 각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-027",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "angle_calculation",
+      "skills": [
+        "angle_calculation",
+        "max_min"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "10°, 90°, 85° 중 가장 큰 각도와 가장 작은 각도의 차를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 80
+      },
+      "steps": [
+        {
+          "desc": "최대·최소",
+          "expression": "최대 90°, 최소 10°"
+        },
+        {
+          "desc": "차",
+          "expression": "90° − 10° = 80°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "90°에서 10°를 빼면 80°입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-028",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각의 종류",
+      "type": "concept",
+      "difficulty": "challenge",
+      "concept": "angle_classification",
+      "skills": [
+        "acute_obtuse_classification",
+        "counting"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음에서 예각은 모두 몇 개인가요?\n150°  20°  100°  90°  30°",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "steps": [
+        {
+          "desc": "예각 = 0°~90° 미만",
+          "expression": "20°(예각), 30°(예각), 나머지는 둔각 또는 직각"
+        },
+        {
+          "desc": "개수",
+          "expression": "예각 2개"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "0°보다 크고 90°보다 작은 각이 예각입니다. 20°와 30°가 예각입니다."
+    },
+    {
+      "id": "g4-s1-u2-angle-029",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "삼각형의 각도",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "triangle_angle_sum",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "어떤 삼각형의 두 각의 크기는 각각 20°, 25°입니다. 이 삼각형의 나머지 한 각의 크기를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 135
+      },
+      "steps": [
+        {
+          "desc": "삼각형 세 각의 합",
+          "expression": "세 각의 합 = 180°"
+        },
+        {
+          "desc": "계산",
+          "expression": "나머지 각 = 180° − 20° − 25° = 135°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "삼각형의 세 각의 합은 180°입니다. 나머지 각 = 180° − 20° − 25° = 135°"
+    },
+    {
+      "id": "g4-s1-u2-angle-030",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "straight_line_angle",
+      "skills": [
+        "angle_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직선 위에 두 각이 90°와 50°가 있을 때, A에 알맞은 각도를 구하세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 40
+      },
+      "steps": [
+        {
+          "desc": "직선의 각도",
+          "expression": "180°"
+        },
+        {
+          "desc": "계산",
+          "expression": "A = 180° − 90° − 50° = 40°"
+        }
+      ],
+      "animationAsset": "angle",
+      "conceptExplanation": "한 직선 위의 각도 합은 180°이므로 A = 180° − 90° − 50° = 40°"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-001",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 문장제",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "division_word_problem",
+      "skills": [
+        "division"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "승헌이는 과자 60개를 친구들 10명에게 똑같이 나누어 주려고 합니다. 반 친구 한 명이 받을 수 있는 과자는 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 6
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "60 ÷ 10 = 6개"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "60개를 10명이 똑같이 나누면 60 ÷ 10 = 6개입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-002",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "글이 한 상자에 229개씩 들어 있습니다. 71상자에 들어 있는 글은 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 16259
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "229 × 71 = 16259개"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "한 상자에 229개씩 71상자이면 229 × 71 = 16259개입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-003",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "466 × 31의 값을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "14446",
+        "21490",
+        "27848",
+        "38446",
+        "60580"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "466 × 1",
+          "expression": "466 × 1 = 466"
+        },
+        {
+          "desc": "466 × 30",
+          "expression": "466 × 30 = 13980"
+        },
+        {
+          "desc": "합산",
+          "expression": "466 + 13980 = 14446"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "466 × 31 = 466 × 1 + 466 × 30 = 466 + 13980 = 14446"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-004",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈의 성질",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "multiplication_property",
+      "skills": [
+        "multiplication_fact"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "□에 알맞은 수를 구하세요.\n400 × □ = 4000",
+      "answerType": "multiple_choice",
+      "choices": [
+        "10",
+        "40",
+        "50",
+        "70",
+        "90"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "역산",
+          "expression": "4000 ÷ 400 = 10"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "400에는 0이 2개, 4000에는 0이 3개이므로 □=10입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-005",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "multiplication_comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "다음 두 식 중 곱이 더 큰 식의 기호를 쓰세요.\n㉠ 765 × 91       ㉡ 337 × 28",
+      "answerType": "multiple_choice",
+      "choices": [
+        "㉠",
+        "㉡"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "㉠",
+          "expression": "765 × 91 = 69615"
+        },
+        {
+          "desc": "㉡",
+          "expression": "337 × 28 = 9436"
+        },
+        {
+          "desc": "비교",
+          "expression": "69615 > 9436 → ㉠이 더 큼"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "765 × 91 = 69615, 337 × 28 = 9436이므로 ㉠이 더 큽니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-006",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈의 성질",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "division_property",
+      "skills": [
+        "division_fact"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 중 56 ÷ 8과 몫이 같은 것을 찾아 기호를 쓰세요.\n㉠ 560 ÷ 8     ㉡ 560 ÷ 80     ㉢ 56 ÷ 80",
+      "answerType": "multiple_choice",
+      "choices": [
+        "㉠",
+        "㉡",
+        "㉢"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "기준",
+          "expression": "56 ÷ 8 = 7"
+        },
+        {
+          "desc": "㉠",
+          "expression": "560 ÷ 8 = 70 (다름)"
+        },
+        {
+          "desc": "㉡",
+          "expression": "560 ÷ 80 = 7 (같음)"
+        },
+        {
+          "desc": "㉢",
+          "expression": "56 ÷ 80 = 0.7 (다름)"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "나눠지는 수와 나누는 수를 같은 수로 곱하거나 나누어도 몫은 같습니다. 56÷8 = 560÷80 = 7"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-007",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "multiplication_fact"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "곱이 다른 하나를 찾아 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "300 × 80",
+        "300 × 90",
+        "400 × 60",
+        "600 × 40",
+        "800 × 30"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "각 계산",
+          "expression": "① 24000  ② 27000  ③ 24000  ④ 24000  ⑤ 24000"
+        },
+        {
+          "desc": "결론",
+          "expression": "② 300 × 90 = 27000만 다름"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "300×80=24000, 300×90=27000(다름), 400×60=24000, 600×40=24000, 800×30=24000"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-008",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 문장제",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "division_word_problem",
+      "skills": [
+        "division_with_remainder"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "감자 400개를 한 상자에 48개씩 포장하려고 합니다. 몇 상자까지 포장할 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 8
+      },
+      "steps": [
+        {
+          "desc": "나눗셈",
+          "expression": "400 ÷ 48 = 8 ··· 16"
+        },
+        {
+          "desc": "결론",
+          "expression": "8상자까지 포장 가능 (나머지 16개)"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "400 ÷ 48 = 8 나머지 16. 나머지가 있으므로 8상자까지만 완전히 포장할 수 있습니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-009",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 비교",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "division_comparison",
+      "skills": [
+        "division",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "몫의 크기를 비교하여 >, =, < 중 알맞은 기호를 써넣으세요.\n745 ÷ 23     ○     952 ÷ 22",
+      "answerType": "symbol",
+      "answer": {
+        "symbol": "<"
+      },
+      "steps": [
+        {
+          "desc": "745 ÷ 23",
+          "expression": "745 ÷ 23 = 32 ··· 9"
+        },
+        {
+          "desc": "952 ÷ 22",
+          "expression": "952 ÷ 22 = 43 ··· 6"
+        },
+        {
+          "desc": "비교",
+          "expression": "32 < 43 → <"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "745÷23의 몫은 32, 952÷22의 몫은 43이므로 32 < 43입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-010",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "계산해 보세요.\n811 × 84",
+      "answerType": "integer",
+      "answer": {
+        "value": 68124
+      },
+      "steps": [
+        {
+          "desc": "811 × 4",
+          "expression": "811 × 4 = 3244"
+        },
+        {
+          "desc": "811 × 80",
+          "expression": "811 × 80 = 64880"
+        },
+        {
+          "desc": "합산",
+          "expression": "3244 + 64880 = 68124"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "811 × 84 = 811 × 4 + 811 × 80 = 3244 + 64880 = 68124"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-011",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈의 성질",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "division_property",
+      "skills": [
+        "division_fact"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 중 98 ÷ 2와 몫이 같은 것을 찾아 기호를 쓰세요.\n㉠ 980 ÷ 2     ㉡ 98 ÷ 20     ㉢ 980 ÷ 20",
+      "answerType": "multiple_choice",
+      "choices": [
+        "㉠",
+        "㉡",
+        "㉢"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "기준",
+          "expression": "98 ÷ 2 = 49"
+        },
+        {
+          "desc": "㉠",
+          "expression": "980 ÷ 2 = 490 (다름)"
+        },
+        {
+          "desc": "㉡",
+          "expression": "98 ÷ 20 = 4.9 (다름)"
+        },
+        {
+          "desc": "㉢",
+          "expression": "980 ÷ 20 = 49 (같음)"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "나눠지는 수와 나누는 수를 둘 다 10배 하면 몫이 같습니다. 98÷2 = 980÷20 = 49"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-012",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "두 자리 나눗셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "two_digit_division",
+      "skills": [
+        "division"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "빈 곳에 알맞은 수를 써넣으세요.\n630 ÷ 70 = □",
+      "answerType": "integer",
+      "answer": {
+        "value": 9
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "630 ÷ 70 = 9"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "630 ÷ 70 = 63 ÷ 7 = 9"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-013",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "three_digit_multiplication",
+        "digit_counting"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "다음 중 계산 결과가 네 자리 수인 것을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "836 × 25",
+        "356 × 21",
+        "452 × 81",
+        "160 × 64",
+        "957 × 48"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "각 계산",
+          "expression": "① 20900(5자리) ② 7476(4자리) ③ 36612 ④ 10240 ⑤ 45936"
+        },
+        {
+          "desc": "결론",
+          "expression": "② 356 × 21 = 7476만 네 자리 수"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "356 × 21 = 7476으로 유일하게 네 자리 수입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-014",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 비교",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "multiplication_comparison",
+      "skills": [
+        "multiplication_comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "곱의 크기를 비교하여 >, =, < 중 알맞은 기호를 써넣으세요.\n779 × 30     ○     818 × 30",
+      "answerType": "symbol",
+      "answer": {
+        "symbol": "<"
+      },
+      "steps": [
+        {
+          "desc": "779 × 30",
+          "expression": "= 23370"
+        },
+        {
+          "desc": "818 × 30",
+          "expression": "= 24540"
+        },
+        {
+          "desc": "비교",
+          "expression": "23370 < 24540 → <"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "곱하는 수(30)가 같을 때 곱해지는 수가 클수록 곱이 큽니다. 779 < 818이므로 <"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-015",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "두 자리 나눗셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "two_digit_division",
+      "skills": [
+        "division",
+        "ordering"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "몫이 큰 것부터 차례로 기호를 나열하세요.\n㉠ 356 ÷ 89     ㉡ 201 ÷ 67     ㉢ 504 ÷ 72",
+      "answerType": "multiple_choice",
+      "choices": [
+        "㉠, ㉡, ㉢",
+        "㉠, ㉢, ㉡",
+        "㉡, ㉠, ㉢",
+        "㉢, ㉠, ㉡",
+        "㉢, ㉡, ㉠"
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "steps": [
+        {
+          "desc": "각 몫",
+          "expression": "㉠ 356÷89=4, ㉡ 201÷67=3, ㉢ 504÷72=7"
+        },
+        {
+          "desc": "정렬",
+          "expression": "㉢(7) > ㉠(4) > ㉡(3)"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "각 나눗셈의 몫: ㉢=7, ㉠=4, ㉡=3. 큰 것부터 ㉢, ㉠, ㉡"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-016",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "reverse_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "어떤 수에 60을 곱해야 할 것을 잘못하여 30을 곱해 17460이 되었습니다. 올바르게 계산한 값을 고르세요.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "34920",
+        "35013",
+        "38576",
+        "38680",
+        "39257"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "어떤 수 구하기",
+          "expression": "17460 ÷ 30 = 582"
+        },
+        {
+          "desc": "올바른 계산",
+          "expression": "582 × 60 = 34920"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "잘못 계산한 식에서 역산으로 어떤 수를 구한 후(17460÷30=582), 올바른 계산을 합니다(582×60=34920)."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-017",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "error_detection"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "계산이 틀린 사람은 누구인가요?\n주희: 866 × 20 = 17320\n송선: 121 × 50 = 6050\n중수: 399 × 70 = 28340",
+      "answerType": "multiple_choice",
+      "choices": [
+        "주희",
+        "송선",
+        "중수"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "주희 검증",
+          "expression": "866 × 20 = 17320 ✓"
+        },
+        {
+          "desc": "송선 검증",
+          "expression": "121 × 50 = 6050 ✓"
+        },
+        {
+          "desc": "중수 검증",
+          "expression": "399 × 70 = 27930 ≠ 28340 ✗"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "399 × 70 = 399 × 7 × 10 = 2793 × 10 = 27930. 중수의 계산이 틀렸습니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-018",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "max_min",
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "다음 수 중 가장 큰 수와 가장 작은 수의 곱을 구해 보세요.\n153     73     188     88",
+      "answerType": "integer",
+      "answer": {
+        "value": 13724
+      },
+      "steps": [
+        {
+          "desc": "최대·최소",
+          "expression": "가장 큰 수: 188, 가장 작은 수: 73"
+        },
+        {
+          "desc": "계산",
+          "expression": "188 × 73 = 13724"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "188이 가장 크고 73이 가장 작습니다. 188 × 73 = 13724"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-019",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 문장제",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "division_word_problem",
+      "skills": [
+        "division_with_remainder"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "양계장에서 오늘 372개의 달걀을 생산했습니다. 달걀을 한 판에 60개씩 담으면 몇 판까지 담을 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 6
+      },
+      "steps": [
+        {
+          "desc": "나눗셈",
+          "expression": "372 ÷ 60 = 6 ··· 12"
+        },
+        {
+          "desc": "결론",
+          "expression": "6판까지 담을 수 있습니다."
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "372 ÷ 60 = 6 나머지 12. 나머지가 있으므로 6판까지만 완전히 담을 수 있습니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-020",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 문장제",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "division_word_problem",
+      "skills": [
+        "division_with_remainder",
+        "unit_conversion"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "길이가 9m인 색 테이프를 25cm씩 잘라 리본을 만들려고 합니다. 리본을 몇 개까지 만들 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 36
+      },
+      "steps": [
+        {
+          "desc": "단위 변환",
+          "expression": "9m = 900cm"
+        },
+        {
+          "desc": "계산",
+          "expression": "900 ÷ 25 = 36개"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "9m = 900cm, 900 ÷ 25 = 36. 25cm짜리 리본 36개를 만들 수 있습니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-021",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "청환이는 매일 320mL씩 2주 동안 우유를 마셨습니다. 청환이가 2주 동안 마신 우유는 모두 몇 mL인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "3870 mL",
+        "4180 mL",
+        "4480 mL",
+        "4530 mL",
+        "4900 mL"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "2주 = 며칠?",
+          "expression": "2주 = 14일"
+        },
+        {
+          "desc": "계산",
+          "expression": "320 × 14 = 4480 mL"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "2주는 14일이므로 320 × 14 = 4480 mL입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-022",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "세 자리 수의 곱셈",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "three_digit_multiplication",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "계산해 보세요.\n447 × 55",
+      "answerType": "integer",
+      "answer": {
+        "value": 24585
+      },
+      "steps": [
+        {
+          "desc": "447 × 5",
+          "expression": "447 × 5 = 2235"
+        },
+        {
+          "desc": "447 × 50",
+          "expression": "447 × 50 = 22350"
+        },
+        {
+          "desc": "합산",
+          "expression": "2235 + 22350 = 24585"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "447 × 55 = 447 × 5 + 447 × 50 = 2235 + 22350 = 24585"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-023",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "three_digit_multiplication",
+        "calendar"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "수정이는 매일 551mL의 미숫가루를 마십니다. 수정이가 3월과 11월에 마신 미숫가루의 양은 모두 몇 mL인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 33611
+      },
+      "steps": [
+        {
+          "desc": "날짜 계산",
+          "expression": "3월 31일 + 11월 30일 = 61일"
+        },
+        {
+          "desc": "계산",
+          "expression": "551 × 61 = 33611 mL"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "3월은 31일, 11월은 30일로 합 61일. 551 × 61 = 33611 mL"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-024",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 비교",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "multiplication_comparison",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "두 곱의 차를 구해 보세요.\n587 × 40      374 × 40",
+      "answerType": "integer",
+      "answer": {
+        "value": 8520
+      },
+      "steps": [
+        {
+          "desc": "587 × 40",
+          "expression": "= 23480"
+        },
+        {
+          "desc": "374 × 40",
+          "expression": "= 14960"
+        },
+        {
+          "desc": "차",
+          "expression": "23480 − 14960 = 8520"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "587×40=23480, 374×40=14960, 차=8520"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-025",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "정국이네 농장에서 딴 포도를 한 상자에 913개씩 28상자에 담아 포장하였습니다. 포장한 포도는 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 25564
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "913 × 28 = 25564개"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "913 × 28 = 25564개"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-026",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈 문장제",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "division_word_problem",
+      "skills": [
+        "division_with_remainder"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "양계장에서 오늘 979개의 달걀을 생산했습니다. 달걀을 한 판에 30개씩 담으면 몇 판까지 담을 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 32
+      },
+      "steps": [
+        {
+          "desc": "나눗셈",
+          "expression": "979 ÷ 30 = 32 ··· 19"
+        },
+        {
+          "desc": "결론",
+          "expression": "32판까지 담을 수 있습니다."
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "979 ÷ 30 = 32 나머지 19. 32판까지 담을 수 있습니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-027",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "두 자리 나눗셈",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "two_digit_division",
+      "skills": [
+        "division",
+        "estimation"
+      ],
+      "mistakeTypes": [
+        "calculation_error",
+        "concept_error"
+      ],
+      "question": "수진이는 144 ÷ 47의 몫을 2라고 어림했습니다. 실제로 계산했을 때의 몫과 수진이가 어림한 몫의 차는 얼마인지 구해 보세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 1
+      },
+      "steps": [
+        {
+          "desc": "실제 계산",
+          "expression": "144 ÷ 47 = 3 ··· 3"
+        },
+        {
+          "desc": "차",
+          "expression": "실제 몫 3 − 어림 몫 2 = 1"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "144 ÷ 47 = 3 나머지 3. 실제 몫은 3이고 어림한 몫은 2이므로 차는 1입니다."
+    },
+    {
+      "id": "g4-s1-u3-mul-div-028",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈의 활용",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "division_with_remainder",
+      "skills": [
+        "division_with_remainder",
+        "max_value"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "calculation_error"
+      ],
+      "question": "□ ÷ 25 = 5 ··· ● 일 때, □ 안에 들어갈 수 있는 가장 큰 수를 구해 보세요.",
+      "answerType": "integer",
+      "answer": {
+        "value": 149
+      },
+      "steps": [
+        {
+          "desc": "나머지 범위",
+          "expression": "나머지 ●는 0~24 가능"
+        },
+        {
+          "desc": "최대 나머지",
+          "expression": "● = 24일 때 □가 최대"
+        },
+        {
+          "desc": "계산",
+          "expression": "□ = 25 × 5 + 24 = 125 + 24 = 149"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "나머지는 나누는 수(25)보다 작아야 하므로 최대 24. □ = 25×5 + 24 = 149"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-029",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "곱셈 문장제",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "multiplication_word_problem",
+      "skills": [
+        "three_digit_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "상희네 반 친구들 28명이 버스를 한 번 타고 과학관에 갑니다. 10명은 현금을 내고 나머지는 교통카드를 이용했을 때, 교통카드를 이용한 학생들의 버스 요금은 모두 얼마인가요?\n(현금: 800원, 교통카드: 530원)",
+      "answerType": "multiple_choice",
+      "choices": [
+        "9270원",
+        "9280원",
+        "9540원",
+        "9720원",
+        "10010원"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "교통카드 인원",
+          "expression": "28 − 10 = 18명"
+        },
+        {
+          "desc": "요금 계산",
+          "expression": "530 × 18 = 9540원"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "교통카드 이용 학생: 28-10=18명. 530 × 18 = 9540원"
+    },
+    {
+      "id": "g4-s1-u3-mul-div-030",
+      "grade": 4,
+      "semester": 1,
+      "unit": "곱셈과 나눗셈",
+      "subUnit": "나눗셈의 활용",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "division_with_remainder",
+      "skills": [
+        "division_with_remainder",
+        "min_value"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "calculation_error"
+      ],
+      "question": "■ ÷ 93 = 8 ··· ● 일 때, ■가 될 수 있는 가장 작은 수를 구해 보세요. (단, ■는 자연수입니다.)",
+      "answerType": "integer",
+      "answer": {
+        "value": 744
+      },
+      "steps": [
+        {
+          "desc": "나머지 최솟값",
+          "expression": "나머지 ● = 0일 때 ■이 가장 작음"
+        },
+        {
+          "desc": "계산",
+          "expression": "■ = 93 × 8 + 0 = 744"
+        }
+      ],
+      "animationAsset": "multiplication",
+      "conceptExplanation": "나머지가 0일 때 ■이 가장 작습니다. 93 × 8 = 744"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-001",
+      "question": "오른쪽 모양을 밀기를 이용하여 만든 무늬를 찾아 기호를 쓰시오.\n(ㄱ: 돌리기 무늬, ㄴ: 뒤집기 무늬, ㄷ: 밀기 무늬)",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "ㄱ",
+        "ㄴ",
+        "ㄷ"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "밀기로 만든 무늬는 모양과 크기, 방향이 모두 같습니다. 돌리기·뒤집기와 달리 방향이 변하지 않는 것이 특징입니다.",
+      "steps": [
+        {
+          "desc": "각 무늬가 만들어진 방법 확인",
+          "expression": "ㄱ: 돌리기, ㄴ: 뒤집기, ㄷ: 밀기"
+        },
+        {
+          "desc": "밀기로 만든 무늬 선택",
+          "expression": "정답: ㄷ"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-002",
+      "question": "도형을 시계 반대 방향으로 270°만큼 돌렸을 때의 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-ccw270-basic.png"
+      },
+      "conceptExplanation": "시계 반대 방향으로 270°는 시계 방향으로 90°와 같습니다. 도형의 꼭짓점 위치를 하나씩 옮겨서 그려 보세요.",
+      "steps": [
+        {
+          "desc": "시계 반대 270° = 시계 방향 90°",
+          "expression": "↺270° = ↻90°"
+        },
+        {
+          "desc": "도형을 오른쪽으로 90° 회전하여 그리기",
+          "expression": "꼭짓점 좌표를 (x,y)→(y,−x)로 변환"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-002-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-003",
+      "question": "모양 조각을 오른쪽으로 밀었습니다. 알맞은 기호를 쓰시오.\n(ㄱ: 뒤집힌 삼각형, ㄴ: 같은 모양 삼각형)",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "ㄱ",
+        "ㄴ"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "밀기를 하면 도형의 모양과 방향이 변하지 않습니다. 오른쪽으로 밀어도 삼각형의 모양은 그대로입니다.",
+      "steps": [
+        {
+          "desc": "밀기의 성질 확인",
+          "expression": "밀기 → 모양·방향 불변"
+        },
+        {
+          "desc": "원래 모양과 같은 것 선택",
+          "expression": "정답: ㄴ"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-004",
+      "question": "도형을 왼쪽으로 뒤집었을 때의 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-flip-left-basic.png"
+      },
+      "conceptExplanation": "왼쪽(또는 오른쪽)으로 뒤집으면 도형이 세로축을 기준으로 좌우 대칭이 됩니다.",
+      "steps": [
+        {
+          "desc": "세로축 기준 좌우 대칭",
+          "expression": "왼쪽 뒤집기 → 좌우 대칭"
+        },
+        {
+          "desc": "각 꼭짓점을 좌우 반전하여 연결",
+          "expression": "x 좌표를 반전"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-004-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-005",
+      "question": "다음 중 돌리기를 이용하여 만든 무늬가 아닌 것은 어느 것입니까?\n①~⑤ 중에서 고르시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "돌리기 무늬는 한 모양을 중심점을 기준으로 회전시켜 반복합니다. ③은 밀기·뒤집기 규칙으로 만든 무늬입니다.",
+      "steps": [
+        {
+          "desc": "각 무늬의 규칙 확인",
+          "expression": "①②④⑤: 돌리기, ③: 다른 규칙"
+        },
+        {
+          "desc": "돌리기가 아닌 것 선택",
+          "expression": "정답: ③"
+        }
+      ],
+      "choiceImages": [
+        "/data/choice-images/u4-005-c1.png",
+        "/data/choice-images/u4-005-c2.png",
+        "/data/choice-images/u4-005-c3.png",
+        "/data/choice-images/u4-005-c4.png",
+        "/data/choice-images/u4-005-c5.png"
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-006",
+      "question": "도형을 시계 반대 방향으로 180°만큼 돌렸을 때의 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-ccw180-basic.png"
+      },
+      "conceptExplanation": "180°돌리기는 시계 방향이든 반대 방향이든 결과가 같습니다. 도형이 위아래·좌우 모두 뒤집힌 모양이 됩니다.",
+      "steps": [
+        {
+          "desc": "180° 회전 = 점대칭",
+          "expression": "↺180° = ↻180°"
+        },
+        {
+          "desc": "도형을 점대칭 이동하여 그리기",
+          "expression": "꼭짓점 (x,y) → (−x,−y)"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-006-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-007",
+      "question": "나 도형은 가 도형을 오른쪽으로 몇 cm 밀어서 이동한 도형입니까?",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 3
+      },
+      "conceptExplanation": "밀기는 도형을 일정한 방향으로 일정한 거리만큼 옮기는 것입니다. 격자 한 칸 = 1 cm로 계산합니다.",
+      "steps": [
+        {
+          "desc": "격자 칸 수 세기",
+          "expression": "가 도형 → 나 도형: 오른쪽으로 3칸"
+        },
+        {
+          "desc": "1칸 = 1 cm 적용",
+          "expression": "정답: 3 cm"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-008",
+      "question": "도형을 왼쪽으로 2번 밀었을 때의 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-slide-left-2-basic.png"
+      },
+      "conceptExplanation": "밀기를 여러 번 해도 도형의 모양과 크기는 변하지 않습니다. 방향도 바뀌지 않으므로 T자 모양 그대로 왼쪽으로 이동합니다.",
+      "steps": [
+        {
+          "desc": "1번 왼쪽으로 밀기",
+          "expression": "도형 왼쪽 이동"
+        },
+        {
+          "desc": "2번 왼쪽으로 밀기 = 같은 모양, 더 왼쪽",
+          "expression": "모양·방향 불변"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-008-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-009",
+      "question": "규칙에 따라 무늬를 만들었습니다. 빈칸을 채워 무늬를 완성하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-pattern-complete-basic.png"
+      },
+      "conceptExplanation": "오른쪽으로 뒤집기를 반복하고, 그 모양을 아래쪽으로 뒤집기를 반복하면 대칭 무늬가 만들어집니다.",
+      "steps": [
+        {
+          "desc": "무늬 규칙 파악",
+          "expression": "오른쪽 뒤집기 → 아래쪽 뒤집기 반복"
+        },
+        {
+          "desc": "빈칸 채우기",
+          "expression": "규칙에 따라 나머지 칸 완성"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-009-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-010",
+      "question": "어떤 도형을 시계 방향으로 90°만큼 돌린 도형이 주어져 있습니다. 처음 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-reverse-cw90-basic.png"
+      },
+      "conceptExplanation": "시계 방향으로 90° 돌린 것을 되돌리려면 시계 반대 방향으로 90° 돌리면 됩니다.",
+      "steps": [
+        {
+          "desc": "역연산: 시계 반대 방향으로 90°",
+          "expression": "↻90° 역연산 = ↺90°"
+        },
+        {
+          "desc": "주어진 도형을 반시계 90° 회전하여 처음 도형 그리기",
+          "expression": "꼭짓점 (x,y) → (−y,x)"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-010-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-011",
+      "question": "주어진 모양을 시계 방향으로 몇 도만큼 돌리는 것을 반복해서 무늬를 만들었습니까? (예: 90, 180, 270)",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 270
+      },
+      "conceptExplanation": "무늬를 보면 한 모양이 270°씩 회전되어 반복됩니다. 4번 돌리면 360°(원래 위치)가 됩니다.",
+      "steps": [
+        {
+          "desc": "무늬에서 반복 패턴 확인",
+          "expression": "모양이 4방향으로 배치 → 90°씩 또는 270°씩"
+        },
+        {
+          "desc": "회전 방향·각도 결정",
+          "expression": "정답: 270°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-012",
+      "question": "다음 중 돌리기를 이용하여 만든 무늬가 아닌 것은 어느 것입니까?\n①~⑤ 중에서 고르시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "①③④⑤의 무늬는 돌리기를 이용하여 만들었습니다. ②의 무늬는 뒤집기 규칙으로 만든 무늬입니다.",
+      "steps": [
+        {
+          "desc": "각 무늬의 규칙 확인",
+          "expression": "①③④⑤: 돌리기, ②: 뒤집기"
+        },
+        {
+          "desc": "돌리기가 아닌 것 선택",
+          "expression": "정답: ②"
+        }
+      ],
+      "choiceImages": [
+        "/data/choice-images/u4-012-c1.png",
+        "/data/choice-images/u4-012-c2.png",
+        "/data/choice-images/u4-012-c3.png",
+        "/data/choice-images/u4-012-c4.png",
+        "/data/choice-images/u4-012-c5.png"
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-013",
+      "question": "뒤집기에 대해 올바르게 말한 사람은 누구입니까?\n은진: '아래쪽으로 뒤집으면 위아래가 바뀐다'\n지민: '오른쪽으로 뒤집으면 위아래가 바뀐다'",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "은진",
+        "지민"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "아래쪽으로 뒤집으면 위아래(상하)가 바뀝니다. 오른쪽으로 뒤집으면 좌우가 바뀝니다.",
+      "steps": [
+        {
+          "desc": "뒤집기 방향별 결과 확인",
+          "expression": "위아래 뒤집기 → 상하 교환, 좌우 뒤집기 → 좌우 교환"
+        },
+        {
+          "desc": "올바른 설명 선택",
+          "expression": "은진의 말이 맞음 → 정답: 은진"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-014",
+      "question": "어떤 도형을 시계 반대 방향으로 270°만큼 돌렸더니 다음 도형이 되었습니다. 처음 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-reverse-ccw270-inter.png"
+      },
+      "conceptExplanation": "시계 반대 방향 270° 역연산 → 시계 방향으로 270°(또는 시계 반대 방향으로 90°) 회전하면 처음 도형을 구할 수 있습니다.",
+      "steps": [
+        {
+          "desc": "역연산 방향 결정",
+          "expression": "↺270° 역 = ↻270° = ↺90°"
+        },
+        {
+          "desc": "주어진 도형을 시계 방향 270° 회전",
+          "expression": "처음 도형 완성"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-014-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-015",
+      "question": "규칙에 따라 무늬를 만들었습니다. 빈칸을 채워 무늬를 완성하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-pattern-complete-inter.png"
+      },
+      "conceptExplanation": "모양을 오른쪽으로 뒤집기를 반복하여 행을 만들고, 그 행을 아래쪽으로 뒤집기를 반복하여 무늬를 완성합니다.",
+      "steps": [
+        {
+          "desc": "무늬 규칙 파악",
+          "expression": "오른쪽 뒤집기 + 아래쪽 뒤집기 반복"
+        },
+        {
+          "desc": "빈칸 채우기",
+          "expression": "규칙 적용"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-015-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-016",
+      "question": "도형을 시계 방향으로 360°만큼 돌리면 처음 도형과 어떻게 됩니까?\n가: 처음 도형과 같다  나: 처음 도형과 다르다",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "가 (처음과 같다)",
+        "나 (처음과 다르다)"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "360°는 한 바퀴 완전히 돌아 처음 위치로 되돌아옵니다. 따라서 처음 도형과 완전히 같습니다.",
+      "steps": [
+        {
+          "desc": "360° = 한 바퀴",
+          "expression": "360° 회전 → 원래 위치"
+        },
+        {
+          "desc": "처음 도형과 동일",
+          "expression": "정답: 가"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-017",
+      "question": "세 자리 수가 적힌 카드 891을 시계 방향으로 180°만큼 돌렸습니다.\n(처음 수) − (만들어지는 수)를 구하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 723
+      },
+      "conceptExplanation": "디지털 숫자는 180° 돌리면 다른 숫자가 됩니다. 8→8, 9→6, 1→1 → 891을 뒤집으면 168. 891−168=723.",
+      "steps": [
+        {
+          "desc": "891을 180° 회전",
+          "expression": "8→8, 9→6, 1→1 → 순서 역전 → 168"
+        },
+        {
+          "desc": "차 계산",
+          "expression": "891 − 168 = 723"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-018",
+      "question": "어떤 도형을 왼쪽으로 뒤집고 시계 방향으로 270°만큼 돌렸더니 다음 도형이 되었습니다. 처음 도형을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-reverse-flip-rot-inter.png"
+      },
+      "conceptExplanation": "역순으로 풀어야 합니다. 시계 방향 270° 역연산(반시계 270°) → 왼쪽 뒤집기 역연산(다시 왼쪽 뒤집기) 순으로 처음 도형을 구합니다.",
+      "steps": [
+        {
+          "desc": "역연산 순서 결정",
+          "expression": "↻270° 역 → 왼쪽 뒤집기 역"
+        },
+        {
+          "desc": "결과 도형에 역연산 적용",
+          "expression": "처음 도형 완성"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-018-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-019",
+      "question": "돌리기를 이용하여 아래와 같은 무늬를 만들 수 있는 모양을 모두 찾아 기호를 쓰시오.\n(ㄱ, ㄴ, ㄷ, ㄹ 중에서)",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "text",
+      "answer": {
+        "text": "ㄴ, ㄹ"
+      },
+      "conceptExplanation": "시계 방향으로 90°씩 돌리기를 반복했을 때 주어진 무늬가 만들어지는 모양은 ㄴ과 ㄹ입니다.",
+      "steps": [
+        {
+          "desc": "각 모양을 90°씩 돌려서 무늬 확인",
+          "expression": "ㄴ, ㄹ → 주어진 무늬 완성 가능"
+        },
+        {
+          "desc": "정답 기호 쓰기",
+          "expression": "ㄴ, ㄹ"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-020",
+      "question": "다음 중 돌리기를 이용하여 만든 무늬가 아닌 것을 고르시오.\n①~⑤ 중에서 고르시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "①②④⑤의 무늬는 돌리기를 이용하여 만들었습니다. ③의 무늬는 다른 규칙(뒤집기 등)으로 만든 무늬입니다.",
+      "steps": [
+        {
+          "desc": "각 무늬의 규칙 확인",
+          "expression": "①②④⑤: 돌리기 규칙"
+        },
+        {
+          "desc": "돌리기가 아닌 것 선택",
+          "expression": "정답: ③"
+        }
+      ],
+      "choiceImages": [
+        "/data/choice-images/u4-020-c1.png",
+        "/data/choice-images/u4-020-c2.png",
+        "/data/choice-images/u4-020-c3.png",
+        "/data/choice-images/u4-020-c4.png",
+        "/data/choice-images/u4-020-c5.png"
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-021",
+      "question": "규칙에 따라 무늬를 만들었습니다. 빈칸을 채워 무늬를 완성하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-pattern-complete-adv.png"
+      },
+      "conceptExplanation": "모양을 오른쪽으로 뒤집기를 반복하고, 아래쪽으로 뒤집기를 반복하여 전체 무늬를 완성합니다.",
+      "steps": [
+        {
+          "desc": "무늬 규칙 파악",
+          "expression": "오른쪽 뒤집기 + 아래쪽 뒤집기 반복"
+        },
+        {
+          "desc": "빈칸 완성",
+          "expression": "규칙 적용하여 나머지 칸 채우기"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-021-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-022",
+      "question": "어떤 도형을 아래쪽으로 뒤집고 시계 반대 방향으로 180°만큼 돌렸더니 다음 도형이 되었습니다.\n처음 도형과 돌리기 전 도형을 각각 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-two-step-reverse-adv.png"
+      },
+      "conceptExplanation": "역순 풀이: ①결과 도형을 시계 방향 180° 역회전 → 돌리기 전 도형. ②그것을 아래쪽 뒤집기 역연산 → 처음 도형.",
+      "steps": [
+        {
+          "desc": "역연산 1: ↺180° 역 = ↻180°",
+          "expression": "결과 → 돌리기 전 도형"
+        },
+        {
+          "desc": "역연산 2: 아래쪽 뒤집기 역 = 다시 아래쪽 뒤집기",
+          "expression": "돌리기 전 도형 → 처음 도형"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-022-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-023",
+      "question": "모눈종이 위의 말(♟)을 위쪽으로 2칸, 오른쪽으로 1칸 이동했을 때 위치에 있는 물건은 무엇입니까?",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "연필",
+        "지우개",
+        "자",
+        "클립",
+        "가위",
+        "공책"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "밀기(이동)는 방향과 칸 수에 따라 정확한 위치를 찾습니다. 위쪽 2칸, 오른쪽 1칸 이동하면 지우개 위치에 도달합니다.",
+      "steps": [
+        {
+          "desc": "현재 위치에서 위쪽 2칸 이동",
+          "expression": "말 위치 → 위로 2칸"
+        },
+        {
+          "desc": "오른쪽 1칸 이동 → 지우개",
+          "expression": "정답: 지우개"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-023-grid.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-024",
+      "question": "다음 도형 중 시계 반대 방향으로 180°만큼 돌렸을 때의 도형이 처음 도형과 같은 것을 모두 찾으시오.\n(ㄱ: 평행사변형, ㄴ: 십자 모양, ㄷ: 사다리꼴, ㄹ: L자 모양)",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "ㄱ, ㄴ",
+        "ㄱ, ㄷ",
+        "ㄱ, ㄹ",
+        "ㄴ, ㄷ",
+        "ㄴ, ㄹ"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "180° 돌렸을 때 처음과 같으려면 점대칭 도형이어야 합니다. 평행사변형(ㄱ)과 십자 모양(ㄴ)은 점대칭 도형입니다.",
+      "steps": [
+        {
+          "desc": "점대칭 도형 확인",
+          "expression": "ㄱ(평행사변형): 점대칭 ○, ㄴ(십자): 점대칭 ○"
+        },
+        {
+          "desc": "정답 선택",
+          "expression": "정답: ㄱ, ㄴ"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-024-shapes.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-025",
+      "question": "글자 '곰'이 글자 '문'이 되도록 움직이는 방법을 두 가지로 설명하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "[방법1] 곰을 아래쪽(위쪽)으로 뒤집고 오른쪽(왼쪽)으로 뒤집으면 문이 됩니다. [방법2] 곰을 시계 방향으로 180°(시계 반대 방향으로 180°)만큼 돌리면 문이 됩니다."
+      },
+      "conceptExplanation": "뒤집기 두 번(상하+좌우)은 180° 돌리기와 같은 결과입니다.",
+      "steps": [
+        {
+          "desc": "방법 1: 두 번 뒤집기",
+          "expression": "아래쪽 뒤집기 → 오른쪽 뒤집기"
+        },
+        {
+          "desc": "방법 2: 180° 돌리기",
+          "expression": "시계 방향 180° 회전"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-026",
+      "question": "세 자리 수가 적힌 카드 169를 시계 방향으로 180°만큼 돌렸을 때 만들어지는 수와 처음 수의 차를 구하시오.\n① 516  ② 519  ③ 522  ④ 524  ⑤ 527",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "516",
+        "519",
+        "522",
+        "524",
+        "527"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "디지털 숫자 180° 회전: 1→1, 6→9, 9→6 → 역순으로 읽으면 691. 691−169=522.",
+      "steps": [
+        {
+          "desc": "169를 180° 회전",
+          "expression": "1→1, 6→9, 9→6 → 역순 → 691"
+        },
+        {
+          "desc": "차 계산",
+          "expression": "691 − 169 = 522 → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-027",
+      "question": "조각 ㄱ을 시계 반대 방향으로 90°만큼 9번 돌렸더니 조각 ㄴ과 같은 모양이 되었습니다. 처음 조각 ㄱ을 그려 보시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u4-9times-ccw90-adv.png"
+      },
+      "conceptExplanation": "시계 반대 방향 90° × 9번 = 810° = 720° + 90° = 시계 반대 방향 90°. 따라서 조각 ㄴ을 시계 방향으로 90° 돌리면 처음 조각 ㄱ이 됩니다.",
+      "steps": [
+        {
+          "desc": "총 회전각 계산",
+          "expression": "90° × 9 = 810° = 720° + 90° → 실제 ↺90°"
+        },
+        {
+          "desc": "역연산: ↻90°로 처음 도형 찾기",
+          "expression": "조각 ㄴ을 시계 방향 90° 회전 → 조각 ㄱ"
+        }
+      ],
+      "questionImage": "/data/answer-images/u4-027-qi.png"
+    },
+    {
+      "id": "g4-s1-u4-shape-move-028",
+      "question": "돌리기를 이용하여 규칙적인 무늬를 만든 사람은 누구입니까?\n민석: 모양을 오른쪽으로 뒤집기를 반복한 무늬\n서준: 모양을 시계 방향으로 90°씩 돌려서 반복한 무늬",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "서준"
+      },
+      "conceptExplanation": "민석의 무늬는 뒤집기를 이용한 무늬이고, 서준의 무늬는 돌리기(90°씩 회전)를 이용한 무늬입니다.",
+      "steps": [
+        {
+          "desc": "민석: 뒤집기 반복 → 돌리기 아님",
+          "expression": "민석의 무늬 = 뒤집기"
+        },
+        {
+          "desc": "서준: 90° 돌리기 반복 → 돌리기 맞음",
+          "expression": "정답: 서준"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-029",
+      "question": "다음 알파벳 중 아래쪽으로 뒤집고 시계 방향으로 180°만큼 돌렸을 때의 모양이 처음과 같은 알파벳을 모두 찾아 쓰시오.\nQ, X, J, W",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "W, X"
+      },
+      "conceptExplanation": "아래쪽 뒤집기 + 시계 방향 180° = 좌우 뒤집기와 같습니다. 좌우 대칭인 알파벳 W, X는 처음과 같은 모양이 됩니다.",
+      "steps": [
+        {
+          "desc": "아래쪽 뒤집기 + 180° = 좌우 뒤집기",
+          "expression": "상하 반전 + 180° = 좌우 반전"
+        },
+        {
+          "desc": "좌우 대칭 알파벳 찾기",
+          "expression": "W: ○, X: ○, Q: ✗, J: ✗ → 정답: W, X"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u4-shape-move-030",
+      "question": "오른쪽 무늬는 왼쪽 두 가지 모양을 어떻게 움직여서 만든 것인지 설명하시오.",
+      "concept": "plane-shape-movement",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "주어진 두 모양을 번갈아가며 오른쪽으로 밀어서 첫줄을 만들고, 그 모양을 아래쪽으로 뒤집어서 무늬를 만들었습니다."
+      },
+      "conceptExplanation": "밀기와 뒤집기를 조합하면 다양한 무늬를 만들 수 있습니다. 이 무늬는 두 도형을 교대로 배치(밀기) 후 아래쪽으로 뒤집어 반복한 것입니다.",
+      "steps": [
+        {
+          "desc": "첫 행 만들기",
+          "expression": "두 모양 번갈아 오른쪽으로 밀기"
+        },
+        {
+          "desc": "다음 행 만들기",
+          "expression": "첫 행을 아래쪽으로 뒤집어 반복"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-001",
+      "question": "선영이네 반 학생들이 좋아하는 운동을 조사했습니다.\n피구 9명, 럭비 4명, 야구 6명, 윔볼 9명\n전체 학생은 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 28
+      },
+      "conceptExplanation": "막대그래프에서 각 항목의 수를 모두 더하면 전체 수를 구할 수 있습니다.",
+      "steps": [
+        {
+          "desc": "각 운동별 학생 수 더하기",
+          "expression": "9 + 4 + 6 + 9 = 28"
+        },
+        {
+          "desc": "전체 학생 수",
+          "expression": "28명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-002",
+      "question": "재활용 쓰레기 막대그래프에서 세로 눈금 5칸이 15 kg를 나타냅니다.\n세로 눈금 한 칸은 몇 kg입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 3
+      },
+      "conceptExplanation": "눈금 한 칸의 값 = 전체 값 ÷ 칸 수. 5칸 = 15 kg이면 1칸 = 3 kg입니다.",
+      "steps": [
+        {
+          "desc": "눈금 한 칸의 값 계산",
+          "expression": "15 ÷ 5 = 3"
+        },
+        {
+          "desc": "한 칸 = 3 kg",
+          "expression": "3 kg"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-003",
+      "question": "재활용 쓰레기 그래프에서 눈금 한 칸이 3 kg이고,\n투명 패트병 막대는 9칸입니다.\n일주일 동안 버린 투명 패트병은 몇 kg입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1 kg",
+        "3 kg",
+        "12 kg",
+        "14 kg",
+        "27 kg"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "conceptExplanation": "막대그래프에서 항목의 값 = 눈금 한 칸의 값 × 막대의 칸 수.",
+      "steps": [
+        {
+          "desc": "투명 패트병 무게 계산",
+          "expression": "3 × 9 = 27"
+        },
+        {
+          "desc": "정답",
+          "expression": "27 kg → ⑤"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-004",
+      "question": "시우네 반 학생들이 좋아하는 계절 조사 결과입니다.\n봄 6명, 여름 5명, 가을 5명, 겨울 9명\n겨울을 좋아하는 학생과 여름을 좋아하는 학생의 차는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 4
+      },
+      "conceptExplanation": "두 항목의 차이를 구하려면 큰 수에서 작은 수를 뺍니다.",
+      "steps": [
+        {
+          "desc": "겨울 − 여름",
+          "expression": "9 − 5 = 4"
+        },
+        {
+          "desc": "차이",
+          "expression": "4명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-005",
+      "question": "상희네 반 학생들이 좋아하는 운동 막대그래프에서\n세로 눈금 5칸이 5명을 나타냅니다.\n세로 눈금 한 칸은 몇 명을 나타냅니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1명",
+        "5명",
+        "6명",
+        "7명",
+        "8명"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "눈금 한 칸의 값 = 5 ÷ 5 = 1. 세로 눈금 한 칸은 1명을 나타냅니다.",
+      "steps": [
+        {
+          "desc": "눈금 한 칸 값",
+          "expression": "5 ÷ 5 = 1"
+        },
+        {
+          "desc": "한 칸 = 1명",
+          "expression": "① 1명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-006",
+      "question": "연도별 학생 수 막대그래프에서 세로 눈금 한 칸이 100명입니다.\n2021년 막대가 11칸, 2023년 막대가 9칸이라면\n두 연도의 학생 수의 차는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 200
+      },
+      "conceptExplanation": "2021년: 100×11=1100명, 2023년: 100×9=900명. 차 = 1100−900 = 200명.",
+      "steps": [
+        {
+          "desc": "각 연도 학생 수",
+          "expression": "2021년: 100×11=1100, 2023년: 100×9=900"
+        },
+        {
+          "desc": "차 계산",
+          "expression": "1100 − 900 = 200명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-007",
+      "question": "일주일 동안 가게별 팔린 스쿠터 수입니다.\nA가게 18대, B가게 16대, C가게 20대, D가게 12대\n스쿠터를 가장 많이 판매한 가게는 어디입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "A가게",
+        "B가게",
+        "C가게",
+        "D가게"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "막대그래프에서 막대가 가장 긴 항목이 가장 큰 값입니다. C가게(20대)가 가장 많습니다.",
+      "steps": [
+        {
+          "desc": "각 가게 수량 비교",
+          "expression": "A:18, B:16, C:20, D:12"
+        },
+        {
+          "desc": "최대값",
+          "expression": "C가게 20대 → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-008",
+      "question": "일주일 동안 가게별 팔린 마술 키트 수입니다.\nA가게 18개, B가게 20개, C가게 24개, D가게 16개\nB가게와 C가게의 판매량의 합은 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 44
+      },
+      "conceptExplanation": "두 항목의 합을 구하려면 각 항목의 값을 더합니다.",
+      "steps": [
+        {
+          "desc": "B + C 계산",
+          "expression": "20 + 24 = 44"
+        },
+        {
+          "desc": "합계",
+          "expression": "44개"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-009",
+      "question": "빵 수를 비교한 막대그래프에서 가로 눈금 9칸이 9명을 나타냅니다.\n지연이가 가진 빵은 6개, 도움이가 가진 빵은 7개입니다.\n두 사람이 가진 빵 수의 차는 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1개",
+        "2개",
+        "3개",
+        "4개",
+        "9개"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "7 − 6 = 1. 두 사람이 가진 빵 수의 차는 1개입니다.",
+      "steps": [
+        {
+          "desc": "차이 계산",
+          "expression": "7 − 6 = 1"
+        },
+        {
+          "desc": "정답",
+          "expression": "1개 → ①"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-010",
+      "question": "영은이의 간식 상자를 세어 보았습니다.\n빵 3개, 과자 5개, 아이스크림 2개, 머핀 8개\n간식 상자에 있는 간식의 합계는 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 18
+      },
+      "conceptExplanation": "모든 항목을 더하면 전체 합계가 됩니다.",
+      "steps": [
+        {
+          "desc": "합계 계산",
+          "expression": "3 + 5 + 2 + 8 = 18"
+        },
+        {
+          "desc": "전체 간식 수",
+          "expression": "18개"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-011",
+      "question": "연도별 학생 수 막대그래프에서 세로 눈금 한 칸이 100명입니다.\n2021년 막대가 9칸, 2024년 막대가 6칸이라면\n두 연도의 학생 수는 각각 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          900,
+          600
+        ],
+        "labels": [
+          "2021년(명)",
+          "2024년(명)"
+        ]
+      },
+      "conceptExplanation": "학생 수 = 눈금 한 칸의 값 × 막대의 칸 수. 2021: 100×9=900, 2024: 100×6=600.",
+      "steps": [
+        {
+          "desc": "2021년 학생 수",
+          "expression": "100 × 9 = 900명"
+        },
+        {
+          "desc": "2024년 학생 수",
+          "expression": "100 × 6 = 600명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-012",
+      "question": "주차장 자동차 수 막대그래프에 대한 설명으로 잘못된 것은 어느 것입니까?\n(데이터: 승용차 10대, 트럭 6대, 버스 8대, 가로 눈금 한 칸 = 2대)\n① 각 막대의 길이는 종류별 자동차 수를 나타냅니다.\n② 가장 적게 있는 자동차는 트럭입니다.\n③ 가로 눈금 한 칸은 3대를 나타냅니다.\n④ 주차장에 버스가 8대 있습니다.\n⑤ 주차장에 트럭이 6대 있습니다.",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "가로 눈금 한 칸은 실제로 2대를 나타냅니다. '3대'라고 설명한 ③이 잘못된 설명입니다.",
+      "steps": [
+        {
+          "desc": "각 설명 검토",
+          "expression": "①②④⑤: 맞음, ③: 한 칸 = 2대인데 3대라고 했으므로 틀림"
+        },
+        {
+          "desc": "잘못된 설명",
+          "expression": "③ → 정답"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-013",
+      "question": "진아네 학교 4학년 학생들이 가고 싶은 나라 조사 결과입니다.\n스페인 80명, 프랑스 90명, 스웨덴 ?, 미국 ?, 전체 340명\n스웨덴과 미국 학생 수의 합은 몇 명이고, 스웨덴이 70명이면 미국은 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          170,
+          100
+        ],
+        "labels": [
+          "스웨덴+미국 합(명)",
+          "미국(명)"
+        ]
+      },
+      "conceptExplanation": "전체에서 알고 있는 값을 빼면 나머지를 구할 수 있습니다. 340−80−90=170, 170−70=100.",
+      "steps": [
+        {
+          "desc": "스웨덴 + 미국",
+          "expression": "340 − 80 − 90 = 170명"
+        },
+        {
+          "desc": "미국",
+          "expression": "170 − 70 = 100명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-014",
+      "question": "민수와 친구들이 가진 빵 수 그래프에서\n민수는 18개, 다정이는 30개를 가지고 있습니다.\n두 사람이 가진 빵 수의 차는 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "11개",
+        "12개",
+        "22개",
+        "23개",
+        "30개"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "두 막대의 차이 = 큰 값 − 작은 값 = 30 − 18 = 12.",
+      "steps": [
+        {
+          "desc": "차이 계산",
+          "expression": "30 − 18 = 12"
+        },
+        {
+          "desc": "정답",
+          "expression": "12개 → ②"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-015",
+      "question": "지현이네 반 전체 학생은 55명입니다.\n좋아하는 체육 활동 조사: 럭비 8명, 피구 10명, 윔볼 5명, 배드민턴 7명\n축구를 좋아하는 학생은 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "2명",
+        "10명",
+        "25명",
+        "43명",
+        "53명"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "축구 = 전체 − (럭비+피구+윔볼+배드민턴) = 55−(8+10+5+7) = 55−30 = 25명.",
+      "steps": [
+        {
+          "desc": "나머지 합계",
+          "expression": "8 + 10 + 5 + 7 = 30"
+        },
+        {
+          "desc": "축구 학생 수",
+          "expression": "55 − 30 = 25명 → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-016",
+      "question": "가 가게와 나 가게의 과일 1월 판매량입니다.\n가 가게: 코코넛 3, 귤 18, 오렌지 25\n나 가게: 코코넛 5, 귤 15, 오렌지 6\n두 가게 모두에서 판매량이 가장 많은 과일은 어느 것입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "코코넛",
+        "귤",
+        "오렌지"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "각 과일의 두 가게 합계: 코코넛 8, 귤 33, 오렌지 31. 가장 많이 팔린 것은 귤이지만, 두 가게 중 어디서도 가장 큰 막대는 오렌지(가 가게 25)입니다.",
+      "steps": [
+        {
+          "desc": "각 가게에서 가장 많이 팔린 과일",
+          "expression": "가 가게: 오렌지(25), 나 가게: 귤(15)"
+        },
+        {
+          "desc": "두 가게 막대 길이가 가장 긴 과일",
+          "expression": "오렌지 → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-017",
+      "question": "혜수네 반 혈액형 조사 결과입니다.\nA형 7명, B형 ?, O형 ?, AB형 10명, 전체 26명\nB형과 O형의 학생 수의 합은 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 9
+      },
+      "conceptExplanation": "B형+O형 = 전체 − A형 − AB형 = 26 − 7 − 10 = 9명.",
+      "steps": [
+        {
+          "desc": "B형 + O형 계산",
+          "expression": "26 − 7 − 10 = 9"
+        },
+        {
+          "desc": "합계",
+          "expression": "9명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-018",
+      "question": "혜수네 반 혈액형 조사에서 B형은 O형보다 1명 적고, B형+O형=9명입니다.\nB형과 O형은 각각 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          4,
+          5
+        ],
+        "labels": [
+          "B형(명)",
+          "O형(명)"
+        ]
+      },
+      "conceptExplanation": "B+O=9, O=B+1 → B+(B+1)=9 → 2B=8 → B=4, O=5.",
+      "steps": [
+        {
+          "desc": "연립 조건",
+          "expression": "B + O = 9, O = B + 1"
+        },
+        {
+          "desc": "풀이",
+          "expression": "B = 4, O = 5"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-019",
+      "question": "혜수네 반 학생들이 좋아하는 취미를 조사했습니다.\n게임 9명, 수영 7명, 조각 5명, 낚시 3명\n전체 학생 수는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 24
+      },
+      "conceptExplanation": "전체 = 9 + 7 + 5 + 3 = 24명.",
+      "steps": [
+        {
+          "desc": "합계",
+          "expression": "9 + 7 + 5 + 3 = 24"
+        },
+        {
+          "desc": "전체 학생 수",
+          "expression": "24명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-020",
+      "question": "가로 막대그래프에서 항목(취미 이름)은 세로축에, 학생 수는 가로축에 나타냅니다.\n가로 눈금이 나타내는 것은 무엇입니까?",
+      "concept": "bar-graph",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "학생 수",
+        "취미 종류",
+        "조사한 날짜",
+        "학교 이름"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "가로 막대그래프에서 가로축(눈금)은 수량(학생 수)을 나타내고, 세로축은 항목(취미 이름)을 나타냅니다.",
+      "steps": [
+        {
+          "desc": "가로 막대그래프 구조",
+          "expression": "세로축 = 항목, 가로축 = 수량"
+        },
+        {
+          "desc": "정답",
+          "expression": "학생 수 → ①"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-021",
+      "question": "주혁이와 진아가 가진 사탕 수를 조사했습니다.\n주혁 5개, 진아 50개\n두 사람이 가진 사탕 수의 차는 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "7개",
+        "17개",
+        "23개",
+        "27개",
+        "45개"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "conceptExplanation": "50 − 5 = 45. 두 사람이 가진 사탕 수의 차는 45개입니다.",
+      "steps": [
+        {
+          "desc": "차이 계산",
+          "expression": "50 − 5 = 45"
+        },
+        {
+          "desc": "정답",
+          "expression": "45개 → ⑤"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-022",
+      "question": "다흔이네 학교 4학년 학생들이 가고 싶은 나라 조사입니다.\n이집트 80명, 벨기에 70명, 베트남 100명, 스페인 90명, 전체 340명\n벨기에와 베트남의 학생 수 차이는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 30
+      },
+      "conceptExplanation": "베트남(100) − 벨기에(70) = 30명.",
+      "steps": [
+        {
+          "desc": "차이 계산",
+          "expression": "100 − 70 = 30"
+        },
+        {
+          "desc": "정답",
+          "expression": "30명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-023",
+      "question": "나경이네 반 학생들이 좋아하는 취미를 조사했습니다.\n바둑 7명, 게임 10명, 운동 2명, 체스 5명\n전체 학생 수는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 24
+      },
+      "conceptExplanation": "7 + 10 + 2 + 5 = 24명.",
+      "steps": [
+        {
+          "desc": "합계",
+          "expression": "7 + 10 + 2 + 5 = 24"
+        },
+        {
+          "desc": "전체 학생 수",
+          "expression": "24명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-024",
+      "question": "헤빈이의 이야기를 보고 막대그래프를 완성하려 합니다.\n혜빈 14초, 형근 12초, 영지 8초, 현진 10초\n가장 빠른 사람(기록이 가장 낮은 사람)은 누구입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "혜빈",
+        "형근",
+        "영지",
+        "현진"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "50m 달리기는 기록(초)이 낮을수록 빠릅니다. 영지의 기록이 8초로 가장 낮아 가장 빠릅니다.",
+      "steps": [
+        {
+          "desc": "기록 비교",
+          "expression": "혜빈14 > 형근12 > 현진10 > 영지8"
+        },
+        {
+          "desc": "가장 빠른 사람",
+          "expression": "영지 → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-025",
+      "question": "막대그래프에 대한 설명으로 옳지 않은 것은 어느 것입니까?\n(가로 막대그래프, 세로: 항목, 가로: 학생 수)\n① 가장 높은 막대가 가장 많은 수입니다.\n② 막대의 길이로 항목을 비교할 수 있습니다.\n③ 가로는 항목 이름을 나타냅니다.\n④ 눈금 한 칸의 크기가 클수록 전체 범위가 넓습니다.\n⑤ 막대가 길수록 수가 많습니다.",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①",
+        "②",
+        "③",
+        "④",
+        "⑤"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "가로 막대그래프에서 가로축은 수량(학생 수)을 나타내고, 항목 이름은 세로축에 표시됩니다. ③이 잘못된 설명입니다.",
+      "steps": [
+        {
+          "desc": "가로 막대그래프 구조 확인",
+          "expression": "가로축 = 수량, 세로축 = 항목"
+        },
+        {
+          "desc": "잘못된 설명",
+          "expression": "③ 가로는 항목 이름 → 틀림 (수량이 맞음)"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-026",
+      "question": "혈액형 조사 결과입니다.\nA형 ?, B형 10명, O형 8명, AB형 ?, 전체 26명\nA형과 AB형의 학생 수를 구하시오. (A형 < AB형, AB형 = A형 × 3)",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          2,
+          6
+        ],
+        "labels": [
+          "A형(명)",
+          "AB형(명)"
+        ]
+      },
+      "conceptExplanation": "A형+AB형 = 26−10−8 = 8, AB형 = A형×3 → A형+3×A형=8 → 4×A형=8 → A형=2, AB형=6.",
+      "steps": [
+        {
+          "desc": "A형 + AB형",
+          "expression": "26 − 10 − 8 = 8"
+        },
+        {
+          "desc": "AB형 = A형×3 → 4×A형 = 8",
+          "expression": "A형=2, AB형=6"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-027",
+      "question": "학교 행사에 오신 아버지와 어머니 수를 반별로 조사했습니다.\n1반: 아버지13, 어머니5 / 2반: 아버지11, 어머니8 / 3반: 아버지11, 어머니9 / 4반: 아버지13, 어머니7 / 5반: 아버지14, 어머니5\n아버지와 어머니 수의 차가 가장 큰 반은?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1반",
+        "2반",
+        "3반",
+        "4반",
+        "5반"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "conceptExplanation": "각 반의 차: 1반8, 2반3, 3반2, 4반6, 5반9. 가장 큰 차는 5반(9명)입니다.",
+      "steps": [
+        {
+          "desc": "각 반의 차 계산",
+          "expression": "1반:8, 2반:3, 3반:2, 4반:6, 5반:9"
+        },
+        {
+          "desc": "가장 큰 차",
+          "expression": "5반(9명) → ⑤"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-028",
+      "question": "학교까지 가는 방법별 시간과 비용을 조사했습니다.\n택시: 시간 5분, 비용 4000원\n지하철: 시간 15분, 비용 1500원\n버스: 시간 20분, 비용 1200원\n시간이 가장 적게 걸리는 방법과 비용이 가장 적게 드는 방법을 순서대로 쓰시오.",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "택시, 버스"
+      },
+      "conceptExplanation": "시간이 가장 적게 걸리는 것: 택시(5분). 비용이 가장 적게 드는 것: 버스(1200원).",
+      "steps": [
+        {
+          "desc": "시간 최소",
+          "expression": "택시 5분 → 가장 빠름"
+        },
+        {
+          "desc": "비용 최소",
+          "expression": "버스 1200원 → 가장 저렴"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-029",
+      "question": "예준이네 반 학생들이 좋아하는 과목 조사 결과입니다.\n미술 4명, 체육 12명, 과학 8명, 국어 6명\n전체 학생 수는 몇 명입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 30
+      },
+      "conceptExplanation": "4 + 12 + 8 + 6 = 30명.",
+      "steps": [
+        {
+          "desc": "합계",
+          "expression": "4 + 12 + 8 + 6 = 30"
+        },
+        {
+          "desc": "전체 학생 수",
+          "expression": "30명"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u5-bar-graph-030",
+      "question": "자두 한 개의 무게는 5 kg입니다.\n막대그래프에서 세로 눈금 한 칸이 10 kg이고, 자두 막대는 10칸입니다.\n수확한 자두는 모두 몇 개입니까?",
+      "concept": "bar-graph",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 20
+      },
+      "conceptExplanation": "자두 총 무게 = 10×10 = 100 kg. 개수 = 100 ÷ 5 = 20개.",
+      "steps": [
+        {
+          "desc": "자두 총 무게",
+          "expression": "10 × 10 = 100 kg"
+        },
+        {
+          "desc": "자두 개수",
+          "expression": "100 ÷ 5 = 20개"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-001",
+      "question": "나눗셈식에서 규칙을 찾아보세요.\n230÷10=23, 410÷10=41, 590÷10=59, 770÷10=77\n나누어지는 수가 180씩 커지고 나누는 수가 10으로 일정하면 몫은 □씩 커집니다. □에 알맞은 수는?",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "14",
+        "15",
+        "17",
+        "18",
+        "24"
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "conceptExplanation": "나누는 수가 같을 때, 나누어지는 수가 일정하게 커지면 몫도 일정하게 커집니다. 180 ÷ 10 = 18이므로 몫은 18씩 커집니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "나누어지는 수 +180, 나누는 수 10 고정 → 몫 +?"
+        },
+        {
+          "desc": "계산",
+          "expression": "180 ÷ 10 = 18 → ④"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-002",
+      "question": "뺄셈식에서 규칙을 찾아보세요.\n813-404=409, 833-424=409, 853-444=409, 873-464=409\n십의 자리 수가 각각 □씩 커지는 두 수의 차는 409로 일정합니다. □에 알맞은 수는?",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "7",
+        "8"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "두 수가 같은 양(2)씩 커지면 두 수의 차는 변하지 않습니다. 813→833→853: 십의 자리 +2씩, 404→424→444: 십의 자리 +2씩.",
+      "steps": [
+        {
+          "desc": "십의 자리 변화 확인",
+          "expression": "813→833: +20, 404→424: +20 → 십의 자리 2씩 증가"
+        },
+        {
+          "desc": "□=2",
+          "expression": "② 2"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-003",
+      "question": "수 배열의 규칙에 따라 빈칸에 알맞은 수를 써넣으세요.\n4084 → 4184 → 4284 → 4384 → □",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "4414",
+        "4484",
+        "4514",
+        "4544",
+        "4564"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "conceptExplanation": "4084부터 100씩 커지므로 빈칸에 알맞은 수는 4484입니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "4084, 4184, 4284, 4384 → +100씩"
+        },
+        {
+          "desc": "다음 수",
+          "expression": "4384 + 100 = 4484 → ②"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-004",
+      "question": "덧셈식에서 규칙을 찾아보세요.\n106+138=244, 206+238=444, 306+338=644, 406+438=844\n백의 자리 수가 각각 1씩 커지는 두 수의 합은 □씩 커집니다. □에 알맞은 수는?",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "110",
+        "180",
+        "200",
+        "260",
+        "280"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "두 수의 백의 자리가 각각 1씩 커지면, 합은 100+100=200씩 커집니다.",
+      "steps": [
+        {
+          "desc": "합의 변화 확인",
+          "expression": "244→444→644→844: +200씩"
+        },
+        {
+          "desc": "□=200",
+          "expression": "③ 200"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-005",
+      "question": "계산식에서 규칙을 찾아 987654321 × 9의 값을 구하시오.\n9×9=81, 98×9=882, 987×9=8883, 9876×9=88884",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "888885",
+        "8888886",
+        "88888887",
+        "888888888",
+        "8888888889"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "conceptExplanation": "9, 98, 987… 처럼 자릿수가 하나씩 늘어나는 수에 9를 곱하면 결과의 일의 자리 수가 1씩 커지면서 8이 1개씩 늘어납니다. 987654321(9자리) × 9 = 8888888889.",
+      "steps": [
+        {
+          "desc": "자릿수 패턴 확인",
+          "expression": "9×9=81(2자리), 98×9=882(3자리)… 9자리×9=10자리"
+        },
+        {
+          "desc": "결과",
+          "expression": "8888888889 → ⑤"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-006",
+      "question": "삼각형 도형을 쌓아 무늬를 만들었습니다.\n첫째에 노란색 모양이 5개 있고, 다음에는 7개, 9개로 늘어납니다.\n노란색 모양은 몇 개씩 늘어나고 있습니까?",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "conceptExplanation": "5, 7, 9… 2씩 커지는 수열입니다. 노란색 모양은 2개씩 늘어납니다.",
+      "steps": [
+        {
+          "desc": "변화량 계산",
+          "expression": "7-5=2, 9-7=2"
+        },
+        {
+          "desc": "2개씩 늘어남",
+          "expression": "답: 2"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-007",
+      "question": "다음 표는 곱셈을 이용한 수 배열표입니다. 각 칸은 두 수의 곱의 일의 자리 숫자를 나타냅니다.\n\n×  | 59 | 60 | 61 | 62\n11 |  9 | ☆  |  1 |  2\n12 |  8 |  0 |  2 |  4\n13 | ♡  |  0 |  3 |  6\n14 |  6 |  0 |  4 |  8\n\n☆와 ♡에 알맞은 수를 구하시오.",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          0,
+          7
+        ],
+        "labels": [
+          "☆",
+          "♡"
+        ]
+      },
+      "conceptExplanation": "곱의 일의 자리 숫자: 11×60=660(일의 자리 0), 13×59=767(일의 자리 7).",
+      "steps": [
+        {
+          "desc": "☆ = 11×60의 일의 자리",
+          "expression": "11×60=660 → 일의 자리 0"
+        },
+        {
+          "desc": "♡ = 13×59의 일의 자리",
+          "expression": "13×59=767 → 일의 자리 7"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-008",
+      "question": "달력의 규칙에 따라 ①~④에 알맞은 수를 써넣을 때 잘못된 것은 어느 것입니까?\n7+15=8+①, 8+16=②+15, 14+22=③+④\n①=14, ②=9, ③=16, ④=21",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①=14",
+        "②=9",
+        "③=16",
+        "④=21"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "conceptExplanation": "달력에서 ↘ 방향의 두 수의 합은 ↗ 방향의 두 수의 합과 같습니다. 14+22=36이므로 ③+④=36. ③=15, ④=21이 맞습니다. ③=16은 잘못된 값입니다.",
+      "steps": [
+        {
+          "desc": "①: 7+15=22, 8+14=22 ✓",
+          "expression": "①=14 맞음"
+        },
+        {
+          "desc": "③: 14+22=36, 16+21=37≠36 ✗",
+          "expression": "③=16 틀림 (정답은 15) → ③"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-009",
+      "question": "덧셈표에서 규칙을 찾아 □에 알맞은 수를 구하시오.\n\n+  | 270 | 280 | 290 | 300\n11 | 281 | 291 | 301 | 311\n12 | 282 | 292 | □   | 312\n13 | 283 | 293 | 303 |    \n14 | 284 |     | 304 | 314\n\n12+290=?",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "integer",
+      "answer": {
+        "value": 302
+      },
+      "conceptExplanation": "덧셈표에서 가로는 오른쪽으로 10씩, 세로는 아래쪽으로 1씩 커집니다. 12+290=302.",
+      "steps": [
+        {
+          "desc": "규칙 확인",
+          "expression": "가로 +10, 세로 +1"
+        },
+        {
+          "desc": "12+290 계산",
+          "expression": "12+290=302"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-010",
+      "question": "도형의 배열에서 규칙을 찾아 여섯째에 알맞은 도형을 그려 보시오.\n(정사각형 모양의 규칙: 매번 시계 방향으로 180° 돌리고 정사각형 각 변에 있는 사각형이 두 개씩 늘어나는 모양)",
+      "concept": "number-pattern",
+      "difficulty": "basic",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u6-shape-pattern-basic-q10.png"
+      },
+      "conceptExplanation": "여섯째 도형은 넷째 도형을 시계 방향으로 180°만큼 돌리고 정사각형 모양의 각 변에 있는 사각형이 두 개씩 늘어난 모양입니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "180° 회전 + 각 변에 사각형 +2개"
+        },
+        {
+          "desc": "여섯째 도형 완성",
+          "expression": "정답 이미지 참조"
+        }
+      ],
+      "questionImage": "/data/answer-images/u6-010-qi.png"
+    },
+    {
+      "id": "g4-s1-u6-pattern-011",
+      "question": "계산식에서 규칙을 찾아 777777 ÷ 37037의 값을 구하시오.\n111111÷37037=3, 222222÷37037=6, 333333÷37037=9, 444444÷37037=12",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "3",
+        "9",
+        "15",
+        "21",
+        "27"
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "conceptExplanation": "나누어지는 수가 111111의 2배, 3배…가 되면 몫도 3의 2배, 3배…가 됩니다. 777777은 111111의 7배이므로 몫은 3×7=21.",
+      "steps": [
+        {
+          "desc": "패턴 파악",
+          "expression": "111111×n ÷ 37037 = 3n"
+        },
+        {
+          "desc": "777777 = 111111×7",
+          "expression": "3×7=21 → ④"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-012",
+      "question": "수 배열의 규칙을 찾아 □에 알맞은 수를 구하시오.\n1, 4, 9, 16, □",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 25
+      },
+      "conceptExplanation": "1=1², 4=2², 9=3², 16=4², □=5²=25. 자연수를 제곱한 수의 배열입니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "1², 2², 3², 4², 5²"
+        },
+        {
+          "desc": "다음 수",
+          "expression": "5²=25"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-013",
+      "question": "곱셈식의 규칙을 이용하여 규칙적인 나눗셈식을 만들어 보세요.\n407×8=3256, 4007×8=32056, 40007×8=320056\n이 규칙을 이용하여 3256÷407, 32056÷4007, 320056÷40007의 값을 모두 쓰시오.",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "text",
+      "answer": {
+        "text": "3256÷407=8, 32056÷4007=8, 320056÷40007=8"
+      },
+      "conceptExplanation": "A×B=C이면 C÷A=B, C÷B=A입니다. 세 나눗셈식의 몫은 모두 8입니다.",
+      "steps": [
+        {
+          "desc": "곱셈의 역 관계",
+          "expression": "407×8=3256 → 3256÷407=8"
+        },
+        {
+          "desc": "나머지도 동일",
+          "expression": "모두 ÷8=몫, 공통 답: 8"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-014",
+      "question": "덧셈식의 규칙에 따라 ①, ② 안에 알맞은 수를 차례대로 써넣으세요.\n630+489=1119, 6225+489=6714, 11820+①=12309, 17415+489=②, 23010+489=23499",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          489,
+          17904
+        ],
+        "labels": [
+          "①",
+          "②"
+        ]
+      },
+      "conceptExplanation": "더해지는 수가 5595씩 커지고 더하는 수가 489로 일정하면 합은 5595씩 커집니다. ①=489, ②=17415+489=17904.",
+      "steps": [
+        {
+          "desc": "①: 12309-11820",
+          "expression": "12309-11820=489"
+        },
+        {
+          "desc": "②: 17415+489",
+          "expression": "17415+489=17904"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-015",
+      "question": "규칙을 찾아 빈칸에 알맞은 도형을 그려 보시오.\n(X자 모양이 사방으로 각 1개씩, 모두 4개씩 늘어나는 패턴의 다섯째 도형)",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u6-x-pattern-inter-q15.png"
+      },
+      "conceptExplanation": "사각형이 네 방향으로 각 1개씩, 모두 4개가 늘어납니다. 다섯째 도형은 네 방향으로 5칸씩 뻗은 X자 모양입니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "매번 4개씩 (4방향 각 1개) 늘어남"
+        },
+        {
+          "desc": "다섯째 도형",
+          "expression": "정답 이미지 참조"
+        }
+      ],
+      "questionImage": "/data/answer-images/u6-015-qi.png"
+    },
+    {
+      "id": "g4-s1-u6-pattern-016",
+      "question": "도형의 배열에서 규칙을 찾아 다섯째에 알맞은 도형을 그려 보시오.\n(정사각형 모양이 시계 방향으로 90° 돌리면서 정사각형 각 변에 있는 사각형이 한 개씩 늘어나는 패턴)",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u6-square-pattern-inter-q16.png"
+      },
+      "conceptExplanation": "다섯째에 알맞은 도형은 넷째 도형을 시계 방향으로 90° 돌리고 정사각형 모양의 각 변에 있는 사각형이 한 개씩 늘어난 모양입니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "90° 회전 + 각 변 사각형 +1개"
+        },
+        {
+          "desc": "다섯째 도형 완성",
+          "expression": "정답 이미지 참조"
+        }
+      ],
+      "questionImage": "/data/answer-images/u6-016-qi.png"
+    },
+    {
+      "id": "g4-s1-u6-pattern-017",
+      "question": "덧셈표에서 규칙을 찾아 □에 알맞은 수를 구하시오.\n\n+  | 510 | 520 | 530 | 540\n50 | 560 | 570 | 580 | 590\n51 | 561 | 571 | 581 | 591\n52 | 562 | 572 | □   | 592\n53 | 563 | 573 | 583 | 593\n\n52+530=?",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "integer",
+      "answer": {
+        "value": 582
+      },
+      "conceptExplanation": "덧셈표에서 가로는 오른쪽으로 10씩, 세로는 아래로 1씩 커집니다. 52+530=582.",
+      "steps": [
+        {
+          "desc": "규칙 확인",
+          "expression": "가로 +10, 세로 +1"
+        },
+        {
+          "desc": "52+530 계산",
+          "expression": "52+530=582"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-018",
+      "question": "다음에 올 뺄셈식을 바르게 말한 어린이는 누구입니까?\n850-200=650, 1050-300=750, 1250-400=850, 1450-500=950\n유리: 1650-600=1050\n혜수: 1850-600=1250",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "유리",
+        "혜수"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "conceptExplanation": "빼어지는 수는 200씩, 빼는 수는 100씩 커지므로 차는 100씩 커집니다. 1650-600=1050은 규칙을 따릅니다. 혜수의 1850-600=1250은 빼는 수가 700이어야 합니다.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "빼어지는 수 +200, 빼는 수 +100"
+        },
+        {
+          "desc": "유리 확인",
+          "expression": "1650-600=1050 ✓ → 유리"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-019",
+      "question": "규칙을 찾아 여섯째에 알맞은 도형을 그리고, □안에 알맞은 수를 써넣으시오.\n(오른쪽 위에서 시작하여 ↙방향으로 1개씩, 왼쪽, 아래쪽으로 각각 1개씩 번갈아 늘어나는 L자형 패턴, □=8)",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/data/answer-images/u6-l-pattern-inter-q19.png"
+      },
+      "conceptExplanation": "오른쪽 위에서 시작하여 ↙방향으로 1개씩, 왼쪽과 아래쪽으로 각각 1개씩 번갈아가며 늘어납니다. 여섯째 도형의 총 사각형 수는 8개입니다.",
+      "steps": [
+        {
+          "desc": "패턴 파악",
+          "expression": "1, 2, 4, 5, 7, 8… (+1, +2 반복)"
+        },
+        {
+          "desc": "여섯째 = 8개",
+          "expression": "□=8, 정답 이미지 참조"
+        }
+      ],
+      "questionImage": "/data/answer-images/u6-019-qi.png"
+    },
+    {
+      "id": "g4-s1-u6-pattern-020",
+      "question": "영화관 좌석표에서 좌석 번호의 규칙을 찾을 때, ①~⑤에 들어갈 수로 잘못된 것은 어느 것입니까?\n(A1~E7 격자, 행=알파벳, 열=숫자)\n①B4, ②C5, ③D2, ④E1, ⑤E8",
+      "concept": "number-pattern",
+      "difficulty": "intermediate",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①B4",
+        "②C5",
+        "③D2",
+        "④E1",
+        "⑤E8"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "conceptExplanation": "세로줄(↓)로 보면 A6에서 알파벳이 순서대로 바뀌고 숫자는 6 그대로이므로 ⑤는 E6입니다. E8은 7열까지만 있으므로 잘못된 값입니다.",
+      "steps": [
+        {
+          "desc": "열 번호 확인",
+          "expression": "좌석표는 7열(1~7)까지"
+        },
+        {
+          "desc": "⑤ 확인",
+          "expression": "E8은 존재하지 않음 → ⑤E8이 잘못됨"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-021",
+      "question": "달력의 □ 안의 수를 이용하여 규칙적인 계산식을 만들었습니다.\n11+31=21×□\n□에 알맞은 수는?",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "conceptExplanation": "11+31=42, 21×□=42 → □=42÷21=2.",
+      "steps": [
+        {
+          "desc": "좌변 계산",
+          "expression": "11+31=42"
+        },
+        {
+          "desc": "□ 계산",
+          "expression": "42÷21=2"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-022",
+      "question": "규칙적인 수의 배열에서 ■와 ●에 알맞은 수를 차례대로 구하세요.\nㄱ: 1691, 2037, 2383, ■\nㄴ: 3061, 3407, ●, 4099",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          2729,
+          3753
+        ],
+        "labels": [
+          "■",
+          "●"
+        ]
+      },
+      "conceptExplanation": "두 배열 모두 346씩 커지는 규칙입니다. ■=2383+346=2729, ●=3407+346=3753.",
+      "steps": [
+        {
+          "desc": "공차 확인",
+          "expression": "2037-1691=346, 2383-2037=346"
+        },
+        {
+          "desc": "■와 ●",
+          "expression": "■=2383+346=2729, ●=3407+346=3753"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-023",
+      "question": "곱셈식의 규칙을 이용하여 규칙적인 나눗셈식을 만들어 보세요.\n107×12=1284, 1007×12=12084, 10007×12=120084\n이 규칙을 이용하여 세 나눗셈식을 각각 쓰시오.",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "text",
+      "answer": {
+        "text": "1284÷12=107, 12084÷12=1007, 120084÷12=10007"
+      },
+      "conceptExplanation": "A×B=C이면 C÷B=A. 공통으로 나누는 수는 12이고, 몫이 107, 1007, 10007로 늘어납니다.",
+      "steps": [
+        {
+          "desc": "곱셈의 역관계",
+          "expression": "107×12=1284 → 1284÷12=107"
+        },
+        {
+          "desc": "나머지 두 식",
+          "expression": "12084÷12=1007, 120084÷12=10007"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-024",
+      "question": "덧셈표에서 규칙을 찾아 34+570의 값을 구하시오.\n\n+  | 560 | 570 | 580\n32 | 592 | 602 | 612\n33 | 593 | 603 | 613\n34 | 594 | □   | 614\n35 | 595 | 605 | 615",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 604
+      },
+      "conceptExplanation": "덧셈표에서 가로는 오른쪽으로 10씩, 세로는 아래로 1씩 커집니다. 34+570=604.",
+      "steps": [
+        {
+          "desc": "규칙 확인",
+          "expression": "가로 +10, 세로 +1"
+        },
+        {
+          "desc": "34+570 계산",
+          "expression": "34+570=604"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-025",
+      "question": "수 배열표에서 규칙적인 계산식을 찾았습니다. 규칙이 다른 하나를 고르시오.\n(배열: 192~215, 6열 4행)\n①민지: 212-200=12\n②시우: 215-203=12\n③다정: 214-202=12\n④민기: 213-207=6\n⑤민수: 211-199=12",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "multiple_choice",
+      "choices": [
+        "①민지",
+        "②시우",
+        "③다정",
+        "④민기",
+        "⑤민수"
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "conceptExplanation": "표에서 같은 열 2행 차이 = +12(한 줄에 6개씩), 1행 차이 = +6입니다. 민기(213-207=6)는 1행 차이 규칙이고 나머지는 모두 2행 차이 규칙입니다.",
+      "steps": [
+        {
+          "desc": "①②③⑤: 2행 차이 = 12",
+          "expression": "6×2=12"
+        },
+        {
+          "desc": "④민기: 1행 차이 = 6 → 규칙이 다름",
+          "expression": "정답: ④"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-026",
+      "question": "규칙적인 수 배열에서 빈칸에 알맞은 수를 순서대로 쓰시오.\n4, 9, 16, 25, 36, 49, □, □",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          64,
+          81
+        ],
+        "labels": [
+          "일곱째",
+          "여덟째"
+        ]
+      },
+      "conceptExplanation": "2², 3², 4², 5², 6², 7², □, □ → 8²=64, 9²=81.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "n² 수열: 2²,3²,4²,5²,6²,7²,8²,9²"
+        },
+        {
+          "desc": "빈칸",
+          "expression": "8²=64, 9²=81"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-027",
+      "question": "삼각형 모양을 규칙적으로 쌓았습니다.\n첫째: 노란색 1개, 파란색 0개\n둘째: 노란색 1개, 파란색 3개\n셋째: 노란색 4개, 파란색 5개\n넷째에 알맞은 노란색 모양과 파란색 모양의 개수의 합은 몇 개입니까?",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 16
+      },
+      "conceptExplanation": "총 개수가 1, 4, 9, 16… (n²) 패턴입니다. 넷째 = 4² = 16개.",
+      "steps": [
+        {
+          "desc": "전체 패턴",
+          "expression": "1, 4, 9, … = n²"
+        },
+        {
+          "desc": "넷째 합",
+          "expression": "4²=16개"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-028",
+      "question": "수 배열표의 규칙에 따라 □에 알맞은 수를 구하시오.\n(가로: 127,129,131,133,135,137 / 세로: +200씩)\n527행, 131 열의 값은?",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 531
+      },
+      "conceptExplanation": "가로: 2씩 증가, 세로: 200씩 증가. 127행의 131열 값은 131입니다. 527행은 127+200+200=527이므로 같은 열의 값 = 131+200+200 = 531.",
+      "steps": [
+        {
+          "desc": "행 규칙 파악",
+          "expression": "127 → 327(+200) → 527(+200)"
+        },
+        {
+          "desc": "131열, 527행 값",
+          "expression": "131+200+200=531"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-029",
+      "question": "계산식을 보고 규칙을 찾아 ㉠에 들어갈 알맞은 수를 구하시오.\n10101×11=111111\n10101×22=222222\n10101×33=333333\n10101×55=㉠",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 555555
+      },
+      "conceptExplanation": "10101×(11×n) = 111111×n. 10101×55 = 10101×(11×5) = 111111×5 = 555555.",
+      "steps": [
+        {
+          "desc": "규칙 파악",
+          "expression": "10101×11n = 111111×n (6자리 반복수)"
+        },
+        {
+          "desc": "n=5",
+          "expression": "10101×55=555555"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u6-pattern-030",
+      "question": "규칙에 따라 3960 ÷ 72의 몫을 구해 보세요.\n792÷72=11, 1584÷72=22, 2376÷72=33, 3168÷72=44",
+      "concept": "number-pattern",
+      "difficulty": "advanced",
+      "answerType": "integer",
+      "answer": {
+        "value": 55
+      },
+      "conceptExplanation": "나누어지는 수가 792씩 커지면 몫이 11씩 커집니다. 3960=792×5이므로 몫=11×5=55.",
+      "steps": [
+        {
+          "desc": "패턴 파악",
+          "expression": "792×n ÷ 72 = 11n"
+        },
+        {
+          "desc": "3960=792×5",
+          "expression": "11×5=55"
+        }
+      ]
     }
   ],
   "templates": [
     {
       "templateId": "g4-s1-u2-fraction-add-tpl-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add"],
-      "mistakeTypes": ["denominator_error"],
+      "skills": [
+        "numerator_add"
+      ],
+      "mistakeTypes": [
+        "denominator_error"
+      ],
       "template": "{a}/{b} + {c}/{b} = ?",
-      "variables": { "a": [1,2,3,4], "b": [5,6,7,8,9], "c": [1,2,3] },
-      "constraints": ["a + c < b"],
+      "variables": {
+        "a": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "b": [
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "c": [
+          1,
+          2,
+          3
+        ]
+      },
+      "constraints": [
+        "a + c < b"
+      ],
       "animationAsset": "fraction-pizza-add",
       "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
       "templateId": "g4-s1-u2-fraction-sub-tpl-001",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
-      "type": "calculation", "difficulty": "basic",
+      "type": "calculation",
+      "difficulty": "basic",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error"
+      ],
       "template": "{a}/{b} - {c}/{b} = ?",
-      "variables": { "a": [3,4,5,6,7], "b": [8,9,10], "c": [1,2,3] },
-      "constraints": ["a > c"],
+      "variables": {
+        "a": [
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "b": [
+          8,
+          9,
+          10
+        ],
+        "c": [
+          1,
+          2,
+          3
+        ]
+      },
+      "constraints": [
+        "a > c"
+      ],
       "animationAsset": "fraction-water-sub",
       "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
     },
     {
       "templateId": "g4-s1-u2-fraction-add-tpl-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_add_same_denominator",
-      "skills": ["numerator_add", "concept_understanding"],
-      "mistakeTypes": ["denominator_error", "numerator_error"],
+      "skills": [
+        "numerator_add",
+        "concept_understanding"
+      ],
+      "mistakeTypes": [
+        "denominator_error",
+        "numerator_error"
+      ],
       "template": "{a}/{b} + {c}/{b} = ?",
-      "variables": { "a": [2,3,4,5], "b": [10,12,15], "c": [2,3,4,5] },
-      "constraints": ["a + c < b"],
+      "variables": {
+        "a": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "b": [
+          10,
+          12,
+          15
+        ],
+        "c": [
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "constraints": [
+        "a + c < b"
+      ],
       "animationAsset": "fraction-clock-add",
       "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
     },
     {
       "templateId": "g4-s1-u2-fraction-sub-tpl-002",
-      "grade": 4, "semester": 1,
+      "grade": 4,
+      "semester": 1,
       "unit": "분수의 덧셈과 뺄셈",
-      "type": "calculation", "difficulty": "applied",
+      "type": "calculation",
+      "difficulty": "applied",
       "concept": "fraction_sub_same_denominator",
-      "skills": ["numerator_sub"],
-      "mistakeTypes": ["numerator_error"],
+      "skills": [
+        "numerator_sub"
+      ],
+      "mistakeTypes": [
+        "numerator_error"
+      ],
       "template": "{a}/{b} - {c}/{b} = ?",
-      "variables": { "a": [6,7,8,9,10], "b": [11,12,13,15], "c": [1,2,3,4] },
-      "constraints": ["a > c"],
+      "variables": {
+        "a": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "b": [
+          11,
+          12,
+          13,
+          15
+        ],
+        "c": [
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "constraints": [
+        "a > c"
+      ],
       "animationAsset": "fraction-bar-sub",
       "conceptExplanation": "분모가 같은 분수를 뺄 때는 분모는 그대로 두고, 분자끼리만 뺍니다."
     }

@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
 import { useDiary } from '@/features/diary/hooks/useDiary'
+import { AppHeader } from '@/shared/components/AppHeader'
 
 export function DiaryRoute() {
   const navigate = useNavigate()
@@ -13,12 +14,8 @@ export function DiaryRoute() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
-      {/* Header */}
-      <div className="bg-white border-b px-4 py-4 flex items-center gap-3">
-        <button onClick={() => navigate('/home')} className="text-gray-500 font-medium">←</button>
-        <h1 className="text-lg font-bold text-gray-800">수학 일기</h1>
-      </div>
+    <div className="flex h-screen flex-col bg-gray-50">
+      <AppHeader title="수학 일기" onBack={() => navigate('/home')} />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {days.length === 0 ? (

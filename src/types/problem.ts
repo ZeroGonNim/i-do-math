@@ -10,7 +10,14 @@ export type MistakeType =
   | 'calculation_error'
   | null
 
-export type AnswerType = 'fraction' | 'integer'
+export type AnswerType =
+  | 'fraction'
+  | 'integer'
+  | 'multiple_choice'
+  | 'symbol'
+  | 'multi_blank'
+  | 'text'
+  | 'draw'
 
 export interface FractionAnswer {
   numerator: number
@@ -21,7 +28,35 @@ export interface IntegerAnswer {
   value: number
 }
 
-export type Answer = FractionAnswer | IntegerAnswer
+export interface MultipleChoiceAnswer {
+  choice: number // 1~5
+}
+
+export interface SymbolAnswer {
+  symbol: '>' | '=' | '<'
+}
+
+export interface MultiBlankAnswer {
+  values: number[]
+  labels?: string[] // 각 빈칸 레이블 (예: ["만이", "일이"])
+}
+
+export interface TextAnswer {
+  text: string
+}
+
+export interface DrawAnswer {
+  referenceImage: string // 정답 이미지 경로 (해설지에서 추출)
+}
+
+export type Answer =
+  | FractionAnswer
+  | IntegerAnswer
+  | MultipleChoiceAnswer
+  | SymbolAnswer
+  | MultiBlankAnswer
+  | TextAnswer
+  | DrawAnswer
 
 export function isIntegerAnswer(a: Answer): a is IntegerAnswer {
   return 'value' in a
@@ -31,10 +66,30 @@ export function isFractionAnswer(a: Answer): a is FractionAnswer {
   return 'numerator' in a
 }
 
+export function isMultipleChoiceAnswer(a: Answer): a is MultipleChoiceAnswer {
+  return 'choice' in a
+}
+
+export function isSymbolAnswer(a: Answer): a is SymbolAnswer {
+  return 'symbol' in a
+}
+
+export function isMultiBlankAnswer(a: Answer): a is MultiBlankAnswer {
+  return 'values' in a
+}
+
+export function isTextAnswer(a: Answer): a is TextAnswer {
+  return 'text' in a
+}
+
+export function isDrawAnswer(a: Answer): a is DrawAnswer {
+  return 'referenceImage' in a
+}
+
 export interface ProblemStep {
   desc: string
   expression: string
-  narrative?: string  // "피자 한 판 8조각 중 처음 먹은 3조각" 형태의 스토리 연결 문장
+  narrative?: string
 }
 
 export interface Problem {
@@ -49,6 +104,9 @@ export interface Problem {
   skills: string[]
   mistakeTypes: MistakeType[]
   question: string
+  questionImage?: string   // 문제 본문에 표시할 이미지 (워크시트 문제 이미지 등)
+  choices?: string[]       // multiple_choice 텍스트 선택지
+  choiceImages?: string[]  // multiple_choice 이미지 선택지 (텍스트 대신 이미지로 표시)
   answerType?: AnswerType  // 생략 시 'fraction'으로 간주
   answer: Answer
   steps: ProblemStep[]

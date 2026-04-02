@@ -5,6 +5,7 @@ import { LEVEL_TITLES } from '@/types/user'
 import { loadProblems } from '@/shared/services/problemLoader'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { getMissionProgress, DAILY_PROBLEM_GOAL } from '@/shared/hooks/useDailyMission'
+import { BottomNavBar } from '@/shared/components/BottomNavBar'
 
 export function HomeRoute() {
   const profile = useUserProfile()
@@ -133,6 +134,8 @@ export function HomeRoute() {
           </button>
         </div>
       </div>
+
+      <BottomNavBar />
     </div>
   )
 }

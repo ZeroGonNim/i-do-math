@@ -1,6 +1,8 @@
+import type { AnswerType } from '@/types/problem'
+
 interface Props {
   onKey: (key: string) => void
-  mode?: 'fraction' | 'integer'
+  mode?: AnswerType
 }
 
 const FRACTION_KEYS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '/', '0', 'del']

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AppHeader } from '@/shared/components/AppHeader'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
 import { userProfileRepo } from '@/shared/db/userProfileRepo'
 import { PinInputModal } from '@/shared/components/PinInputModal'
@@ -56,11 +57,8 @@ export function SettingsRoute() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-gray-50">
-      <div className="bg-white border-b px-4 py-4 flex items-center gap-3">
-        <button onClick={() => navigate('/home')} className="text-gray-500 font-medium">←</button>
-        <h1 className="text-lg font-bold text-gray-800">설정</h1>
-      </div>
+    <div className="flex h-screen flex-col bg-gray-50">
+      <AppHeader title="설정" onBack={() => navigate('/home')} />
 
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {/* 프로필 */}
