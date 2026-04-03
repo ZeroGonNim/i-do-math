@@ -76,16 +76,20 @@ export function ResultRoute() {
   useEffect(() => {
     if (isCorrect || !profile) return
     async function loadRecommend() {
-      const data = await loadProblems()
-      const recentIds = await learningLogRepo.getRecentProblemIds(profile!.userId, 10)
-      const rec = selectRecommendedProblem({
-        concept: problem.concept,
-        currentDifficulty: problem.difficulty,
-        isCorrect: false,
-        recentIds,
-        pool: data.problems,
-      })
-      setRecommended(rec)
+      try {
+        const data = await loadProblems()
+        const recentIds = await learningLogRepo.getRecentProblemIds(profile!.userId, 10)
+        const rec = selectRecommendedProblem({
+          concept: problem.concept,
+          currentDifficulty: problem.difficulty,
+          isCorrect: false,
+          recentIds,
+          pool: data.problems,
+        })
+        setRecommended(rec)
+      } catch {
+        // 추천 문제 로드 실패 시 추천 버튼만 숨김 (비필수)
+      }
     }
     loadRecommend()
   }, [isCorrect, problem, profile])

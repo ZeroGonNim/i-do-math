@@ -1,6 +1,11 @@
 import { useState, useRef, useEffect } from 'react'
 import type { Problem, Answer, AnswerType } from '@/types/problem'
 
+const MAX_INT_LENGTH = 13
+const MAX_FRACTION_LENGTH = 3
+const MAX_BLANK_LENGTH = 10
+const MAX_BLANK_DOUBLE_LENGTH = 8
+
 export function useProblemSession(problem: Problem) {
   const answerType: AnswerType = problem.answerType ?? 'fraction'
 
@@ -43,44 +48,38 @@ export function useProblemSession(problem: Problem) {
     setInputSequence([])
   }, [problem.id, blankCount])
 
-  function handleKeyPress(key: string) {
-    setInputSequence(prev => [...prev, key])
-
-    if (answerType === 'integer') {
-      if (key === 'del') {
-        setIntValue(v => v.slice(0, -1))
-      } else if (key === '00') {
-        setIntValue(v => (v.length >= 13 ? v : v + '00'))
-      } else {
-        setIntValue(v => (v.length >= 13 ? v : v + key))
-      }
-      return
+  function handleIntegerKey(key: string) {
+    if (key === 'del') {
+      setIntValue(v => v.slice(0, -1))
+    } else if (key === '00') {
+      setIntValue(v => (v.length >= MAX_INT_LENGTH ? v : v + '00'))
+    } else {
+      setIntValue(v => (v.length >= MAX_INT_LENGTH ? v : v + key))
     }
+  }
 
-    if (answerType === 'multi_blank') {
-      setBlankValues(prev => {
-        const next = [...prev]
-        if (key === 'del') {
-          next[activeBlankIndex] = next[activeBlankIndex].slice(0, -1)
-        } else if (key === '00') {
-          next[activeBlankIndex] = next[activeBlankIndex].length >= 8
-            ? next[activeBlankIndex]
-            : next[activeBlankIndex] + '00'
-        } else {
-          if (next[activeBlankIndex].length < 10) {
-            next[activeBlankIndex] = next[activeBlankIndex] + key
-            // 숫자 입력 후 자동으로 다음 빈칸으로 이동 (한 자리 입력 시)
-            if (next[activeBlankIndex].length === 1 && activeBlankIndex < blankCount - 1) {
-              setActiveBlankIndex(i => i + 1)
-            }
+  function handleMultiBlankKey(key: string) {
+    setBlankValues(prev => {
+      const next = [...prev]
+      if (key === 'del') {
+        next[activeBlankIndex] = next[activeBlankIndex].slice(0, -1)
+      } else if (key === '00') {
+        next[activeBlankIndex] = next[activeBlankIndex].length >= MAX_BLANK_DOUBLE_LENGTH
+          ? next[activeBlankIndex]
+          : next[activeBlankIndex] + '00'
+      } else {
+        if (next[activeBlankIndex].length < MAX_BLANK_LENGTH) {
+          next[activeBlankIndex] = next[activeBlankIndex] + key
+          if (next[activeBlankIndex].length === 1 && activeBlankIndex < blankCount - 1) {
+            setActiveBlankIndex(i => i + 1)
           }
         }
-        return next
-      })
-      return
-    }
+      }
+      return next
+    })
+  }
 
-    // 분수 모드
+  function handleFractionKey(key: string) {
     if (key === 'del') {
       if (activeField === 'numerator') setNumerator(n => n.slice(0, -1))
       else setDenominator(d => d.slice(0, -1))
@@ -92,14 +91,21 @@ export function useProblemSession(problem: Problem) {
     }
     if (activeField === 'numerator') {
       setNumerator(n => {
-        if (n.length >= 3) return n
+        if (n.length >= MAX_FRACTION_LENGTH) return n
         const next = n + key
         if (next.length === 1) setActiveField('denominator')
         return next
       })
     } else {
-      setDenominator(d => (d.length >= 3 ? d : d + key))
+      setDenominator(d => (d.length >= MAX_FRACTION_LENGTH ? d : d + key))
     }
+  }
+
+  function handleKeyPress(key: string) {
+    setInputSequence(prev => [...prev, key])
+    if (answerType === 'integer') { handleIntegerKey(key); return }
+    if (answerType === 'multi_blank') { handleMultiBlankKey(key); return }
+    handleFractionKey(key)
   }
 
   function getAnswer(): Answer | null {
@@ -108,27 +114,20 @@ export function useProblemSession(problem: Problem) {
       if (isNaN(v)) return null
       return { value: v }
     }
-
     if (answerType === 'multiple_choice') {
       if (selectedChoice === null) return null
       return { choice: selectedChoice }
     }
-
     if (answerType === 'symbol') {
       if (selectedSymbol === null) return null
       return { symbol: selectedSymbol }
     }
-
     if (answerType === 'multi_blank') {
       const values = blankValues.map(v => parseInt(v))
       if (values.some(isNaN)) return null
       return { values }
     }
-
-    if (answerType === 'draw' || answerType === 'text') {
-      // draw는 DrawProblem 컴포넌트에서 직접 처리
-      return null
-    }
+    if (answerType === 'draw' || answerType === 'text') return null
 
     // 분수
     const n = parseInt(numerator)
@@ -146,30 +145,24 @@ export function useProblemSession(problem: Problem) {
     if (answerType === 'multiple_choice') return selectedChoice !== null
     if (answerType === 'symbol') return selectedSymbol !== null
     if (answerType === 'multi_blank') return blankValues.every(v => v.length > 0)
-    if (answerType === 'draw' || answerType === 'text') return false // DrawProblem이 직접 처리
+    if (answerType === 'draw' || answerType === 'text') return false
     return numerator.length > 0 && denominator.length > 0
   })()
 
   return {
     answerType,
-    // 분수
     numerator,
     denominator,
     activeField,
     setActiveField,
-    // 정수
     intValue,
-    // 객관식
     selectedChoice,
     setSelectedChoice,
-    // 부등호
     selectedSymbol,
     setSelectedSymbol,
-    // 다중 빈칸
     blankValues,
     activeBlankIndex,
     setActiveBlankIndex,
-    // 공통
     hintUsed,
     setHintUsed,
     handleKeyPress,

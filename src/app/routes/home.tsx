@@ -11,10 +11,12 @@ export function HomeRoute() {
   const profile = useUserProfile()
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
+  const [loadError, setLoadError] = useState(false)
 
   async function startProblem() {
     if (!profile) return
     setLoading(true)
+    setLoadError(false)
     try {
       const data = await loadProblems()
       const recentIds = await learningLogRepo.getRecentProblemIds(profile.userId, 10)
@@ -29,6 +31,8 @@ export function HomeRoute() {
 
       const rec = candidates[Math.floor(Math.random() * candidates.length)]
       if (rec) navigate('/problem', { state: { problem: rec } })
+    } catch {
+      setLoadError(true)
     } finally {
       setLoading(false)
     }
@@ -112,6 +116,9 @@ export function HomeRoute() {
         >
           {loading ? '문제 불러오는 중...' : '🟢 학습 시작하기'}
         </button>
+        {loadError && (
+          <p className="text-sm text-red-500 text-center">문제를 불러오지 못했어요. 다시 시도해주세요.</p>
+        )}
 
         <div className="flex gap-3 w-full">
           <button

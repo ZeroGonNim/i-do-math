@@ -35,13 +35,18 @@ export function RemindRoute() {
   useEffect(() => {
     if (!profile) return
     async function load() {
-      const weakNote = await getTopWeakNote(profile!.userId)
-      if (!weakNote) { setLoading(false); return }
-      setNote(weakNote)
-      const data = await loadProblems()
-      const match = data.problems.find(p => p.concept === weakNote.concept)
-      setProblem(match ?? null)
-      setLoading(false)
+      try {
+        const weakNote = await getTopWeakNote(profile!.userId)
+        if (!weakNote) { setLoading(false); return }
+        setNote(weakNote)
+        const data = await loadProblems()
+        const match = data.problems.find(p => p.concept === weakNote.concept)
+        setProblem(match ?? null)
+      } catch {
+        // 로드 실패 시 빈 상태와 동일하게 처리
+      } finally {
+        setLoading(false)
+      }
     }
     load()
   }, [profile])
