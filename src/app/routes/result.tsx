@@ -50,6 +50,11 @@ export function ResultRoute() {
   const navigate = useNavigate()
   const profile = useUserProfile()
 
+  if (!state?.problem || state.isCorrect === undefined) {
+    navigate('/home', { replace: true })
+    return null
+  }
+
   const { problem, userAnswer, isCorrect, timeSpent, hintUsed, inputSequence } = state as {
     problem: Problem
     userAnswer: Answer

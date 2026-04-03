@@ -4104,7 +4104,11 @@
           "desc": "밀기로 만든 무늬 선택",
           "expression": "정답: ㄷ"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-002",
@@ -4126,7 +4130,11 @@
           "expression": "꼭짓점 좌표를 (x,y)→(y,−x)로 변환"
         }
       ],
-      "questionImage": "/data/answer-images/u4-002-qi.png"
+      "questionImage": "/data/answer-images/u4-002-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-003",
@@ -4151,7 +4159,11 @@
           "desc": "원래 모양과 같은 것 선택",
           "expression": "정답: ㄴ"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-004",
@@ -4173,7 +4185,11 @@
           "expression": "x 좌표를 반전"
         }
       ],
-      "questionImage": "/data/answer-images/u4-004-qi.png"
+      "questionImage": "/data/answer-images/u4-004-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-005",
@@ -4208,7 +4224,11 @@
         "/data/choice-images/u4-005-c3.png",
         "/data/choice-images/u4-005-c4.png",
         "/data/choice-images/u4-005-c5.png"
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-006",
@@ -4230,7 +4250,11 @@
           "expression": "꼭짓점 (x,y) → (−x,−y)"
         }
       ],
-      "questionImage": "/data/answer-images/u4-006-qi.png"
+      "questionImage": "/data/answer-images/u4-006-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-007",
@@ -4251,7 +4275,11 @@
           "desc": "1칸 = 1 cm 적용",
           "expression": "정답: 3 cm"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-008",
@@ -4273,7 +4301,11 @@
           "expression": "모양·방향 불변"
         }
       ],
-      "questionImage": "/data/answer-images/u4-008-qi.png"
+      "questionImage": "/data/answer-images/u4-008-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-009",
@@ -4295,7 +4327,11 @@
           "expression": "규칙에 따라 나머지 칸 완성"
         }
       ],
-      "questionImage": "/data/answer-images/u4-009-qi.png"
+      "questionImage": "/data/answer-images/u4-009-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-010",
@@ -4317,7 +4353,11 @@
           "expression": "꼭짓점 (x,y) → (−y,x)"
         }
       ],
-      "questionImage": "/data/answer-images/u4-010-qi.png"
+      "questionImage": "/data/answer-images/u4-010-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-011",
@@ -4338,7 +4378,11 @@
           "desc": "회전 방향·각도 결정",
           "expression": "정답: 270°"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-012",
@@ -4373,7 +4417,11 @@
         "/data/choice-images/u4-012-c3.png",
         "/data/choice-images/u4-012-c4.png",
         "/data/choice-images/u4-012-c5.png"
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-013",
@@ -4398,7 +4446,11 @@
           "desc": "올바른 설명 선택",
           "expression": "은진의 말이 맞음 → 정답: 은진"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-014",
@@ -4420,7 +4472,11 @@
           "expression": "처음 도형 완성"
         }
       ],
-      "questionImage": "/data/answer-images/u4-014-qi.png"
+      "questionImage": "/data/answer-images/u4-014-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-015",
@@ -4442,7 +4498,11 @@
           "expression": "규칙 적용"
         }
       ],
-      "questionImage": "/data/answer-images/u4-015-qi.png"
+      "questionImage": "/data/answer-images/u4-015-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-016",
@@ -4467,7 +4527,11 @@
           "desc": "처음 도형과 동일",
           "expression": "정답: 가"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-017",
@@ -4488,7 +4552,11 @@
           "desc": "차 계산",
           "expression": "891 − 168 = 723"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-018",
@@ -4510,7 +4578,11 @@
           "expression": "처음 도형 완성"
         }
       ],
-      "questionImage": "/data/answer-images/u4-018-qi.png"
+      "questionImage": "/data/answer-images/u4-018-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-019",
@@ -4531,7 +4603,11 @@
           "desc": "정답 기호 쓰기",
           "expression": "ㄴ, ㄹ"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-020",
@@ -4566,7 +4642,11 @@
         "/data/choice-images/u4-020-c3.png",
         "/data/choice-images/u4-020-c4.png",
         "/data/choice-images/u4-020-c5.png"
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-021",
@@ -4588,7 +4668,11 @@
           "expression": "규칙 적용하여 나머지 칸 채우기"
         }
       ],
-      "questionImage": "/data/answer-images/u4-021-qi.png"
+      "questionImage": "/data/answer-images/u4-021-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-022",
@@ -4610,7 +4694,11 @@
           "expression": "돌리기 전 도형 → 처음 도형"
         }
       ],
-      "questionImage": "/data/answer-images/u4-022-qi.png"
+      "questionImage": "/data/answer-images/u4-022-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-023",
@@ -4640,7 +4728,11 @@
           "expression": "정답: 지우개"
         }
       ],
-      "questionImage": "/data/answer-images/u4-023-grid.png"
+      "questionImage": "/data/answer-images/u4-023-grid.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-024",
@@ -4669,7 +4761,11 @@
           "expression": "정답: ㄱ, ㄴ"
         }
       ],
-      "questionImage": "/data/answer-images/u4-024-shapes.png"
+      "questionImage": "/data/answer-images/u4-024-shapes.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-025",
@@ -4690,7 +4786,11 @@
           "desc": "방법 2: 180° 돌리기",
           "expression": "시계 방향 180° 회전"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-026",
@@ -4718,7 +4818,11 @@
           "desc": "차 계산",
           "expression": "691 − 169 = 522 → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-027",
@@ -4740,7 +4844,11 @@
           "expression": "조각 ㄴ을 시계 방향 90° 회전 → 조각 ㄱ"
         }
       ],
-      "questionImage": "/data/answer-images/u4-027-qi.png"
+      "questionImage": "/data/answer-images/u4-027-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-028",
@@ -4761,7 +4869,11 @@
           "desc": "서준: 90° 돌리기 반복 → 돌리기 맞음",
           "expression": "정답: 서준"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-029",
@@ -4782,7 +4894,11 @@
           "desc": "좌우 대칭 알파벳 찾기",
           "expression": "W: ○, X: ○, Q: ✗, J: ✗ → 정답: W, X"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u4-shape-move-030",
@@ -4803,7 +4919,11 @@
           "desc": "다음 행 만들기",
           "expression": "첫 행을 아래쪽으로 뒤집어 반복"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "평면도형의 이동",
+      "subUnit": "밀기, 뒤집기, 돌리기"
     },
     {
       "id": "g4-s1-u5-bar-graph-001",
@@ -4824,7 +4944,11 @@
           "desc": "전체 학생 수",
           "expression": "28명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-002",
@@ -4845,7 +4969,11 @@
           "desc": "한 칸 = 3 kg",
           "expression": "3 kg"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-003",
@@ -4873,7 +5001,11 @@
           "desc": "정답",
           "expression": "27 kg → ⑤"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-004",
@@ -4894,7 +5026,11 @@
           "desc": "차이",
           "expression": "4명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-005",
@@ -4922,7 +5058,11 @@
           "desc": "한 칸 = 1명",
           "expression": "① 1명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-006",
@@ -4943,7 +5083,11 @@
           "desc": "차 계산",
           "expression": "1100 − 900 = 200명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-007",
@@ -4970,7 +5114,11 @@
           "desc": "최대값",
           "expression": "C가게 20대 → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-008",
@@ -4991,7 +5139,11 @@
           "desc": "합계",
           "expression": "44개"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-009",
@@ -5019,7 +5171,11 @@
           "desc": "정답",
           "expression": "1개 → ①"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-010",
@@ -5040,7 +5196,11 @@
           "desc": "전체 간식 수",
           "expression": "18개"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-011",
@@ -5068,7 +5228,11 @@
           "desc": "2024년 학생 수",
           "expression": "100 × 6 = 600명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-012",
@@ -5096,7 +5260,11 @@
           "desc": "잘못된 설명",
           "expression": "③ → 정답"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-013",
@@ -5124,7 +5292,11 @@
           "desc": "미국",
           "expression": "170 − 70 = 100명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-014",
@@ -5152,7 +5324,11 @@
           "desc": "정답",
           "expression": "12개 → ②"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-015",
@@ -5180,7 +5356,11 @@
           "desc": "축구 학생 수",
           "expression": "55 − 30 = 25명 → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-016",
@@ -5206,7 +5386,11 @@
           "desc": "두 가게 막대 길이가 가장 긴 과일",
           "expression": "오렌지 → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-017",
@@ -5227,7 +5411,11 @@
           "desc": "합계",
           "expression": "9명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-018",
@@ -5255,7 +5443,11 @@
           "desc": "풀이",
           "expression": "B = 4, O = 5"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-019",
@@ -5276,7 +5468,11 @@
           "desc": "전체 학생 수",
           "expression": "24명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-020",
@@ -5303,7 +5499,11 @@
           "desc": "정답",
           "expression": "학생 수 → ①"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-021",
@@ -5331,7 +5531,11 @@
           "desc": "정답",
           "expression": "45개 → ⑤"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-022",
@@ -5352,7 +5556,11 @@
           "desc": "정답",
           "expression": "30명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-023",
@@ -5373,7 +5581,11 @@
           "desc": "전체 학생 수",
           "expression": "24명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-024",
@@ -5400,7 +5612,11 @@
           "desc": "가장 빠른 사람",
           "expression": "영지 → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-025",
@@ -5428,7 +5644,11 @@
           "desc": "잘못된 설명",
           "expression": "③ 가로는 항목 이름 → 틀림 (수량이 맞음)"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-026",
@@ -5456,7 +5676,11 @@
           "desc": "AB형 = A형×3 → 4×A형 = 8",
           "expression": "A형=2, AB형=6"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-027",
@@ -5484,7 +5708,11 @@
           "desc": "가장 큰 차",
           "expression": "5반(9명) → ⑤"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-028",
@@ -5505,7 +5733,11 @@
           "desc": "비용 최소",
           "expression": "버스 1200원 → 가장 저렴"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-029",
@@ -5526,7 +5758,11 @@
           "desc": "전체 학생 수",
           "expression": "30명"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u5-bar-graph-030",
@@ -5547,7 +5783,11 @@
           "desc": "자두 개수",
           "expression": "100 ÷ 5 = 20개"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "막대그래프",
+      "subUnit": "막대그래프"
     },
     {
       "id": "g4-s1-u6-pattern-001",
@@ -5575,7 +5815,11 @@
           "desc": "계산",
           "expression": "180 ÷ 10 = 18 → ④"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-002",
@@ -5603,7 +5847,11 @@
           "desc": "□=2",
           "expression": "② 2"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-003",
@@ -5631,7 +5879,11 @@
           "desc": "다음 수",
           "expression": "4384 + 100 = 4484 → ②"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-004",
@@ -5659,7 +5911,11 @@
           "desc": "□=200",
           "expression": "③ 200"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-005",
@@ -5687,7 +5943,11 @@
           "desc": "결과",
           "expression": "8888888889 → ⑤"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-006",
@@ -5708,7 +5968,11 @@
           "desc": "2개씩 늘어남",
           "expression": "답: 2"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-007",
@@ -5736,7 +6000,11 @@
           "desc": "♡ = 13×59의 일의 자리",
           "expression": "13×59=767 → 일의 자리 7"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-008",
@@ -5763,7 +6031,11 @@
           "desc": "③: 14+22=36, 16+21=37≠36 ✗",
           "expression": "③=16 틀림 (정답은 15) → ③"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-009",
@@ -5784,7 +6056,11 @@
           "desc": "12+290 계산",
           "expression": "12+290=302"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-010",
@@ -5806,7 +6082,11 @@
           "expression": "정답 이미지 참조"
         }
       ],
-      "questionImage": "/data/answer-images/u6-010-qi.png"
+      "questionImage": "/data/answer-images/u6-010-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-011",
@@ -5834,7 +6114,11 @@
           "desc": "777777 = 111111×7",
           "expression": "3×7=21 → ④"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-012",
@@ -5855,7 +6139,11 @@
           "desc": "다음 수",
           "expression": "5²=25"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-013",
@@ -5876,7 +6164,11 @@
           "desc": "나머지도 동일",
           "expression": "모두 ÷8=몫, 공통 답: 8"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-014",
@@ -5904,7 +6196,11 @@
           "desc": "②: 17415+489",
           "expression": "17415+489=17904"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-015",
@@ -5926,7 +6222,11 @@
           "expression": "정답 이미지 참조"
         }
       ],
-      "questionImage": "/data/answer-images/u6-015-qi.png"
+      "questionImage": "/data/answer-images/u6-015-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-016",
@@ -5948,7 +6248,11 @@
           "expression": "정답 이미지 참조"
         }
       ],
-      "questionImage": "/data/answer-images/u6-016-qi.png"
+      "questionImage": "/data/answer-images/u6-016-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-017",
@@ -5969,7 +6273,11 @@
           "desc": "52+530 계산",
           "expression": "52+530=582"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-018",
@@ -5994,7 +6302,11 @@
           "desc": "유리 확인",
           "expression": "1650-600=1050 ✓ → 유리"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-019",
@@ -6016,7 +6328,11 @@
           "expression": "□=8, 정답 이미지 참조"
         }
       ],
-      "questionImage": "/data/answer-images/u6-019-qi.png"
+      "questionImage": "/data/answer-images/u6-019-qi.png",
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-020",
@@ -6044,7 +6360,11 @@
           "desc": "⑤ 확인",
           "expression": "E8은 존재하지 않음 → ⑤E8이 잘못됨"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-021",
@@ -6065,7 +6385,11 @@
           "desc": "□ 계산",
           "expression": "42÷21=2"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-022",
@@ -6093,7 +6417,11 @@
           "desc": "■와 ●",
           "expression": "■=2383+346=2729, ●=3407+346=3753"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-023",
@@ -6114,7 +6442,11 @@
           "desc": "나머지 두 식",
           "expression": "12084÷12=1007, 120084÷12=10007"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-024",
@@ -6135,7 +6467,11 @@
           "desc": "34+570 계산",
           "expression": "34+570=604"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-025",
@@ -6163,7 +6499,11 @@
           "desc": "④민기: 1행 차이 = 6 → 규칙이 다름",
           "expression": "정답: ④"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-026",
@@ -6191,7 +6531,11 @@
           "desc": "빈칸",
           "expression": "8²=64, 9²=81"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-027",
@@ -6212,7 +6556,11 @@
           "desc": "넷째 합",
           "expression": "4²=16개"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-028",
@@ -6233,7 +6581,11 @@
           "desc": "131열, 527행 값",
           "expression": "131+200+200=531"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-029",
@@ -6254,7 +6606,11 @@
           "desc": "n=5",
           "expression": "10101×55=555555"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     },
     {
       "id": "g4-s1-u6-pattern-030",
@@ -6275,7 +6631,11 @@
           "desc": "3960=792×5",
           "expression": "11×5=55"
         }
-      ]
+      ],
+      "grade": 4,
+      "semester": 1,
+      "unit": "규칙 찾기",
+      "subUnit": "규칙 찾기"
     }
   ],
   "templates": [

@@ -24,5 +24,5 @@ export interface UserProfile {
   missionDate: string          // 'YYYY-MM-DD'
   missionProblemsSolved: number
   missionWrongReviewed: boolean
-  unlockedDifficulty: 'basic' | 'applied'
+  unlockedDifficulty: 'basic' | 'applied' | 'challenge'
 }
