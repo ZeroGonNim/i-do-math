@@ -87,7 +87,7 @@ try {
 | 401 처리 | 글로벌 인터셉터에서 토큰 갱신 → 실패 시 로그아웃 | 동일 |
 
 ```ts
-// ✅ 글로벌 Query 에러 핸들러 설정 예시
+// ... (기존 코드 생략)
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -105,3 +105,14 @@ const queryClient = new QueryClient({
   },
 });
 ```
+
+---
+
+## 5. 과학적 디버깅 (Scientific Debugging)
+
+버그 수정 요청 시 AI는 반드시 아래 4단계를 거친다:
+
+1.  **Hypothesis (가설 수립)**: 에러 로그와 코드를 분석하여 발생 원인에 대한 가설을 세운다.
+2.  **Reproduction (재현 테스트 작성)**: 가설을 증명하기 위해 실패하는 테스트 케이스(`Red`)를 작성한다. 테스트에서 재현되지 않으면 가설을 수정한다.
+3.  **Root Cause Analysis (근본 원인 분석)**: 테스트가 실패하는 지점을 추적하여 정확한 문제의 원인을 파악한다.
+4.  **Fix & Verify (수정 및 검증)**: 문제를 수정하고 작성한 재현 테스트가 통과(`Green`)하는지 확인한다. 관련된 다른 테스트에 영향이 없는지 전수 검사한다.
