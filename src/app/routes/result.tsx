@@ -79,12 +79,18 @@ export function ResultRoute() {
       try {
         const data = await loadProblems()
         const recentIds = await learningLogRepo.getRecentProblemIds(profile!.userId, 10)
+        const recentTimes = await learningLogRepo.getRecentTimeSpent(profile!.userId, 20)
+        const avgTimeSpent = recentTimes.length > 0
+          ? recentTimes.reduce((a, b) => a + b, 0) / recentTimes.length
+          : undefined
         const rec = selectRecommendedProblem({
           concept: problem.concept,
           currentDifficulty: problem.difficulty,
           isCorrect: false,
           recentIds,
           pool: data.problems,
+          avgTimeSpent,
+          timeSpent,
         })
         setRecommended(rec)
       } catch {
@@ -92,7 +98,7 @@ export function ResultRoute() {
       }
     }
     loadRecommend()
-  }, [isCorrect, problem, profile])
+  }, [isCorrect, problem, profile, timeSpent])
 
   return (
     <div className="flex h-screen flex-col bg-white">

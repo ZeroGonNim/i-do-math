@@ -22,12 +22,7 @@ export class IDoMathDB extends Dexie {
       wrongNotes: 'id, userId, concept, mistakeType, isWeak',
       templateCounters: 'key',
     })
-    this.version(2).stores({
-      userProfile: 'userId',
-      learningLogs: 'logId, userId, concept, timestamp',
-      wrongNotes: 'id, userId, concept, mistakeType, isWeak',
-      templateCounters: 'key',
-    }).upgrade(tx => {
+    this.version(2).upgrade(tx => {
       return tx.table('userProfile').toCollection().modify((profile: Record<string, unknown>) => {
         if (!profile.unlockedDifficulty) {
           profile.unlockedDifficulty = 'basic'
