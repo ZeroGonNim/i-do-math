@@ -519,7 +519,8 @@
         }
       ],
       "animationAsset": "multiply-applied",
-      "conceptExplanation": "매일 같은 양이 반복될 때는 (하루 양) × (날 수)로 전체 양을 구합니다."
+      "conceptExplanation": "매일 같은 양이 반복될 때는 (하루 양) × (날 수)로 전체 양을 구합니다.",
+      "answerUnit": "분"
     },
     {
       "id": "g4-s1-u3-multiply-applied-002",
@@ -555,7 +556,8 @@
         }
       ],
       "animationAsset": "multiply-applied",
-      "conceptExplanation": "여러 단계로 이루어진 문제는 순서대로 곱셈을 나누어 계산합니다."
+      "conceptExplanation": "여러 단계로 이루어진 문제는 순서대로 곱셈을 나누어 계산합니다.",
+      "answerUnit": "mL"
     },
     {
       "id": "g4-s1-u3-multiply-reverse-001",
@@ -591,7 +593,8 @@
         }
       ],
       "animationAsset": "multiply-reverse",
-      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다."
+      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u3-divide-basic-001",
@@ -697,7 +700,8 @@
         }
       ],
       "animationAsset": "divide-applied",
-      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)"
+      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-divide-applied-002",
@@ -733,7 +737,8 @@
         }
       ],
       "animationAsset": "divide-applied",
-      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)"
+      "conceptExplanation": "전체를 똑같이 나눌 때는 나눗셈을 사용합니다. (전체) ÷ (사람 수) = (한 명 몫)",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-divide-reverse-001",
@@ -769,7 +774,8 @@
         }
       ],
       "animationAsset": "divide-reverse",
-      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다."
+      "conceptExplanation": "잘못 계산한 식에서 역연산으로 '어떤 수'를 먼저 구한 뒤, 바른 계산을 합니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-001",
@@ -1205,7 +1211,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "6686만 = 66860000입니다. 숫자 0은 4개 들어있습니다."
+      "conceptExplanation": "6686만 = 66860000입니다. 숫자 0은 4개 들어있습니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u1-big-number-013",
@@ -1365,7 +1372,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "61550000에서 각 자리 값은 60000000, 1000000, 500000, 50000이며 가장 큰 값은 6이 나타내는 60000000입니다."
+      "conceptExplanation": "61550000에서 각 자리 값은 60000000, 1000000, 500000, 50000이며 가장 큰 값은 6이 나타내는 60000000입니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-017",
@@ -1402,7 +1410,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "1000원짜리 2장 = 2000원, 100원짜리 921개 = 92100원. 합산하면 94100원입니다."
+      "conceptExplanation": "1000원짜리 2장 = 2000원, 100원짜리 921개 = 92100원. 합산하면 94100원입니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-018",
@@ -1435,7 +1444,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "10000원에서 2000원을 빼면 8000원이 더 필요합니다."
+      "conceptExplanation": "10000원에서 2000원을 빼면 8000원이 더 필요합니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-019",
@@ -1472,7 +1482,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "500원씩 27번 = 13500원, 100원씩 11번 = 1100원. 합산하면 14600원입니다."
+      "conceptExplanation": "500원씩 27번 = 13500원, 100원씩 11번 = 1100원. 합산하면 14600원입니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-020",
@@ -1501,7 +1512,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "10000 = 100 × 100이므로 100원이 100개 있으면 10000원이 됩니다."
+      "conceptExplanation": "10000 = 100 × 100이므로 100원이 100개 있으면 10000원이 됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u1-big-number-021",
@@ -1615,7 +1627,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "거꾸로 5번 뺐다면, 반대로 5번 더하면 처음 수를 구할 수 있습니다. 5220억 + 50억 = 5270억"
+      "conceptExplanation": "거꾸로 5번 뺐다면, 반대로 5번 더하면 처음 수를 구할 수 있습니다. 5220억 + 50억 = 5270억",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-024",
@@ -1686,7 +1699,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "10000 = 10 × 1000이므로 10원이 1000개 있으면 10000원이 됩니다."
+      "conceptExplanation": "10000 = 10 × 1000이므로 10원이 1000개 있으면 10000원이 됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u1-big-number-026",
@@ -1723,7 +1737,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "1000원짜리 23장 = 23000원, 100원짜리 628개 = 62800원. 합산하면 85800원입니다."
+      "conceptExplanation": "1000원짜리 23장 = 23000원, 100원짜리 628개 = 62800원. 합산하면 85800원입니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-027",
@@ -1765,7 +1780,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "전체 금액을 구한 뒤 10만 원짜리 수표 한 장의 금액(100000원)으로 나눕니다."
+      "conceptExplanation": "전체 금액을 구한 뒤 10만 원짜리 수표 한 장의 금액(100000원)으로 나눕니다.",
+      "answerUnit": "장"
     },
     {
       "id": "g4-s1-u1-big-number-028",
@@ -1803,7 +1819,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "만의 자리 1은 10000을 나타내고, 천의 자리 5는 5000을 나타냅니다."
+      "conceptExplanation": "만의 자리 1은 10000을 나타내고, 천의 자리 5는 5000을 나타냅니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u1-big-number-029",
@@ -1878,7 +1895,8 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "10000원짜리 6장 = 60000원, 1000원짜리 30장 = 30000원. 합산하면 90000원입니다."
+      "conceptExplanation": "10000원짜리 6장 = 60000원, 1000원짜리 30장 = 30000원. 합산하면 90000원입니다.",
+      "answerUnit": "원"
     },
     {
       "id": "g4-s1-u2-angle-001",
@@ -1917,7 +1935,9 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "사각형의 네 각의 합은 360°입니다. 한 직선이 이루는 각도는 180°이므로 먼저 ㉡을 구한 뒤 ㉠을 계산합니다."
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다. 한 직선이 이루는 각도는 180°이므로 먼저 ㉡을 구한 뒤 ㉠을 계산합니다.",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-001.svg"
     },
     {
       "id": "g4-s1-u2-angle-002",
@@ -2021,7 +2041,9 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다."
+      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다.",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-004.svg"
     },
     {
       "id": "g4-s1-u2-angle-005",
@@ -2171,7 +2193,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "□ − 179° = 20°이면 □ = 20° + 179° = 199°입니다."
+      "conceptExplanation": "□ − 179° = 20°이면 □ = 20° + 179° = 199°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-009",
@@ -2247,7 +2270,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "직선이 이루는 각도는 180°입니다. 따라서 ㉠ = 180° − 40° = 140°"
+      "conceptExplanation": "직선이 이루는 각도는 180°입니다. 따라서 ㉠ = 180° − 40° = 140°",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-011",
@@ -2365,7 +2389,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "직각은 90°이므로 직각보다 85° 작으면 90° − 85° = 5°입니다."
+      "conceptExplanation": "직각은 90°이므로 직각보다 85° 작으면 90° − 85° = 5°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-014",
@@ -2480,7 +2505,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "직선이 이루는 각도는 180°이므로 ㉠ = 180° − 130° = 50°"
+      "conceptExplanation": "직선이 이루는 각도는 180°이므로 ㉠ = 180° − 130° = 50°",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-017",
@@ -2514,7 +2540,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "가장 큰 135°에서 가장 작은 70°를 빼면 65°입니다."
+      "conceptExplanation": "가장 큰 135°에서 가장 작은 70°를 빼면 65°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-018",
@@ -2584,7 +2611,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "60°를 똑같이 3개로 나누면 각각 20°입니다."
+      "conceptExplanation": "60°를 똑같이 3개로 나누면 각각 20°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-020",
@@ -2622,7 +2650,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "예각은 0°보다 크고 90°보다 작은 각입니다. 50°, 10°, 20°가 예각입니다."
+      "conceptExplanation": "예각은 0°보다 크고 90°보다 작은 각입니다. 50°, 10°, 20°가 예각입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-021",
@@ -2733,7 +2762,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "사각형의 네 각의 합은 360°입니다."
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-024",
@@ -2800,7 +2830,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "60°를 2등분하면 각각 30°입니다."
+      "conceptExplanation": "60°를 2등분하면 각각 30°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-026",
@@ -2867,7 +2898,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "90°에서 10°를 빼면 80°입니다."
+      "conceptExplanation": "90°에서 10°를 빼면 80°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-028",
@@ -2901,7 +2933,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "0°보다 크고 90°보다 작은 각이 예각입니다. 20°와 30°가 예각입니다."
+      "conceptExplanation": "0°보다 크고 90°보다 작은 각이 예각입니다. 20°와 30°가 예각입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-029",
@@ -2934,7 +2967,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "삼각형의 세 각의 합은 180°입니다. 나머지 각 = 180° − 20° − 25° = 135°"
+      "conceptExplanation": "삼각형의 세 각의 합은 180°입니다. 나머지 각 = 180° − 20° − 25° = 135°",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-030",
@@ -2967,7 +3001,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "한 직선 위의 각도 합은 180°이므로 A = 180° − 90° − 50° = 40°"
+      "conceptExplanation": "한 직선 위의 각도 합은 180°이므로 A = 180° − 90° − 50° = 40°",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u3-mul-div-001",
@@ -2996,7 +3031,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "60개를 10명이 똑같이 나누면 60 ÷ 10 = 6개입니다."
+      "conceptExplanation": "60개를 10명이 똑같이 나누면 60 ÷ 10 = 6개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-mul-div-002",
@@ -3025,7 +3061,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "한 상자에 229개씩 71상자이면 229 × 71 = 16259개입니다."
+      "conceptExplanation": "한 상자에 229개씩 71상자이면 229 × 71 = 16259개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-mul-div-003",
@@ -3266,7 +3303,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "400 ÷ 48 = 8 나머지 16. 나머지가 있으므로 8상자까지만 완전히 포장할 수 있습니다."
+      "conceptExplanation": "400 ÷ 48 = 8 나머지 16. 나머지가 있으므로 8상자까지만 완전히 포장할 수 있습니다.",
+      "answerUnit": "상자"
     },
     {
       "id": "g4-s1-u3-mul-div-009",
@@ -3685,7 +3723,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "372 ÷ 60 = 6 나머지 12. 나머지가 있으므로 6판까지만 완전히 담을 수 있습니다."
+      "conceptExplanation": "372 ÷ 60 = 6 나머지 12. 나머지가 있으므로 6판까지만 완전히 담을 수 있습니다.",
+      "answerUnit": "판"
     },
     {
       "id": "g4-s1-u3-mul-div-020",
@@ -3719,7 +3758,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "9m = 900cm, 900 ÷ 25 = 36. 25cm짜리 리본 36개를 만들 수 있습니다."
+      "conceptExplanation": "9m = 900cm, 900 ÷ 25 = 36. 25cm짜리 리본 36개를 만들 수 있습니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-mul-div-021",
@@ -3830,7 +3870,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "3월은 31일, 11월은 30일로 합 61일. 551 × 61 = 33611 mL"
+      "conceptExplanation": "3월은 31일, 11월은 30일로 합 61일. 551 × 61 = 33611 mL",
+      "answerUnit": "mL"
     },
     {
       "id": "g4-s1-u3-mul-div-024",
@@ -3896,7 +3937,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "913 × 28 = 25564개"
+      "conceptExplanation": "913 × 28 = 25564개",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-mul-div-026",
@@ -3929,7 +3971,8 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "979 ÷ 30 = 32 나머지 19. 32판까지 담을 수 있습니다."
+      "conceptExplanation": "979 ÷ 30 = 32 나머지 19. 32판까지 담을 수 있습니다.",
+      "answerUnit": "판"
     },
     {
       "id": "g4-s1-u3-mul-div-027",
@@ -4279,7 +4322,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s1-u4-shape-move-008",
@@ -4382,7 +4426,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u4-shape-move-012",
@@ -4556,7 +4601,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u4-shape-move-018",
@@ -4948,7 +4994,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-002",
@@ -4973,7 +5020,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "kg"
     },
     {
       "id": "g4-s1-u5-bar-graph-003",
@@ -5030,7 +5078,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-005",
@@ -5087,7 +5136,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-007",
@@ -5143,7 +5193,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u5-bar-graph-009",
@@ -5200,7 +5251,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u5-bar-graph-011",
@@ -5415,7 +5467,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-018",
@@ -5472,7 +5525,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-020",
@@ -5560,7 +5614,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-023",
@@ -5585,7 +5640,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-024",
@@ -5762,7 +5818,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "명"
     },
     {
       "id": "g4-s1-u5-bar-graph-030",
@@ -5787,7 +5844,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "막대그래프",
-      "subUnit": "막대그래프"
+      "subUnit": "막대그래프",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u6-pattern-001",
@@ -5972,7 +6030,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "규칙 찾기",
-      "subUnit": "규칙 찾기"
+      "subUnit": "규칙 찾기",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u6-pattern-007",
@@ -6560,7 +6619,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "규칙 찾기",
-      "subUnit": "규칙 찾기"
+      "subUnit": "규칙 찾기",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u6-pattern-028",

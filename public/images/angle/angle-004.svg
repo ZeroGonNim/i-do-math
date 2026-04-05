@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="250" viewBox="0 0 430 250">
+<rect width="430" height="250" fill="#F8FAFF" rx="10"/>
+<polygon points="80,190 300,190 339,45 193,45" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M 98.4,166.3 A 30,30 0 0,0 110.0,190.0" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+<text x="127" y="167" text-anchor="middle" dominant-baseline="middle" font-size="15" fill="#1e293b" font-weight="normal" font-family="Arial,sans-serif">52°</text>
+<path d="M 276.0,190.0 A 24,24 0 0,0 306.2,166.8" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+<text x="272" y="153" text-anchor="middle" dominant-baseline="middle" font-size="15" fill="#1e293b" font-weight="normal" font-family="Arial,sans-serif">105°</text>
+<path d="M 331.2,74.0 A 30,30 0 0,0 309.0,45.0" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+<text x="298" y="77" text-anchor="middle" dominant-baseline="middle" font-size="15" fill="#1e293b" font-weight="normal" font-family="Arial,sans-serif">75°</text>
+<path d="M 217.0,45.0 A 24,24 0 0,0 178.2,63.9" fill="none" stroke="#2563EB" stroke-width="1.8"/>
+<text x="213" y="86" text-anchor="middle" dominant-baseline="middle" font-size="20" fill="#2563EB" font-weight="bold" font-family="Arial,sans-serif">㉠</text>
+</svg>

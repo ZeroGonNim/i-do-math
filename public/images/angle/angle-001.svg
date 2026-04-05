@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="480" viewBox="0 0 450 480">
+<rect width="450" height="480" fill="#F8FAFF" rx="10"/>
+<polygon points="180.0,150.0 326.5,150.0 326.5,361.6 72.2,202.6" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2.5" stroke-linejoin="round"/>
+<line x1="326.5" y1="361.6" x2="326.5" y2="431.6" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4"/>
+<path d="M 326.5,397.6 A 36,36 0 0,0 296.0,342.6" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="272" y="392" text-anchor="middle" dominant-baseline="middle" font-size="14" fill="#64748b" font-family="Arial,sans-serif">122°</text>
+<path d="M 162.0,158.8 A 20,20 0 0,1 200.0,150.0" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+<text x="190" y="195" text-anchor="middle" dominant-baseline="middle" font-size="15" fill="#1e293b" font-weight="normal" font-family="Arial,sans-serif">154°</text>
+<polyline points="312.5,150.0 312.5,164.0 326.5,164.0" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+<text x="294" y="183" text-anchor="middle" dominant-baseline="middle" font-size="15" fill="#1e293b" font-family="Arial,sans-serif">90°</text>
+<path d="M 326.5,333.6 A 28,28 0 0,1 302.8,346.8" fill="none" stroke="#475569" stroke-width="1.8"/>
+<text x="300" y="314" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#475569" font-weight="normal" font-family="Arial,sans-serif">㉡</text>
+<path d="M 95.9,217.5 A 28,28 0 0,1 97.3,190.4" fill="none" stroke="#2563EB" stroke-width="1.8"/>
+<text x="126" y="205" text-anchor="middle" dominant-baseline="middle" font-size="20" fill="#2563EB" font-weight="bold" font-family="Arial,sans-serif">㉠</text>
+</svg>

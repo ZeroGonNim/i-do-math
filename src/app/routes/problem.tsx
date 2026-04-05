@@ -165,19 +165,33 @@ function ProblemScreen({ problem }: { problem: Problem }) {
         </>
       ) : (
         <>
+          {/* 연습장 전체화면 오버레이 */}
+          {showScratchpad && (
+            <div className="fixed inset-0 z-50 flex flex-col bg-amber-50">
+              <div className="flex items-center justify-between px-4 py-3 bg-white border-b shadow-sm">
+                <span className="text-base font-bold text-gray-700">✏️ 연습장</span>
+                <button
+                  onClick={() => setShowScratchpad(false)}
+                  className="text-sm font-bold px-4 py-2 rounded-xl bg-indigo-500 text-white"
+                >
+                  닫기
+                </button>
+              </div>
+              <div className="flex-1 min-h-0 p-3">
+                <Scratchpad onClear={handleScratchpadClear} />
+              </div>
+            </div>
+          )}
+
           {/* 상단 스크롤 영역: 헤더·힌트·문제·애니메이션 */}
           <div className="flex-1 overflow-y-auto min-h-0">
             {header}
             {hint}
             {question}
             <div className="mx-4 mb-2 rounded-2xl h-44 overflow-hidden">
-              {showScratchpad ? (
-                <Scratchpad onClear={handleScratchpadClear} />
-              ) : (
-                <div className="flex items-center justify-center bg-indigo-50 w-full h-full">
-                  <AnimationPlayer asset={problem.animationAsset} className="w-full h-full max-h-44" />
-                </div>
-              )}
+              <div className="flex items-center justify-center bg-indigo-50 w-full h-full">
+                <AnimationPlayer asset={problem.animationAsset} className="w-full h-full max-h-44" />
+              </div>
             </div>
           </div>
 
@@ -211,7 +225,7 @@ function ProblemScreen({ problem }: { problem: Problem }) {
                 />
               )}
               {session.answerType === 'integer' && (
-                <IntegerInput value={session.intValue} />
+                <IntegerInput value={session.intValue} unit={problem.answerUnit} />
               )}
               {(session.answerType === 'fraction' || session.answerType === undefined) && (
                 <FractionInput

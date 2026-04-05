@@ -8,13 +8,14 @@ export function Scratchpad({ onClear }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const drawing = useRef(false)
   const lastPos = useRef<{ x: number; y: number } | null>(null)
+  const dprRef = useRef(window.devicePixelRatio || 1)
 
-  // 캔버스 해상도를 컨테이너에 맞게 초기화
-  useEffect(() => {
+  const initCanvas = useCallback(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const dpr = window.devicePixelRatio || 1
+    const dpr = dprRef.current
     const rect = canvas.getBoundingClientRect()
+    if (rect.width === 0 || rect.height === 0) return
     canvas.width = rect.width * dpr
     canvas.height = rect.height * dpr
     const ctx = canvas.getContext('2d')!
@@ -25,13 +26,22 @@ export function Scratchpad({ onClear }: Props) {
     ctx.strokeStyle = '#1e293b'
   }, [])
 
+  // 레이아웃 완료 후 초기화 (requestAnimationFrame으로 타이밍 보장)
+  useEffect(() => {
+    const raf = requestAnimationFrame(() => {
+      initCanvas()
+    })
+    return () => cancelAnimationFrame(raf)
+  }, [initCanvas])
+
   function getPos(e: React.TouchEvent | React.MouseEvent): { x: number; y: number } {
     const canvas = canvasRef.current!
     const rect = canvas.getBoundingClientRect()
     if ('touches' in e) {
+      const touch = e.touches[0] ?? e.changedTouches[0]
       return {
-        x: e.touches[0].clientX - rect.left,
-        y: e.touches[0].clientY - rect.top,
+        x: touch.clientX - rect.left,
+        y: touch.clientY - rect.top,
       }
     }
     return {

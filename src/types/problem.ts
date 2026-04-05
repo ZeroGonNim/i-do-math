@@ -112,6 +112,7 @@ export interface Problem {
   steps: ProblemStep[]
   animationAsset: string
   conceptExplanation: string
+  answerUnit?: string      // 답의 단위 (예: "개", "원", "분", "°")
 }
 
 export interface ProblemTemplate {

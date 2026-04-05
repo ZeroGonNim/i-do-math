@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Space+Grotesk:wght@400;700;900&family=JetBrains+Mono:wght@700&display=swap');
 
 @theme {
   --font-sans: 'Noto Sans KR', sans-serif;
