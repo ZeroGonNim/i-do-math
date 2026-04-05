@@ -4,19 +4,20 @@
 
 ---
 
-## 📍 1. 현재 개발 상태 (Session 12 기준)
-- **진행 단계**: Figma 와이어프레임 구축 완료 (Phase A 디자인 진행 중)
+## 📍 1. 현재 개발 상태 (Session 13 기준)
+- **진행 단계**: 실사용 테스트 개선 완료 (Phase A 디자인 대기 중)
 - **코어 스택**: React 19, Tailwind v4, Dexie.js (IndexedDB), Zustand v5
 - **DB 버전**: `version(2)` — `userProfile`에 난이도 해금 필드 반영 완료
 - **문제 데이터**: `problems-v1.json` **200문제** (목표 달성)
   - 분수(20) + u1 큰수(30) + u2 각도(40) + u3 곱셈나눗셈(40) + u4 평면도형이동(30) + u5 막대그래프(30) + u6 규칙찾기(30)
-- **Figma 와이어프레임**: Page 3 — 총 17개 화면 완성 (채널 `8o5pxs4u`)
+  - **answerUnit**: 58개 문제에 단위 필드 추가 (개/원/분/°/mL/cm/명/판/상자/장)
+- **Figma 와이어프레임**: Page 3 — 총 17개 화면 완성 (채널 `6fy4jrn6`)
 
 ## 🗺️ 2. 핵심 파일 맵 (주요 로직 위치)
 - **비즈니스 로직**: `src/shared/utils/` (정답 판별, 오답 분류, 추천 엔진)
 - **데이터 저장소**: `src/shared/db/` (Dexie 스키마 및 Repository 패턴)
 - **문제 데이터**: `public/data/problems-v1.json` (200문제, ID 형식: `g4-s1-u{unit}-{concept}-{num:03d}`)
-- **타입 정의**: `src/types/problem.ts` — `questionImage?`, `choiceImages?` 필드 추가됨
+- **타입 정의**: `src/types/problem.ts` — `questionImage?`, `choiceImages?`, `answerUnit?` 필드 추가됨
 - **주요 UI**: `src/features/problem/components/` (커스텀 키패드, 분수/정수/다지선다/빈칸/그리기 입력)
 - **연습장 기능**: `src/features/problem/components/Scratchpad.tsx` (Canvas 기반)
 - **이미지 선택지**: `src/features/problem/components/MultipleChoiceInput.tsx` — `choiceImages` prop 지원
@@ -34,10 +35,11 @@
 2. ~~**[완료] u4 multiple_choice choiceImages 연결**~~ → 3문제 완료
 3. ~~**[완료] draw questionImage 연결**~~ → 16개 완료
 4. ~~**[완료] Figma 와이어프레임 17개 화면 구축**~~ → Page 3 완성, 팀별 검수 완료
-5. **[다음] Phase A (디자인)**: 와이어프레임 기반 실제 UI 컴포넌트 스타일 적용
-6. **[선택] Figma 추가 화면**: 오답복습 일반 상태 / 홈 / 문제풀이 각 타입(신규 스타일) 추가
-7. **Phase B (아이템)**: `version(3)` 마이그레이션 및 아이템/박스 시스템 코어 구축
-8. **이슈 해결**: `lottie-web` eval 관련 번들 경고 원인 파악 및 해결
+5. ~~**[완료] 실사용 테스트 개선**~~ → 단위 표시, 연습장 전체화면, 각도 SVG, CSS 수정
+6. **[진행 중] 아이 실사용 테스트** — 발견되는 오류/불편사항 수정
+7. **[다음] Phase A (디자인)**: 와이어프레임 기반 실제 UI 컴포넌트 스타일 적용
+8. **Phase B (아이템)**: `version(3)` 마이그레이션 및 아이템/박스 시스템 코어 구축
+9. **이슈 해결**: `lottie-web` eval 관련 번들 경고 원인 파악 및 해결
 
 ## 📝 5. 주요 의사결정 기록
 - **문제 타입 확장** (세션 9): `Problem` 인터페이스에 `questionImage?`, `choiceImages?` 추가
@@ -50,5 +52,10 @@
   - Figma 채널: `8o5pxs4u`, Page 3 (프레임 x=2130~9611)
   - 미포함: 오답복습 일반 상태, 홈, 문제풀이 각 타입(신규 스타일) → 추후 추가 예정
 
+- **answerUnit 필드 추가** (세션 13): `Problem` 인터페이스에 `answerUnit?` 추가. 정수 답 문제 58개에 단위 자동 등록
+- **연습장 전체화면** (세션 13): ✏️ 클릭 시 fixed overlay로 전환, 캔버스 좌표 버그 수정 (requestAnimationFrame)
+- **각도 SVG 이미지** (세션 13): `public/images/angle/` — angle-001, angle-004 수학적으로 정확한 사각형 도형 SVG
+- **외부 접속 방법** (세션 13): serveo.net SSH 터널 사용. `ssh -R 80:localhost:5173 serveo.net`
+
 ---
-*마지막 업데이트: 2026-04-02 (세션 12)*
+*마지막 업데이트: 2026-04-05 (세션 13)*
