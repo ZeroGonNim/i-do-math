@@ -25,4 +25,13 @@ export interface UserProfile {
   missionProblemsSolved: number
   missionWrongReviewed: boolean
   unlockedDifficulty: 'basic' | 'applied' | 'challenge'
+  boxCount: number
+  pittyCount: number
+  // Phase B: XP 시스템 (version 4 마이그레이션으로 기본값 0)
+  totalXP: number
+  noDropStreak: number           // 천장 카운터: 박스 미드롭 연속 정답 수
+  duplicateBuff?: {              // 중복 아이템 보상 버프
+    remaining: number            // 남은 적용 문제 수 (최대 3)
+    bonusRate: number            // 드롭 확률 보너스 (0.05 = +5%)
+  }
 }

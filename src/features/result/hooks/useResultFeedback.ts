@@ -3,11 +3,14 @@ import { classifyMistake } from '@/shared/utils/mistakeClassifier'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { wrongNoteRepo } from '@/shared/db/wrongNoteRepo'
 import { userProfileRepo } from '@/shared/db/userProfileRepo'
+import { userBoxRepo } from '@/shared/db/userBoxRepo'
 import { updateStreak } from '@/shared/hooks/useStreak'
 import { recordMissionProblemSolved, recordMissionWrongReviewed } from '@/shared/hooks/useDailyMission'
 import { calcLevel } from '@/shared/utils/levelUp'
 import { canUnlockNextDifficulty } from '@/shared/utils/difficultyUnlock'
+import { generateUUID } from '@/shared/utils/uuid'
 import type { Problem, Answer } from '@/types/problem'
+import type { UserProfile } from '@/types/user'
 
 interface Params {
   problem: Problem
@@ -16,6 +19,15 @@ interface Params {
   timeSpent: number
   hintUsed: boolean
   inputSequence: string[]
+  isRemind?: boolean
+  drawingData?: string
+}
+
+/** XP 획득량 (스펙 §3-2) */
+function calcXpGain(isRemind: boolean, hintUsed: boolean): number {
+  if (isRemind) return 10       // 오답 복습 정답
+  if (hintUsed) return 15       // 힌트 없이 재도전 정답 (근사)
+  return 20                     // 일반 정답
 }
 
 export function useResultFeedback({
@@ -25,71 +37,161 @@ export function useResultFeedback({
   timeSpent,
   hintUsed,
   inputSequence,
+  isRemind,
+  drawingData,
 }: Params) {
   const [leveledUp, setLeveledUp] = useState(false)
   const [newLevel, setNewLevel] = useState<number | null>(null)
   const [difficultyUnlocked, setDifficultyUnlocked] = useState(false)
+  const [saveError, setSaveError] = useState(false)
+  const [boxDropped, setBoxDropped] = useState(false)
+  const [xpGained, setXpGained] = useState(0)
 
   useEffect(() => {
-    async function save() {
+    async function processResult() {
       const profile = await userProfileRepo.get()
       if (!profile) return
 
-      const mistakeType = isCorrect
-        ? null
-        : classifyMistake(problem.type, problem.answer, userAnswer, timeSpent)
+      try {
+        const mistakeType = isCorrect
+          ? null
+          : classifyMistake(problem.type, problem.answer, userAnswer, timeSpent)
 
-      await learningLogRepo.add({
-        logId: crypto.randomUUID(),
-        userId: profile.userId,
-        grade: profile.grade,
-        problemId: problem.id,
-        concept: problem.concept,
-        mistakeType,
-        isCorrect,
-        userAnswer,
-        timeSpent,
-        hintUsed,
-        retryCount: 0,
-        timestamp: Date.now(),
-      })
-
-      await updateStreak(profile.userId)
-      await recordMissionProblemSolved(profile.userId)
-
-      if (isCorrect) {
-        const stars = hintUsed ? 5 : 10
-        const newStars = profile.totalStars + stars
-        const prevLevel = profile.level
-        const nextLevel = calcLevel(newStars)
-        await userProfileRepo.update({ totalStars: newStars, level: nextLevel })
-        await wrongNoteRepo.recordCorrect(profile.userId, problem.concept)
-        if (nextLevel > prevLevel) {
-          setLeveledUp(true)
-          setNewLevel(nextLevel)
-        }
-
-        if (profile.unlockedDifficulty === 'basic') {
-          const conceptLogs = await learningLogRepo.getRecentForUnlockCheck(
-            profile.userId,
-            problem.concept,
-            20
-          )
-          if (canUnlockNextDifficulty(conceptLogs)) {
-            await userProfileRepo.update({ unlockedDifficulty: 'applied' })
-            setDifficultyUnlocked(true)
-          }
-        }
-      } else if (mistakeType && mistakeType !== 'guess_error') {
-        await wrongNoteRepo.upsertWrong(profile.userId, problem.concept, mistakeType, {
-          lastWrongAnswer: userAnswer,
-          replayData: { inputSequence },
+        // 1. 학습 로그 저장
+        await learningLogRepo.add({
+          logId: generateUUID(),
+          userId: profile.userId,
+          grade: profile.grade,
+          problemId: problem.id,
+          concept: problem.concept,
+          difficulty: problem.difficulty,
+          mistakeType,
+          isCorrect,
+          userAnswer,
+          timeSpent,
+          hintUsed,
+          retryCount: 0,
+          timestamp: Date.now(),
+          drawingData,
         })
-        await recordMissionWrongReviewed(profile.userId)
+
+        // 2. 기본 업데이트
+        const { newStreak } = await updateStreak(profile.userId)
+        await recordMissionProblemSolved(profile.userId)
+
+        // 30일 연속 달성 시 레전드 박스 지급 (30의 배수마다)
+        if (newStreak > 0 && newStreak % 30 === 0) {
+          await userBoxRepo.add({
+            userId: profile.userId,
+            boxType: 'legend',
+            acquiredAt: Date.now(),
+            isOpened: false,
+          })
+          await userProfileRepo.update({
+            boxCount: (profile.boxCount ?? 0) + 1,
+          })
+        }
+
+        // 3. 정답/오답 분기 처리
+        if (isCorrect) {
+          const latestProfile = await userProfileRepo.get()
+          if (!latestProfile) return
+
+          // XP 계산
+          const xpGain = calcXpGain(!!isRemind, hintUsed)
+          const prevXP = latestProfile.totalXP ?? 0
+          const newXP = prevXP + xpGain
+          const prevLevel = latestProfile.level
+          const nextLevel = calcLevel(newXP)
+
+          // 박스 드롭 판단
+          const noDropStreak = latestProfile.noDropStreak ?? 0
+          const buffRate = latestProfile.duplicateBuff?.bonusRate ?? 0
+          const dropNormalBox = userBoxRepo.shouldDropBox(noDropStreak, buffRate)
+          const dropLevelupBox = userBoxRepo.isLevelupBoxLevel(prevLevel, nextLevel)
+          const anyBoxDropped = dropNormalBox || dropLevelupBox
+
+          // 중복 버프 소진
+          const duplicateBuff = (() => {
+            const buff = latestProfile.duplicateBuff
+            if (!buff || buff.remaining <= 0) return undefined
+            const remaining = buff.remaining - 1
+            return remaining > 0 ? { ...buff, remaining } : undefined
+          })()
+
+          const updates: Partial<UserProfile> = {
+            totalStars: latestProfile.totalStars + (hintUsed ? 5 : 10),
+            totalXP: newXP,
+            level: nextLevel,
+            noDropStreak: dropNormalBox ? 0 : noDropStreak + 1,
+            boxCount: (latestProfile.boxCount ?? 0)
+              + (dropNormalBox ? 1 : 0)
+              + (dropLevelupBox ? 1 : 0),
+            duplicateBuff,
+          }
+
+          // 원자적 업데이트 (totalXP + level 동시)
+          await userProfileRepo.update(updates)
+
+          // userBoxes 레코드 저장
+          if (dropNormalBox) {
+            await userBoxRepo.add({
+              userId: latestProfile.userId,
+              boxType: 'normal',
+              acquiredAt: Date.now(),
+              isOpened: false,
+            })
+          }
+          if (dropLevelupBox) {
+            await userBoxRepo.add({
+              userId: latestProfile.userId,
+              boxType: 'levelup',
+              acquiredAt: Date.now(),
+              isOpened: false,
+            })
+          }
+
+          await wrongNoteRepo.recordCorrect(profile.userId, problem.concept)
+
+          if (isRemind) {
+            await recordMissionWrongReviewed(profile.userId)
+          }
+
+          if (nextLevel > prevLevel) {
+            setLeveledUp(true)
+            setNewLevel(nextLevel)
+          }
+
+          setBoxDropped(anyBoxDropped)
+          setXpGained(xpGain)
+
+          if (latestProfile.unlockedDifficulty === 'basic') {
+            const conceptLogs = await learningLogRepo.getRecentForUnlockCheck(
+              profile.userId,
+              problem.concept,
+              20
+            )
+            if (canUnlockNextDifficulty(conceptLogs)) {
+              await userProfileRepo.update({ unlockedDifficulty: 'applied' })
+              setDifficultyUnlocked(true)
+            }
+          }
+        } else if (mistakeType) {
+          // 오답 노트 저장
+          await wrongNoteRepo.upsertWrong(profile.userId, problem.concept, mistakeType, {
+            lastWrongAnswer: userAnswer,
+            replayData: { inputSequence },
+            drawingData,
+          })
+        }
+      } catch (err) {
+        console.error('결과 피드백 처리 중 오류:', err)
+        setSaveError(true)
       }
     }
-    save()
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
-  return { leveledUp, newLevel, difficultyUnlocked }
+    processResult()
+  }, [isCorrect, problem, userAnswer, timeSpent, hintUsed, inputSequence, isRemind, drawingData])
+
+  return { leveledUp, newLevel, difficultyUnlocked, saveError, boxDropped, xpGained }
 }

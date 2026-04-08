@@ -1,131 +1,130 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
-import { getTopWeakNote } from '@/features/remind/hooks/useRemind'
+import { useRemindList } from '@/features/remind/hooks/useRemindList'
 import { loadProblems } from '@/shared/services/problemLoader'
-import type { WrongNote } from '@/types/wrongNote'
-import type { Problem } from '@/types/problem'
-import {
-  isIntegerAnswer,
-  isFractionAnswer,
-  isMultipleChoiceAnswer,
-  isSymbolAnswer,
-  isMultiBlankAnswer,
-} from '@/types/problem'
-import type { Answer } from '@/types/problem'
+import { MISTAKE_LABELS, formatConceptName } from '@/shared/constants/problemConstants'
 import { BottomNavBar } from '@/shared/components/BottomNavBar'
 import { AppHeader } from '@/shared/components/AppHeader'
-
-function formatAnswer(answer: Answer): string {
-  if (isIntegerAnswer(answer)) return String(answer.value)
-  if (isFractionAnswer(answer)) return `${answer.numerator}/${answer.denominator}`
-  if (isMultipleChoiceAnswer(answer)) return `${answer.choice}번`
-  if (isSymbolAnswer(answer)) return answer.symbol
-  if (isMultiBlankAnswer(answer)) return answer.values.join(', ')
-  return '—'
-}
+import { formatNumber } from '@/shared/utils/format'
+import type { WrongNote } from '@/types/wrongNote'
 
 export function RemindRoute() {
   const navigate = useNavigate()
   const profile = useUserProfile()
-  const [note, setNote] = useState<WrongNote | null>(null)
-  const [problem, setProblem] = useState<Problem | null>(null)
-  const [loading, setLoading] = useState(true)
+  const remindDays = useRemindList(profile?.userId)
+  const [toastMsg, setToastMsg] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (!profile) return
-    async function load() {
-      try {
-        const weakNote = await getTopWeakNote(profile!.userId)
-        if (!weakNote) { setLoading(false); return }
-        setNote(weakNote)
-        const data = await loadProblems()
-        const match = data.problems.find(p => p.concept === weakNote.concept)
-        setProblem(match ?? null)
-      } catch {
-        // 로드 실패 시 빈 상태와 동일하게 처리
-      } finally {
-        setLoading(false)
+  function showToast(msg: string) {
+    setToastMsg(msg)
+    setTimeout(() => setToastMsg(null), 3000)
+  }
+
+  async function handleStartReview(note: WrongNote) {
+    try {
+      const data = await loadProblems()
+      const problem = data.problems.find(p => p.concept === note.concept)
+      if (problem) {
+        navigate('/problem', { state: { problem, isRemind: true } })
+      } else {
+        showToast('문제를 찾을 수 없어요.')
       }
+    } catch {
+      showToast('데이터를 불러오지 못했습니다.')
     }
-    load()
-  }, [profile])
-
-  if (loading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <p className="text-gray-400">불러오는 중...</p>
-      </div>
-    )
   }
 
-  if (!note || !problem) {
-    return (
-      <div className="flex h-screen flex-col">
-        <div className="flex flex-1 flex-col items-center justify-center gap-4 p-6">
-          <div className="text-5xl">🎉</div>
-          <h2 className="text-xl font-bold text-gray-800">틀린 문제가 없어요!</h2>
-          <p className="text-gray-500 text-center">계속 잘하고 있어요. 새 문제에 도전해봐요!</p>
-          <button
-            className="mt-4 w-full max-w-xs min-h-[48px] rounded-2xl bg-indigo-500 text-white font-bold"
-            onClick={() => navigate('/home')}
-          >
-            홈으로
-          </button>
-        </div>
-        <BottomNavBar />
-      </div>
-    )
-  }
+  if (!profile) return null
 
-  const mistakeLabel: Record<string, string> = {
-    denominator_error: '분모를 잘못 쓰는 실수',
-    numerator_error: '분자를 잘못 쓰는 실수',
-    concept_error: '개념을 헷갈리는 실수',
-    precision_error: '계산 실수',
-    guess_error: '추측으로 답한 경우',
-    hint_dependent_error: '힌트에 너무 의존',
-  }
+  const totalWeakCount = (remindDays || []).reduce((sum, day) => sum + day.notes.length, 0)
 
   return (
-    <div className="flex h-screen flex-col bg-white">
-      <AppHeader title="오답 복습" onBack={() => navigate('/home')} />
-      <div className="flex-1 overflow-y-auto">
-        <div className="flex flex-col gap-5 p-6 pt-4">
-          <div className="text-center">
-            <div className="text-5xl mb-2">🔁</div>
-            <h2 className="text-2xl font-bold text-gray-800">다시 도전해봐요!</h2>
-            <p className="text-gray-500 text-sm mt-1">예전에 틀린 유형이에요</p>
-          </div>
-
-          {/* 약점 정보 */}
-          <div className="rounded-2xl bg-red-50 border border-red-200 p-4 space-y-2">
-            <p className="text-sm font-bold text-red-700">⚠️ 자주 틀리는 유형</p>
-            <p className="text-gray-700 font-medium">{mistakeLabel[note.mistakeType ?? ''] ?? note.mistakeType}</p>
-            <p className="text-xs text-gray-400">틀린 횟수: {note.wrongCount}회</p>
-          </div>
-
-          {/* 이전에 쓴 오답 */}
-          <div className="rounded-2xl bg-gray-50 border border-gray-200 p-4">
-            <p className="text-sm font-bold text-gray-600 mb-2">📋 이전에 쓴 답</p>
-            <p className="text-2xl font-bold text-red-500 text-center">
-              {formatAnswer(note.lastWrongAnswer)}
-            </p>
-          </div>
-
-          {/* 힌트 */}
-          <div className="rounded-2xl bg-yellow-50 border border-yellow-200 p-4">
-            <p className="text-sm font-bold text-yellow-800 mb-1">💡 이번엔 이걸 기억해요</p>
-            <p className="text-gray-700">{problem.conceptExplanation}</p>
-          </div>
-
-          <button
-            className="w-full min-h-[48px] rounded-2xl bg-indigo-500 text-white text-xl font-bold"
-            onClick={() => navigate('/problem', { state: { problem } })}
-          >
-            🎯 지금 풀어보기
-          </button>
+    <div className="flex h-dvh flex-col" style={{ backgroundColor: 'var(--color-bg-base)' }}>
+      {toastMsg && (
+        <div className="fixed top-4 left-0 right-0 mx-4 z-50 rounded-xl px-4 py-3 text-sm text-center font-medium text-white shadow-lg"
+             style={{ backgroundColor: 'rgba(33,33,33,0.92)' }}>
+          {toastMsg}
         </div>
+      )}
+      <AppHeader title="오답 복습" onBack={() => navigate('/home')} />
+      
+      <div className="flex-1 overflow-y-auto p-4">
+        {totalWeakCount === 0 ? (
+          <div className="flex flex-col items-center justify-center pt-20 gap-3">
+            <div className="text-7xl mb-1">🎉</div>
+            <h2 className="text-xl font-bold" style={{ color: 'var(--color-text-primary)' }}>
+              모든 오답 정복!
+            </h2>
+            <p className="text-center text-sm" style={{ color: 'var(--color-text-secondary)' }}>
+              지금은 복습할 문제가 없어요.<br />정말 대단한 실력이에요!
+            </p>
+            <button
+              className="mt-4 px-8 min-h-[48px] rounded-xl font-bold transition-all active:scale-[0.97]"
+              style={{ background: 'linear-gradient(135deg, #22C55E, #16A34A)', color: '#071a14' }}
+              onClick={() => navigate('/home')}
+            >
+              새로운 문제 풀기
+            </button>
+          </div>
+        ) : (
+          <div className="space-y-5">
+            {/* 요약 카드 */}
+            <div className="rounded-2xl p-5"
+                 style={{
+                   background: 'linear-gradient(135deg, rgba(196,127,255,0.25) 0%, rgba(196,127,255,0.12) 100%)',
+                   border: '1px solid rgba(196,127,255,0.35)',
+                   boxShadow: '0 0 20px rgba(196,127,255,0.12), var(--shadow-card)',
+                 }}>
+              <p className="text-xs font-bold mb-1" style={{ color: 'rgba(196,127,255,0.7)' }}>도전 과제</p>
+              <h2 className="text-xl font-black" style={{ color: 'var(--color-text-primary)' }}>
+                약점 개념{' '}
+                <span style={{ color: 'var(--color-yellow)', fontFamily: 'var(--font-game)' }}>
+                  {formatNumber(totalWeakCount)}
+                </span>
+                개를<br />정복해볼까요?
+              </h2>
+            </div>
+
+            {/* 날짜별 오답 리스트 */}
+            {remindDays.map(day => (
+              <div key={day.date} className="space-y-2">
+                <div className="flex items-center gap-2 px-1">
+                  <span className="text-xs font-bold" style={{ color: 'var(--color-text-muted)' }}>📅 {day.date}</span>
+                  <div className="flex-1 h-px" style={{ backgroundColor: 'var(--color-border-dim)' }} />
+                </div>
+                <div className="space-y-2">
+                  {day.notes.map(note => (
+                    <button
+                      key={note.id}
+                      onClick={() => handleStartReview(note)}
+                      className="w-full flex items-center gap-3 rounded-2xl px-4 py-3 text-left transition-all active:scale-[0.98]"
+                      style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-card)' }}
+                    >
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-bold truncate mb-1" style={{ color: 'var(--color-text-primary)' }}>
+                          {formatConceptName(note.concept)}
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-bold px-1.5 py-0.5 rounded-md"
+                                style={{ backgroundColor: 'rgba(255,107,107,0.12)', color: 'var(--color-red)', border: '1px solid rgba(255,107,107,0.2)' }}>
+                            {(note.mistakeType && MISTAKE_LABELS[note.mistakeType]) || '복습 필요'}
+                          </span>
+                          <span className="text-[10px]" style={{ color: 'var(--color-text-muted)' }}>
+                            {formatNumber(note.wrongCount)}회 틀림
+                          </span>
+                        </div>
+                      </div>
+                      <div className="shrink-0 w-9 h-9 flex items-center justify-center rounded-xl text-lg"
+                           style={{ backgroundColor: 'rgba(196,127,255,0.1)', border: '1px solid rgba(196,127,255,0.15)' }}>
+                        🎯
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <BottomNavBar />

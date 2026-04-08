@@ -10,11 +10,19 @@ function getYesterdayString(): string {
   return d.toISOString().slice(0, 10)
 }
 
-export async function updateStreak(userId: string): Promise<void> {
+interface UpdateStreakResult {
+  newStreak: number
+  streakIncremented: boolean
+}
+
+export async function updateStreak(userId: string): Promise<UpdateStreakResult> {
   const profile = await db.userProfile.get(userId)
-  if (!profile) return
+  if (!profile) return { newStreak: 0, streakIncremented: false }
   const today = getTodayString()
-  if (profile.lastStudyDate === today) return
+  // 오늘 이미 학습한 경우: 스트릭 변경 없음
+  if (profile.lastStudyDate === today) {
+    return { newStreak: profile.currentStreak, streakIncremented: false }
+  }
 
   const yesterday = getYesterdayString()
   const newStreak = profile.lastStudyDate === yesterday
@@ -27,4 +35,6 @@ export async function updateStreak(userId: string): Promise<void> {
     currentStreak: newStreak,
     longestStreak,
   })
+
+  return { newStreak, streakIncremented: true }
 }
