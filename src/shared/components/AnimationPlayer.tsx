@@ -21,7 +21,8 @@ export function AnimationPlayer({ asset, className = '' }: Props) {
   useEffect(() => {
     setAnimData(null)
     setFailed(false)
-    fetch(`/animations/${asset}.json`)
+    const url = `${import.meta.env.BASE_URL}animations/${asset}.json`
+    fetch(url)
       .then(r => {
         if (!r.ok) throw new Error('not found')
         return r.json()
@@ -44,9 +45,8 @@ export function AnimationPlayer({ asset, className = '' }: Props) {
 
   const emoji = EMOJI_FALLBACK[asset] ?? '🔢'
   return (
-    <div className={`flex flex-col items-center justify-center gap-1 ${className}`}>
-      <span className="text-6xl">{emoji}</span>
-      <span className="text-xs text-gray-400">{asset}</span>
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <span className="text-7xl animate-pulse">{emoji}</span>
     </div>
   )
 }

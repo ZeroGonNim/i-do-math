@@ -11,26 +11,40 @@ export function MultipleChoiceInput({ choices, choiceImages, selected, onSelect 
   // 이미지 선택지 모드
   if (choiceImages && choiceImages.length > 0) {
     return (
-      <div className="grid grid-cols-3 gap-2 px-4">
+      <div className="grid grid-cols-2 gap-3 px-4">
         {choiceImages.map((src, i) => {
           const num = i + 1
           const isSelected = selected === num
+
+          const cleanSrc = src.startsWith('/') ? src.slice(1) : src
+          const imageFullUrl = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/${cleanSrc}`
+
           return (
             <button
               key={num}
               onClick={() => onSelect(num)}
-              className={`flex flex-col items-center gap-1 rounded-xl border-2 p-2 transition-colors active:scale-[0.97] ${
-                isSelected
-                  ? 'border-blue-500 bg-blue-50'
-                  : 'border-gray-200 bg-white'
-              }`}
+              className="flex flex-col items-center gap-2 p-3 transition-all active:scale-[0.96]"
+              style={{
+                backgroundColor: isSelected ? '#0d1f2a' : '#1d1d37',
+                border: `2px solid ${isSelected ? '#81ecff' : '#23233f'}`,
+                boxShadow: isSelected ? '0 0 12px rgba(129,236,255,0.2)' : 'none',
+              }}
             >
-              <img
-                src={src}
-                alt={`선택지 ${LABELS[i]}`}
-                className="w-full h-20 object-contain"
-              />
-              <span className={`text-sm font-bold ${isSelected ? 'text-blue-500' : 'text-gray-400'}`}>
+              <div className="w-full aspect-square flex items-center justify-center overflow-hidden"
+                   style={{ backgroundColor: '#000' }}>
+                <img
+                  src={imageFullUrl}
+                  alt={`선택지 ${LABELS[i]}`}
+                  className="max-w-full max-h-full object-contain"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111127"/><text x="50%" y="50%" text-anchor="middle" dy=".3em" fill="%2346465c" font-size="12">이미지 없음</text></svg>'
+                  }}
+                />
+              </div>
+              <span
+                className="text-base font-bold"
+                style={{ color: isSelected ? '#81ecff' : '#aaa8c3', fontFamily: 'var(--font-game)' }}
+              >
                 {LABELS[i]}
               </span>
             </button>
@@ -50,16 +64,22 @@ export function MultipleChoiceInput({ choices, choiceImages, selected, onSelect 
           <button
             key={num}
             onClick={() => onSelect(num)}
-            className={`flex items-center gap-3 w-full min-h-[48px] rounded-xl border-2 px-4 py-2 text-left text-base font-medium transition-colors active:scale-[0.98] ${
-              isSelected
-                ? 'border-blue-500 bg-blue-50 text-blue-800'
-                : 'border-gray-200 bg-white text-gray-700'
-            }`}
+            className="flex items-center gap-4 w-full min-h-[56px] px-5 py-3 text-left text-lg font-bold transition-all active:scale-[0.98]"
+            style={{
+              backgroundColor: isSelected ? '#0d1f2a' : '#1d1d37',
+              border: `2px solid ${isSelected ? '#81ecff' : '#23233f'}`,
+              boxShadow: isSelected ? '0 0 12px rgba(129,236,255,0.2)' : 'none',
+            }}
           >
-            <span className={`text-lg font-bold ${isSelected ? 'text-blue-500' : 'text-gray-400'}`}>
+            <span
+              className="text-xl font-bold shrink-0"
+              style={{ color: isSelected ? '#81ecff' : '#46465c', fontFamily: 'var(--font-game)' }}
+            >
               {LABELS[i]}
             </span>
-            <span>{text}</span>
+            <span className="leading-tight" style={{ color: '#e5e3ff', fontFamily: 'var(--font-sans)' }}>
+              {text}
+            </span>
           </button>
         )
       })}

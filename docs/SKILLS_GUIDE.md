@@ -36,6 +36,9 @@
 | **webapp-testing** | Playwright를 사용하여 브라우저 기반의 기능 테스트를 수행합니다. |
 | **systematic-debugging** | 복잡한 버그의 원인을 가설 기반으로 체계적으로 분석하여 해결합니다. |
 | **security-auditor** | 코드의 보안 취약점을 점검하고 OWASP Top 10 기반의 보안 감사를 수행합니다. |
+| **gstack-investigate** | 4단계(조사→분석→가설검증→구현) 체계적 근본 원인 디버깅. Iron Law: 원인 없이 수정 금지. (gstack 적응) |
+| **gstack-cso** | CSO 모드. 공격 표면 조사, 시크릿 발굴, OWASP Top 10, STRIDE 위협 모델링 통합 보안 감사. (gstack 적응) |
+| **gstack-careful** | 파괴적 명령어(rm -rf, DROP TABLE, force-push 등) 실시간 안전 가드. (gstack 적응) |
 
 ### 📝 5. 마케팅 & 문서 (Marketing & Docs)
 | 스킬명 | 주요 기능 (한 줄 요약) |
@@ -47,11 +50,12 @@
 | **pdf** | PDF 문서의 텍스트 추출, 병합, 분할 및 변환을 지원합니다. |
 | **docx** | 표 및 서식이 포함된 전문적인 .docx 문서를 작성하고 수정합니다. |
 
-### 🤖 6. 자동화 (Automation)
+### 🤖 6. 자동화 & 회고 (Automation & Retro)
 | 스킬명 | 주요 기능 (한 줄 요약) |
 | :--- | :--- |
 | **agent-browser** | 웹 브라우저를 직접 제어하여 탐색 및 데이터 추출 작업을 자동화합니다. |
 | **read-memories** | 이전 세션 로그를 분석하여 과거의 결정이나 컨텍스트를 복원합니다. |
+| **gstack-retro** | 주간 엔지니어링 회고. 커밋 히스토리, 작업 패턴, 기여자별 분석 보고서 생성. (gstack 적응) |
 
 ### 📊 8. 데이터 분석 (Data Analysis)
 | 스킬명 | 주요 기능 (한 줄 요약) |
@@ -67,4 +71,5 @@
 | **[encoding-issue](./ENCODING_GUIDE.md)** | 인코딩(BOM/Mojibake) 문제 방지 및 해결 가이드 (Vite/PowerShell 환경). |
 
 ---
-*마지막 업데이트: 2026-03-21*
+*마지막 업데이트: 2026-04-03*
+*gstack 적응 스킬 4종 추가 (원본: github.com/garrytan/gstack, MIT License)*

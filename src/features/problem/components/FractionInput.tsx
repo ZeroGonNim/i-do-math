@@ -1,3 +1,5 @@
+import { formatNumber } from '@/shared/utils/format'
+
 interface Props {
   numerator: string
   denominator: string
@@ -7,23 +9,33 @@ interface Props {
 
 export function FractionInput({ numerator, denominator, activeField, onFieldSelect }: Props) {
   return (
-    <div className="flex items-center justify-center gap-3 text-2xl font-bold">
+    <div className="flex items-center justify-center gap-3 text-3xl font-bold">
       <button
-        className={`w-16 min-h-[48px] rounded-xl border-2 text-center transition-colors ${
-          activeField === 'numerator' ? 'border-indigo-500 bg-indigo-50' : 'border-gray-300 bg-white'
-        }`}
+        className="w-20 min-h-[56px] flex items-center justify-center text-center transition-all active:scale-[0.97]"
+        style={{
+          backgroundColor: '#000',
+          border: `2px solid ${activeField === 'numerator' ? '#81ecff' : '#23233f'}`,
+          boxShadow: activeField === 'numerator' ? '0 0 12px rgba(129,236,255,0.25)' : 'none',
+          color: '#e5e3ff',
+          fontFamily: 'var(--font-game)',
+        }}
         onClick={() => onFieldSelect('numerator')}
       >
-        {numerator || '_'}
+        {numerator ? formatNumber(numerator) : <span style={{ color: '#23233f' }}>?</span>}
       </button>
-      <span className="text-3xl text-gray-500">/</span>
+      <span className="text-4xl" style={{ color: '#aaa8c3' }}>/</span>
       <button
-        className={`w-16 min-h-[48px] rounded-xl border-2 text-center transition-colors ${
-          activeField === 'denominator' ? 'border-indigo-500 bg-indigo-50' : 'border-gray-300 bg-white'
-        }`}
+        className="w-20 min-h-[56px] flex items-center justify-center text-center transition-all active:scale-[0.97]"
+        style={{
+          backgroundColor: '#000',
+          border: `2px solid ${activeField === 'denominator' ? '#81ecff' : '#23233f'}`,
+          boxShadow: activeField === 'denominator' ? '0 0 12px rgba(129,236,255,0.25)' : 'none',
+          color: '#e5e3ff',
+          fontFamily: 'var(--font-game)',
+        }}
         onClick={() => onFieldSelect('denominator')}
       >
-        {denominator || '_'}
+        {denominator ? formatNumber(denominator) : <span style={{ color: '#23233f' }}>?</span>}
       </button>
     </div>
   )

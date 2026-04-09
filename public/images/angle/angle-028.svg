@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="180" viewBox="0 0 500 180">
+<rect width="500" height="180" fill="#F8FAFF" rx="10"/>
+<line x1="50" y1="100" x2="100" y2="100" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="50" y1="100" x2="6.698729810778062" y2="75.0" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 80,100 A 30,30 0 0,0 24.01923788646684,85.0" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="61.64685702961343" y="56.533337816991924" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">150°</text>
+<line x1="130" y1="100" x2="180" y2="100" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="130" y1="100" x2="176.98463103929544" y2="82.89899283371656" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 160,100 A 30,30 0 0,0 158.19077862357724,89.73939570022993" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="174.31634888554936" y="92.18583200498813" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">20°</text>
+<line x1="210" y1="100" x2="260" y2="100" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="210" y1="100" x2="201.3175911166535" y2="50.7596123493896" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 240,100 A 30,30 0 0,0 204.7905546699921,70.45576740963375" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="238.92544243589427" y="65.52800005964599" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">100°</text>
+<line x1="330" y1="100" x2="380" y2="100" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="330" y1="100" x2="330.0" y2="50.0" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 360,100 A 30,30 0 0,0 330.0,70.0" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="361.81980515339467" y="68.18019484660536" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">90°</text>
+<line x1="410" y1="100" x2="460" y2="100" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="410" y1="100" x2="453.30127018922195" y2="75.0" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 440,100 A 30,30 0 0,0 435.98076211353316,85.0" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="453.46666218300805" y="88.35314297038657" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">30°</text>
+
+</svg>

@@ -10,8 +10,15 @@ interface DiaryDay {
   stars: number
 }
 
+/**
+ * 타임스탬프를 로컬 시간 기준 YYYY-MM-DD 문자열로 변환합니다.
+ */
 function formatDate(ts: number): string {
-  return new Date(ts).toISOString().slice(0, 10)
+  const d = new Date(ts)
+  const year = d.getFullYear()
+  const month = String(d.getMonth() + 1).padStart(2, '0')
+  const day = String(d.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
 }
 
 function groupByDate(logs: LearningLog[]): DiaryDay[] {
@@ -39,7 +46,7 @@ export function useDiary(userId: string | undefined) {
     const logs = await db.learningLogs
       .where('userId').equals(userId)
       .reverse().sortBy('timestamp')
-      .then(all => all.slice(0, 200))
+      .then(all => all.slice(0, 500)) // 기록 제한 상향
     return groupByDate(logs)
   }, [userId], [])
 }

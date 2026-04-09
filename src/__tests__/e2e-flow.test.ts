@@ -4,12 +4,16 @@ import { db } from '@/shared/db/db'
 import { userProfileRepo } from '@/shared/db/userProfileRepo'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { wrongNoteRepo } from '@/shared/db/wrongNoteRepo'
+import { userItemRepo } from '@/shared/db/userItemRepo'
+import { equippedItemsRepo } from '@/shared/db/equippedItemsRepo'
+import { userBoxRepo } from '@/shared/db/userBoxRepo'
 import { classifyMistake } from '@/shared/utils/mistakeClassifier'
 import { isFractionEqual } from '@/shared/utils/fractionUtils'
 import { selectRecommendedProblem } from '@/shared/utils/recommendEngine'
 import { getMissionProgress, DAILY_PROBLEM_GOAL } from '@/shared/hooks/useDailyMission'
 import { updateStreak } from '@/shared/hooks/useStreak'
 import { getTopWeakNote } from '@/features/remind/hooks/useRemind'
+import { getAvatarAbility } from '@/shared/utils/avatarAbility'
 import type { UserProfile } from '@/types/user'
 import type { Problem } from '@/types/problem'
 
@@ -20,8 +24,11 @@ const mockProfile: UserProfile = {
   displayName: '테스트',
   grade: 4,
   characterId: 'char-01',
+  avatarId: 'warrior',
+  unlockedAvatars: ['warrior'],
   level: 1,
   totalStars: 0,
+  totalXP: 0,
   currentStreak: 0,
   longestStreak: 0,
   lastStudyDate: '2020-01-01',
@@ -32,6 +39,9 @@ const mockProfile: UserProfile = {
   missionProblemsSolved: 0,
   missionWrongReviewed: false,
   unlockedDifficulty: 'basic',
+  boxCount: 0,
+  pittyCount: 0,
+  noDropStreak: 0,
 }
 
 const mockProblem: Problem = {
@@ -57,6 +67,9 @@ beforeEach(async () => {
   await db.learningLogs.clear()
   await db.wrongNotes.clear()
   await db.templateCounters.clear()
+  await db.userItems.clear()
+  await db.equippedItems.clear()
+  await db.userBoxes.clear()
   await userProfileRepo.save(mockProfile)
 })
 
@@ -115,6 +128,7 @@ describe('학습 로그 저장', () => {
       grade: 4,
       problemId: mockProblem.id,
       concept: mockProblem.concept,
+      difficulty: 'basic',
       mistakeType: null,
       isCorrect: true,
       userAnswer: { numerator: 5, denominator: 8 },
@@ -156,7 +170,7 @@ describe('오답 노트', () => {
 })
 
 describe('추천 문제 엔진', () => {
-  it('틀렸을 때 같은 개념 기본 문제 추천', () => {
+  it('틀렸을 때 시간 정보 없으면 현재 난이도 유지', () => {
     const pool: Problem[] = [
       { ...mockProblem, id: 'p-basic', difficulty: 'basic' },
       { ...mockProblem, id: 'p-applied', difficulty: 'applied' },
@@ -164,9 +178,28 @@ describe('추천 문제 엔진', () => {
     const rec = selectRecommendedProblem({
       concept: mockProblem.concept,
       currentDifficulty: 'applied',
+      currentId: mockProblem.id,
       isCorrect: false,
       recentIds: [],
       pool,
+    })
+    expect(rec?.difficulty).toBe('applied')
+  })
+
+  it('틀렸을 때 시간이 평균의 2배 초과(isHard)면 난이도 낮춤', () => {
+    const pool: Problem[] = [
+      { ...mockProblem, id: 'p-basic', difficulty: 'basic' },
+      { ...mockProblem, id: 'p-applied', difficulty: 'applied' },
+    ]
+    const rec = selectRecommendedProblem({
+      concept: mockProblem.concept,
+      currentDifficulty: 'applied',
+      currentId: mockProblem.id,
+      isCorrect: false,
+      recentIds: [],
+      pool,
+      timeSpent: 100,
+      avgTimeSpent: 30,
     })
     expect(rec?.difficulty).toBe('basic')
   })
@@ -228,5 +261,153 @@ describe('스마트 리마인드', () => {
     const result = await getTopWeakNote(TEST_USER_ID)
     expect(result).not.toBeNull()
     expect(result?.concept).toBe('fraction_add_same_denominator')
+  })
+})
+
+describe('인벤토리 — 아이템 획득 및 장착', () => {
+  it('아이템 획득 후 인벤토리에 저장됨', async () => {
+    const ui = await userItemRepo.add(TEST_USER_ID, 'warrior_hat_common')
+    const all = await userItemRepo.getAll(TEST_USER_ID)
+    expect(all).toHaveLength(1)
+    expect(all[0].itemId).toBe('warrior_hat_common')
+    expect(ui.userId).toBe(TEST_USER_ID)
+  })
+
+  it('장착하면 해당 슬롯에 userItemId 저장됨', async () => {
+    const ui = await userItemRepo.add(TEST_USER_ID, 'warrior_hat_common')
+    await equippedItemsRepo.equip(TEST_USER_ID, 'hat', ui.id)
+    const equipped = await equippedItemsRepo.get(TEST_USER_ID)
+    expect(equipped.hat).toBe(ui.id)
+  })
+
+  it('같은 슬롯에 새 아이템 장착하면 이전 것이 교체됨', async () => {
+    const ui1 = await userItemRepo.add(TEST_USER_ID, 'warrior_hat_common')
+    const ui2 = await userItemRepo.add(TEST_USER_ID, 'warrior_hat_rare')
+    await equippedItemsRepo.equip(TEST_USER_ID, 'hat', ui1.id)
+    await equippedItemsRepo.equip(TEST_USER_ID, 'hat', ui2.id)
+    const equipped = await equippedItemsRepo.get(TEST_USER_ID)
+    expect(equipped.hat).toBe(ui2.id)
+  })
+
+  it('장착 해제하면 슬롯이 null이 됨', async () => {
+    const ui = await userItemRepo.add(TEST_USER_ID, 'warrior_weapon_common')
+    await equippedItemsRepo.equip(TEST_USER_ID, 'weapon', ui.id)
+    await equippedItemsRepo.unequip(TEST_USER_ID, 'weapon')
+    const equipped = await equippedItemsRepo.get(TEST_USER_ID)
+    expect(equipped.weapon).toBeNull()
+  })
+
+  it('장착 없는 슬롯은 null 반환', async () => {
+    const equipped = await equippedItemsRepo.get(TEST_USER_ID)
+    expect(equipped.hat).toBeNull()
+    expect(equipped.weapon).toBeNull()
+    expect(equipped.armor).toBeNull()
+    expect(equipped.pet).toBeNull()
+  })
+})
+
+describe('박스 드롭 시스템', () => {
+  it('천장(noDropStreak=10)에서 반드시 드롭', () => {
+    const result = userBoxRepo.shouldDropBox(10, 0)
+    expect(result).toBe(true)
+  })
+
+  it('천장 미만(noDropStreak=0)에서도 확률적으로 드롭 가능', () => {
+    // 100회 시도 중 최소 1번은 드롭되어야 함 (20% 확률)
+    const drops = Array.from({ length: 100 }, () => userBoxRepo.shouldDropBox(0, 0))
+    expect(drops.some(Boolean)).toBe(true)
+  })
+
+  it('로봇 보너스(+5%) 포함 시 드롭율 높아짐 — 천장 조건은 동일', () => {
+    const result = userBoxRepo.shouldDropBox(10, 0.05)
+    expect(result).toBe(true)
+  })
+
+  it('박스 추가 후 boxCount 증가', async () => {
+    await userBoxRepo.add({ userId: TEST_USER_ID, boxType: 'normal', acquiredAt: Date.now(), isOpened: false })
+    await userProfileRepo.update({ boxCount: 1 })
+    const profile = await userProfileRepo.get()
+    expect(profile?.boxCount).toBe(1)
+  })
+})
+
+describe('아바타 해금 및 변경', () => {
+  it('초기 unlockedAvatars는 warrior만 포함', async () => {
+    const profile = await userProfileRepo.get()
+    expect(profile?.unlockedAvatars).toContain('warrior')
+    expect(profile?.unlockedAvatars).not.toContain('mage')
+  })
+
+  it('별이 충분하면 새 아바타 해금 가능', async () => {
+    await userProfileRepo.update({ totalStars: 200, unlockedAvatars: ['warrior', 'mage'], avatarId: 'mage' })
+    const profile = await userProfileRepo.get()
+    expect(profile?.unlockedAvatars).toContain('mage')
+    expect(profile?.avatarId).toBe('mage')
+    expect(profile?.totalStars).toBe(200)
+  })
+
+  it('해금 시 별 차감', async () => {
+    await userProfileRepo.update({ totalStars: 128 })
+    const before = await userProfileRepo.get()
+    const cost = 128
+    await userProfileRepo.update({
+      totalStars: (before?.totalStars ?? 0) - cost,
+      unlockedAvatars: [...(before?.unlockedAvatars ?? ['warrior']), 'mage'],
+      avatarId: 'mage',
+    })
+    const after = await userProfileRepo.get()
+    expect(after?.totalStars).toBe(0)
+    expect(after?.unlockedAvatars).toContain('mage')
+  })
+
+  it('avatarId 변경 후 프로필에 반영', async () => {
+    await userProfileRepo.update({ unlockedAvatars: ['warrior', 'assassin'], avatarId: 'assassin' })
+    const profile = await userProfileRepo.get()
+    expect(profile?.avatarId).toBe('assassin')
+  })
+})
+
+describe('아바타 특수 능력', () => {
+  it('전사 — 오답 시 wrongXpBonus=2', () => {
+    const ability = getAvatarAbility('warrior', { isCorrect: false, hintUsed: false, noDropStreak: 0 })
+    expect(ability.wrongXpBonus).toBe(2)
+  })
+
+  it('전사 — 정답 시 wrongXpBonus=0', () => {
+    const ability = getAvatarAbility('warrior', { isCorrect: true, hintUsed: false, noDropStreak: 0 })
+    expect(ability.wrongXpBonus).toBe(0)
+  })
+
+  it('마법사 — 힌트 사용 시 ignoreHintPenalty=true', () => {
+    const ability = getAvatarAbility('mage', { isCorrect: true, hintUsed: true, noDropStreak: 0 })
+    expect(ability.ignoreHintPenalty).toBe(true)
+  })
+
+  it('마법사 — 힌트 미사용 시 ignoreHintPenalty=false', () => {
+    const ability = getAvatarAbility('mage', { isCorrect: true, hintUsed: false, noDropStreak: 0 })
+    expect(ability.ignoreHintPenalty).toBe(false)
+  })
+
+  it('암살자 — 연속 정답(noDropStreak≥2)이면 xpMultiplier=2', () => {
+    const ability = getAvatarAbility('assassin', { isCorrect: true, hintUsed: false, noDropStreak: 3 })
+    expect(ability.xpMultiplier).toBe(2)
+  })
+
+  it('암살자 — 연속 정답 부족(noDropStreak=1)이면 xpMultiplier=1', () => {
+    const ability = getAvatarAbility('assassin', { isCorrect: true, hintUsed: false, noDropStreak: 1 })
+    expect(ability.xpMultiplier).toBe(1)
+  })
+
+  it('로봇 — boxBonusRate=0.05', () => {
+    const ability = getAvatarAbility('robot', { isCorrect: true, hintUsed: false, noDropStreak: 0 })
+    expect(ability.boxBonusRate).toBe(0.05)
+  })
+
+  it('avatarId 미지정 시 모든 보너스=기본값', () => {
+    const ability = getAvatarAbility(undefined, { isCorrect: false, hintUsed: true, noDropStreak: 5 })
+    expect(ability.wrongXpBonus).toBe(0)
+    expect(ability.xpMultiplier).toBe(1)
+    expect(ability.ignoreHintPenalty).toBe(false)
+    expect(ability.boxBonusRate).toBe(0)
   })
 })

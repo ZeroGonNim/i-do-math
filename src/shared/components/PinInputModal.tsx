@@ -1,13 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface Props {
   title: string
+  headerTitle?: string
+  showBack?: boolean
+  showCancel?: boolean
   onConfirm: (pin: string) => void
   onCancel: () => void
 }
 
-export function PinInputModal({ title, onConfirm, onCancel }: Props) {
+export function PinInputModal({
+  title,
+  headerTitle,
+  showBack = false,
+  showCancel = false,
+  onConfirm,
+  onCancel,
+}: Props) {
   const [pin, setPin] = useState('')
+
+  useEffect(() => {
+    if (pin.length === 4) {
+      onConfirm(pin)
+    }
+  }, [pin, onConfirm])
 
   function handleKey(key: string) {
     if (key === 'del') {
@@ -15,59 +31,174 @@ export function PinInputModal({ title, onConfirm, onCancel }: Props) {
       return
     }
     if (pin.length >= 4) return
-    const next = pin + key
-    setPin(next)
-    if (next.length === 4) {
-      setTimeout(() => onConfirm(next), 100)
-    }
+    setPin(p => p + key)
   }
 
   const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', 'del']
+  const displayHeader = headerTitle ?? title
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-end justify-center z-50">
-      <div className="w-full max-w-sm bg-white rounded-t-3xl p-6 pb-8">
-        <h3 className="text-center font-bold text-gray-800 text-lg mb-6">{title}</h3>
+    <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#0c0c1f' }}>
 
-        {/* PIN dots */}
-        <div className="flex justify-center gap-4 mb-8">
+      {/* AppHeader */}
+      <div
+        className="shrink-0 flex items-center justify-between px-6 h-16"
+        style={{ backgroundColor: '#0c0c1f', borderBottom: '1px solid #1c1c3a' }}
+      >
+        <div className="flex items-center gap-3">
+          {showBack && (
+            <button
+              onClick={onCancel}
+              className="text-xl leading-none"
+              style={{ color: '#e5e3ff' }}
+            >
+              ←
+            </button>
+          )}
+          <span
+            className="text-xl font-medium"
+            style={{ color: '#e5e3ff', fontFamily: 'var(--font-sans)' }}
+          >
+            {displayHeader}
+          </span>
+        </div>
+        <div
+          className="w-10 h-10 flex items-center justify-center"
+          style={{ backgroundColor: '#1d1d37', border: '1.5px solid #23233f' }}
+        >
+          <span style={{ fontSize: '20px' }}>👤</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="flex-1 flex flex-col items-center px-6 pt-8 gap-7">
+
+        {/* Parent character */}
+        <div
+          className="flex items-center justify-center overflow-hidden"
+          style={{
+            width: '120px',
+            height: '120px',
+            backgroundColor: '#f5f0e8',
+            border: '3px solid #1d1d37',
+          }}
+        >
+          <span style={{ fontSize: '72px', lineHeight: 1 }}>👨‍💼</span>
+        </div>
+
+        {/* Title + subtitle */}
+        <div className="text-center">
+          <h2
+            className="text-2xl font-bold mb-2"
+            style={{ color: '#81ecff', fontFamily: 'var(--font-sans)', letterSpacing: '-0.5px' }}
+          >
+            {displayHeader}
+          </h2>
+          <p
+            className="text-base"
+            style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)' }}
+          >
+            {title}
+          </p>
+        </div>
+
+        {/* PIN boxes */}
+        <div className="flex gap-4">
           {[0, 1, 2, 3].map(i => (
             <div
               key={i}
-              className={`w-4 h-4 rounded-full border-2 transition-colors ${
-                i < pin.length ? 'bg-indigo-500 border-indigo-500' : 'bg-white border-gray-300'
-              }`}
-            />
+              className="flex items-center justify-center"
+              style={{
+                width: '64px',
+                height: '64px',
+                backgroundColor: '#000',
+                border: `2px solid ${i === pin.length ? '#81ecff' : '#23233f'}`,
+                boxShadow: i === pin.length ? '0 0 8px rgba(129,236,255,0.4)' : 'none',
+              }}
+            >
+              {i < pin.length && (
+                <div
+                  style={{
+                    width: '16px',
+                    height: '16px',
+                    backgroundColor: '#81ecff',
+                    transform: 'rotate(45deg)',
+                  }}
+                />
+              )}
+              {i >= pin.length && (
+                <div
+                  style={{
+                    width: '8px',
+                    height: '2px',
+                    backgroundColor: '#46465c',
+                  }}
+                />
+              )}
+            </div>
           ))}
         </div>
 
-        {/* Keypad */}
-        <div className="grid grid-cols-3 gap-3">
+        {/* Numpad */}
+        <div className="w-full grid grid-cols-3 gap-2">
           {digits.map((d, i) => {
             if (d === '') return <div key={i} />
+            if (d === 'del') {
+              return (
+                <button
+                  key={i}
+                  onClick={() => handleKey('del')}
+                  className="flex items-center justify-center text-xl font-bold transition-opacity active:opacity-70"
+                  style={{
+                    height: '68px',
+                    backgroundColor: '#c0392b',
+                    color: '#fff',
+                    fontFamily: 'var(--font-game)',
+                  }}
+                >
+                  ⌫
+                </button>
+              )
+            }
             return (
               <button
                 key={i}
                 onClick={() => handleKey(d)}
-                className={`min-h-[56px] rounded-2xl font-bold text-xl transition-colors ${
-                  d === 'del'
-                    ? 'bg-gray-100 text-gray-600'
-                    : 'bg-gray-50 text-gray-800 active:bg-indigo-100'
-                }`}
+                className="flex items-center justify-center text-2xl font-bold transition-opacity active:opacity-70"
+                style={{
+                  height: '68px',
+                  backgroundColor: '#1d1d37',
+                  color: '#e5e3ff',
+                  border: '1px solid #23233f',
+                  fontFamily: 'var(--font-game)',
+                }}
               >
-                {d === 'del' ? '⌫' : d}
+                {d}
               </button>
             )
           })}
         </div>
 
-        <button
-          className="w-full mt-4 min-h-[44px] text-gray-400 text-sm"
-          onClick={onCancel}
-        >
-          취소
-        </button>
+        {/* Cancel button */}
+        {showCancel && (
+          <button
+            className="w-full flex items-center justify-center text-sm font-medium"
+            style={{
+              height: '52px',
+              backgroundColor: '#17172f',
+              color: '#aaa8c3',
+              border: '1px solid #23233f',
+              fontFamily: 'var(--font-sans)',
+            }}
+            onClick={onCancel}
+          >
+            × 취소
+          </button>
+        )}
       </div>
+
+      {/* BottomNavBar placeholder spacer */}
+      <div className="shrink-0 h-16" />
     </div>
   )
 }

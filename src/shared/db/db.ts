@@ -62,6 +62,21 @@ export class IDoMathDB extends Dexie {
         if (profile.noDropStreak === undefined) profile.noDropStreak = 0
       })
     })
+
+    this.version(5).stores({
+      userProfile: 'userId',
+      learningLogs: 'logId, userId, concept, timestamp',
+      wrongNotes: 'id, userId, concept, mistakeType, isWeak',
+      templateCounters: 'key',
+      userItems: 'id, userId, itemId, obtainedAt',
+      equippedItems: 'userId',
+      userBoxes: '++boxId, userId, isOpened, acquiredAt',
+    }).upgrade(tx => {
+      return tx.table('userProfile').toCollection().modify((profile: Record<string, unknown>) => {
+        if (profile.avatarId === undefined) profile.avatarId = 'warrior'
+        if (profile.unlockedAvatars === undefined) profile.unlockedAvatars = ['warrior']
+      })
+    })
   }
 }
 

@@ -35,13 +35,13 @@
           "expression": "2/8"
         },
         {
-          "desc": "두 번 먹은 피자를 합산",
+          "desc": "두 번 먹은 피자를 다 더하기",
           "narrative": "분모(전체 조각 수)는 같으니 분자(먹은 조각 수)끼리만 더해요 → 3 + 2 = 5",
           "expression": "3/8 + 2/8 = 5/8"
         }
       ],
       "animationAsset": "fraction-pizza-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "id": "g4-s1-u2-fraction-add-002",
@@ -75,13 +75,13 @@
           "expression": "2/6"
         },
         {
-          "desc": "색칠한 칸 합산",
+          "desc": "색칠한 칸 다 더하기",
           "narrative": "전체 칸 수(분모)는 같으니 색칠한 칸 수(분자)끼리만 더해요 → 1 + 2 = 3",
           "expression": "1/6 + 2/6 = 3/6"
         }
       ],
       "animationAsset": "fraction-bar-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "id": "g4-s1-u2-fraction-add-003",
@@ -115,13 +115,13 @@
           "expression": "4/9"
         },
         {
-          "desc": "전체 사용량 합산",
+          "desc": "전체 사용량 다 더하기",
           "narrative": "분모가 같으니 분자끼리만 더해요 → 2 + 4 = 6",
           "expression": "2/9 + 4/9 = 6/9"
         }
       ],
       "animationAsset": "fraction-bar-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "id": "g4-s1-u2-fraction-add-004",
@@ -163,7 +163,7 @@
         }
       ],
       "animationAsset": "fraction-clock-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "id": "g4-s1-u2-fraction-add-005",
@@ -198,13 +198,13 @@
           "expression": "3/7"
         },
         {
-          "desc": "두 색 구슬 합산",
+          "desc": "두 색 구슬 다 더하기",
           "narrative": "분모가 7로 같아요 → 분자끼리 더해요 2 + 3 = 5",
           "expression": "2/7 + 3/7 = 5/7"
         }
       ],
       "animationAsset": "fraction-bar-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "id": "g4-s1-u2-fraction-sub-001",
@@ -467,19 +467,19 @@
       },
       "steps": [
         {
-          "desc": "184 × 6 (일의 자리)",
-          "narrative": "184 × 6 = 1104",
+          "desc": "184 × 6 (일의 자리 곱)",
+          "narrative": "먼저 184에 6을 곱하면 1104가 됩니다.",
           "expression": "184 × 6 = 1104"
         },
         {
-          "desc": "184 × 30 (십의 자리)",
-          "narrative": "184 × 30 = 5520",
+          "desc": "184 × 30 (십의 자리 곱)",
+          "narrative": "다음으로 184에 30을 곱하면 5520이 됩니다.",
           "expression": "184 × 30 = 5520"
         },
         {
-          "desc": "두 결과 더하기",
-          "narrative": "1104 + 5520 = 6624",
-          "expression": "184 × 36 = 6624"
+          "desc": "두 값을 더하기",
+          "narrative": "1104와 5520을 더하면 최종 결과는 6624입니다.",
+          "expression": "1104 + 5520 = 6624"
         }
       ],
       "animationAsset": "multiply-basic",
@@ -794,7 +794,7 @@
         "concept_error",
         "precision_error"
       ],
-      "question": "설명하는 수를 수로 쓴 것을 고르세요.\n억이 3061개, 만이 290개, 일이 8630개인 수",
+      "question": "설명하는 수를 수로 쓴 것을 골라 봐요.\n억이 3061개, 만이 290개, 일이 8630개인 수",
       "answerType": "multiple_choice",
       "choices": [
         "306102908630",
@@ -820,12 +820,12 @@
           "expression": "8630"
         },
         {
-          "desc": "합산",
+          "desc": "다 더하기",
           "expression": "306100000000 + 2900000 + 8630 = 306102908630"
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "큰 수는 억, 만, 일 자리를 구분해서 씁니다. 억이 3061개면 306100000000, 만이 290개면 2900000, 일이 8630이면 8630입니다."
+      "conceptExplanation": "큰 수는 억, 만, 일 자리를 구나눠서 보기서 씁니다. 억이 3061개면 306100000000, 만이 290개면 2900000, 일이 8630이면 8630입니다."
     },
     {
       "id": "g4-s1-u1-big-number-002",
@@ -952,7 +952,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "19747을 바르게 읽은 것을 고르세요.",
+      "question": "19747을 바르게 읽은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "일만 구천칠백사십칠",
@@ -1088,7 +1088,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "조가 83267개, 억이 2426개, 만이 3357개인 수를 바르게 읽은 것을 고르세요.",
+      "question": "조가 83267개, 억이 2426개, 만이 3357개인 수를 바르게 읽은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "팔천삼백이십육조 이천사백이십육억 삼천삼백오십칠만",
@@ -1195,7 +1195,7 @@
       "mistakeTypes": [
         "precision_error"
       ],
-      "question": "6686만을 수로 나타낼 때 0은 모두 몇 개인지 구하세요.",
+      "question": "6686만을 수로 나타낼 때 0은 모두 몇 개인지 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 4
@@ -1230,7 +1230,7 @@
         "concept_error",
         "precision_error"
       ],
-      "question": "천만의 자리 숫자가 다른 수를 고르세요.",
+      "question": "천만의 자리 숫자가 다른 수를 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "58167197",
@@ -1270,7 +1270,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "87446을 바르게 읽은 것을 고르세요.",
+      "question": "87446을 바르게 읽은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "팔만 칠천사백사십육",
@@ -1363,7 +1363,7 @@
       },
       "steps": [
         {
-          "desc": "분해",
+          "desc": "나눠서 보기",
           "expression": "61550000 = 60000000 + 1000000 + 500000 + 50000"
         },
         {
@@ -1410,7 +1410,7 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "1000원짜리 2장 = 2000원, 100원짜리 921개 = 92100원. 합산하면 94100원입니다.",
+      "conceptExplanation": "1000원짜리 2장 = 2000원, 100원짜리 921개 = 92100원. 다 더하기하면 94100원입니다.",
       "answerUnit": "원"
     },
     {
@@ -1482,7 +1482,7 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "500원씩 27번 = 13500원, 100원씩 11번 = 1100원. 합산하면 14600원입니다.",
+      "conceptExplanation": "500원씩 27번 = 13500원, 100원씩 11번 = 1100원. 다 더하기하면 14600원입니다.",
       "answerUnit": "원"
     },
     {
@@ -1531,7 +1531,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "억이 2960개인 수를 바르게 읽은 것을 고르세요.",
+      "question": "억이 2960개인 수를 바르게 읽은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "이천구백육십억",
@@ -1587,7 +1587,7 @@
       },
       "steps": [
         {
-          "desc": "분해",
+          "desc": "나눠서 보기",
           "expression": "7920000 = 7000000 + 900000 + 20000"
         }
       ],
@@ -1618,7 +1618,7 @@
       },
       "steps": [
         {
-          "desc": "역산",
+          "desc": "반대로 생각하기",
           "expression": "5220억 + 10억 × 5 = 5220억 + 50억 = 5270억"
         },
         {
@@ -1646,7 +1646,7 @@
         "concept_error",
         "precision_error"
       ],
-      "question": "15674768654 8476에서 조의 자리 숫자와 천억의 자리 숫자의 합을 구하세요.",
+      "question": "15674768654 8476에서 조의 자리 숫자와 천억의 자리 숫자의 합을 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 5
@@ -1665,7 +1665,7 @@
           "expression": "4768억 → 천억의 자리 숫자: 4"
         },
         {
-          "desc": "합산",
+          "desc": "다 더하기",
           "expression": "1 + 4 = 5"
         }
       ],
@@ -1737,7 +1737,7 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "1000원짜리 23장 = 23000원, 100원짜리 628개 = 62800원. 합산하면 85800원입니다.",
+      "conceptExplanation": "1000원짜리 23장 = 23000원, 100원짜리 628개 = 62800원. 다 더하기하면 85800원입니다.",
       "answerUnit": "원"
     },
     {
@@ -1838,7 +1838,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "두 기업 중 더 많이 기부한 기업을 고르세요.\n청솔 기업: 1787579512895원\n별님 기업: 26366550239501원",
+      "question": "두 기업 중 더 많이 기부한 기업을 골라 봐요.\n청솔 기업: 1787579512895원\n별님 기업: 26366550239501원",
       "answerType": "multiple_choice",
       "choices": [
         "청솔 기업",
@@ -1895,7 +1895,7 @@
         }
       ],
       "animationAsset": "big-number",
-      "conceptExplanation": "10000원짜리 6장 = 60000원, 1000원짜리 30장 = 30000원. 합산하면 90000원입니다.",
+      "conceptExplanation": "10000원짜리 6장 = 60000원, 1000원짜리 30장 = 30000원. 다 더하기하면 90000원입니다.",
       "answerUnit": "원"
     },
     {
@@ -1915,7 +1915,7 @@
         "calculation_error",
         "concept_error"
       ],
-      "question": "사각형에서 ㉠의 각도는 몇 도인지 구하세요.\n(세 각: 154°, 90°, 122° / 단, 122°와 ㉡은 직선 위에 있음)",
+      "question": "사각형에서 ㉠의 각도는 몇 도인지 구해 봐요.\n(세 각: 154°, 90°, 122° / 단, 122°와 ㉡은 직선 위에 있음)",
       "answerType": "integer",
       "answer": {
         "value": 58
@@ -1954,7 +1954,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "다음 그림에서 가장 큰 각을 고르세요.\n(각: ㄱ - 직각보다 약간 작은 예각, ㄴ - 매우 작은 예각, ㄷ - 넓게 벌어진 둔각)",
+      "question": "다음 그림에서 가장 큰 각을 골라 봐요.\n(각: ㄱ - 직각보다 약간 작은 예각, ㄴ - 매우 작은 예각, ㄷ - 넓게 벌어진 둔각)",
       "answerType": "multiple_choice",
       "choices": [
         "ㄱ",
@@ -1962,7 +1962,7 @@
         "ㄷ"
       ],
       "answer": {
-        "choice": 1
+        "choice": 3
       },
       "steps": [
         {
@@ -1975,7 +1975,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "두 변이 더 많이 벌어질수록 큰 각입니다."
+      "conceptExplanation": "두 변이 더 많이 벌어질수록 큰 각입니다.",
+      "questionImage": "/images/angle/angle-002.svg"
     },
     {
       "id": "g4-s1-u2-angle-003",
@@ -1992,7 +1993,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "두 그림의 각 중에서 더 작은 각을 고르세요.\n(㉠: 좁게 벌어진 예각, ㉡: 넓게 벌어진 둔각)",
+      "question": "두 그림의 각 중에서 더 작은 각을 골라 봐요.\n(㉠: 좁게 벌어진 예각, ㉡: 넓게 벌어진 둔각)",
       "answerType": "multiple_choice",
       "choices": [
         "㉠",
@@ -2008,7 +2009,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "두 변이 덜 벌어질수록 작은 각입니다."
+      "conceptExplanation": "두 변이 덜 벌어질수록 작은 각입니다.",
+      "questionImage": "/images/angle/angle-003.svg"
     },
     {
       "id": "g4-s1-u2-angle-004",
@@ -2025,7 +2027,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "사각형에서 ㉠의 각도를 구하세요.\n(세 각: 52°, 105°, 75°, 나머지 ㉠)",
+      "question": "사각형에서 ㉠의 각도를 구해 봐요.\n(세 각: 52°, 105°, 75°, 나머지 ㉠)",
       "answerType": "integer",
       "answer": {
         "value": 128
@@ -2060,7 +2062,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "사각형의 네 각의 크기의 합을 구하세요.\n세 각이 90°, 90°, 75°이고 나머지 한 각이 □°일 때, 합은 몇 도인가요?",
+      "question": "사각형의 네 각의 크기의 합을 구해 봐요.\n세 각이 90°, 90°, 75°이고 나머지 한 각이 □°일 때, 합은 몇 도인가요?",
       "answerType": "multi_blank",
       "answer": {
         "values": [
@@ -2083,7 +2085,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "사각형의 네 각의 합은 360°입니다."
+      "conceptExplanation": "사각형의 네 각의 합은 360°입니다.",
+      "questionImage": "/images/angle/angle-005.svg"
     },
     {
       "id": "g4-s1-u2-angle-006",
@@ -2100,7 +2103,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "각의 크기가 큰 것부터 차례로 고를 때, 올바른 순서를 고르세요.\n(ㄱ: 가장 넓게 벌어진 둔각, ㄴ: 중간 크기 예각, ㄷ: 작은 예각)",
+      "question": "각의 크기가 큰 것부터 차례로 고를 때, 올바른 순서를 골라 봐요.\n(ㄱ: 가장 넓게 벌어진 둔각, ㄴ: 중간 크기 예각, ㄷ: 작은 예각)",
       "answerType": "multiple_choice",
       "choices": [
         "ㄱ, ㄴ, ㄷ",
@@ -2123,7 +2126,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "두 변이 벌어진 정도로 각의 크기를 비교합니다."
+      "conceptExplanation": "두 변이 벌어진 정도로 각의 크기를 비교합니다.",
+      "questionImage": "/images/angle/angle-006.svg"
     },
     {
       "id": "g4-s1-u2-angle-007",
@@ -2141,7 +2145,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "시계의 긴바늘과 짧은바늘이 이루는 작은 쪽의 각이 둔각인 것을 모두 고르세요.\n(가: 2시, 나: 4시, 다: 6시, 라: 10시)",
+      "question": "시계의 긴바늘과 짧은바늘이 이루는 작은 쪽의 각이 둔각인 것을 모두 골라 봐요.\n(가: 2시, 나: 4시, 다: 6시, 라: 10시)",
       "answerType": "multiple_choice",
       "choices": [
         "가, 나",
@@ -2164,7 +2168,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "둔각은 90°보다 크고 180°보다 작은 각입니다. 4시는 두 바늘이 120°를 이루므로 둔각입니다."
+      "conceptExplanation": "둔각은 90°보다 크고 180°보다 작은 각입니다. 4시는 두 바늘이 120°를 이루므로 둔각입니다.",
+      "questionImage": "/images/angle/angle-007.svg"
     },
     {
       "id": "g4-s1-u2-angle-008",
@@ -2188,13 +2193,14 @@
       },
       "steps": [
         {
-          "desc": "역산",
+          "desc": "반대로 생각하기",
           "expression": "□ = 179° + 20° = 199°"
         }
       ],
       "animationAsset": "angle",
       "conceptExplanation": "□ − 179° = 20°이면 □ = 20° + 179° = 199°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-008.svg"
     },
     {
       "id": "g4-s1-u2-angle-009",
@@ -2236,7 +2242,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 160° 눈금에 점을 찍은 후 선으로 연결합니다."
+      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 160° 눈금에 점을 찍은 후 선으로 연결합니다.",
+      "questionImage": "/images/angle/angle-009.svg"
     },
     {
       "id": "g4-s1-u2-angle-010",
@@ -2254,7 +2261,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "직선 위에 40°의 각이 있을 때, ㉠의 각도를 구하세요.",
+      "question": "직선 위에 40°의 각이 있을 때, ㉠의 각도를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 140
@@ -2271,7 +2278,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "직선이 이루는 각도는 180°입니다. 따라서 ㉠ = 180° − 40° = 140°",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-010.svg"
     },
     {
       "id": "g4-s1-u2-angle-011",
@@ -2288,7 +2296,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "사각형의 네 각의 합을 구하세요.\n세 각이 105°, 90°, 75°일 때, 나머지 각(□°)과 합(□°)을 구하세요.",
+      "question": "사각형의 네 각의 합을 구해 봐요.\n세 각이 105°, 90°, 75°일 때, 나머지 각(□°)과 합(□°)을 구해 봐요.",
       "answerType": "multi_blank",
       "answer": {
         "values": [
@@ -2311,7 +2319,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다."
+      "conceptExplanation": "사각형의 네 각의 합은 항상 360°입니다.",
+      "questionImage": "/images/angle/angle-011.svg"
     },
     {
       "id": "g4-s1-u2-angle-012",
@@ -2329,7 +2338,7 @@
         "calculation_error",
         "concept_error"
       ],
-      "question": "삼각형의 세 각의 크기를 잘못 잰 것을 고르세요.",
+      "question": "삼각형의 세 각의 크기를 잘못 잰 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "65°, 25°, 90°",
@@ -2347,7 +2356,7 @@
           "expression": "각 보기의 합 확인"
         },
         {
-          "desc": "검증",
+          "desc": "맞는지 확인",
           "expression": "① 65+25+90=180✓  ② 50+80+60=190✗  ③ 100+65+15=180✓"
         },
         {
@@ -2356,7 +2365,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "삼각형의 세 각의 합은 항상 180°입니다."
+      "conceptExplanation": "삼각형의 세 각의 합은 항상 180°입니다.",
+      "questionImage": "/images/angle/angle-012.svg"
     },
     {
       "id": "g4-s1-u2-angle-013",
@@ -2390,7 +2400,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "직각은 90°이므로 직각보다 85° 작으면 90° − 85° = 5°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-013.svg"
     },
     {
       "id": "g4-s1-u2-angle-014",
@@ -2407,7 +2418,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "세 각 A(약 40°), B(약 50°), C(약 30°)를 보고 예각과 둔각을 올바르게 분류한 것을 고르세요.",
+      "question": "세 각 A(약 40°), B(약 50°), C(약 30°)를 보고 예각과 둔각을 올바르게 분류한 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "A: 예각, B: 예각, C: 예각",
@@ -2430,7 +2441,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "0°보다 크고 90°보다 작은 각은 예각, 90°보다 크고 180°보다 작은 각은 둔각입니다."
+      "conceptExplanation": "0°보다 크고 90°보다 작은 각은 예각, 90°보다 크고 180°보다 작은 각은 둔각입니다.",
+      "questionImage": "/images/angle/angle-014.svg"
     },
     {
       "id": "g4-s1-u2-angle-015",
@@ -2472,7 +2484,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 140° 눈금에 점을 찍어 선으로 연결합니다."
+      "conceptExplanation": "각도기의 중심을 꼭짓점에, 밑금을 한 변에 맞추고 140° 눈금에 점을 찍어 선으로 연결합니다.",
+      "questionImage": "/images/angle/angle-015.svg"
     },
     {
       "id": "g4-s1-u2-angle-016",
@@ -2489,7 +2502,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "직선 위에서 130°의 각이 있을 때, ㉠의 각도를 구하세요.",
+      "question": "직선 위에서 130°의 각이 있을 때, ㉠의 각도를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 50
@@ -2506,7 +2519,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "직선이 이루는 각도는 180°이므로 ㉠ = 180° − 130° = 50°",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-016.svg"
     },
     {
       "id": "g4-s1-u2-angle-017",
@@ -2524,7 +2538,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "80°, 135°, 70° 중 가장 큰 각도와 가장 작은 각도의 차를 구하세요.",
+      "question": "80°, 135°, 70° 중 가장 큰 각도와 가장 작은 각도의 차를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 65
@@ -2541,7 +2555,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "가장 큰 135°에서 가장 작은 70°를 빼면 65°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-017.svg"
     },
     {
       "id": "g4-s1-u2-angle-018",
@@ -2582,7 +2597,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "예각(나)은 직각(가)보다 작은 각입니다."
+      "conceptExplanation": "예각(나)은 직각(가)보다 작은 각입니다.",
+      "questionImage": "/images/angle/angle-018.svg"
     },
     {
       "id": "g4-s1-u2-angle-019",
@@ -2612,7 +2628,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "60°를 똑같이 3개로 나누면 각각 20°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-019.svg"
     },
     {
       "id": "g4-s1-u2-angle-020",
@@ -2651,7 +2668,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "예각은 0°보다 크고 90°보다 작은 각입니다. 50°, 10°, 20°가 예각입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-020.svg"
     },
     {
       "id": "g4-s1-u2-angle-021",
@@ -2693,7 +2711,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "각도기로 45° 눈금을 찾아 점을 찍고, 꼭짓점과 이어 각을 그립니다."
+      "conceptExplanation": "각도기로 45° 눈금을 찾아 점을 찍고, 꼭짓점과 이어 각을 그립니다.",
+      "questionImage": "/images/angle/angle-021.svg"
     },
     {
       "id": "g4-s1-u2-angle-022",
@@ -2710,7 +2729,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "148°와 104°, 두 각도의 차를 구하세요.",
+      "question": "148°와 104°, 두 각도의 차를 구해 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "34°",
@@ -2729,7 +2748,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "두 각도의 차를 구할 때는 큰 각에서 작은 각을 뺍니다."
+      "conceptExplanation": "두 각도의 차를 구할 때는 큰 각에서 작은 각을 뺍니다.",
+      "questionImage": "/images/angle/angle-022.svg"
     },
     {
       "id": "g4-s1-u2-angle-023",
@@ -2746,7 +2766,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "사각형에서 세 각이 100°, 70°, 70°일 때, A에 알맞은 각도를 구하세요.",
+      "question": "사각형에서 세 각이 100°, 70°, 70°일 때, A에 알맞은 각도를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 120
@@ -2763,7 +2783,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "사각형의 네 각의 합은 360°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-023.svg"
     },
     {
       "id": "g4-s1-u2-angle-024",
@@ -2780,7 +2801,7 @@
       "mistakeTypes": [
         "concept_error"
       ],
-      "question": "삼각형의 각의 크기에 대한 설명 중 옳은 것을 고르세요.",
+      "question": "삼각형의 각의 크기에 대한 설명 중 옳은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "두 변이 벌어진 정도가 가장 큰 가의 각의 크기가 가장 큽니다.",
@@ -2801,7 +2822,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "각의 크기는 두 변이 벌어진 정도에 의해 결정됩니다. 변의 길이나 삼각형의 높이와 관계없습니다."
+      "conceptExplanation": "각의 크기는 두 변이 벌어진 정도에 의해 결정됩니다. 변의 길이나 삼각형의 높이와 관계없습니다.",
+      "questionImage": "/images/angle/angle-024.svg"
     },
     {
       "id": "g4-s1-u2-angle-025",
@@ -2831,7 +2853,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "60°를 2등분하면 각각 30°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-025.svg"
     },
     {
       "id": "g4-s1-u2-angle-026",
@@ -2864,7 +2887,8 @@
         }
       ],
       "animationAsset": "angle",
-      "conceptExplanation": "예각은 직각보다 작은 각입니다."
+      "conceptExplanation": "예각은 직각보다 작은 각입니다.",
+      "questionImage": "/images/angle/angle-026.svg"
     },
     {
       "id": "g4-s1-u2-angle-027",
@@ -2882,7 +2906,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "10°, 90°, 85° 중 가장 큰 각도와 가장 작은 각도의 차를 구하세요.",
+      "question": "10°, 90°, 85° 중 가장 큰 각도와 가장 작은 각도의 차를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 80
@@ -2899,7 +2923,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "90°에서 10°를 빼면 80°입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-027.svg"
     },
     {
       "id": "g4-s1-u2-angle-028",
@@ -2934,7 +2959,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "0°보다 크고 90°보다 작은 각이 예각입니다. 20°와 30°가 예각입니다.",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-028.svg"
     },
     {
       "id": "g4-s1-u2-angle-029",
@@ -2951,7 +2977,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "어떤 삼각형의 두 각의 크기는 각각 20°, 25°입니다. 이 삼각형의 나머지 한 각의 크기를 구하세요.",
+      "question": "어떤 삼각형의 두 각의 크기는 각각 20°, 25°입니다. 이 삼각형의 나머지 한 각의 크기를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 135
@@ -2968,7 +2994,8 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "삼각형의 세 각의 합은 180°입니다. 나머지 각 = 180° − 20° − 25° = 135°",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-029.svg"
     },
     {
       "id": "g4-s1-u2-angle-030",
@@ -2985,7 +3012,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "직선 위에 두 각이 90°와 50°가 있을 때, A에 알맞은 각도를 구하세요.",
+      "question": "직선 위에 두 각이 90°와 50°가 있을 때, A에 알맞은 각도를 구해 봐요.",
       "answerType": "integer",
       "answer": {
         "value": 40
@@ -3002,7 +3029,303 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "한 직선 위의 각도 합은 180°이므로 A = 180° − 90° − 50° = 40°",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-030.svg"
+    },
+    {
+      "id": "g4-s1-u2-angle-031",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도의 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 70
+      },
+      "question": "30°와 40°를 더하면 몇 도가 되나요?",
+      "conceptExplanation": "각도를 더할 때는 숫자끼리 더하면 됩니다. 30 + 40 = 70",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-031.svg",
+      "steps": [
+        {
+          "desc": "각도 덧셈 규칙",
+          "expression": "각도끼리 더합니다"
+        },
+        {
+          "desc": "계산",
+          "expression": "30° + 40° = 70°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-032",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도의 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 90
+      },
+      "question": "150°에서 60°를 빼면 몇 도가 되나요?",
+      "conceptExplanation": "각도를 뺄 때는 숫자끼리 빼면 됩니다. 150 - 60 = 90",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-032.svg",
+      "steps": [
+        {
+          "desc": "각도 뺄셈 규칙",
+          "expression": "큰 각도에서 작은 각도를 뺍니다"
+        },
+        {
+          "desc": "계산",
+          "expression": "150° − 60° = 90°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-033",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "삼각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 60
+      },
+      "question": "삼각형의 두 각이 60°, 60°일 때 나머지 한 각의 크기를 구해 봐요.",
+      "conceptExplanation": "삼각형 세 각의 합은 180°입니다. 180 - 60 - 60 = 60",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-033.svg",
+      "steps": [
+        {
+          "desc": "삼각형 세 각의 합",
+          "expression": "60° + 60° + □ = 180°"
+        },
+        {
+          "desc": "두 각의 합 계산",
+          "expression": "60° + 60° = 120°"
+        },
+        {
+          "desc": "나머지 각 계산",
+          "expression": "180° − 120° = 60°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-034",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 90
+      },
+      "question": "사각형의 세 각이 90°, 90°, 90°일 때 나머지 한 각의 크기를 구해 봐요.",
+      "conceptExplanation": "사각형 네 각의 합은 360°입니다. 360 - 270 = 90",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-034.svg",
+      "steps": [
+        {
+          "desc": "사각형 네 각의 합",
+          "expression": "90° + 90° + 90° + □ = 360°"
+        },
+        {
+          "desc": "세 각의 합 계산",
+          "expression": "90° + 90° + 90° = 270°"
+        },
+        {
+          "desc": "나머지 각 계산",
+          "expression": "360° − 270° = 90°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-035",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도의 계산",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "multiple_choice",
+      "answer": {
+        "choice": 1
+      },
+      "question": "45°는 예각과 둔각 중 무엇인가요?",
+      "choices": [
+        "예각",
+        "둔각"
+      ],
+      "conceptExplanation": "90°보다 작은 각은 예각입니다.",
+      "questionImage": "/images/angle/angle-035.svg",
+      "steps": [
+        {
+          "desc": "예각의 정의",
+          "expression": "0° < 예각 < 90°"
+        },
+        {
+          "desc": "45° 위치 확인",
+          "expression": "0° < 45° < 90° → 예각"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-036",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 60
+      },
+      "question": "직선 위에 세 각이 있고, 두 각이 각각 60°, 60°일 때 나머지 한 각은 몇 도인가요?",
+      "conceptExplanation": "일직선은 180°입니다. 180 - 60 - 60 = 60",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-036.svg",
+      "steps": [
+        {
+          "desc": "일직선의 각도 합",
+          "expression": "60° + 60° + □ = 180°"
+        },
+        {
+          "desc": "두 각의 합 계산",
+          "expression": "60° + 60° = 120°"
+        },
+        {
+          "desc": "나머지 각 계산",
+          "expression": "180° − 120° = 60°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-037",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "삼각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 40
+      },
+      "question": "삼각형의 두 각이 110°, 30°일 때 나머지 한 각의 크기를 구해 봐요.",
+      "conceptExplanation": "180 - 110 - 30 = 40",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-037.svg",
+      "steps": [
+        {
+          "desc": "삼각형 세 각의 합",
+          "expression": "110° + 30° + □ = 180°"
+        },
+        {
+          "desc": "두 각의 합 계산",
+          "expression": "110° + 30° = 140°"
+        },
+        {
+          "desc": "나머지 각 계산",
+          "expression": "180° − 140° = 40°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-038",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "사각형의 각도",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "integer",
+      "answer": {
+        "value": 60
+      },
+      "question": "사각형의 세 각이 120°, 120°, 60°일 때 나머지 한 각의 크기를 구해 봐요.",
+      "conceptExplanation": "360 - 120 - 120 - 60 = 60",
+      "answerUnit": "°",
+      "questionImage": "/images/angle/angle-038.svg",
+      "steps": [
+        {
+          "desc": "사각형 네 각의 합",
+          "expression": "120° + 120° + 60° + □ = 360°"
+        },
+        {
+          "desc": "세 각의 합 계산",
+          "expression": "120° + 120° + 60° = 300°"
+        },
+        {
+          "desc": "나머지 각 계산",
+          "expression": "360° − 300° = 60°"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-039",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도의 계산",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "multiple_choice",
+      "answer": {
+        "choice": 2
+      },
+      "question": "100°는 예각과 둔각 중 무엇인가요?",
+      "choices": [
+        "예각",
+        "둔각"
+      ],
+      "conceptExplanation": "90°보다 크고 180°보다 작은 각은 둔각입니다.",
+      "questionImage": "/images/angle/angle-039.svg",
+      "steps": [
+        {
+          "desc": "둔각의 정의",
+          "expression": "90° < 둔각 < 180°"
+        },
+        {
+          "desc": "100° 위치 확인",
+          "expression": "90° < 100° < 180° → 둔각"
+        }
+      ]
+    },
+    {
+      "id": "g4-s1-u2-angle-040",
+      "grade": 4,
+      "semester": 1,
+      "unit": "각도",
+      "subUnit": "각도의 계산",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "angle_addition",
+      "answerType": "draw",
+      "answer": {
+        "referenceImage": "/images/angle/angle-040.svg"
+      },
+      "question": "90°(직각)를 아래 캔버스에 그려보세요.",
+      "conceptExplanation": "각도기를 사용하여 90도 위치에 점을 찍고 선을 긋습니다.",
+      "questionImage": "/images/angle/angle-040.svg"
     },
     {
       "id": "g4-s1-u3-mul-div-001",
@@ -3079,7 +3402,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "466 × 31의 값을 고르세요.",
+      "question": "466 × 31의 값을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "14446",
@@ -3101,7 +3424,7 @@
           "expression": "466 × 30 = 13980"
         },
         {
-          "desc": "합산",
+          "desc": "다 더하기",
           "expression": "466 + 13980 = 14446"
         }
       ],
@@ -3124,7 +3447,7 @@
         "calculation_error",
         "concept_error"
       ],
-      "question": "□에 알맞은 수를 구하세요.\n400 × □ = 4000",
+      "question": "□에 알맞은 수를 구해 봐요.\n400 × □ = 4000",
       "answerType": "multiple_choice",
       "choices": [
         "10",
@@ -3138,7 +3461,7 @@
       },
       "steps": [
         {
-          "desc": "역산",
+          "desc": "반대로 생각하기",
           "expression": "4000 ÷ 400 = 10"
         }
       ],
@@ -3247,7 +3570,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "곱이 다른 하나를 찾아 고르세요.",
+      "question": "곱이 다른 하나를 찾아 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "300 × 80",
@@ -3359,7 +3682,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "계산해 보세요.\n811 × 84",
+      "question": "계산해 봐요.\n811 × 84",
       "answerType": "integer",
       "answer": {
         "value": 68124
@@ -3374,7 +3697,7 @@
           "expression": "811 × 80 = 64880"
         },
         {
-          "desc": "합산",
+          "desc": "다 더하기",
           "expression": "3244 + 64880 = 68124"
         }
       ],
@@ -3472,7 +3795,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "다음 중 계산 결과가 네 자리 수인 것을 고르세요.",
+      "question": "다음 중 계산 결과가 네 자리 수인 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "836 × 25",
@@ -3591,7 +3914,7 @@
         "calculation_error",
         "concept_error"
       ],
-      "question": "어떤 수에 60을 곱해야 할 것을 잘못하여 30을 곱해 17460이 되었습니다. 올바르게 계산한 값을 고르세요.",
+      "question": "어떤 수에 60을 곱해야 할 것을 잘못하여 30을 곱해 17460이 되었습니다. 올바르게 계산한 값을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
         "34920",
@@ -3614,7 +3937,7 @@
         }
       ],
       "animationAsset": "multiplication",
-      "conceptExplanation": "잘못 계산한 식에서 역산으로 어떤 수를 구한 후(17460÷30=582), 올바른 계산을 합니다(582×60=34920)."
+      "conceptExplanation": "잘못 계산한 식에서 반대로 생각하기으로 어떤 수를 구한 후(17460÷30=582), 올바른 계산을 합니다(582×60=34920)."
     },
     {
       "id": "g4-s1-u3-mul-div-017",
@@ -3643,15 +3966,15 @@
       },
       "steps": [
         {
-          "desc": "주희 검증",
+          "desc": "주희 맞는지 확인",
           "expression": "866 × 20 = 17320 ✓"
         },
         {
-          "desc": "송선 검증",
+          "desc": "송선 맞는지 확인",
           "expression": "121 × 50 = 6050 ✓"
         },
         {
-          "desc": "중수 검증",
+          "desc": "중수 맞는지 확인",
           "expression": "399 × 70 = 27930 ≠ 28340 ✗"
         }
       ],
@@ -3816,7 +4139,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "계산해 보세요.\n447 × 55",
+      "question": "계산해 봐요.\n447 × 55",
       "answerType": "integer",
       "answer": {
         "value": 24585
@@ -3831,7 +4154,7 @@
           "expression": "447 × 50 = 22350"
         },
         {
-          "desc": "합산",
+          "desc": "다 더하기",
           "expression": "2235 + 22350 = 24585"
         }
       ],
@@ -4319,6 +4642,7 @@
           "expression": "정답: 3 cm"
         }
       ],
+      "questionImage": "/images/geometry/u4-007-qi.svg",
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
@@ -4427,7 +4751,8 @@
       "semester": 1,
       "unit": "평면도형의 이동",
       "subUnit": "밀기, 뒤집기, 돌리기",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/geometry/u4-011-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-012",
@@ -4602,7 +4927,8 @@
       "semester": 1,
       "unit": "평면도형의 이동",
       "subUnit": "밀기, 뒤집기, 돌리기",
-      "answerUnit": "°"
+      "answerUnit": "°",
+      "questionImage": "/images/geometry/u4-017-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-018",
@@ -4653,7 +4979,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "questionImage": "/images/geometry/u4-019-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-020",
@@ -4836,7 +5163,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "questionImage": "/images/geometry/u4-025-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-026",
@@ -4919,7 +5247,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "questionImage": "/images/geometry/u4-028-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-029",
@@ -4944,7 +5273,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "questionImage": "/images/geometry/u4-029-qi.svg"
     },
     {
       "id": "g4-s1-u4-shape-move-030",
@@ -4969,7 +5299,8 @@
       "grade": 4,
       "semester": 1,
       "unit": "평면도형의 이동",
-      "subUnit": "밀기, 뒤집기, 돌리기"
+      "subUnit": "밀기, 뒤집기, 돌리기",
+      "questionImage": "/images/geometry/u4-030-qi.svg"
     },
     {
       "id": "g4-s1-u5-bar-graph-001",
@@ -6452,7 +6783,7 @@
     },
     {
       "id": "g4-s1-u6-pattern-022",
-      "question": "규칙적인 수의 배열에서 ■와 ●에 알맞은 수를 차례대로 구하세요.\nㄱ: 1691, 2037, 2383, ■\nㄴ: 3061, 3407, ●, 4099",
+      "question": "규칙적인 수의 배열에서 ■와 ●에 알맞은 수를 차례대로 구해 봐요.\nㄱ: 1691, 2037, 2383, ■\nㄴ: 3061, 3407, ●, 4099",
       "concept": "number-pattern",
       "difficulty": "advanced",
       "answerType": "multi_blank",
@@ -6738,7 +7069,7 @@
         "a + c < b"
       ],
       "animationAsset": "fraction-pizza-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "templateId": "g4-s1-u2-fraction-sub-tpl-001",
@@ -6820,7 +7151,7 @@
         "a + c < b"
       ],
       "animationAsset": "fraction-clock-add",
-      "conceptExplanation": "분모가 같은 분수를 더할 때는 분모는 그대로 두고, 분자끼리만 더합니다."
+      "conceptExplanation": "밑에 있는 숫자(분모)는 그대로 두고, 위에 있는 숫자(분자)끼리만 더해주는 것만 기억해!"
     },
     {
       "templateId": "g4-s1-u2-fraction-sub-tpl-002",

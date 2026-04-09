@@ -20,7 +20,7 @@
 ## 2. 절대 금지 사항 (HARD RULES)
 
 1. **`any` 타입 사용 금지** → `unknown` + 타입 가드로 대체
-2. **서버 데이터를 Zustand에 복제 금지** → TanStack Query 전용
+2. **DB 데이터를 Zustand에 복제 금지** → Dexie.js Repository를 Hook에서 직접 호출 (TanStack Query 미사용)
 3. **`dangerouslySetInnerHTML` 사용 금지** → 불가피 시 DOMPurify + PR 리뷰
 4. **환경 변수에 시크릿 노출 금지** → `VITE_` 접두사 변수에 비밀값 금지
 5. **운영 배포 임의 실행 금지** → 반드시 명시적 승인 필요

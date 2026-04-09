@@ -8,6 +8,9 @@ import { RemindRoute } from './routes/remind'
 import { DiaryRoute } from './routes/diary'
 import { ParentRoute } from './routes/parent'
 import { SettingsRoute } from './routes/settings'
+import { BoxOpenRoute } from './routes/box-open'
+import { InventoryRoute } from './routes/inventory'
+import { StatsRoute } from './routes/stats'
 import { ErrorBoundary } from '@/shared/components/ErrorBoundary'
 
 export function App() {
@@ -23,6 +26,9 @@ export function App() {
         <Route path="/diary" element={<DiaryRoute />} />
         <Route path="/parent" element={<ParentRoute />} />
         <Route path="/settings" element={<SettingsRoute />} />
+        <Route path="/box-open" element={<BoxOpenRoute />} />
+        <Route path="/inventory" element={<InventoryRoute />} />
+        <Route path="/stats" element={<StatsRoute />} />
       </Routes>
     </ErrorBoundary>
   )

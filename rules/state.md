@@ -1,5 +1,10 @@
 # 상태 관리 규칙
 
+> ⚠️ **[프로젝트 오버라이드]** 이 프로젝트는 외부 API 서버 없음. TanStack Query 미사용.
+> - "서버 상태" = Dexie.js (IndexedDB)에서 읽어온 로컬 데이터
+> - DB 조작은 Repository 패턴 (`src/shared/db/`) 으로만 접근. Zustand에 복제 금지.
+> - 아래 TanStack Query 예제는 패턴 참고용으로만 활용한다.
+
 > 서버 상태와 클라이언트 상태를 **절대 혼용하지 않는다.**
 
 ---

@@ -1,5 +1,9 @@
 # TypeScript & 코드 스타일 규칙
 
+> ⚠️ **[프로젝트 오버라이드]** 이 프로젝트는 Zod 미사용.
+> - 런타임 검증이 필요한 경우 TypeScript 타입 가드(`typeof`, `in`, discriminated union)로 대체.
+> - 아래 Zod 예제는 패턴 참고용으로만 활용한다. Zod를 새로 설치하지 않는다.
+
 ---
 
 ## 1. TypeScript 핵심 규칙

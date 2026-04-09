@@ -1,33 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fonts */
-  --font-sans: 'Pretendard Variable', 'Pretendard', 'Noto Sans KR', sans-serif;
-  --font-game: 'Courier New', 'Noto Sans KR', monospace;
+  /* Fonts — 피그마 기준 */
+  --font-sans: 'Noto Sans KR', 'Pretendard Variable', 'Pretendard', sans-serif;
+  --font-game: 'Space Grotesk', 'Noto Sans KR', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Colors — Background (픽셀 블록 RPG: stone/brown) */
-  --color-bg-base:    #0D0D0D;  /* --dark: 최하단 배경 */
-  --color-bg-card:    #1C1917;  /* --panel: 화면 배경 */
-  --color-bg-raised:  #1C1917;  /* --panel: 동일 */
-  --color-bg-surface: #292524;  /* --surface: 카드·패널 배경 */
+  /* Colors — Background (피그마 토큰 기준) */
+  --color-bg-base:    #0c0c1f;  /* 전체 앱 배경 */
+  --color-bg-card:    #17172f;  /* 히어로·보상 카드 */
+  --color-bg-raised:  #1d1d37;  /* 스트릭·던전 카드 */
+  --color-bg-surface: #111127;  /* 미션 카드 */
+  --color-bg-input:   #23233f;  /* 진행바·입력 배경 */
 
-  /* Colors — Border */
-  --color-border:     #44403C;  /* --border: 구분선·테두리 */
-  --color-border-dim: #292524;
+  /* Colors — Border (피그마 토큰 기준) */
+  --color-border:     #23233f;  /* 카드 테두리 */
+  --color-border-dim: #1c1c3a;  /* 헤더·네비 테두리 */
 
-  /* Colors — Text */
-  --color-text-primary:   #E7E5E4;  /* --text: 기본 텍스트 */
-  --color-text-secondary: #78716C;  /* --sub: 보조 텍스트 */
+  /* Colors — Text (피그마 토큰 기준) */
+  --color-text-primary:   #e5e3ff;  /* 기본 텍스트 */
+  --color-text-secondary: #aaa8c3;  /* 보조 텍스트 */
   --color-text-muted:     #57534E;
 
-  /* Colors — Accent */
-  --color-cyan:   #7de8ff;
-  --color-purple: #c47fff;
-  --color-yellow: #FCD34D;  /* --yellow: 플레이어 이름·섹션 타이틀 */
-  --color-green:  #22C55E;  /* --green: 주요 액션·XP 바 */
-  --color-red:    #EF4444;  /* --red: HP 바·오답 */
-  --color-orange: #ff9f43;
+  /* Colors — Accent (피그마 토큰 기준) */
+  --color-cyan:   #81ecff;  /* 시안 — 제목·미션 강조 */
+  --color-purple: #c180ff;  /* 퍼플 — 던전·버튼 */
+  --color-yellow: #ffe792;  /* 옐로우 — 상자·보상 */
+  --color-green:  #22C55E;
+  --color-red:    #EF4444;
+  --color-orange: #ff8a3d;  /* 오렌지 — 스트릭 카드 */
 
   /* Colors — Interactive */
   --color-btn-primary:      #22C55E;

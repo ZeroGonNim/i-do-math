@@ -1,61 +1,61 @@
+import { AVATARS } from '@/types/avatar'
+import type { AvatarId } from '@/types/avatar'
+
 interface EquippedSlots {
-  hat?: string    // emoji
-  weapon?: string
-  armor?: string
-  pet?: string
+  hat?: string      // item imagePath
+  weapon?: string   // item imagePath
+  armor?: string    // item imagePath
+  pet?: string      // item imagePath
 }
 
 interface CharacterDisplayProps {
-  /** 캐릭터 이모지 및 액센트 컬러 */
-  characterEmoji: string
+  avatarId: AvatarId
   accentColor: string
-  /** 장착 슬롯 이모지 (없으면 슬롯 미표시) */
   equippedSlots?: EquippedSlots
-  /** 미오픈 박스 수 — 0이면 뱃지 미표시 */
   boxCount?: number
-  /** 탭 핸들러 — undefined면 non-interactive */
   onClick?: () => void
-  /** "인벤토리 →" 힌트 텍스트 표시 여부 */
   showHint?: boolean
 }
 
-/**
- * 캐릭터 이모지 + 장착 아이템 슬롯 디스플레이.
- *
- * 스펙 §2: 캐릭터 이모지 레이어링 방식.
- * 슬롯을 캐릭터에 직접 오버레이하지 않고 주변 고정 좌표에 배치하여
- * iOS/Android/Windows 이모지 렌더 차이를 회피한다.
- *
- * Layout (96×96 컨테이너 기준):
- *   [모자]          top-2, center-x
- *   [무기] [캐릭터] [펫]
- *          [갑옷]   bottom-2, center-x
- */
+function SlotImage({ src, label }: { src: string; label: string }) {
+  return (
+    <div
+      className="w-9 h-9 overflow-hidden border-2"
+      style={{ borderColor: 'rgba(255,255,255,0.15)', backgroundColor: '#111127' }}
+      title={label}
+    >
+      <img src={src} alt={label} className="w-full h-full object-cover" />
+    </div>
+  )
+}
+
 export function CharacterDisplay({
-  characterEmoji,
+  avatarId,
   accentColor,
   equippedSlots = {},
   boxCount = 0,
   onClick,
   showHint = false,
 }: CharacterDisplayProps) {
+  const avatar = AVATARS.find(a => a.id === avatarId) ?? AVATARS[0]
+
   const inner = (
     <div
-      className="relative w-full rounded-2xl py-9 flex items-center justify-center overflow-hidden"
+      className="relative w-full py-6 flex items-center justify-center overflow-hidden"
       style={{
         border: `1.5px solid ${accentColor}60`,
-        background: `radial-gradient(ellipse at 50% 60%, ${accentColor}18 0%, var(--color-bg-card) 68%)`,
-        boxShadow: `0 4px 20px ${accentColor}18, var(--shadow-card)`,
+        background: `radial-gradient(ellipse at 50% 60%, ${accentColor}18 0%, #1d1d37 68%)`,
+        boxShadow: `0 4px 20px ${accentColor}18`,
       }}
     >
       {/* 박스 뱃지 */}
       {boxCount > 0 && (
         <span
-          className="absolute top-2.5 right-3 text-xs font-bold px-2 py-0.5 rounded-full"
+          className="absolute top-2.5 right-3 text-xs font-bold px-2 py-0.5"
           style={{
-            backgroundColor: 'var(--color-purple)',
+            backgroundColor: '#c180ff',
             color: '#fff',
-            boxShadow: 'var(--shadow-glow-purple)',
+            boxShadow: '0 0 12px rgba(193,128,255,0.5)',
           }}
         >
           📦 {boxCount}
@@ -64,32 +64,40 @@ export function CharacterDisplay({
 
       {/* 모자 슬롯 — 상단 */}
       {equippedSlots.hat && (
-        <div className="absolute top-2 left-1/2 -translate-x-1/2 text-xl leading-none">
-          {equippedSlots.hat}
+        <div className="absolute top-2 left-1/2 -translate-x-1/2">
+          <SlotImage src={equippedSlots.hat} label="모자" />
         </div>
       )}
 
       {/* 무기 슬롯 — 좌측 */}
       {equippedSlots.weapon && (
-        <div className="absolute left-5 top-1/2 -translate-y-1/2 text-xl leading-none">
-          {equippedSlots.weapon}
+        <div className="absolute left-4 top-1/2 -translate-y-1/2">
+          <SlotImage src={equippedSlots.weapon} label="무기" />
         </div>
       )}
 
-      {/* 캐릭터 — 중앙, float 애니메이션 */}
-      <span className="char-float text-7xl">{characterEmoji}</span>
+      {/* 아바타 이미지 — 중앙 */}
+      <div
+        className="char-float w-28 h-28 overflow-hidden"
+        style={{
+          border: `2px solid ${accentColor}80`,
+          boxShadow: `0 0 20px ${accentColor}30`,
+        }}
+      >
+        <img src={avatar.imagePath} alt={avatar.name} className="w-full h-full object-cover" />
+      </div>
 
       {/* 펫 슬롯 — 우측 */}
       {equippedSlots.pet && (
-        <div className="absolute right-5 top-1/2 -translate-y-1/2 text-xl leading-none">
-          {equippedSlots.pet}
+        <div className="absolute right-4 top-1/2 -translate-y-1/2">
+          <SlotImage src={equippedSlots.pet} label="펫" />
         </div>
       )}
 
       {/* 갑옷 슬롯 — 하단 */}
       {equippedSlots.armor && (
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-xl leading-none">
-          {equippedSlots.armor}
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2">
+          <SlotImage src={equippedSlots.armor} label="갑옷" />
         </div>
       )}
 
@@ -97,7 +105,7 @@ export function CharacterDisplay({
       {showHint && (
         <p
           className="absolute bottom-2 right-3 text-[10px] font-medium"
-          style={{ color: 'var(--color-text-muted)' }}
+          style={{ color: '#46465c' }}
         >
           인벤토리 →
         </p>

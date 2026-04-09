@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+<rect width="400" height="250" fill="#F8FAFF" rx="10"/>
+<line x1="100" y1="150" x2="180" y2="150" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="100" y1="150" x2="32.156152307485925" y2="107.6064588613436" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 130,150 A 30,30 0 0,0 74.55855711530722,134.10242207300385" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="112.40368101176496" y="106.74322368277565" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">148°</text>
+<line x1="300" y1="150" x2="380" y2="150" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="300" y1="150" x2="280.6462483520266" y2="72.37634189792028" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 330,150 A 30,30 0 0,0 292.74234313201,120.8911282117201" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="327.70476638965465" y="114.5395160876975" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">104°</text>
+
+</svg>

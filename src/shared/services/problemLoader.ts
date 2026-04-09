@@ -10,9 +10,14 @@ let cache: ProblemsData | null = null
 
 export async function loadProblems(): Promise<ProblemsData> {
   if (cache) return cache
-  const res = await fetch('/data/problems-v1.json')
+  const url = `${import.meta.env.BASE_URL}data/problems-v1.json`
+  const res = await fetch(url)
   if (!res.ok) throw new Error('Failed to load problems data')
-  cache = (await res.json()) as ProblemsData
+  const raw = await res.json()
+  if (!raw?.problems || !Array.isArray(raw.problems)) {
+    throw new Error('Invalid problems data format')
+  }
+  cache = raw as ProblemsData
   return cache
 }
 

@@ -1,4 +1,6 @@
-export type CharacterId = 'char-01' | 'char-02' | 'char-03' | 'char-04'
+import type { AvatarId } from './avatar'
+
+export type CharacterId = 'char-01' | 'char-02' | 'char-03' | 'char-04' // @deprecated → avatarId 사용
 
 export const LEVEL_TITLES: Record<number, string> = {
   1: '수학 새싹',
@@ -12,7 +14,9 @@ export interface UserProfile {
   userId: string
   displayName: string
   grade: number
-  characterId: CharacterId
+  characterId: CharacterId    // @deprecated → avatarId 사용
+  avatarId: AvatarId          // 현재 장착 아바타
+  unlockedAvatars: AvatarId[] // 해금된 아바타 목록
   level: number
   totalStars: number
   currentStreak: number

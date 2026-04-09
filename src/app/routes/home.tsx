@@ -1,41 +1,36 @@
-import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useLiveQuery } from 'dexie-react-hooks'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
-import { LEVEL_TITLES } from '@/types/user'
 import { loadProblems } from '@/shared/services/problemLoader'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { getMissionProgress, DAILY_PROBLEM_GOAL } from '@/shared/hooks/useDailyMission'
 import { BottomNavBar } from '@/shared/components/BottomNavBar'
-import { CHARACTERS } from '@/shared/components/CharacterSelectCard'
-import { CharacterDisplay } from '@/shared/components/CharacterDisplay'
-import { levelProgress, xpForNextLevel } from '@/shared/utils/levelUp'
-import { equippedItemsRepo } from '@/shared/db/equippedItemsRepo'
-import { loadItems } from '@/shared/services/itemLoader'
-import { userItemRepo } from '@/shared/db/userItemRepo'
+import { AVATARS } from '@/types/avatar'
 import { formatNumber } from '@/shared/utils/format'
-import type { Item } from '@/types/item'
+import { useState } from 'react'
+
+// 4학년 1학기 교육과정 단원 (피그마 기준)
+const GRADE4_UNITS = [
+  { chapter: 1, unit: '큰 수' },
+  { chapter: 2, unit: '각도' },
+  { chapter: 3, unit: '곱셈과 나눗셈' },
+  { chapter: 4, unit: '평면도형의 이동' },
+  { chapter: 5, unit: '막대그래프' },
+  { chapter: 6, unit: '규칙 찾기' },
+  { chapter: 7, unit: '분수의 덧셈과 뺄셈' },
+]
+
+const DIFFICULTY_CHAPTER: Record<string, number> = {
+  basic: 1,
+  applied: 3,
+  challenge: 5,
+}
+
 
 export function HomeRoute() {
   const profile = useUserProfile()
   const navigate = useNavigate()
   const [loading, setLoading] = useState(false)
   const [loadError, setLoadError] = useState(false)
-  const [allItems, setAllItems] = useState<Item[]>([])
-
-  const equipped = useLiveQuery(
-    () => profile ? equippedItemsRepo.get(profile.userId) : undefined,
-    [profile?.userId]
-  )
-  const userItems = useLiveQuery(
-    () => profile ? userItemRepo.getAll(profile.userId) : [],
-    [profile?.userId],
-    []
-  )
-
-  useEffect(() => {
-    loadItems().then(setAllItems)
-  }, [])
 
   async function startProblem() {
     if (!profile) return
@@ -45,13 +40,10 @@ export function HomeRoute() {
       const data = await loadProblems()
       const recentIds = await learningLogRepo.getRecentProblemIds(profile.userId, 10)
       const gradeProblems = data.problems.filter(p => p.grade === profile.grade)
-
       const notRecent = gradeProblems.filter(p => !recentIds.includes(p.id))
       const pool = notRecent.length > 0 ? notRecent : gradeProblems
-
       const byDifficulty = pool.filter(p => p.difficulty === profile.unlockedDifficulty)
       const candidates = byDifficulty.length > 0 ? byDifficulty : pool
-
       const rec = candidates[Math.floor(Math.random() * candidates.length)]
       if (rec) navigate('/problem', { state: { problem: rec } })
     } catch {
@@ -63,215 +55,238 @@ export function HomeRoute() {
 
   if (!profile) {
     return (
-      <div className="flex h-dvh items-center justify-center text-sm"
-           style={{ backgroundColor: 'var(--color-bg-base)', color: 'var(--color-text-muted)' }}>
+      <div className="flex h-dvh items-center justify-center text-sm bg-[#0c0c1f] text-[#aaa8c3]">
         로딩 중...
       </div>
     )
   }
 
   const mission = getMissionProgress(profile)
-  const character = CHARACTERS.find(c => c.id === profile.characterId) ?? CHARACTERS[0]
-  const itemMap = Object.fromEntries(allItems.map(i => [i.id, i]))
+  const avatar = AVATARS.find(a => a.id === (profile.avatarId ?? 'warrior')) ?? AVATARS[0]
   const boxCount = profile.boxCount ?? 0
-
-  function getEquippedItem(slot: 'hat' | 'weapon' | 'armor' | 'pet'): Item | null {
-    const equippedId = equipped?.[slot] ?? null
-    if (!equippedId) return null
-    const ui = userItems.find(u => u.id === equippedId)
-    return ui ? (itemMap[ui.itemId] ?? null) : null
-  }
+  const missionPct = Math.min(100, (mission.problemsSolved / DAILY_PROBLEM_GOAL) * 100)
+  const chapterIdx = DIFFICULTY_CHAPTER[profile.unlockedDifficulty] ?? 1
+  const dungeonUnit = GRADE4_UNITS.find(u => u.chapter === chapterIdx) ?? GRADE4_UNITS[0]
+  const hasStreak = profile.currentStreak > 0
 
   return (
-    <div className="flex h-dvh flex-col" style={{ backgroundColor: 'var(--color-bg-base)' }}>
+    <div className="flex h-dvh flex-col bg-[#0c0c1f]">
 
-      {/* GNB */}
-      <div className="shrink-0 flex flex-col px-4 pt-3 pb-2"
-           style={{
-             borderBottom: '1px solid var(--color-border)',
-             background: 'linear-gradient(180deg, var(--color-bg-raised) 0%, var(--color-bg-base) 100%)',
-           }}>
-        {/* 이름 · 레벨 / 별 · 설정 */}
-        <div className="flex items-center justify-between mb-2">
-          <div className="flex flex-col">
-            <span className="font-bold text-base leading-tight" style={{ color: 'var(--color-text-primary)' }}>
-              {profile.displayName}
-            </span>
-            <span className="text-xs font-medium" style={{ color: 'var(--color-cyan)' }}>
-              ✦ {LEVEL_TITLES[profile.level] ?? `Lv.${formatNumber(profile.level)}`}
-            </span>
+      {/* ── 헤더 (피그마: h=64, bg rgba(#0c0c1f,0.6), border-b #1c1c3a) ── */}
+      <header className="shrink-0 flex items-center justify-between px-5 h-16 border-b border-[#1c1c3a] bg-[#0c0c1f]/60">
+        <div className="flex items-center gap-3">
+          {/* 피그마: ← 문자, color #ccccff, Inter 18px */}
+          <span className="text-[18px] text-[#ccccff] font-normal leading-none">←</span>
+          {/* 피그마: Noto Sans KR Medium 20px, #81ecff, letterSpacing 1px */}
+          <span className="text-[20px] font-medium text-[#81ecff] tracking-[0.05em]">
+            수학 퀘스트
+          </span>
+        </div>
+        {/* 피그마: 40×40, bg #1d1d37, border 1.5px #81ecff */}
+        <button
+          onClick={() => navigate('/inventory')}
+          className="w-10 h-10 flex items-center justify-center overflow-hidden bg-[#1d1d37] border-[1.5px] border-[#81ecff]"
+        >
+          {avatar.imagePath
+            ? <img src={avatar.imagePath} alt={avatar.name} className="w-full h-full object-cover" />
+            : <span className="text-lg">⚔️</span>}
+        </button>
+      </header>
+
+      <div className="flex-1 overflow-y-auto">
+        {/* 피그마: 카드 간 gap 16px, 좌우 padding 16px */}
+        <div className="px-4 pt-4 pb-24 flex flex-col gap-4">
+
+          {/* ── 히어로 배너 (피그마 node 3:3019: 358×144, bg #17172f, border #23233f) ── */}
+          <div className="relative bg-[#17172f]" style={{ border: '1px solid #23233f', height: '144px', overflow: 'visible' }}>
+            {/* 텍스트 영역 — 이미지 위 레이어 */}
+            <div className="relative z-10" style={{ padding: '28px 28px' }}>
+              {/* 피그마: Noto Sans KR Medium 500, 24px, lineHeight 30px, #81ecff */}
+              <p className="text-[24px] font-medium text-[#81ecff]" style={{ lineHeight: '30px' }}>
+                오늘도 모험을<br />시작하자!
+              </p>
+              {/* 피그마: Noto Sans KR Medium 500, 14px, lineHeight 20px, #aaa8c3 */}
+              <p className="text-[14px] font-medium text-[#aaa8c3] mt-2" style={{ lineHeight: '20px' }}>
+                어제보다 더 강력한 수학 용사가 되세요.
+              </p>
+            </div>
+            {/* 피그마: hero-knight.png — 카드 우측 */}
+            <button
+              onClick={() => navigate('/inventory')}
+              className="absolute w-[120px] h-[120px] flex items-center justify-center active:scale-[0.97] transition-transform"
+              style={{ top: '12px', right: '8px' }}
+            >
+              <img src="/images/hero-knight.png" alt="hero" className="w-full h-full object-contain" />
+            </button>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center gap-1.5 rounded-full px-3 py-1"
-                 style={{
-                   backgroundColor: 'var(--color-bg-surface)',
-                   border: '1px solid rgba(255, 209, 102, 0.25)',
-                 }}>
-              <span className="text-sm leading-none">⭐</span>
-              <span className="text-sm font-bold" style={{ color: 'var(--color-yellow)', fontFamily: 'var(--font-game)' }}>
-                {formatNumber(profile.totalStars)}
+
+          {/* ── 오늘의 미션 (피그마 node 3:3027: 358×132, bg #111127, border #23233f) ── */}
+          <div className="bg-[#111127] border border-[#23233f]" style={{ padding: '20px 20px' }}>
+            {/* 타이틀 행 */}
+            <div className="flex items-center justify-between" style={{ marginBottom: '12px' }}>
+              <div className="flex items-center gap-2">
+                {/* 피그마: 체크 원형 아이콘 (Container node 3:3030) */}
+                <div className="w-3 h-3 rounded-full border-2 border-[#81ecff]" />
+                {/* 피그마: Noto Sans KR Medium 500, 16px, lineHeight 24px, #81ecff */}
+                <span className="text-[16px] font-medium text-[#81ecff]" style={{ lineHeight: '24px' }}>
+                  오늘의 미션
+                </span>
+              </div>
+              {/* 피그마: Space Grotesk Bold 700, 12px, lineHeight 16px, #00d4ec */}
+              <span className="text-[12px] font-bold text-[#00d4ec]" style={{ lineHeight: '16px', fontFamily: 'Space Grotesk, sans-serif' }}>
+                {Math.round(missionPct)}% 완료
               </span>
             </div>
-            <button
-              onClick={() => navigate('/settings')}
-              className="text-xl transition-opacity active:opacity-60 w-9 h-9 flex items-center justify-center rounded-xl"
-              style={{ backgroundColor: 'var(--color-bg-surface)', color: 'var(--color-text-secondary)' }}
-            >
-              ⚙️
-            </button>
-          </div>
-        </div>
-        {/* XP 진행 바 */}
-        {(() => {
-          const xp = profile.totalXP ?? 0
-          const progress = levelProgress(xp)
-          const needed = xpForNextLevel(profile.level)
-          const current = Math.round(progress * needed)
-          return (
-            <>
-              <div className="w-full rounded-full overflow-hidden" style={{ height: '3px', backgroundColor: 'var(--color-bg-surface)' }}>
-                <div className="h-full rounded-full transition-all duration-700"
-                     style={{ width: `${Math.round(progress * 100)}%`, backgroundColor: 'var(--color-green)' }} />
-              </div>
-              <div className="flex justify-between mt-0.5">
-                <span className="text-[9px]" style={{ color: 'var(--color-text-muted)' }}>
-                  Lv.{formatNumber(profile.level)}
-                </span>
-                <span className="text-[9px]" style={{ color: 'var(--color-text-muted)', fontFamily: 'var(--font-game)' }}>
-                  {formatNumber(current)} / {formatNumber(needed)} XP
-                </span>
-              </div>
-            </>
-          )
-        })()}
-      </div>
-
-      {/* 스트릭 배너 */}
-      {profile.currentStreak > 0 && (
-        <div className="streak-pulse mx-4 mt-3 rounded-xl px-4 py-2.5 text-center text-sm font-bold"
-             style={{
-               background: 'linear-gradient(135deg, rgba(255,159,67,0.12) 0%, rgba(255,107,107,0.08) 100%)',
-               border: '1px solid rgba(255, 159, 67, 0.5)',
-               color: 'var(--color-orange)',
-             }}>
-          🔥 {formatNumber(profile.currentStreak)}일 연속 학습 중!
-        </div>
-      )}
-
-      {/* 오늘의 미션 배너 */}
-      <div className="mx-4 mt-3 rounded-xl px-4 py-3"
-           style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-card)' }}>
-        <div className="flex items-center justify-between mb-2">
-          <p className="text-xs font-bold" style={{ color: 'var(--color-cyan)' }}>🎯 오늘의 미션</p>
-          {mission.isComplete && (
-            <span className="text-xs font-bold" style={{ color: 'var(--color-green)' }}>🎉 완료!</span>
-          )}
-        </div>
-        {/* 진행 바 */}
-        <div className="w-full rounded-full mb-2.5 overflow-hidden"
-             style={{ height: '5px', backgroundColor: 'var(--color-bg-surface)' }}>
-          <div className="h-full rounded-full transition-all duration-700 ease-out"
-               style={{
-                 width: `${Math.min(100, (mission.problemsSolved / DAILY_PROBLEM_GOAL) * 100)}%`,
-                 background: mission.isComplete
-                   ? 'var(--color-green)'
-                   : 'linear-gradient(90deg, var(--color-cyan), var(--color-purple))',
-               }} />
-        </div>
-        <div className="flex gap-4 text-sm">
-          <div className="flex items-center gap-1.5">
-            <span>{mission.problemsSolved >= DAILY_PROBLEM_GOAL ? '✅' : '⬜'}</span>
-            <span style={{ color: 'var(--color-text-secondary)' }}>문제 {formatNumber(DAILY_PROBLEM_GOAL)}개</span>
-            <span className="font-bold" style={{ color: 'var(--color-cyan)', fontFamily: 'var(--font-game)' }}>
-              {formatNumber(mission.problemsSolved)}/{formatNumber(DAILY_PROBLEM_GOAL)}
-            </span>
-          </div>
-          <div className="flex items-center gap-1.5">
-            <span>{mission.wrongReviewed ? '✅' : '⬜'}</span>
-            <span style={{ color: 'var(--color-text-secondary)' }}>오답 복습</span>
-          </div>
-        </div>
-      </div>
-
-      {/* 메인 영역 */}
-      <div className="flex-1 flex flex-col items-center justify-center gap-4 px-4">
-
-        {/* 캐릭터 카드 — 탭 → 인벤토리 */}
-        <CharacterDisplay
-          characterEmoji={character.emoji}
-          accentColor={character.accentColor}
-          equippedSlots={{
-            hat:    getEquippedItem('hat')?.emoji    ?? undefined,
-            weapon: getEquippedItem('weapon')?.emoji ?? undefined,
-            armor:  getEquippedItem('armor')?.emoji  ?? undefined,
-            pet:    getEquippedItem('pet')?.emoji    ?? undefined,
-          }}
-          boxCount={boxCount}
-          onClick={() => navigate('/inventory')}
-          showHint
-        />
-
-        {/* 학년 카드 */}
-        <div className="w-full rounded-xl px-6 py-4 text-center"
-             style={{
-               backgroundColor: 'var(--color-bg-raised)',
-               border: '1px solid var(--color-border)',
-               boxShadow: 'var(--shadow-card)',
-             }}>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-base font-bold" style={{ color: 'var(--color-text-primary)' }}>
-              {formatNumber(profile.grade)}학년 수학
-            </span>
-            {profile.unlockedDifficulty === 'applied' && (
-              <span className="rounded-full px-2.5 py-0.5 text-xs font-bold"
-                    style={{ backgroundColor: 'rgba(196,127,255,0.15)', color: 'var(--color-purple)', border: '1px solid rgba(196,127,255,0.3)' }}>
-                🔓 응용
+            {/* 문제 풀기 행 */}
+            <div className="flex items-center justify-between" style={{ marginBottom: '8px' }}>
+              {/* 피그마: Noto Sans KR Medium 500, 12px, #e5e3ff */}
+              <span className="text-[12px] font-medium text-[#e5e3ff]" style={{ lineHeight: '16px' }}>
+                문제 풀기
               </span>
-            )}
+              {/* 피그마: Space Grotesk Bold 700, 12px, #e5e3ff */}
+              <span className="text-[12px] font-bold text-[#e5e3ff]" style={{ lineHeight: '16px', fontFamily: 'Space Grotesk, sans-serif' }}>
+                ({formatNumber(mission.problemsSolved)}/{formatNumber(DAILY_PROBLEM_GOAL)})
+              </span>
+            </div>
+            {/* 피그마: 진행바 컨테이너 318×24, bg #23233f / 내부 바 h=16, top=4, left=4, bg #81ecff */}
+            <div className="relative bg-[#23233f]" style={{ height: '24px' }}>
+              <div
+                className="absolute bg-[#81ecff] transition-[width] duration-700"
+                style={{
+                  top: '4px',
+                  left: '4px',
+                  height: '16px',
+                  width: missionPct > 0 ? `calc(${missionPct}% - 8px)` : '0px',
+                  minWidth: 0,
+                }}
+              />
+            </div>
           </div>
-          <div className="mt-0.5 text-sm" style={{ color: 'var(--color-text-secondary)' }}>
-            오늘도 함께 풀어보자! 💪
-          </div>
-        </div>
 
-        {/* 학습 시작 버튼 */}
-        <button
-          onClick={startProblem}
-          disabled={loading}
-          className="btn-glow-green w-full min-h-[56px] rounded-xl text-lg font-bold transition-all disabled:opacity-50 active:scale-[0.98]"
-          style={{
-            background: loading
-              ? 'var(--color-green)'
-              : 'linear-gradient(135deg, #22C55E 0%, #16A34A 50%, #15803D 100%)',
-            color: '#071a14',
-          }}
-        >
-          {loading ? '문제 불러오는 중...' : '학습 시작하기  →'}
-        </button>
+          {/* ── 스트릭 · 보상 2열 (피그마: 각 171×101.5, gap 16px) ── */}
+          <div className="grid grid-cols-2 gap-4">
 
-        {loadError && (
-          <p className="text-sm text-center" style={{ color: 'var(--color-red)' }}>
-            문제를 불러오지 못했어요. 다시 시도해주세요.
-          </p>
-        )}
-
-        {/* 서브 버튼 */}
-        <div className="flex gap-2.5 w-full">
-          {[
-            { label: '수학 일기', emoji: '📖', path: '/diary', color: 'var(--color-cyan)', bg: 'rgba(125,232,255,0.07)', border: 'rgba(125,232,255,0.2)' },
-            { label: '오답 복습', emoji: '🔁', path: '/remind', color: 'var(--color-yellow)', bg: 'rgba(255,209,102,0.07)', border: 'rgba(255,209,102,0.2)' },
-            { label: '보호자', emoji: '👨‍👩‍👧', path: '/parent', color: 'var(--color-purple)', bg: 'rgba(196,127,255,0.07)', border: 'rgba(196,127,255,0.2)' },
-          ].map(btn => (
-            <button
-              key={btn.path}
-              onClick={() => navigate(btn.path)}
-              className="flex-1 min-h-[52px] rounded-xl font-bold text-xs transition-all active:opacity-70 active:scale-[0.97] flex flex-col items-center justify-center gap-0.5"
-              style={{ backgroundColor: btn.bg, color: btn.color, border: `1px solid ${btn.border}` }}
+            {/* 스트릭 카드 (피그마 node 3:3043: bg #ff8a3d, border #b85a1c) */}
+            <div
+              className={hasStreak
+                ? 'bg-[#ff8a3d] border border-[#b85a1c]'
+                : 'bg-[#1d1d37] border border-[#23233f]'
+              }
+              style={{ padding: '20px 20px' }}
             >
-              <span className="text-lg leading-none">{btn.emoji}</span>
-              <span>{btn.label}</span>
+              {/* 피그마: 상단 Container (node 3:3044) — 불꽃 아이콘 */}
+              <div style={{ height: '22.5px', marginBottom: '4px', display: 'flex', alignItems: 'center' }}>
+                <span style={{ fontSize: '18px', lineHeight: 1 }}>🔥</span>
+              </div>
+              {/* 피그마: Noto Sans KR Medium 500, 12px, lineHeight 16px, #632d0a */}
+              <p className="text-[12px] font-medium text-[#632d0a]" style={{ lineHeight: '16px', marginBottom: '0px' }}>
+                학습 스트릭
+              </p>
+              {/* 피그마: Noto Sans KR Medium 500, 18px, lineHeight 22.5px, #ffffff */}
+              <p className="text-[18px] font-medium text-white" style={{ lineHeight: '22.5px' }}>
+                {hasStreak
+                  ? `${formatNumber(profile.currentStreak)}일 연속\n학습 중!`
+                  : '오늘\n시작해봐요!'}
+              </p>
+            </div>
+
+            {/* 보상 카드 (피그마 node 3:3051: bg #17172f, border #23233f) */}
+            <button
+              onClick={() => navigate('/inventory')}
+              className="text-left bg-[#17172f] border border-[#23233f] active:opacity-80 transition-opacity"
+              style={{ padding: '20px 20px' }}
+            >
+              {/* 피그마: 상단 Container (node 3:3052) — 상자 아이콘 */}
+              <div style={{ height: '25px', marginBottom: '4px', display: 'flex', alignItems: 'center' }}>
+                <span style={{ fontSize: '18px', lineHeight: 1 }}>📦</span>
+              </div>
+              {/* 피그마: Noto Sans KR Medium 500, 12px, lineHeight 16px, #aaa8c3 */}
+              <p className="text-[12px] font-medium text-[#aaa8c3]" style={{ lineHeight: '16px' }}>
+                획득한 보상
+              </p>
+              {/* 피그마: Space Grotesk Bold 700, 18px, lineHeight 28px, #ffe792 */}
+              <p className="text-[18px] font-bold text-[#ffe792]" style={{ lineHeight: '28px', fontFamily: 'Space Grotesk, sans-serif' }}>
+                {formatNumber(boxCount)}개 상자
+              </p>
             </button>
-          ))}
+          </div>
+
+          {/* ── 던전 카드 (피그마 node 3:3059: 358×332, bg #1d1d37, border #c180ff 1px) ── */}
+          <div className="bg-[#1d1d37] border-2 border-[#c180ff] overflow-hidden">
+
+            {/* 배경 이미지 영역 (피그마 node 3:3060: 350×128) */}
+            <div className="relative" style={{ height: '128px' }}>
+              <img
+                src="/images/dungeon-bg.png"
+                alt=""
+                className="w-full h-full object-cover"
+              />
+              {/* 하단 그라디언트 페이드 (피그마 node 3:3062) */}
+              <div
+                className="absolute bottom-0 left-0 right-0"
+                style={{
+                  height: '64px',
+                  background: 'linear-gradient(to bottom, transparent, #1d1d37)',
+                }}
+              />
+              {/* 현재 던전 배지 (피그마 node 3:3063: bg #c180ff, borderRadius 4, 58.55×17) */}
+              {/* 피그마 절대 위치: x=263-247=16, y=651-547=104 → bottom=128-104-17=7 */}
+              <div
+                className="absolute"
+                style={{
+                  left: '16px',
+                  bottom: '7px',
+                  backgroundColor: '#c180ff',
+                  borderRadius: '4px',
+                  padding: '1px 8px',
+                }}
+              >
+                {/* 피그마: Noto Sans KR Medium 500, 10px, lineHeight 15px, #33005b */}
+                <span className="text-[10px] font-medium text-[#33005b]" style={{ lineHeight: '15px' }}>
+                  현재 던전
+                </span>
+              </div>
+            </div>
+
+            {/* 텍스트 + 버튼 (피그마 node 3:3065: 350×196, padding 24px 24px) */}
+            <div style={{ padding: '24px 24px 24px' }}>
+              {/* 피그마 node 3:3068: Space Grotesk Bold 700, 20px, lineHeight 28px, #c180ff */}
+              <p
+                className="text-[20px] font-bold text-[#c180ff]"
+                style={{ lineHeight: '28px', marginBottom: '4px', fontFamily: 'Space Grotesk, sans-serif' }}
+              >
+                {formatNumber(profile.grade)}학년 1학기 - {chapterIdx}단원
+              </p>
+              {/* 피그마 node 3:3070: Noto Sans KR Medium 500, 24px, lineHeight 32px, #e5e3ff */}
+              <p
+                className="text-[24px] font-medium text-[#e5e3ff]"
+                style={{ lineHeight: '32px', marginBottom: '24px' }}
+              >
+                {dungeonUnit.unit}
+              </p>
+
+              {/* 버튼 (피그마 node 3:3071: 302×68, bg #c180ff, border #4f0089) */}
+              <button
+                onClick={startProblem}
+                disabled={loading}
+                className="w-full flex items-center justify-center gap-2 bg-[#c180ff] border-2 border-[#4f0089] text-[#33005b] disabled:opacity-50 active:scale-[0.98] transition-transform"
+                style={{ height: '68px' }}
+              >
+                {/* 피그마: 아이콘 Container (node 3:3072: 20×20) + 텍스트 Noto Sans KR Medium 500, 18px, lineHeight 28px */}
+                <span className="text-[20px] leading-none">⚔</span>
+                <span className="text-[18px] font-medium" style={{ lineHeight: '28px' }}>
+                  {loading ? '불러오는 중...' : '모험 시작하기!'}
+                </span>
+              </button>
+
+              {loadError && (
+                <p className="text-[12px] text-center text-[#ff716c] mt-2">
+                  문제를 불러오지 못했어요. 다시 시도해주세요.
+                </p>
+              )}
+            </div>
+          </div>
+
         </div>
       </div>
 

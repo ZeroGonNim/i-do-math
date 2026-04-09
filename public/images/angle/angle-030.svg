@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+<rect width="400" height="250" fill="#F8FAFF" rx="10"/>
+<line x1="50" y1="180" x2="350" y2="180" stroke="#94a3b8" stroke-width="2"/>
+<line x1="200" y1="180" x2="200" y2="100" stroke="#4F46E5" stroke-width="2.5"/>
+<line x1="200" y1="180" x2="260" y2="120" stroke="#4F46E5" stroke-width="2.5"/>
+<text x="170" y="140" font-size="14">90°</text>
+<text x="230" y="160" font-size="14">A</text>
+<text x="280" y="175" font-size="14">50°</text>
+
+</svg>

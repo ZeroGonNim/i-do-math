@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+<rect width="400" height="250" fill="#F8FAFF" rx="10"/>
+<line x1="100" y1="180" x2="300" y2="180" stroke="#94a3b8" stroke-width="2" stroke-dasharray="5,5"/>
+<circle cx="100" cy="180" r="4" fill="#4F46E5"/>
+<text x="200" y="100" text-anchor="middle" font-size="18" fill="#4F46E5" font-weight="bold">45°를 그려보세요</text>
+</svg>

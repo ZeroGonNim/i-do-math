@@ -1,0 +1,12 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#fff9f2" />
+  <!-- Pattern grid -->
+  <g transform="translate(100, 50)">
+    <rect width="100" height="100" fill="none" stroke="#cbd5e1" />
+    <path d="M 0 0 L 50 0 L 0 50 Z" fill="#3b82f6" opacity="0.8" />
+    <path d="M 100 0 L 100 50 L 50 0 Z" fill="#3b82f6" opacity="0.6" transform="rotate(90, 50, 50)" />
+    <path d="M 100 100 L 50 100 L 100 50 Z" fill="#3b82f6" opacity="0.4" transform="rotate(180, 50, 50)" />
+    <path d="M 0 100 L 0 50 L 50 100 Z" fill="#3b82f6" opacity="0.2" transform="rotate(270, 50, 50)" />
+  </g>
+  <text x="150" y="180" font-size="12" text-anchor="middle" fill="#64748b">이 무늬는 몇 도씩 돌려서 만들었을까요?</text>
+</svg>

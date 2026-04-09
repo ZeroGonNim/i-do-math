@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+<rect width="400" height="250" fill="#F8FAFF" rx="10"/>
+<polygon points="80,180 300,180 300,80 120,80" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<polyline points="300,170 290,170 290,180" fill="none" stroke="#1e293b" stroke-width="1"/>
+<polyline points="300,90 290,90 290,80" fill="none" stroke="#1e293b" stroke-width="1"/>
+<text x="90" y="170" font-size="12">75°</text>
+<text x="135" y="100" font-size="14" font-weight="bold" fill="#2563EB">□°</text>
+
+</svg>

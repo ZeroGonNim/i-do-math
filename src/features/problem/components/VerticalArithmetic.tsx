@@ -14,7 +14,7 @@ export function VerticalArithmetic({ expression, steps, result, className = '' }
   const hasSteps = steps && steps.length > 0
 
   return (
-    <div className={`rounded-xl border border-purple-600 bg-black px-5 py-4 ${className}`}>
+    <div className={`px-5 py-4 ${className}`} style={{ border: '1px solid #c180ff', backgroundColor: '#000' }}>
       {/* 수식 헤더 */}
       <div className="border-b border-[#46465c] pb-2 text-right font-sans text-lg text-[#e5e3ff]">
         {expression}

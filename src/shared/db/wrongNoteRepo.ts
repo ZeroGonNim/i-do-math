@@ -7,20 +7,20 @@ export const wrongNoteRepo = {
     userId: string,
     concept: string,
     mistakeType: MistakeType,
-    updates: Pick<WrongNote, 'lastWrongAnswer' | 'replayData'>
+    updates: Pick<WrongNote, 'lastWrongAnswer' | 'replayData' | 'drawingData'>
   ): Promise<void> {
     if (!mistakeType) return
     const id = `${userId}::${concept}::${mistakeType}`
     const existing = await db.wrongNotes.get(id)
     if (existing) {
-      const consecutiveWrong = existing.consecutiveWrong + 1
-      const wrongCount = existing.wrongCount + 1
+      const consecutiveWrong = (existing.consecutiveWrong ?? 0) + 1
+      const wrongCount = (existing.wrongCount ?? 0) + 1
       await db.wrongNotes.update(id, {
         ...updates,
         wrongCount,
         consecutiveWrong,
         consecutiveCorrect: 0,
-        isWeak: wrongCount >= 3,
+        isWeak: true, // 한 번이라도 틀리면 일단 리스트에 나오도록 true로 설정
         lastAttemptAt: Date.now(),
       })
     } else {
@@ -32,7 +32,7 @@ export const wrongNoteRepo = {
         wrongCount: 1,
         consecutiveWrong: 1,
         consecutiveCorrect: 0,
-        isWeak: false,
+        isWeak: true, // 새 오답도 바로 표시
         lastAttemptAt: Date.now(),
         ...updates,
       })

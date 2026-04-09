@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="250" viewBox="0 0 450 250">
+<rect width="450" height="250" fill="#F8FAFF" rx="10"/>
+<line x1="100" y1="150" x2="180" y2="150" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="100" y1="150" x2="100.0" y2="70.0" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 130,150 A 30,30 0 0,0 100.0,120.0" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="131.81980515339464" y="118.18019484660536" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">가</text>
+<line x1="300" y1="150" x2="380" y2="150" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="300" y1="150" x2="356.5685424949238" y2="93.4314575050762" stroke="#4F46E5" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M 330,150 A 30,30 0 0,0 321.2132034355964,128.78679656440357" fill="none" stroke="#94a3b8" stroke-width="1.8"/>
+<text x="341.5745789630079" y="132.77924554357097" text-anchor="middle" dominant-baseline="middle" font-size="16" fill="#1e293b" font-weight="bold">나</text>
+
+</svg>

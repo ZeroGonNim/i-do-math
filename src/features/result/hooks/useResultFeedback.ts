@@ -9,6 +9,7 @@ import { recordMissionProblemSolved, recordMissionWrongReviewed } from '@/shared
 import { calcLevel } from '@/shared/utils/levelUp'
 import { canUnlockNextDifficulty } from '@/shared/utils/difficultyUnlock'
 import { generateUUID } from '@/shared/utils/uuid'
+import { getAvatarAbility } from '@/shared/utils/avatarAbility'
 import type { Problem, Answer } from '@/types/problem'
 import type { UserProfile } from '@/types/user'
 
@@ -46,6 +47,8 @@ export function useResultFeedback({
   const [saveError, setSaveError] = useState(false)
   const [boxDropped, setBoxDropped] = useState(false)
   const [xpGained, setXpGained] = useState(0)
+  const [starsGained, setStarsGained] = useState(0)
+  const [xpMultiplierApplied, setXpMultiplierApplied] = useState(false)
 
   useEffect(() => {
     async function processResult() {
@@ -92,21 +95,32 @@ export function useResultFeedback({
           })
         }
 
-        // 3. 정답/오답 분기 처리
+        // 3. 아바타 특수 능력 계산 (profile의 noDropStreak 재활용 — 추가 DB 읽기 불필요)
+        const ability = getAvatarAbility(profile.avatarId, {
+          isCorrect,
+          hintUsed,
+          noDropStreak: profile.noDropStreak ?? 0,
+        })
+
+        // 4. 정답/오답 분기 처리
         if (isCorrect) {
           const latestProfile = await userProfileRepo.get()
           if (!latestProfile) return
 
-          // XP 계산
-          const xpGain = calcXpGain(!!isRemind, hintUsed)
+          // XP 계산 (마법사: 힌트 페널티 무시 / 암살자: 연속 정답 ×2)
+          const effectiveHintUsed = ability.ignoreHintPenalty ? false : hintUsed
+          const baseXp = calcXpGain(!!isRemind, effectiveHintUsed)
+          const xpGain = Math.round(baseXp * ability.xpMultiplier)
+          const stars = effectiveHintUsed ? 5 : 10
+
           const prevXP = latestProfile.totalXP ?? 0
           const newXP = prevXP + xpGain
           const prevLevel = latestProfile.level
           const nextLevel = calcLevel(newXP)
 
-          // 박스 드롭 판단
+          // 박스 드롭 판단 (로봇: +0.05 보너스율)
           const noDropStreak = latestProfile.noDropStreak ?? 0
-          const buffRate = latestProfile.duplicateBuff?.bonusRate ?? 0
+          const buffRate = (latestProfile.duplicateBuff?.bonusRate ?? 0) + ability.boxBonusRate
           const dropNormalBox = userBoxRepo.shouldDropBox(noDropStreak, buffRate)
           const dropLevelupBox = userBoxRepo.isLevelupBoxLevel(prevLevel, nextLevel)
           const anyBoxDropped = dropNormalBox || dropLevelupBox
@@ -120,7 +134,7 @@ export function useResultFeedback({
           })()
 
           const updates: Partial<UserProfile> = {
-            totalStars: latestProfile.totalStars + (hintUsed ? 5 : 10),
+            totalStars: latestProfile.totalStars + stars,
             totalXP: newXP,
             level: nextLevel,
             noDropStreak: dropNormalBox ? 0 : noDropStreak + 1,
@@ -164,6 +178,8 @@ export function useResultFeedback({
 
           setBoxDropped(anyBoxDropped)
           setXpGained(xpGain)
+          setStarsGained(stars)
+          if (ability.xpMultiplier > 1) setXpMultiplierApplied(true)
 
           if (latestProfile.unlockedDifficulty === 'basic') {
             const conceptLogs = await learningLogRepo.getRecentForUnlockCheck(
@@ -176,13 +192,28 @@ export function useResultFeedback({
               setDifficultyUnlocked(true)
             }
           }
-        } else if (mistakeType) {
-          // 오답 노트 저장
-          await wrongNoteRepo.upsertWrong(profile.userId, problem.concept, mistakeType, {
-            lastWrongAnswer: userAnswer,
-            replayData: { inputSequence },
-            drawingData,
-          })
+        } else {
+          // 오답 처리: 전사는 +2 XP 지급
+          if (ability.wrongXpBonus > 0) {
+            const latestProfile = await userProfileRepo.get()
+            if (latestProfile) {
+              const newXP = (latestProfile.totalXP ?? 0) + ability.wrongXpBonus
+              await userProfileRepo.update({
+                totalXP: newXP,
+                level: calcLevel(newXP),
+              })
+              setXpGained(ability.wrongXpBonus)
+            }
+          }
+
+          if (mistakeType) {
+            // 오답 노트 저장
+            await wrongNoteRepo.upsertWrong(profile.userId, problem.concept, mistakeType, {
+              lastWrongAnswer: userAnswer,
+              replayData: { inputSequence },
+              drawingData,
+            })
+          }
         }
       } catch (err) {
         console.error('결과 피드백 처리 중 오류:', err)
@@ -193,5 +224,5 @@ export function useResultFeedback({
     processResult()
   }, [isCorrect, problem, userAnswer, timeSpent, hintUsed, inputSequence, isRemind, drawingData])
 
-  return { leveledUp, newLevel, difficultyUnlocked, saveError, boxDropped, xpGained }
+  return { leveledUp, newLevel, difficultyUnlocked, saveError, boxDropped, xpGained, starsGained, xpMultiplierApplied }
 }

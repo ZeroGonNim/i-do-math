@@ -1,39 +1,55 @@
-# I Do Math — 프로젝트 네비게이터 (v1.6)
+# I Do Math — 프로젝트 네비게이터 (v1.8)
 
 > **관리 원칙**: 소스 코드는 실제 파일에 맡기고, 본 파일은 "의사결정"과 "파일 위치"라는 지도 역할에 집중한다.
 
 ---
 
-## 📍 1. 현재 개발 상태 (Session 21 기준)
-- **진행 단계**: Phase A~D 완료 — 픽셀 블록 RPG 디자인 + XP/박스 아이템 시스템 코어 통합
-- **완성도**: 98% (핵심 루프 + 디자인 + 아이템 시스템 연동 완료)
+## 📍 1. 현재 개발 상태 (Session 23 기준)
+- **진행 단계**: 피그마 25개 화면 전체 정합성 체크 + 화면 디자인 폴리시 완료
+- **완성도**: 99%
 - **주요 성과**:
-  - **[Session 21 - Phase A]** CSS 토큰 스톤/브라운 RPG 팔레트 전환 (Courier New 게임 폰트, 레어도 글로우 토큰).
-  - **[Session 21 - Phase A]** 전 화면 구 색상 hardcode 제거 (blue→stone), CharacterDisplay 컴포넌트 분리.
-  - **[Session 21 - Phase B]** DB version(4) — `userBoxes` 테이블, `totalXP`/`noDropStreak` 필드 마이그레이션.
-  - **[Session 21 - Phase B]** XP 획득 로직 (+20/15/10 XP), 박스 드롭 (20% + 천장 시스템), O(1) `calcLevel` 공식.
-  - **[Session 21 - Phase C]** `/box-open` 화면 이중드롭 버그 수정 (`useBoxDrop` 제거, `useResultFeedback`으로 통합). XP 팝업(+N XP) 추가.
-  - **[Session 21 - Phase D]** 홈 GNB XP 진행 바. 레벨업 모달 "📦 박스 열기" 버튼 (5배수 레벨). 30일 연속 → 레전드 박스 자동 지급.
+  - **[Session 23 - 피그마 정합성]** Figma 25개 화면 전수 비교 완료. 20개 구현 가능 화면 중 19개 완전 일치, 1개(CorrectOverlay) 기능 초과 구현으로 유지.
+  - **[Session 23]** `DrawProblem.tsx` — 비교 단계 버튼 순서 수정 (외곽선 "다시 그려볼래" → 채운 "맞게 그렸어"), 그리기 영역 레이블 + 🗑️ 지우기 버튼 추가.
+  - **[Session 23]** `diary.tsx` — 빈 상태 전면 재설계 (108px 보라색 책 아이콘 + 노란 잠금 뱃지, 시안 CTA, 팁 카드). 헤더 회귀 수정 (← 화살표 → 🎮 아이콘 유지).
+  - **[Session 23]** `onboarding.tsx` — 학년 선택 스텝1 2열 이모지 버튼 + 힌트 텍스트 + CTA "다음 단계로 이동 →".
+  - **[Session 23]** `PinInputModal.tsx` — 바텀시트 모달 → 전체화면 컴포넌트 전면 재작성. `headerTitle`/`showBack`/`showCancel` 프롭, 4자리 자동 제출.
+  - **[Session 23]** `parent.tsx` — 새 PinInputModal 프롭스 적용 (lock/setup/confirm 3가지 컨텍스트).
+  - **[Session 23]** `inventory.tsx` — "장착 중" 초록 텍스트 배지 (top-left), 아이템 테두리 항상 레어도 색상.
+  - **[Session 22]** 아바타/아이템 이미지 시스템 + 특수 능력 + 레벨업 버그 수정 + E2E 테스트 (이전 세션).
+  - **[Session 21 - Phase A~D]** CSS RPG 팔레트, XP/박스 드롭, 레벨업 모달 (이전 세션).
 
 ---
 
 ## 🗺️ 2. 핵심 파일 지도
 
+### [Avatar & Item System]
+- `src/types/avatar.ts`: **[New]** `AvatarId`, `AvatarDef`, `AVATARS` 4종 정의.
+- `src/types/item.ts`: **[Updated]** `avatarId`, `imagePath` 필드 추가.
+- `src/types/user.ts`: **[Updated]** `avatarId: AvatarId`, `unlockedAvatars: AvatarId[]` 추가.
+- `src/shared/db/db.ts`: **[Updated]** version(5) — `avatarId`/`unlockedAvatars` 마이그레이션.
+- `src/shared/utils/avatarAbility.ts`: **[New]** 아바타 특수 능력 유틸 (`getAvatarAbility`).
+- `public/data/items.json`: **[Rewritten]** 64개 아이템 (imagePath 기반).
+- `public/images/avatars/`: **[New]** warrior/mage/assassin/robot.png.
+- `public/images/items/`: **[New]** 16종 아이템 이미지.
+
 ### [Design System]
 - `src/index.css`: **[Updated]** 스톤/브라운 RPG 팔레트, Courier New 게임 폰트, 레어도 글로우 토큰.
-- `src/shared/components/CharacterDisplay.tsx`: **[New]** 캐릭터 이모지 + 장착 슬롯 4개 재사용 컴포넌트.
+- `src/shared/components/CharacterDisplay.tsx`: **[Updated]** avatarId 기반 이미지 렌더링 + 장착 슬롯 이미지.
+- `src/shared/components/CharacterSelectCard.tsx`: **[Updated]** AvatarDef 기반, 이미지 렌더링.
 
 ### [XP & Box System]
-- `src/types/userBox.ts`: **[New]** `UserBox` / `BoxType` 타입.
-- `src/shared/db/db.ts`: **[Updated]** version(4) — `userBoxes` 테이블 + upgrade 마이그레이션.
-- `src/shared/db/userBoxRepo.ts`: **[New]** 박스 CRUD + `shouldDropBox()` / `isLevelupBoxLevel()` / `drawRarity()`.
-- `src/shared/utils/levelUp.ts`: **[Updated]** O(1) `calcLevel(totalXP)` + `levelProgress()` + `xpForNextLevel()`.
-- `src/features/result/hooks/useResultFeedback.ts`: **[Updated]** XP 획득, 박스 드롭, 30일 레전드 박스 연동.
+- `src/types/userBox.ts`: `UserBox` / `BoxType` 타입.
+- `src/shared/db/userBoxRepo.ts`: 박스 CRUD + `shouldDropBox()` / `isLevelupBoxLevel()`.
+- `src/shared/utils/levelUp.ts`: O(1) `calcLevel(totalXP)` + `levelProgress()`.
+- `src/features/result/hooks/useResultFeedback.ts`: **[Updated]** 아바타 능력치 적용, `starsGained`/`xpMultiplierApplied` 반환.
 
-### [UI — Result & LevelUp]
-- `src/shared/components/LevelUpModal.tsx`: **[Updated]** `hasBox`/`onOpenBox` prop — 5배수 레벨 시 박스 열기 버튼.
-- `src/app/routes/result.tsx`: **[Updated]** `useBoxDrop` 제거, `boxDropped`/`xpGained` 통합, XP 팝업.
-- `src/app/routes/home.tsx`: **[Updated]** GNB XP 진행 바 (current/needed XP 표시).
+### [UI — Screens]
+- `src/app/routes/onboarding.tsx`: **[Updated]** 스텝2 RPG 아바타 선택.
+- `src/app/routes/inventory.tsx`: **[Updated]** 전면 이미지 렌더링.
+- `src/app/routes/settings.tsx`: **[Updated]** 아바타 변경 섹션 (해금/장착).
+- `src/app/routes/box-open.tsx`: **[Updated]** 아이템 공개 이미지 렌더링.
+- `src/app/routes/result.tsx`: **[Updated]** `starsGained` 연동, 암살자 XP×2 표시.
+- `src/app/routes/home.tsx`: GNB XP 진행 바.
 
 ---
 
@@ -64,14 +80,11 @@
 
 ## 📋 5. 남은 작업
 
-### 즉시
+### 단기
 - [ ] 실사용 테스트 (아이 피드백)
 
-### 단기
-- [ ] NCIC 교육과정 매핑 (`ncicCode` 필드 + 마스터리 진행)
-- [ ] E2E 시나리오 추가 (박스 오픈 / 장비 장착 / 인벤토리)
-
 ### 중기
+- [ ] NCIC 교육과정 매핑 (`ncicCode` 필드 + 마스터리 진행)
 - [ ] 트로피/뱃지 시스템 (Phase E)
 - [ ] 보호자 대시보드 NCIC 리포트
 
@@ -81,4 +94,4 @@
 - [ ] iOS/Android 앱스토어 배포
 
 ---
-*마지막 업데이트: 2026-04-08 (Session 21)*
+*마지막 업데이트: 2026-04-09 (Session 23)*

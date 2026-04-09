@@ -87,7 +87,8 @@ export function Scratchpad({ onClear }: Props) {
     <div className="relative w-full h-full">
       <canvas
         ref={canvasRef}
-        className="w-full h-full touch-none cursor-crosshair bg-amber-50 rounded-2xl"
+        className="w-full h-full touch-none cursor-crosshair"
+        style={{ backgroundColor: '#ffe792' }}
         onMouseDown={startDraw}
         onMouseMove={draw}
         onMouseUp={endDraw}
@@ -99,7 +100,8 @@ export function Scratchpad({ onClear }: Props) {
       <button
         onPointerDown={e => e.stopPropagation()}
         onClick={handleClear}
-        className="absolute bottom-2 right-2 rounded-xl bg-white/80 border border-gray-200 px-3 py-1 text-xs font-bold text-gray-500 shadow-sm active:bg-gray-100"
+        className="absolute bottom-2 right-2 px-3 py-1 text-xs font-bold active:opacity-70"
+        style={{ backgroundColor: '#17172f', color: '#aaa8c3', border: '1px solid #46465c', fontFamily: 'var(--font-game)' }}
       >
         지우기 🧹
       </button>

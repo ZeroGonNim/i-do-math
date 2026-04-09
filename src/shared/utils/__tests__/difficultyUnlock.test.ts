@@ -8,6 +8,7 @@ const makeLog = (isCorrect: boolean): LearningLog => ({
   grade: 4,
   problemId: 'p',
   concept: 'c',
+  difficulty: 'basic',
   mistakeType: null,
   isCorrect,
   userAnswer: { numerator: 1, denominator: 1 },

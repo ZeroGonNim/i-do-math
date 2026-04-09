@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+<rect width="400" height="200" fill="#F8FAFF" rx="10"/>
+<polygon points="50,150 150,150 100,50" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/>
+<text x="250" y="100" text-anchor="middle" font-size="16" fill="#1e293b">세 각의 합이 180°가</text><text x="250" y="125" text-anchor="middle" font-size="16" fill="#1e293b">아닌 것을 고르세요</text>
+</svg>

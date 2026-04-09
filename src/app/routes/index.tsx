@@ -15,7 +15,7 @@ export function IndexRoute() {
 
   if (checking) {
     return (
-      <div className="flex h-screen items-center justify-center text-gray-400">
+      <div className="flex h-screen items-center justify-center" style={{ backgroundColor: '#0c0c1f', color: '#aaa8c3' }}>
         로딩 중...
       </div>
     )

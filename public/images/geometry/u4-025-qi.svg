@@ -1,0 +1,20 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#fff9f2" />
+  <!-- Gom -->
+  <rect x="40" y="50" width="80" height="80" rx="15" fill="#fff" stroke="#3b82f6" stroke-width="2" />
+  <text x="80" y="105" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e3a8a">곰</text>
+  
+  <path d="M 140 90 Q 150 60 160 90" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrow)" />
+  
+  <!-- Mun -->
+  <rect x="180" y="50" width="80" height="80" rx="15" fill="#fff" stroke="#ef4444" stroke-width="2" />
+  <text x="220" y="105" font-size="40" font-weight="bold" text-anchor="middle" fill="#7f1d1d">문</text>
+  
+  <text x="150" y="160" font-size="12" text-anchor="middle" fill="#64748b">'곰'을 어떻게 움직이면 '문'이 될까요?</text>
+  
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b" />
+    </marker>
+  </defs>
+</svg>

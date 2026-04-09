@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="150" viewBox="0 0 480 150">
+<rect width="480" height="150" fill="#F8FAFF" rx="10"/>
+<polygon points="20,60 100,60 120,20 40,20" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/> <text x="70" y="85">ㄱ</text>
+<polygon points="160,40 180,40 180,20 200,20 200,40 220,40 220,60 200,60 200,80 180,80 180,60 160,60" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/> <text x="190" y="105">ㄴ</text>
+<polygon points="260,60 360,60 330,20 290,20" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/> <text x="310" y="85">ㄷ</text>
+<polygon points="400,20 420,20 420,60 450,60 450,80 400,80" fill="#EEF2FF" stroke="#4F46E5" stroke-width="2"/> <text x="425" y="105">ㄹ</text>
+
+</svg>

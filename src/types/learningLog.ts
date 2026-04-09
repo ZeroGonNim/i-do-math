@@ -1,4 +1,4 @@
-import type { MistakeType, Answer } from './problem'
+import type { MistakeType, Answer, Difficulty } from './problem'
 
 export interface LearningLog {
   logId: string
@@ -6,6 +6,7 @@ export interface LearningLog {
   grade: number
   problemId: string
   concept: string
+  difficulty: Difficulty // 난이도 필드 추가
   mistakeType: MistakeType
   isCorrect: boolean
   userAnswer: Answer
@@ -13,4 +14,5 @@ export interface LearningLog {
   hintUsed: boolean
   retryCount: number
   timestamp: number
+  drawingData?: string // 그리기 문제의 경우 사용자가 그린 이미지 (Base64)
 }

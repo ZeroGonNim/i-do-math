@@ -1,0 +1,20 @@
+<svg width="300" height="200" viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="200" fill="#fff9f2" />
+  <g transform="translate(20, 60)">
+    <rect width="60" height="80" rx="8" fill="#fff" stroke="#cbd5e1" />
+    <text x="30" y="55" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e293b">Q</text>
+  </g>
+  <g transform="translate(90, 60)">
+    <rect width="60" height="80" rx="8" fill="#fff" stroke="#cbd5e1" />
+    <text x="30" y="55" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e293b">X</text>
+  </g>
+  <g transform="translate(160, 60)">
+    <rect width="60" height="80" rx="8" fill="#fff" stroke="#cbd5e1" />
+    <text x="30" y="55" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e293b">J</text>
+  </g>
+  <g transform="translate(230, 60)">
+    <rect width="60" height="80" rx="8" fill="#fff" stroke="#cbd5e1" />
+    <text x="30" y="55" font-size="40" font-weight="bold" text-anchor="middle" fill="#1e293b">W</text>
+  </g>
+  <text x="150" y="40" font-size="12" text-anchor="middle" fill="#64748b">뒤집고 180° 돌려도 모양이 같은 것은?</text>
+</svg>

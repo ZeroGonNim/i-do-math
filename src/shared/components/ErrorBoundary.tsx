@@ -32,16 +32,20 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
-        <div className="flex h-screen flex-col items-center justify-center gap-4 p-6 bg-white">
+        <div className="flex h-screen flex-col items-center justify-center gap-4 p-6"
+             style={{ backgroundColor: '#0c0c1f' }}>
           <div className="text-5xl">😵</div>
-          <h2 className="text-xl font-bold text-gray-800">앗, 문제가 생겼어요!</h2>
-          <p className="text-sm text-gray-500 text-center">{this.state.message}</p>
-          <button
-            onClick={this.handleRetry}
-            className="mt-2 min-h-[48px] w-full max-w-xs rounded-2xl bg-indigo-500 text-white font-bold"
-          >
-            다시 시도
-          </button>
+          <h2 className="text-xl font-bold" style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}>앗, 문제가 생겼어요!</h2>
+          <p className="text-sm text-center" style={{ color: '#aaa8c3' }}>{this.state.message}</p>
+          <div className="mt-2 w-full max-w-xs" style={{ backgroundColor: '#005762' }}>
+            <button
+              onClick={this.handleRetry}
+              className="w-full min-h-[48px] font-bold -translate-y-1"
+              style={{ backgroundColor: '#81ecff', color: '#0c0c1f', fontFamily: 'var(--font-game)', border: '2px solid #005762' }}
+            >
+              다시 시도
+            </button>
+          </div>
         </div>
       )
     }

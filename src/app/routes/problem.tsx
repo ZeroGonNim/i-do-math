@@ -20,13 +20,14 @@ import { TextInput } from '@/features/problem/components/TextInput'
 import { MultiBlankInput } from '@/features/problem/components/MultiBlankInput'
 import { DrawProblem } from '@/features/problem/components/DrawProblem'
 import { AnimationPlayer } from '@/shared/components/AnimationPlayer'
-import { AppHeader } from '@/shared/components/AppHeader'
 import { Scratchpad } from '@/features/problem/components/Scratchpad'
 import { SubmitFeedback } from '@/features/result/components/SubmitFeedback'
+import { BottomNavBar } from '@/shared/components/BottomNavBar'
 import { isFractionEqual } from '@/shared/utils/fractionUtils'
-import { formatNumbersInString } from '@/shared/utils/format'
-import { DifficultyBadge } from '@/shared/components/DifficultyBadge'
+import { formatNumber, formatNumbersInString } from '@/shared/utils/format'
 import { filterHintText } from '@/shared/utils/hintFilter'
+import { useUserProfile } from '@/shared/hooks/useUserProfile'
+import { getMissionProgress, DAILY_PROBLEM_GOAL } from '@/shared/hooks/useDailyMission'
 
 const NO_KEYPAD_TYPES = new Set(['multiple_choice', 'symbol', 'draw', 'text'])
 
@@ -57,8 +58,15 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
   const [showHint, setShowHint] = useState(false)
   const handleScratchpadClear = useCallback(() => {}, [])
 
+  const profile = useUserProfile()
+  const isMage = (profile?.avatarId ?? 'warrior') === 'mage'
   const isDraw = session.answerType === 'draw'
   const showKeypad = !NO_KEYPAD_TYPES.has(session.answerType)
+
+  const missionProgress = profile ? getMissionProgress(profile) : null
+  const problemNum = Math.min((missionProgress?.problemsSolved ?? 0) + 1, DAILY_PROBLEM_GOAL)
+  const progressPct = (problemNum / DAILY_PROBLEM_GOAL) * 100
+  const starCount = profile?.totalXP ?? 0
 
   function checkCorrect(): boolean {
     const answer = session.getAnswer()
@@ -129,50 +137,71 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
     }
   }
 
-  const header = (
-    <AppHeader
-      title={
-        <div className="flex items-center gap-2">
-          <span className="truncate max-w-[160px]">{problem.unit}</span>
-          <DifficultyBadge difficulty={problem.difficulty} />
+  const progressHeader = (
+    <div className="shrink-0" style={{ backgroundColor: '#0c0c1f', borderBottom: '1px solid #1c1c3a' }}>
+      <div className="flex items-center justify-between px-4 h-12 gap-2">
+        {/* 뒤로 */}
+        <button
+          onClick={() => navigate('/home')}
+          className="shrink-0 text-xl leading-none"
+          style={{ color: '#e5e3ff' }}
+        >←</button>
+
+        {/* 단원 / 문제 진행 */}
+        <div className="flex-1 min-w-0">
+          <p className="text-[11px] font-bold truncate"
+             style={{ color: '#aaa8c3', fontFamily: 'var(--font-game)' }}>
+            {problem.unit} / 문제 {problemNum}/{DAILY_PROBLEM_GOAL}
+          </p>
         </div>
-      }
-      onBack={() => navigate('/home')}
-      right={
-        <div className="flex items-center gap-2">
+
+        {/* 별 + 도구 버튼 */}
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-xs font-bold" style={{ color: '#ffe792', fontFamily: 'var(--font-game)' }}>
+            ★ {formatNumber(starCount)}
+          </span>
           {!isDraw && (
             <button
               onClick={() => setShowScratchpad(s => !s)}
-              className="text-xs font-bold px-2 py-1 rounded-lg border transition-colors"
+              className="text-xs font-bold px-2 py-1 border transition-colors"
               style={showScratchpad
-                ? { backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-yellow)', color: 'var(--color-yellow)' }
-                : { backgroundColor: 'var(--color-bg-card)', borderColor: 'var(--color-border)', color: 'var(--color-text-secondary)' }
+                ? { backgroundColor: '#23233f', borderColor: '#ffe792', color: '#ffe792' }
+                : { backgroundColor: '#1d1d37', borderColor: '#23233f', color: '#aaa8c3' }
               }
-            >
-              ✏️
-            </button>
+            >✏️</button>
           )}
           <button
             onClick={() => {
               setShowHint(s => !s)
               if (!showHint) session.setHintUsed(true)
             }}
-            className="text-xs font-bold px-2 py-1 rounded-lg border transition-colors"
+            className="relative text-xs font-bold px-2 py-1 border transition-colors"
             style={showHint
-              ? { backgroundColor: 'var(--color-bg-surface)', borderColor: 'var(--color-yellow)', color: 'var(--color-yellow)' }
-              : { backgroundColor: 'var(--color-bg-card)', borderColor: 'var(--color-border)', color: 'var(--color-cyan)' }
+              ? { backgroundColor: '#23233f', borderColor: '#ffe792', color: '#ffe792' }
+              : { backgroundColor: '#1d1d37', borderColor: isMage ? 'rgba(196,127,255,0.5)' : '#23233f', color: isMage ? '#c180ff' : '#81ecff' }
             }
           >
             💡
+            {isMage && !showHint && (
+              <span className="absolute -top-1.5 -right-1.5 text-[8px] font-black px-1 leading-tight"
+                    style={{ backgroundColor: '#c180ff', color: '#fff' }}>
+                FREE
+              </span>
+            )}
           </button>
         </div>
-      }
-    />
+      </div>
+      {/* 진행 바 */}
+      <div style={{ height: '3px', backgroundColor: '#23233f' }}>
+        <div className="h-full transition-all duration-500"
+             style={{ width: `${progressPct}%`, backgroundColor: '#22c55e' }} />
+      </div>
+    </div>
   )
 
   const hint = showHint && (
-    <div className="mx-4 mt-2 mb-2 rounded-xl px-4 py-3 text-sm animate-in fade-in slide-in-from-top-2"
-         style={{ backgroundColor: 'var(--color-bg-surface)', border: '1px solid var(--color-yellow)', color: 'var(--color-text-primary)' }}>
+    <div className="mx-4 mt-2 mb-2 px-4 py-3 text-sm animate-in fade-in slide-in-from-top-2"
+         style={{ backgroundColor: '#23233f', border: '1px solid #ffe792', color: '#e5e3ff' }}>
       <p className="font-bold text-yellow-400 mb-1">💡 힌트</p>
       {formatNumbersInString(filterHintText(problem.conceptExplanation))}
     </div>
@@ -180,10 +209,10 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
 
   const questionContent = (
     <div className="px-5 py-4 text-base font-medium leading-relaxed"
-         style={{ color: 'var(--color-text-primary)' }}>
+         style={{ color: '#e5e3ff' }}>
       {formatNumbersInString(problem.question)}
       {problem.questionImage && (
-        <div className="mt-4 w-full flex items-center justify-center bg-white rounded-2xl p-3 border border-gray-200 shadow-xs">
+        <div className="mt-4 w-full flex items-center justify-center p-3 border">
           <img
             src={getAssetPath(problem.questionImage)}
             alt="문제 그림"
@@ -196,12 +225,12 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
   )
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden" style={{ backgroundColor: 'var(--color-bg-base)' }}>
+    <div className="flex h-dvh flex-col overflow-hidden" style={{ backgroundColor: '#0c0c1f' }}>
       {submitResult !== null && <SubmitFeedback isCorrect={submitResult} />}
+      {progressHeader}
 
       {isDraw && isDrawAnswer(problem.answer) ? (
-        <div className="flex flex-col h-full overflow-hidden">
-          <div className="flex-none">{header}</div>
+        <div className="flex flex-col flex-1 overflow-hidden">
           <div className="flex-1 overflow-y-auto">
             {questionContent}
             {hint}
@@ -217,19 +246,19 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
         <>
           {/* 연습장 전체화면 오버레이 */}
           {showScratchpad && (
-            <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: 'var(--color-bg-base)' }}>
+            <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#0c0c1f' }}>
               <div className="flex items-center justify-between px-4 py-3"
-                   style={{ backgroundColor: 'var(--color-bg-raised)', borderBottom: '1px solid var(--color-border)' }}>
-                <span className="text-base font-bold" style={{ color: 'var(--color-yellow)' }}>✏️ 연습장</span>
+                   style={{ backgroundColor: '#17172f', borderBottom: '1px solid #23233f' }}>
+                <span className="text-base font-bold" style={{ color: '#ffe792' }}>✏️ 연습장</span>
                 <button
                   onClick={() => setShowScratchpad(false)}
-                  className="text-sm font-bold px-4 py-2 rounded-xl"
-                  style={{ backgroundColor: 'var(--color-btn-primary)', color: '#fff' }}
+                  className="text-sm font-bold px-4 py-2"
+                  style={{ backgroundColor: '#22c55e', color: '#fff' }}
                 >
                   닫기
                 </button>
               </div>
-              
+
               {/* 연습장 상단에 문제 지문 표시 */}
               <div className="flex-none max-h-[30%] overflow-y-auto bg-black/10 border-b border-white/5">
                 {questionContent}
@@ -243,14 +272,13 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
 
           {/* 상단 스크롤 영역 */}
           <div className="flex-1 overflow-y-auto min-h-0">
-            {header}
             {questionContent}
             {hint}
 
             {/* 조건부 애니메이션 노출: 지문 이미지가 없고, 애니메이션 에셋이 있는 경우만 노출 */}
             {!problem.questionImage && problem.animationAsset && problem.animationAsset !== 'none' && (
-              <div className="mx-4 mb-2 rounded-xl h-44 overflow-hidden"
-                   style={{ backgroundColor: 'var(--color-bg-card)', border: '1px solid var(--color-border)' }}>
+              <div className="mx-4 mb-2 h-44 overflow-hidden"
+                   style={{ backgroundColor: '#1d1d37', border: '1px solid #23233f' }}>
                 <div className="flex items-center justify-center w-full h-full">
                   <AnimationPlayer asset={problem.animationAsset} className="w-full h-full max-h-44" />
                 </div>
@@ -286,7 +314,7 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
           </div>
 
           {/* 하단 고정 영역 */}
-          <div className="shrink-0" style={{ borderTop: '1px solid var(--color-border)', backgroundColor: 'var(--color-bg-raised)' }}>
+          <div className="shrink-0" style={{ borderTop: '1px solid #23233f', backgroundColor: '#17172f' }}>
             <div className="py-3">
               {session.answerType === 'multi_blank' && (
                 <MultiBlankInput
@@ -317,19 +345,20 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
               <CustomKeypad onKey={session.handleKeyPress} mode={session.answerType} />
             )}
 
-            <div className="px-4 pt-2 pb-5">
+            <div className="px-4 pt-2 pb-3">
               <button
                 disabled={!session.isReady || submitResult !== null}
                 onClick={handleSubmit}
-                className="w-full min-h-[52px] rounded-xl text-xl font-bold transition-opacity disabled:opacity-40 active:opacity-80"
-                style={{ backgroundColor: 'var(--color-cyan)', color: '#0D0D0D' }}
+                className="w-full min-h-[52px] text-xl font-bold transition-opacity disabled:opacity-40 active:opacity-80"
+                style={{ backgroundColor: '#22c55e', color: '#fff' }}
               >
-                정답 확인 ✓
+                정답 제출하기
               </button>
             </div>
           </div>
         </>
       )}
+      <BottomNavBar />
     </div>
   )
 }

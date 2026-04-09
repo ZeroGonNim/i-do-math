@@ -1,24 +1,119 @@
+import { useEffect, useState } from 'react'
+
 interface Props {
   onClose: () => void
 }
 
 export function DifficultyUnlockModal({ onClose }: Props) {
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    requestAnimationFrame(() => setVisible(true))
+  }, [])
+
+  function handleClose() {
+    setVisible(false)
+    setTimeout(onClose, 250)
+  }
+
   return (
-    <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-6">
-      <div className="w-full max-w-sm bg-white rounded-3xl p-8 text-center shadow-xl">
-        <div className="text-6xl mb-3">🔓</div>
-        <h2 className="text-2xl font-bold text-gray-800 mb-1">난이도 해금!</h2>
-        <p className="text-4xl font-black text-purple-600 my-4">응용 문제</p>
-        <p className="text-sm text-gray-500 mb-6">
-          꾸준히 풀어서 응용 문제를 풀 수 있게 됐어요!<br />
-          이제 더 어려운 문제에 도전해봐요 💪
-        </p>
-        <button
-          onClick={onClose}
-          className="w-full min-h-[48px] rounded-2xl bg-purple-500 text-white text-lg font-bold"
-        >
-          도전하기
-        </button>
+    <div
+      className="fixed inset-0 flex items-center justify-center z-50 px-4 transition-all duration-250"
+      style={{ backgroundColor: visible ? 'rgba(0,0,0,0.9)' : 'rgba(0,0,0,0)' }}
+      onClick={handleClose}
+    >
+      <div
+        className="relative w-full max-w-sm flex flex-col transition-all duration-300"
+        style={{
+          backgroundColor: '#1d1d37',
+          transform: visible ? 'scale(1) translateY(0)' : 'scale(0.85) translateY(24px)',
+          opacity: visible ? 1 : 0,
+          maxWidth: '342px',
+        }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Pixel corner accents */}
+        <div className="absolute top-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(129,236,255,0.3)' }} />
+        <div className="absolute top-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(129,236,255,0.3)' }} />
+        <div className="absolute bottom-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(193,128,255,0.3)' }} />
+        <div className="absolute bottom-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(193,128,255,0.3)' }} />
+
+        {/* Top tag */}
+        <div className="flex justify-center -mt-3.5">
+          <div
+            className="px-8 py-1.5"
+            style={{ backgroundColor: '#81ecff' }}
+          >
+            <span
+              className="text-sm font-bold"
+              style={{ color: '#005762', fontFamily: 'var(--font-game)', letterSpacing: '-0.7px' }}
+            >
+              새로운 도전
+            </span>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center px-8 pt-6 pb-8 gap-5">
+          {/* Purple icon area */}
+          <div
+            className="flex items-center justify-center"
+            style={{
+              width: '96px',
+              height: '111px',
+              backgroundColor: '#23233f',
+              border: '2px solid #c180ff',
+              boxShadow: '0 0 32px rgba(193,128,255,0.4)',
+            }}
+          >
+            <span style={{ fontSize: '48px', lineHeight: 1 }}>🔒</span>
+          </div>
+
+          {/* 난이도 해금! */}
+          <p
+            className="text-4xl font-bold text-center"
+            style={{
+              color: '#c180ff',
+              fontFamily: 'var(--font-sans)',
+              letterSpacing: '-1.8px',
+              lineHeight: '40px',
+            }}
+          >
+            난이도 해금!
+          </p>
+
+          {/* Description */}
+          <p
+            className="text-base font-medium text-center leading-7"
+            style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)' }}
+          >
+            응용 문제 섹션이<br />활성화되었습니다.
+          </p>
+
+          {/* 도전하기 button */}
+          <button
+            onClick={handleClose}
+            className="flex items-center justify-center gap-3 font-medium text-xl transition-all active:scale-[0.97]"
+            style={{
+              width: '270px',
+              height: '68px',
+              backgroundColor: '#81ecff',
+              color: '#005762',
+              fontFamily: 'var(--font-sans)',
+              letterSpacing: '-0.5px',
+            }}
+          >
+            도전하기 ⚔️
+          </button>
+
+          {/* 나중에 하기 */}
+          <button
+            onClick={handleClose}
+            className="text-xs font-medium"
+            style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)', letterSpacing: '1.2px' }}
+          >
+            나중에 하기
+          </button>
+        </div>
       </div>
     </div>
   )

@@ -1,77 +1,93 @@
-import type { CharacterId } from '@/types/user'
+import { AVATARS } from '@/types/avatar'
+import type { AvatarDef, AvatarId } from '@/types/avatar'
 
-interface CharacterDef {
-  id: CharacterId
-  emoji: string
-  name: string
-  color: string      // bg color when selected
-  ringColor: string  // border ring color
-}
-
-export const CHARACTERS: CharacterDef[] = [
-  { id: 'char-01', emoji: '🦊', name: '여우',    color: 'bg-orange-100', ringColor: 'ring-orange-400' },
-  { id: 'char-02', emoji: '🐼', name: '판다',    color: 'bg-gray-100',   ringColor: 'ring-gray-500'   },
-  { id: 'char-03', emoji: '🦁', name: '사자',    color: 'bg-yellow-100', ringColor: 'ring-yellow-500' },
-  { id: 'char-04', emoji: '🐬', name: '돌고래',  color: 'bg-blue-100',   ringColor: 'ring-blue-400'   },
-]
+export { AVATARS }
+export type { AvatarDef }
 
 interface Props {
-  char: CharacterDef
+  avatar: AvatarDef
   selected: boolean
-  onSelect: (id: CharacterId) => void
+  onSelect: (id: AvatarId) => void
+  locked?: boolean
+  isDefault?: boolean
 }
 
-export function CharacterSelectCard({ char, selected, onSelect }: Props) {
+export function CharacterSelectCard({ avatar, selected, onSelect, locked = false, isDefault = false }: Props) {
   return (
     <button
-      onClick={() => onSelect(char.id)}
-      className={`
-        relative flex flex-col items-center py-4 rounded-2xl border-2 transition-all duration-200
-        ${selected
-          ? `${char.color} border-transparent ring-4 ${char.ringColor} scale-105 shadow-lg`
-          : 'bg-gray-50 border-gray-100 hover:scale-102'
-        }
-      `}
-      style={selected ? { animation: 'charSelect 0.35s cubic-bezier(0.34,1.56,0.64,1)' } : undefined}
+      onClick={() => !locked && onSelect(avatar.id)}
+      disabled={locked}
+      className="relative flex flex-col items-center overflow-hidden border-2 transition-all duration-200 active:scale-[0.97] disabled:cursor-not-allowed"
+      style={selected
+        ? {
+            borderColor: avatar.accentColor,
+            boxShadow: `0 0 16px ${avatar.accentColor}50`,
+            transform: 'scale(1.03)',
+          }
+        : {
+            backgroundColor: '#17172f',
+            borderColor: '#23233f',
+          }
+      }
     >
-      {/* 선택 완료 뱃지 */}
+      {/* 기본 캐릭터 뱃지 */}
+      {isDefault && !selected && (
+        <span
+          className="absolute top-2 left-2 text-[9px] font-black px-1.5 py-0.5 z-10"
+          style={{ backgroundColor: 'rgba(125,232,255,0.15)', color: '#81ecff', border: '1px solid rgba(125,232,255,0.3)' }}
+        >
+          기본
+        </span>
+      )}
+
+      {/* 선택 체크 뱃지 */}
       {selected && (
         <span
-          className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full text-white text-xs flex items-center justify-center font-bold shadow"
-          style={{ animation: 'badgePop 0.3s cubic-bezier(0.34,1.56,0.64,1) 0.15s both' }}
+          className="absolute top-2 right-2 w-6 h-6 text-xs flex items-center justify-center font-bold z-10"
+          style={{ backgroundColor: avatar.accentColor, color: '#0c0c1f' }}
         >
           ✓
         </span>
       )}
 
-      <span
-        className="text-4xl transition-transform duration-200"
-        style={selected ? { animation: 'emojiWiggle 0.4s ease 0.1s' } : undefined}
+      {/* 아바타 이미지 */}
+      <div
+        className="w-full aspect-square relative"
+        style={{
+          background: selected
+            ? `radial-gradient(circle, ${avatar.accentColor}20 0%, #111127 100%)`
+            : '#111127',
+        }}
       >
-        {char.emoji}
-      </span>
-      <span className={`text-sm font-bold mt-2 ${selected ? 'text-gray-800' : 'text-gray-500'}`}>
-        {char.name}
-      </span>
+        <img
+          src={avatar.imagePath}
+          alt={avatar.name}
+          className="w-full h-full object-cover"
+          style={{ filter: locked ? 'grayscale(80%) brightness(0.4)' : selected ? 'none' : 'grayscale(40%) brightness(0.8)' }}
+        />
+        {/* 잠금 오버레이 */}
+        {locked && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.5">
+            <span className="text-xl">🔒</span>
+            <span className="text-[10px] font-bold" style={{ color: '#ffe792' }}>
+              ⭐{avatar.starCost}
+            </span>
+          </div>
+        )}
+      </div>
 
-      <style>{`
-        @keyframes charSelect {
-          0%   { transform: scale(1); }
-          40%  { transform: scale(1.18); }
-          70%  { transform: scale(1.02); }
-          100% { transform: scale(1.05); }
-        }
-        @keyframes emojiWiggle {
-          0%, 100% { transform: rotate(0deg) scale(1); }
-          25%  { transform: rotate(-12deg) scale(1.2); }
-          50%  { transform: rotate(12deg) scale(1.15); }
-          75%  { transform: rotate(-6deg) scale(1.1); }
-        }
-        @keyframes badgePop {
-          from { transform: scale(0); }
-          to   { transform: scale(1); }
-        }
-      `}</style>
+      {/* 이름 + 특성 */}
+      <div className="w-full px-2 py-2 text-center" style={{ backgroundColor: '#1d1d37' }}>
+        <p
+          className="text-sm font-bold"
+          style={{ color: locked ? '#aaa8c3' : selected ? avatar.accentColor : '#e5e3ff' }}
+        >
+          {avatar.name}
+        </p>
+        <p className="text-[10px] mt-0.5" style={{ color: locked ? '#23233f' : '#81ecff' }}>
+          {avatar.trait}
+        </p>
+      </div>
     </button>
   )
 }

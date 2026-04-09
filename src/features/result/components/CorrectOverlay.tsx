@@ -6,90 +6,68 @@ interface Props {
 }
 
 interface Particle {
-  x: number
-  y: number
-  vx: number
-  vy: number
-  color: string
-  size: number
-  shape: 'rect' | 'circle'
-  rotation: number
-  rotSpeed: number
-  alpha: number
+  x: number; y: number; vx: number; vy: number
+  color: string; size: number; shape: 'rect' | 'circle'
+  rotation: number; rotSpeed: number; alpha: number
 }
 
-const COLORS = [
-  '#FF6B6B', '#FF922B', '#FFD43B',
-  '#69DB7C', '#4DABF7', '#CC5DE8',
-  '#FF8CC8', '#63E6BE',
-]
+const COLORS = ['#81ecff', '#ffe792', '#c180ff', '#ff716c', '#69DB7C', '#FF922B']
 
-function createParticles(w: number, h: number, count = 90): Particle[] {
-  return Array.from({ length: count }, (_, i) => {
-    const spread = (i / count) * Math.PI * 2
-    const speed = 8 + Math.random() * 10
+function createParticles(w: number, h: number): Particle[] {
+  return Array.from({ length: 70 }, (_, i) => {
+    const spread = (i / 70) * Math.PI * 2
+    const speed = 6 + Math.random() * 8
     return {
-      x: w / 2 + (Math.random() - 0.5) * w * 0.3,
-      y: h * 0.45,
-      vx: Math.cos(spread) * speed * (0.5 + Math.random()),
-      vy: Math.sin(spread) * speed - Math.random() * 8,
+      x: w / 2 + (Math.random() - 0.5) * w * 0.25,
+      y: h * 0.4,
+      vx: Math.cos(spread) * speed * (0.4 + Math.random()),
+      vy: Math.sin(spread) * speed - Math.random() * 6,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      size: 6 + Math.random() * 8,
+      size: 5 + Math.random() * 7,
       shape: Math.random() > 0.4 ? 'rect' : 'circle',
       rotation: Math.random() * Math.PI * 2,
-      rotSpeed: (Math.random() - 0.5) * 0.25,
+      rotSpeed: (Math.random() - 0.5) * 0.2,
       alpha: 1,
     }
   })
 }
 
-const TOTAL_MS = 2400
-
 export function CorrectOverlay({ stars, onDone }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
-  const startRef = useRef<number>(0)
 
+  // Run confetti animation (decorative only, doesn't auto-close)
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')
     if (!ctx) return
 
-    const w = canvas.width = window.innerWidth
-    const h = canvas.height = window.innerHeight
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+    const { width: w, height: h } = canvas
     const particles = createParticles(w, h)
+    let start = 0
+    const DURATION = 2000
 
     function draw(ts: number) {
-      if (!startRef.current) startRef.current = ts
-      const elapsed = ts - startRef.current
-      const progress = Math.min(elapsed / TOTAL_MS, 1)
-
+      if (!start) start = ts
+      const progress = Math.min((ts - start) / DURATION, 1)
       ctx!.clearRect(0, 0, w, h)
-
-      // 오버레이 페이드인 → 페이드아웃
-      const overlayAlpha = progress < 0.15
-        ? progress / 0.15 * 0.55
-        : progress > 0.6
-          ? (1 - (progress - 0.6) / 0.4) * 0.55
-          : 0.55
-      ctx!.fillStyle = `rgba(255,255,255,${overlayAlpha})`
-      ctx!.fillRect(0, 0, w, h)
 
       for (const p of particles) {
         p.x += p.vx
-        p.vy += 0.35   // gravity
-        p.vx *= 0.985  // air resistance
+        p.vy += 0.3
+        p.vx *= 0.99
         p.y += p.vy
         p.rotation += p.rotSpeed
-        p.alpha = Math.max(0, 1 - progress * 1.3)
+        p.alpha = Math.max(0, 1 - progress * 1.4)
 
         ctx!.save()
         ctx!.globalAlpha = p.alpha
         ctx!.translate(p.x, p.y)
         ctx!.rotate(p.rotation)
         ctx!.fillStyle = p.color
-
         if (p.shape === 'circle') {
           ctx!.beginPath()
           ctx!.arc(0, 0, p.size / 2, 0, Math.PI * 2)
@@ -102,37 +80,116 @@ export function CorrectOverlay({ stars, onDone }: Props) {
 
       if (progress < 1) {
         rafRef.current = requestAnimationFrame(draw)
-      } else {
-        onDone()
       }
     }
 
     rafRef.current = requestAnimationFrame(draw)
     return () => cancelAnimationFrame(rafRef.current)
-  }, [onDone])
+  }, [])
 
   return (
-    <div className="fixed inset-0 z-40 flex flex-col items-center justify-center pointer-events-none">
-      <canvas ref={canvasRef} className="absolute inset-0" />
+    <div
+      className="fixed inset-0 z-40 flex items-center justify-center"
+      style={{ backgroundColor: 'rgba(0,255,136,0.07)' }}
+    >
+      {/* Confetti canvas */}
+      <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
 
-      {/* 중앙 체크마크 팝 */}
+      {/* Modal card */}
       <div
-        className="relative z-10 flex flex-col items-center gap-3"
-        style={{ animation: 'correctPop 0.5s cubic-bezier(0.34,1.56,0.64,1) forwards' }}
+        className="relative z-10 flex flex-col items-center mx-6"
+        style={{
+          width: '342px',
+          backgroundColor: '#0c0c1f',
+          border: '2px solid #81ecff',
+          boxShadow: '0 0 40px rgba(129,236,255,0.3)',
+          animation: 'correctPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards',
+        }}
       >
-        <div className="w-28 h-28 rounded-full bg-green-500 flex items-center justify-center shadow-2xl">
-          <span className="text-6xl">✓</span>
+        {/* Pixel pattern decoration strip */}
+        <div
+          className="w-full h-2"
+          style={{
+            background: 'repeating-linear-gradient(90deg, #81ecff 0px, #81ecff 8px, transparent 8px, transparent 16px)',
+            opacity: 0.3,
+          }}
+        />
+
+        <div className="flex flex-col items-center px-6 py-8 gap-5 w-full">
+          {/* Big check icon */}
+          <div
+            className="flex items-center justify-center"
+            style={{
+              width: '128px',
+              height: '128px',
+              backgroundColor: '#81ecff',
+            }}
+          >
+            <svg width="64" height="52" viewBox="0 0 64 52" fill="none">
+              <path
+                d="M4 26L22 44L60 6"
+                stroke="#005762"
+                strokeWidth="10"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              />
+            </svg>
+          </div>
+
+          {/* 정답! text */}
+          <p
+            className="text-5xl font-medium text-center"
+            style={{ color: '#81ecff', fontFamily: 'var(--font-sans)', lineHeight: '48px' }}
+          >
+            정답!
+          </p>
+
+          {/* Star reward banner */}
+          <div
+            className="w-full flex items-center justify-center gap-3 py-4"
+            style={{ backgroundColor: '#ffe792' }}
+          >
+            <span className="text-2xl">⭐</span>
+            <span
+              className="text-2xl font-bold"
+              style={{ color: '#655400', fontFamily: 'var(--font-game)' }}
+            >
+              +{stars}별 획득!
+            </span>
+          </div>
+
+          {/* 다음 문제 button */}
+          <button
+            onClick={onDone}
+            className="flex items-center justify-center font-medium text-xl transition-all active:scale-[0.97]"
+            style={{
+              width: '238px',
+              height: '60px',
+              backgroundColor: '#81ecff',
+              color: '#005762',
+              fontFamily: 'var(--font-sans)',
+              letterSpacing: '2px',
+            }}
+          >
+            다음 문제
+          </button>
         </div>
-        <p className="text-3xl font-black text-green-600 drop-shadow-sm">정답!</p>
-        <p className="text-lg font-bold text-yellow-500">+{stars}⭐ 획득!</p>
+
+        {/* Bottom pixel strip */}
+        <div
+          className="w-full h-2"
+          style={{
+            background: 'repeating-linear-gradient(90deg, #81ecff 0px, #81ecff 8px, transparent 8px, transparent 16px)',
+            opacity: 0.3,
+          }}
+        />
       </div>
 
       <style>{`
         @keyframes correctPop {
-          0%   { transform: scale(0) rotate(-10deg); opacity: 0; }
-          60%  { transform: scale(1.15) rotate(3deg); opacity: 1; }
-          80%  { transform: scale(0.95) rotate(-1deg); }
-          100% { transform: scale(1) rotate(0deg); opacity: 1; }
+          0%   { transform: scale(0.7); opacity: 0; }
+          60%  { transform: scale(1.04); opacity: 1; }
+          100% { transform: scale(1); opacity: 1; }
         }
       `}</style>
     </div>

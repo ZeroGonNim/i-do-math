@@ -1,95 +1,106 @@
-import { useEffect, useRef } from 'react'
-
 interface Props {
   userNumerator?: number
   userDenominator?: number
   onDone: () => void
 }
 
-const TOTAL_MS = 1800
-
 export function WrongOverlay({ userNumerator, userDenominator, onDone }: Props) {
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
-
-  useEffect(() => {
-    timerRef.current = setTimeout(onDone, TOTAL_MS)
-    return () => {
-      if (timerRef.current) clearTimeout(timerRef.current)
-    }
-  }, [onDone])
+  const formattedAnswer = userNumerator !== undefined
+    ? userDenominator !== undefined
+      ? `${userNumerator}/${userDenominator}`
+      : String(userNumerator)
+    : '?'
 
   return (
-    <div className="fixed inset-0 z-40 flex flex-col items-center justify-center pointer-events-none">
-      {/* 붉은 펄스 배경 */}
-      <div
-        className="absolute inset-0 bg-red-400"
-        style={{ animation: 'redPulse 0.6s ease-out forwards' }}
-      />
+    <div
+      className="fixed inset-0 z-40 flex flex-col"
+      style={{ backgroundColor: '#ff716c' }}
+    >
+      {/* HUD status bar */}
+      <div className="flex items-center justify-between px-4 py-2">
+        <span className="text-xs font-bold" style={{ color: 'rgba(0,0,0,0.5)', fontFamily: 'var(--font-game)' }}>
+          시스템 오류 // 에러_04
+        </span>
+        <span className="text-xs font-bold" style={{ color: 'rgba(0,0,0,0.5)', fontFamily: 'var(--font-game)' }}>
+          HP: 00 // XP: 2450
+        </span>
+      </div>
 
-      {/* 중앙 콘텐츠 */}
-      <div
-        className="relative z-10 flex flex-col items-center gap-4"
-        style={{ animation: 'wrongBounceIn 0.5s cubic-bezier(0.34,1.56,0.64,1) 0.1s both' }}
-      >
-        {/* 이모지 */}
+      {/* Centered content */}
+      <div className="flex-1 flex items-center justify-center px-6">
+        {/* Black card */}
         <div
-          className="text-8xl"
-          style={{ animation: 'headShake 0.5s ease-in-out 0.4s' }}
+          className="w-full flex flex-col items-center py-10 px-8 gap-6"
+          style={{
+            backgroundColor: '#000',
+            maxWidth: '342px',
+            animation: 'wrongPop 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards',
+          }}
         >
-          🤔
-        </div>
+          {/* Pixel icon */}
+          <div
+            className="flex items-center justify-center"
+            style={{ width: '96px', height: '96px', backgroundColor: '#000' }}
+          >
+            <span style={{ fontSize: '52px', lineHeight: 1 }}>🧠</span>
+          </div>
 
-        {/* 오답 분수 — 떨림 */}
-        <div
-          className="bg-white/90 rounded-2xl px-8 py-4 shadow-lg"
-          style={{ animation: 'shake 0.4s ease-in-out 0.3s' }}
-        >
-          <p className="text-xs text-gray-400 text-center mb-1">내가 쓴 답</p>
-          <p className="text-4xl font-black text-red-500 text-center">
-            {userNumerator !== undefined
-              ? userDenominator !== undefined
-                ? `${userNumerator}/${userDenominator}`
-                : userNumerator
-              : '?'}
+          {/* 오답! */}
+          <p
+            className="text-4xl font-bold text-center"
+            style={{ color: '#ff716c', fontFamily: 'var(--font-sans)', letterSpacing: '-1.8px', lineHeight: '40px' }}
+          >
+            오답!
           </p>
-        </div>
 
-        {/* 격려 메시지 */}
-        <p
-          className="text-xl font-bold text-white drop-shadow-md"
-          style={{ animation: 'fadeInUp 0.4s ease 0.6s both' }}
-        >
-          괜찮아요, 다시 해봐요! 💪
-        </p>
+          {/* User answer */}
+          <div className="flex flex-col items-center gap-1">
+            <p
+              className="text-lg font-bold text-center"
+              style={{ color: '#aaa8c3', fontFamily: 'var(--font-game)' }}
+            >
+              내가 쓴 답 {formattedAnswer}.
+            </p>
+            <p
+              className="text-xl font-medium text-center"
+              style={{ color: '#e5e3ff', fontFamily: 'var(--font-sans)' }}
+            >
+              괜찮아요, 다시 해봐요! 💪
+            </p>
+          </div>
+
+          {/* 다시 도전 button */}
+          <button
+            onClick={onDone}
+            className="flex items-center justify-center font-medium text-xl transition-all active:scale-[0.97]"
+            style={{
+              width: '278px',
+              height: '68px',
+              backgroundColor: '#ff716c',
+              color: '#490006',
+              fontFamily: 'var(--font-sans)',
+              letterSpacing: '2px',
+            }}
+          >
+            ↻　다시 도전
+          </button>
+
+          {/* 내 답 확인하기 */}
+          <button
+            onClick={onDone}
+            className="text-sm font-medium"
+            style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)' }}
+          >
+            내 답 확인하기
+          </button>
+        </div>
       </div>
 
       <style>{`
-        @keyframes redPulse {
-          0%   { opacity: 0; }
-          20%  { opacity: 0.35; }
-          100% { opacity: 0; }
-        }
-        @keyframes wrongBounceIn {
-          0%   { transform: scale(0.4) translateY(40px); opacity: 0; }
-          60%  { transform: scale(1.1) translateY(-8px); opacity: 1; }
+        @keyframes wrongPop {
+          0%   { transform: scale(0.8) translateY(20px); opacity: 0; }
+          60%  { transform: scale(1.03) translateY(-4px); opacity: 1; }
           100% { transform: scale(1) translateY(0); opacity: 1; }
-        }
-        @keyframes shake {
-          0%, 100% { transform: translateX(0); }
-          15%  { transform: translateX(-10px) rotate(-2deg); }
-          30%  { transform: translateX(10px) rotate(2deg); }
-          45%  { transform: translateX(-8px) rotate(-1deg); }
-          60%  { transform: translateX(8px) rotate(1deg); }
-          75%  { transform: translateX(-4px); }
-        }
-        @keyframes headShake {
-          0%, 100% { transform: rotate(0deg); }
-          25%  { transform: rotate(-15deg); }
-          75%  { transform: rotate(15deg); }
-        }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
     </div>

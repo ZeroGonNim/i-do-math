@@ -14,8 +14,12 @@ const mockProfile: UserProfile = {
   displayName: '테스트',
   grade: 4,
   characterId: 'char-01',
+  avatarId: 'warrior',
+  unlockedAvatars: ['warrior'],
   level: 1,
   totalStars: 0,
+  totalXP: 0,
+  noDropStreak: 0,
   currentStreak: 0,
   longestStreak: 0,
   lastStudyDate: '2026-03-31',
@@ -26,6 +30,8 @@ const mockProfile: UserProfile = {
   missionProblemsSolved: 0,
   missionWrongReviewed: false,
   unlockedDifficulty: 'basic',
+  boxCount: 0,
+  pittyCount: 0,
 }
 
 beforeEach(async () => {

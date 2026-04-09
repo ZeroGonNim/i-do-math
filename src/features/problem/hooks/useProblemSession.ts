@@ -23,6 +23,9 @@ export function useProblemSession(problem: Problem) {
   // 부등호 입력
   const [selectedSymbol, setSelectedSymbol] = useState<'>' | '=' | '<' | null>(null)
 
+  // 텍스트 입력
+  const [textValue, setTextValue] = useState('')
+
   // 다중 빈칸 입력
   const blankCount = answerType === 'multi_blank'
     ? (problem.answer as { values: number[] }).values?.length ?? 2
@@ -44,6 +47,7 @@ export function useProblemSession(problem: Problem) {
     setSelectedSymbol(null)
     setBlankValues(Array(blankCount).fill(''))
     setActiveBlankIndex(0)
+    setTextValue('')
     setHintUsed(false)
     setInputSequence([])
   }, [problem.id, blankCount])
@@ -70,9 +74,7 @@ export function useProblemSession(problem: Problem) {
       } else {
         if (next[activeBlankIndex].length < MAX_BLANK_LENGTH) {
           next[activeBlankIndex] = next[activeBlankIndex] + key
-          if (next[activeBlankIndex].length === 1 && activeBlankIndex < blankCount - 1) {
-            setActiveBlankIndex(i => i + 1)
-          }
+          // 자동 포커스 이동 제거: 여러 자리 숫자 입력을 위해 사용자가 직접 이동하도록 함
         }
       }
       return next
@@ -127,7 +129,8 @@ export function useProblemSession(problem: Problem) {
       if (values.some(isNaN)) return null
       return { values }
     }
-    if (answerType === 'draw' || answerType === 'text') return null
+    if (answerType === 'text') return { text: textValue }
+    if (answerType === 'draw') return null
 
     // 분수
     const n = parseInt(numerator)
@@ -145,12 +148,15 @@ export function useProblemSession(problem: Problem) {
     if (answerType === 'multiple_choice') return selectedChoice !== null
     if (answerType === 'symbol') return selectedSymbol !== null
     if (answerType === 'multi_blank') return blankValues.every(v => v.length > 0)
-    if (answerType === 'draw' || answerType === 'text') return false
+    if (answerType === 'text') return textValue.trim().length > 0
+    if (answerType === 'draw') return false
     return numerator.length > 0 && denominator.length > 0
   })()
 
   return {
     answerType,
+    textValue,
+    setTextValue,
     numerator,
     denominator,
     activeField,
