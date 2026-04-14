@@ -233,6 +233,38 @@ for (const p of problems) {
       })
       checked++
     }
+
+    // ── 3b. 선택지 2개+ 등장 시: 결론 패턴으로 정답 추론
+    // "X가 답", "정답은 X", "→ X", "X가 더 작", "X가 더 크", "X이므로" 등
+    if (mentioned.length >= 2) {
+      // 전체 steps를 합쳐 결론 탐색
+      const allStepsText = p.steps
+        .map(s => (s.expression ?? '') + ' ' + (s.narrative ?? ''))
+        .join(' ')
+
+      // 결론 패턴: 마지막 step에서만 단독 선택지 결론 탐색
+      // "나가 더 작은", "나가 답", "→ 나(결론)", "정답: 나" 등
+      // 중간 step의 "→ X"는 단계 설명이므로 마지막 step으로 한정
+      const conclusionPatterns = p.choices.map((c, i) => {
+        const escaped = c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        // 마지막 step에서만 결론 문맥 확인: "X가 답", "X이(가) 정답", "X가 더", "→ X" (마지막 step)
+        const re = new RegExp(`(${escaped}[이가]\\s*(답|정답|더|작|크|맞)|정답[:\\s]*${escaped}|→\\s*${escaped}\\s*$)`)
+        return { idx: i, choice: c, found: re.test(lastText) }
+      }).filter(x => x.found)
+
+      if (conclusionPatterns.length === 1 && conclusionPatterns[0].idx !== correctIdx) {
+        errors.push({
+          type: 'CHOICE_MISMATCH_INFERRED',
+          id,
+          choices: p.choices,
+          answerChoice: p.answer?.choice,
+          inferredChoice: conclusionPatterns[0].choice,
+          expectedChoice: conclusionPatterns[0].idx + 1,
+          lastStep: lastText.trim().slice(0, 80),
+        })
+        checked++
+      }
+    }
   }
 
   // ── 4. 정수 정답 일치: answer.value와 steps 마지막 계산식 결과
@@ -284,6 +316,14 @@ if (errors.length === 0) {
       console.log(`    steps 마지막 결과: ${e.stepResult}`)
       console.log(`    answer.value: ${e.answerValue}`)
       console.log(`    식: ${e.expression}`)
+    } else if (e.type === 'CHOICE_MISMATCH_INFERRED') {
+      console.log(`    choices: ${e.choices?.join(' / ')}`)
+      console.log(`    answer.choice: ${e.answerChoice} | 추론된 정답: ${e.expectedChoice}(${e.inferredChoice})`)
+      console.log(`    lastStep: ${e.lastStep}`)
+    } else if (e.type === 'CHOICE_MISMATCH') {
+      console.log(`    choices: ${e.choices?.join(' / ')}`)
+      console.log(`    answer.choice: ${e.answerChoice} | step이 가리키는 정답: ${e.expectedChoice}(${e.stepSays})`)
+      console.log(`    lastStep: ${e.lastStep}`)
     }
     console.log()
   })
