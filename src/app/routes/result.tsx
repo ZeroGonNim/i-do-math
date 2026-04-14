@@ -341,8 +341,14 @@ export function ResultRoute() {
                 </div>
 
                 <div className="flex flex-col gap-3">
-                  <button className="w-full h-16 font-bold text-xl transition-all active:scale-[0.98] border-4 border-[#ff9f43] text-[#ff9f43]" onClick={() => navigate('/problem', { state: { problem } })}>다시 써볼래</button>
-                  <button className="w-full h-16 font-bold text-xl transition-all active:scale-[0.98]" style={{ backgroundColor: theme.primary, color: '#000' }} onClick={handleNextProblem}>맞게 썼어</button>
+                  {isDraw ? (
+                    <button className="w-full min-h-[56px] text-lg font-bold transition-all active:scale-[0.98]" style={{ backgroundColor: theme.primary, color: '#000' }} onClick={handleNextProblem}>다음 문제 →</button>
+                  ) : (
+                    <>
+                      <button className="w-full h-16 font-bold text-xl transition-all active:scale-[0.98] border-4 border-[#ff9f43] text-[#ff9f43]" onClick={() => navigate('/problem', { state: { problem } })}>다시 써볼래</button>
+                      <button className="w-full h-16 font-bold text-xl transition-all active:scale-[0.98]" style={{ backgroundColor: theme.primary, color: '#000' }} onClick={handleNextProblem}>맞게 썼어</button>
+                    </>
+                  )}
                 </div>
               </div>
             ) : (
