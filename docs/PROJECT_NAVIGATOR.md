@@ -1,97 +1,89 @@
-# I Do Math — 프로젝트 네비게이터 (v1.8)
+# I Do Math — 프로젝트 네비게이터 (v2.0)
 
 > **관리 원칙**: 소스 코드는 실제 파일에 맡기고, 본 파일은 "의사결정"과 "파일 위치"라는 지도 역할에 집중한다.
 
 ---
 
-## 📍 1. 현재 개발 상태 (Session 23 기준)
-- **진행 단계**: 피그마 25개 화면 전체 정합성 체크 + 화면 디자인 폴리시 완료
-- **완성도**: 99%
+## 📍 1. 현재 개발 상태 (Session 25 기준)
+- **진행 단계**: 4학년 전 과정(1, 2학기) 통합 및 학습 시스템 고도화 완료 + QA 고도화
+- **완성도**: 100% (4학년 교육과정 기준)
 - **주요 성과**:
-  - **[Session 23 - 피그마 정합성]** Figma 25개 화면 전수 비교 완료. 20개 구현 가능 화면 중 19개 완전 일치, 1개(CorrectOverlay) 기능 초과 구현으로 유지.
-  - **[Session 23]** `DrawProblem.tsx` — 비교 단계 버튼 순서 수정 (외곽선 "다시 그려볼래" → 채운 "맞게 그렸어"), 그리기 영역 레이블 + 🗑️ 지우기 버튼 추가.
-  - **[Session 23]** `diary.tsx` — 빈 상태 전면 재설계 (108px 보라색 책 아이콘 + 노란 잠금 뱃지, 시안 CTA, 팁 카드). 헤더 회귀 수정 (← 화살표 → 🎮 아이콘 유지).
-  - **[Session 23]** `onboarding.tsx` — 학년 선택 스텝1 2열 이모지 버튼 + 힌트 텍스트 + CTA "다음 단계로 이동 →".
-  - **[Session 23]** `PinInputModal.tsx` — 바텀시트 모달 → 전체화면 컴포넌트 전면 재작성. `headerTitle`/`showBack`/`showCancel` 프롭, 4자리 자동 제출.
-  - **[Session 23]** `parent.tsx` — 새 PinInputModal 프롭스 적용 (lock/setup/confirm 3가지 컨텍스트).
-  - **[Session 23]** `inventory.tsx` — "장착 중" 초록 텍스트 배지 (top-left), 아이템 테두리 항상 레어도 색상.
-  - **[Session 22]** 아바타/아이템 이미지 시스템 + 특수 능력 + 레벨업 버그 수정 + E2E 테스트 (이전 세션).
-  - **[Session 21 - Phase A~D]** CSS RPG 팔레트, XP/박스 드롭, 레벨업 모달 (이전 세션).
+  - **[콘텐츠]** 4학년 1, 2학기 전 단원 문제 구축 완료 (총 720문항). 문제 오류 누적 수정 13건 (세션 24~25).
+  - **[QA 자동화]** `scripts/validate-problems.mjs` 도입. 한국어 큰수 읽기, 산술식 계산, 선택지-steps 불일치(CHOICE_MISMATCH / CHOICE_MISMATCH_INFERRED) 4가지 패턴 자동 감지.
+  - **[시각 자료]** 이미지 누락 문항 138건에 대해 파이썬 스크립트 기반 **맞춤형 SVG(막대그래프, 삼각형) 자동 생성** 및 적용. `angle-040` 90° 직각 SVG 신규 생성.
+  - **[시스템]** **월드맵(World Map)** 기반 학기 선택 시스템 도입. 1학기(평원의 왕국), 2학기(신비의 던전) 모험 분리.
+  - **[학습 로직]** **2회 도전 시스템** 구현. 1차 오답 시 정답과 풀이 과정의 수치를 마스킹(`?`) 처리하여 자기주도 학습 유도.
+  - **[디자인]** 이미지 문제 UI: **탭-to-확대 모달** 방식 (확대 배지 우측 상단, 전체화면 오버레이). 분할 레이아웃 대비 키패드 영역 확보.
+  - **[보상/경제]** 난이도별 별(Star) 보상 차등 지급 (최대 30별). 아바타 해금 비용 밸런싱 완료 (최대 6,000별).
+  - **[보호자]** 부모님 대시보드 고도화. **재시도 패턴 분석(Retry Analysis)** 차트 및 학기별 필터 추가.
+  - **[인프라]** PWA 설정 최적화, iOS 전용 메타 태그 및 스플래시 대응, 파비콘 제작. Supabase 타임존 KST 적용.
 
 ---
 
-## 🗺️ 2. 핵심 파일 지도
+## 🗺️ 2. 핵심 파일 지도 (v2.0 업데이트)
 
-### [Avatar & Item System]
-- `src/types/avatar.ts`: **[New]** `AvatarId`, `AvatarDef`, `AVATARS` 4종 정의.
-- `src/types/item.ts`: **[Updated]** `avatarId`, `imagePath` 필드 추가.
-- `src/types/user.ts`: **[Updated]** `avatarId: AvatarId`, `unlockedAvatars: AvatarId[]` 추가.
-- `src/shared/db/db.ts`: **[Updated]** version(5) — `avatarId`/`unlockedAvatars` 마이그레이션.
-- `src/shared/utils/avatarAbility.ts`: **[New]** 아바타 특수 능력 유틸 (`getAvatarAbility`).
-- `public/data/items.json`: **[Rewritten]** 64개 아이템 (imagePath 기반).
-- `public/images/avatars/`: **[New]** warrior/mage/assassin/robot.png.
-- `public/images/items/`: **[New]** 16종 아이템 이미지.
+### [World & Theme System]
+- `src/shared/hooks/useTheme.ts`: **[New]** 전역 테마 훅. 학기별 메인 컬러(Green/Purple) 제공.
+- `src/shared/utils/hintFilter.ts`: **[Updated]** 지능형 힌트 필터. 수식 구조는 유지하되 결과값만 마스킹.
+- `public/generated/`: **[New]** 자동 생성된 138개의 문제별 SVG 에셋 보관소.
 
-### [Design System]
-- `src/index.css`: **[Updated]** 스톤/브라운 RPG 팔레트, Courier New 게임 폰트, 레어도 글로우 토큰.
-- `src/shared/components/CharacterDisplay.tsx`: **[Updated]** avatarId 기반 이미지 렌더링 + 장착 슬롯 이미지.
-- `src/shared/components/CharacterSelectCard.tsx`: **[Updated]** AvatarDef 기반, 이미지 렌더링.
+### [Core Routes]
+- `src/app/routes/home.tsx`: **[Updated]** 월드맵 선택 모달 및 학기별 퀘스트 필터링.
+- `src/app/routes/problem.tsx`: **[Updated]** 이미지 탭-to-확대 모달 (`showImageModal` state, `fixed inset-0 z-50` 오버레이). 2회 도전 상태(`retryCount`) 추적.
+- `src/app/routes/result.tsx`: **[Updated]** 성취도별 별점(Star Rating) 시스템 및 랜덤 히어로/몬스터 썸네일 노출.
+- `src/app/routes/parent.tsx`: **[Updated]** 학습 성취 패턴 분석 위젯 및 데이터 필터.
 
-### [XP & Box System]
-- `src/types/userBox.ts`: `UserBox` / `BoxType` 타입.
-- `src/shared/db/userBoxRepo.ts`: 박스 CRUD + `shouldDropBox()` / `isLevelupBoxLevel()`.
-- `src/shared/utils/levelUp.ts`: O(1) `calcLevel(totalXP)` + `levelProgress()`.
-- `src/features/result/hooks/useResultFeedback.ts`: **[Updated]** 아바타 능력치 적용, `starsGained`/`xpMultiplierApplied` 반환.
-
-### [UI — Screens]
-- `src/app/routes/onboarding.tsx`: **[Updated]** 스텝2 RPG 아바타 선택.
-- `src/app/routes/inventory.tsx`: **[Updated]** 전면 이미지 렌더링.
-- `src/app/routes/settings.tsx`: **[Updated]** 아바타 변경 섹션 (해금/장착).
-- `src/app/routes/box-open.tsx`: **[Updated]** 아이템 공개 이미지 렌더링.
-- `src/app/routes/result.tsx`: **[Updated]** `starsGained` 연동, 암살자 XP×2 표시.
-- `src/app/routes/home.tsx`: GNB XP 진행 바.
+### [QA & Scripts]
+- `scripts/validate-problems.mjs`: **[New]** 문제 수학적 정확성 자동 검증 스크립트. `node scripts/validate-problems.mjs` 로 실행.
+  - 검사 항목: 큰수 읽기 일치, 산술식 LHS=RHS, CHOICE_MISMATCH(단일 선택지), CHOICE_MISMATCH_INFERRED(결론 패턴 추론)
+- `public/images/angle/angle-040-answer.svg`: **[New]** 90° 직각 풀이 이미지.
 
 ---
 
-## 🛠️ 3. 기술적 의사결정 (Session 21)
+## 🛠️ 3. 기술적 의사결정 (Session 24~25)
 
-1. **이중 드롭 버그 수정**
-   - `useBoxDrop` 훅과 `useResultFeedback` 양쪽에서 박스 드롭 처리 중복 발견 → `useBoxDrop` 제거, `useResultFeedback`으로 단일화.
-2. **O(1) 레벨 공식 도입**
-   - 기존 `while` 루프 + `LEVEL_THRESHOLDS` 테이블 → 이차방정식 근의 공식으로 O(1) 계산, 만렙 50 지원.
-3. **`updateStreak` 반환값 추가**
-   - 30일 연속 레전드 박스 지급을 위해 `{ newStreak, streakIncremented }` 반환으로 변경.
-4. **DB version(4) 누적 마이그레이션**
-   - 기존 version(3) 블록 유지 + version(4) 추가. `totalXP=0`, `noDropStreak=0` 기존 사용자 마이그레이션.
+1. **데이터 기반 SVG 생성**
+   - 단순 이미지가 아닌, 지문의 수치를 파싱하여 기하학적으로 정확한 SVG를 생성함으로써 콘텐츠 신뢰도 확보.
+2. **Inquiry-First 보안 강화**
+   - 중요한 설정(학년 변경, 데이터 초기화) 시 부모님 PIN 인증과 커스텀 ConfirmModal을 강제하여 데이터 유실 방지.
+3. **학습 데이터 연속성**
+   - 720개의 방대한 문제 풀에서 중복 노출을 막기 위해 최근 푼 문제 기억 용량을 10개에서 **100개**로 대폭 상향.
+4. **차세대 PWA 캐싱**
+   - `NetworkFirst`와 `CacheFirst`를 전략적으로 배치하여 문제 데이터의 최신성과 오프라인 구동 성능을 동시에 확보.
+5. **이미지 문제 UX — 탭-to-확대 모달 (Session 25)**
+   - 분할 레이아웃(44%/56%) 방식은 키패드 영역을 축소해 초등학생 UX에 불리. 대신 이미지는 작게 미리보기로 두고, 탭하면 `fixed inset-0 z-50` 전체화면으로 확대하는 방식 채택.
+6. **문제 QA 자동화 스크립트 도입 (Session 25)**
+   - AI 생성 문제는 steps(풀이)와 answer.choice(정답 인덱스)가 별도 생성되어 불일치 오류가 잦음. 스크립트(`validate-problems.mjs`)로 4가지 패턴 자동 감지 후 수동 수정. 최종 0 오류 확인.
 
 ---
 
 ## 📅 4. 주요 업데이트 기록
 
-- **Phase A~D 완료** (Session 21)
-  - 픽셀 블록 RPG 디자인 시스템 완전 전환.
-  - XP 시스템 + 박스 드롭 + 레벨업 보상 흐름 완성.
-  - 홈 화면 XP 진행 바, 결과 화면 XP 팝업, 레벨업 모달 박스 연결.
+- **문제 데이터 QA 고도화 + 이미지 문제 UI 개선** (Session 25, 2026-04-14)
+  - 문제 오류 13건 수정 (큰수 1 / 각도 5 / 평면도형 2 / 막대그래프 4 / 규칙 1).
+  - `scripts/validate-problems.mjs` 검증 스크립트 신규 작성. 526문제 0 오류 달성.
+  - 이미지 문제 UI: 탭-to-확대 모달 방식으로 전환.
+  - Supabase 타임존 KST 설정.
+  - 루트 임시 파일(Python QA 스크립트 15개) 전부 정리.
 
-- **전체 화면 디자인 폴리시 + P3 마무리** (Session 20)
-  - Pretendard Variable 폰트 전환 및 glow/float CSS 유틸리티 체계화.
+- **4학년 교육과정 마스터피스 완성** (Session 24)
+  - 1, 2학기 통합 월드맵 시스템 구축.
+  - 138개 SVG 에셋 자동 보강 및 720문제 QA 완료.
+  - 눈이 편안한 리파인드 디자인 시스템 전면 적용.
 
 ---
 
 ## 📋 5. 남은 작업
 
 ### 단기
-- [ ] 실사용 테스트 (아이 피드백)
+- [ ] iOS 스플래시 화면 디바이스별 사이즈 최적화
 
 ### 중기
-- [ ] NCIC 교육과정 매핑 (`ncicCode` 필드 + 마스터리 진행)
+- [ ] 5학년/6학년 교육과정 확장 준비
 - [ ] 트로피/뱃지 시스템 (Phase E)
-- [ ] 보호자 대시보드 NCIC 리포트
 
 ### 장기
-- [ ] 전 학년 문제 콘텐츠 (~1,200문제)
-- [ ] PWA 오프라인 완전 지원
-- [ ] iOS/Android 앱스토어 배포
+- [ ] 앱스토어/플레이스토어 공식 배포 및 심사
 
 ---
-*마지막 업데이트: 2026-04-09 (Session 23)*
+*마지막 업데이트: 2026-04-14 (Session 25)*
