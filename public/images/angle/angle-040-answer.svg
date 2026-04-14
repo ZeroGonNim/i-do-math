@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250" viewBox="0 0 400 250">
+  <rect width="400" height="250" fill="#F8FAFF" rx="10"/>
+  <!-- 수평선 (밑변) -->
+  <line x1="80" y1="175" x2="280" y2="175" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <!-- 수직선 (90° 각도) -->
+  <line x1="80" y1="175" x2="80" y2="60" stroke="#4F46E5" stroke-width="3" stroke-linecap="round"/>
+  <!-- 직각 표시 (작은 사각형) -->
+  <polyline points="80,155 100,155 100,175" fill="none" stroke="#4F46E5" stroke-width="2.5"/>
+  <!-- 각도 라벨 -->
+  <text x="115" y="168" font-size="16" fill="#4F46E5" font-weight="bold" font-family="sans-serif">90°</text>
+</svg>
