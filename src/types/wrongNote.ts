@@ -9,6 +9,9 @@ export interface WrongNote {
   consecutiveWrong: number
   consecutiveCorrect: number
   isWeak: boolean
+  problemId?: string       // 가장 최근 틀린 문제 ID (정확한 재도전용)
+  questionText: string     // 오답 당시의 문제 지문
+  correctAnswer: Answer    // 실제 정답
   lastWrongAnswer: Answer
   replayData: { inputSequence: string[] }
   lastAttemptAt: number

@@ -8,6 +8,7 @@ import { AppHeader } from '@/shared/components/AppHeader'
 import { formatNumber } from '@/shared/utils/format'
 import type { WrongNote } from '@/types/wrongNote'
 import type { Problem, Difficulty } from '@/types/problem'
+import { CelebrationIcon, HomeIcon, WarningIcon, PlayIcon, SwordIcon } from '@/shared/components/PixelIcons'
 
 function DifficultyDots({ difficulty }: { difficulty: Difficulty }) {
   const count = difficulty === 'basic' ? 1 : difficulty === 'applied' ? 2 : 3
@@ -19,7 +20,7 @@ function DifficultyDots({ difficulty }: { difficulty: Difficulty }) {
           style={{
             width: '8px',
             height: '8px',
-            backgroundColor: i <= count ? '#c180ff' : '#23233f',
+            backgroundColor: i <= count ? '#8b5cf6' : '#23233f',
           }}
         />
       ))}
@@ -35,7 +36,7 @@ export function RemindRoute() {
   const [allProblems, setAllProblems] = useState<Problem[]>([])
 
   useEffect(() => {
-    loadProblems().then(data => setAllProblems(data.problems))
+    loadProblems().then(data => setAllProblems(data.problems)).catch(err => console.error('문제 로드 실패:', err))
   }, [])
 
   const conceptMap = useMemo(() => {
@@ -54,13 +55,19 @@ export function RemindRoute() {
   async function handleStartReview(note: WrongNote) {
     try {
       const data = await loadProblems()
-      const grade = profile?.grade ?? 4
-      const candidates = data.problems.filter(
-        p => p.concept === note.concept && p.grade === grade
-      )
-      const problem = candidates.length > 0
-        ? candidates[Math.floor(Math.random() * candidates.length)]
-        : data.problems.find(p => p.concept === note.concept)
+      // problemId가 있으면 정확히 틀렸던 문제로, 없으면 랜덤 fallback (구 데이터 호환)
+      let problem = note.problemId
+        ? data.problems.find(p => p.id === note.problemId)
+        : undefined
+      if (!problem) {
+        const grade = profile?.grade ?? 4
+        const candidates = data.problems.filter(
+          p => p.concept === note.concept && p.grade === grade
+        )
+        problem = candidates.length > 0
+          ? candidates[Math.floor(Math.random() * candidates.length)]
+          : data.problems.find(p => p.concept === note.concept)
+      }
       if (problem) {
         navigate('/problem', { state: { problem, isRemind: true } })
       } else {
@@ -84,7 +91,7 @@ export function RemindRoute() {
   const totalWeakCount = allNotes.length
 
   return (
-    <div className="flex h-dvh flex-col" style={{ backgroundColor: '#0c0c1f' }}>
+    <div className="flex h-dvh flex-col" style={{ backgroundColor: '#0f172a' }}>
       {toastMsg && (
         <div className="fixed top-4 left-0 right-0 mx-4 z-50 px-4 py-3 text-sm text-center font-medium text-white shadow-lg"
              style={{ backgroundColor: 'rgba(33,33,33,0.92)' }}>
@@ -101,10 +108,10 @@ export function RemindRoute() {
               style={{ backgroundColor: '#fcf8ff', width: '100%', maxWidth: '342px' }}
             >
               <div className="absolute top-3 left-3 w-3 h-3" style={{ backgroundColor: '#ffe792' }} />
-              <div className="absolute top-3 right-3 w-3 h-3" style={{ backgroundColor: '#81ecff' }} />
+              <div className="absolute top-3 right-3 w-3 h-3" style={{ backgroundColor: '#38bdf8' }} />
               <div className="flex items-center justify-center"
                    style={{ width: '102px', height: '100px', backgroundColor: '#6f00be' }}>
-                <span style={{ fontSize: '52px', lineHeight: 1 }}>🎉</span>
+                <CelebrationIcon color="#ffe792" size={56} />
               </div>
               <p className="text-3xl text-center font-bold"
                  style={{ color: '#1c1c3a', fontFamily: 'var(--font-sans)', letterSpacing: '-0.75px', lineHeight: '38px' }}>
@@ -119,7 +126,7 @@ export function RemindRoute() {
                 className="flex items-center justify-center gap-2 font-medium text-xl transition-all active:scale-[0.97]"
                 style={{ width: '270px', height: '68px', backgroundColor: '#000', color: '#fff', fontFamily: 'var(--font-sans)', letterSpacing: '-0.5px' }}
               >
-                🏠 홈으로
+                <HomeIcon color="#fff" size={18} /> 홈으로
               </button>
             </div>
           </div>
@@ -127,9 +134,9 @@ export function RemindRoute() {
           <div className="space-y-4">
             {/* 취약 개념 발견 배너 */}
             <div className="px-4 py-4"
-                 style={{ backgroundColor: '#c180ff', border: '2px solid #9d5fe8' }}>
-              <p className="text-xs font-bold mb-1" style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-game)' }}>
-                ⚠️ 주의
+                 style={{ backgroundColor: '#8b5cf6', border: '2px solid #9d5fe8' }}>
+              <p className="text-xs font-bold mb-1 flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-game)' }}>
+                <WarningIcon color="rgba(255,255,255,0.7)" size={10} /> 주의
               </p>
               <p className="text-xl font-bold" style={{ color: '#fff', fontFamily: 'var(--font-game)' }}>
                 취약 개념 발견!
@@ -154,13 +161,13 @@ export function RemindRoute() {
                   return (
                     <div
                       key={note.id}
-                      className="flex flex-col"
-                      style={{ backgroundColor: '#1d1d37', border: '1px solid #23233f' }}
+                      className="flex flex-col border-4 border-[#23233f]"
+                      style={{ backgroundColor: '#1d1d37', boxShadow: '0 4px 0 #000000' }}
                     >
                       {/* 상단: 단원 태그 + 실수 유형 + 난이도 */}
                       <div className="flex items-center gap-2 px-3 pt-3 pb-2">
                         <span className="text-[10px] font-bold px-2 py-0.5"
-                              style={{ backgroundColor: '#23233f', color: '#81ecff', fontFamily: 'var(--font-game)' }}>
+                              style={{ backgroundColor: '#23233f', color: '#38bdf8', fontFamily: 'var(--font-game)' }}>
                           {unitLabel}
                         </span>
                         <span className="text-[10px] font-bold px-2 py-0.5"
@@ -173,8 +180,8 @@ export function RemindRoute() {
                       </div>
 
                       {/* 문제 지문 박스 */}
-                      <div className="mx-3 mb-3 px-3 py-2"
-                           style={{ backgroundColor: '#23233f', border: '1px solid #2e2e50' }}>
+                      <div className="mx-3 mb-3 px-3 py-2 border-4 border-[#2e2e50]"
+                           style={{ backgroundColor: '#23233f', boxShadow: '0 2px 0 #000000' }}>
                         <p className="text-sm leading-relaxed line-clamp-2"
                            style={{ color: '#e5e3ff', fontFamily: 'var(--font-sans)' }}>
                           {questionPreview}
@@ -185,9 +192,9 @@ export function RemindRoute() {
                       <button
                         onClick={() => handleStartReview(note)}
                         className="flex items-center justify-center gap-2 text-sm font-bold transition-all active:opacity-80"
-                        style={{ height: '44px', backgroundColor: '#c180ff', color: '#fff', fontFamily: 'var(--font-game)' }}
+                        style={{ height: '44px', backgroundColor: '#8b5cf6', color: '#fff', fontFamily: 'var(--font-game)' }}
                       >
-                        ▶ 재도전
+                        <PlayIcon color="#fff" size={12} /> 재도전
                       </button>
                     </div>
                   )
@@ -201,13 +208,13 @@ export function RemindRoute() {
       {/* 전체 복습 시작 CTA */}
       {totalWeakCount > 0 && (
         <div className="fixed bottom-0 left-0 right-0 p-4"
-             style={{ backgroundColor: '#0c0c1f', borderTop: '1px solid #23233f' }}>
+             style={{ backgroundColor: '#0f172a', borderTop: '1px solid #23233f' }}>
           <button
             onClick={handleStartAll}
-            className="w-full min-h-[56px] text-xl font-bold transition-all active:scale-[0.98]"
-            style={{ backgroundColor: '#c180ff', color: '#fff', fontFamily: 'var(--font-game)' }}
+            className="w-full min-h-[56px] text-xl font-bold transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+            style={{ backgroundColor: '#8b5cf6', color: '#fff', fontFamily: 'var(--font-game)' }}
           >
-            ⚔ 전체 복습 시작!
+            <SwordIcon color="#fff" size={18} /> 전체 복습 시작!
           </button>
         </div>
       )}

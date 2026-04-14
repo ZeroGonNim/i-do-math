@@ -22,6 +22,7 @@ interface Params {
   inputSequence: string[]
   isRemind?: boolean
   drawingData?: string
+  retryCount?: number
 }
 
 /** XP 획득량 (스펙 §3-2) */
@@ -29,6 +30,12 @@ function calcXpGain(isRemind: boolean, hintUsed: boolean): number {
   if (isRemind) return 10       // 오답 복습 정답
   if (hintUsed) return 15       // 힌트 없이 재도전 정답 (근사)
   return 20                     // 일반 정답
+}
+
+/** 별 획득량 계산 (난이도 및 힌트 사용 여부 반영) */
+function calcStarsGained(difficulty: string, hintUsed: boolean): number {
+  const baseStars = difficulty === 'challenge' ? 30 : difficulty === 'applied' ? 20 : 10
+  return hintUsed ? Math.floor(baseStars / 2) : baseStars
 }
 
 export function useResultFeedback({
@@ -40,6 +47,7 @@ export function useResultFeedback({
   inputSequence,
   isRemind,
   drawingData,
+  retryCount = 0,
 }: Params) {
   const [leveledUp, setLeveledUp] = useState(false)
   const [newLevel, setNewLevel] = useState<number | null>(null)
@@ -60,11 +68,14 @@ export function useResultFeedback({
           ? null
           : classifyMistake(problem.type, problem.answer, userAnswer, timeSpent)
 
+        const effectiveHintUsed = hintUsed || (retryCount > 0)
+
         // 1. 학습 로그 저장
         await learningLogRepo.add({
           logId: generateUUID(),
           userId: profile.userId,
           grade: profile.grade,
+          semester: problem.semester as 1 | 2,
           problemId: problem.id,
           concept: problem.concept,
           difficulty: problem.difficulty,
@@ -72,8 +83,8 @@ export function useResultFeedback({
           isCorrect,
           userAnswer,
           timeSpent,
-          hintUsed,
-          retryCount: 0,
+          hintUsed: effectiveHintUsed,
+          retryCount,
           timestamp: Date.now(),
           drawingData,
         })
@@ -107,11 +118,11 @@ export function useResultFeedback({
           const latestProfile = await userProfileRepo.get()
           if (!latestProfile) return
 
-          // XP 계산 (마법사: 힌트 페널티 무시 / 암살자: 연속 정답 ×2)
-          const effectiveHintUsed = ability.ignoreHintPenalty ? false : hintUsed
-          const baseXp = calcXpGain(!!isRemind, effectiveHintUsed)
+          // XP 및 별 계산
+          const abilityHintUsed = ability.ignoreHintPenalty ? false : effectiveHintUsed
+          const baseXp = calcXpGain(!!isRemind, abilityHintUsed)
           const xpGain = Math.round(baseXp * ability.xpMultiplier)
-          const stars = effectiveHintUsed ? 5 : 10
+          const stars = calcStarsGained(problem.difficulty, abilityHintUsed)
 
           const prevXP = latestProfile.totalXP ?? 0
           const newXP = prevXP + xpGain
@@ -209,6 +220,9 @@ export function useResultFeedback({
           if (mistakeType) {
             // 오답 노트 저장
             await wrongNoteRepo.upsertWrong(profile.userId, problem.concept, mistakeType, {
+              problemId: problem.id,
+              questionText: problem.question,
+              correctAnswer: problem.answer,
               lastWrongAnswer: userAnswer,
               replayData: { inputSequence },
               drawingData,
@@ -221,8 +235,11 @@ export function useResultFeedback({
       }
     }
 
-    processResult()
-  }, [isCorrect, problem, userAnswer, timeSpent, hintUsed, inputSequence, isRemind, drawingData])
+    processResult().catch(err => {
+      console.error('결과 처리 최상위 오류:', err)
+      setSaveError(true)
+    })
+  }, [isCorrect, problem, userAnswer, timeSpent, hintUsed, inputSequence, isRemind, drawingData, retryCount])
 
   return { leveledUp, newLevel, difficultyUnlocked, saveError, boxDropped, xpGained, starsGained, xpMultiplierApplied }
 }

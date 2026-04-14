@@ -7,7 +7,7 @@ export const wrongNoteRepo = {
     userId: string,
     concept: string,
     mistakeType: MistakeType,
-    updates: Pick<WrongNote, 'lastWrongAnswer' | 'replayData' | 'drawingData'>
+    updates: Pick<WrongNote, 'lastWrongAnswer' | 'replayData' | 'drawingData' | 'questionText' | 'correctAnswer' | 'problemId'>
   ): Promise<void> {
     if (!mistakeType) return
     const id = `${userId}::${concept}::${mistakeType}`
@@ -45,7 +45,7 @@ export const wrongNoteRepo = {
       .toArray()
     for (const note of notes) {
       const consecutiveCorrect = (note.consecutiveCorrect ?? 0) + 1
-      const isWeak = consecutiveCorrect >= 2 ? false : note.isWeak
+      const isWeak = consecutiveCorrect >= 2 ? false : (note.isWeak ?? true)
       await db.wrongNotes.update(note.id, {
         consecutiveWrong: 0,
         consecutiveCorrect,
