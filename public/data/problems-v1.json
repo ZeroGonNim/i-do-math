@@ -21421,6 +21421,1701 @@
       ],
       "animationAsset": "polygon-shapes",
       "conceptExplanation": "단위를 cm로 통일한 뒤 나눠요. 6m=600cm이에요."
+    },
+    {
+      "id": "g5-s2-u1-range-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "이상과 이하",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "number_range",
+      "skills": [
+        "range_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "수직선에 나타난 수의 범위는 어느 것입니까?\n(수직선: 20~40, 30에 닫힌 점 ● 이후 오른쪽으로 표시)\n① 30 이상인 수\n② 30 이하인 수\n③ 31 이상인 수\n④ 31 이하인 수\n⑤ 32 이상인 수",
+      "answerType": "multiple_choice",
+      "choices": [
+        "30 이상인 수",
+        "30 이하인 수",
+        "31 이상인 수",
+        "31 이하인 수",
+        "32 이상인 수"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "닫힌 점(●)은 그 수를 포함",
+          "expression": "30 포함, 오른쪽 방향 → 30 이상인 수"
+        }
+      ],
+      "conceptExplanation": "닫힌 점(●)에서 오른쪽으로 표시된 범위는 \"이상\"이에요. 30 이상인 수는 30과 같거나 큰 수입니다."
+    },
+    {
+      "id": "g5-s2-u1-range-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "초과와 미만",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "number_range",
+      "skills": [
+        "range_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "수직선에 나타난 수의 범위를 바르게 쓴 것은 어느 것입니까?\n(수직선: 30~34, 33에 열린 점 ○ 이후 오른쪽으로 표시)\n① 32 이상인 수\n② 34 이하인 수\n③ 33 이상인 수\n④ 33 이하인 수\n⑤ 33 초과인 수",
+      "answerType": "multiple_choice",
+      "choices": [
+        "32 이상인 수",
+        "34 이하인 수",
+        "33 이상인 수",
+        "33 이하인 수",
+        "33 초과인 수"
+      ],
+      "answer": {
+        "choice": 5
+      },
+      "steps": [
+        {
+          "desc": "열린 점(○)은 그 수를 포함하지 않음",
+          "expression": "33 미포함, 오른쪽 방향 → 33 초과인 수"
+        }
+      ],
+      "conceptExplanation": "열린 점(○)에서 오른쪽 방향은 \"초과\"예요. 33 초과인 수는 33보다 큰 수입니다."
+    },
+    {
+      "id": "g5-s2-u1-range-003",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "미만",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "number_range",
+      "skills": [
+        "range_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "50 미만인 수를 잘못 쓴 사람은 누구인가요?\n유호: 46, 42, 50, 38, 33\n지수: 47, 44, 49, 36, 41\n명준: 48, 45, 43, 37, 39",
+      "answerType": "text",
+      "answer": {
+        "text": "유호"
+      },
+      "steps": [
+        {
+          "desc": "50 미만 = 50보다 작은 수 (50 포함 안 됨)",
+          "expression": "50 미만인 수: 49 이하의 수"
+        },
+        {
+          "desc": "유호의 목록 확인",
+          "expression": "46, 42, 38, 33은 미만이지만 50은 미만이 아님"
+        }
+      ],
+      "conceptExplanation": "\"미만\"은 그 수를 포함하지 않아요. 50 미만이면 50은 포함되지 않습니다."
+    },
+    {
+      "id": "g5-s2-u1-round-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "버림",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "rounding_down",
+      "skills": [
+        "truncation"
+      ],
+      "mistakeTypes": [
+        "range_error"
+      ],
+      "question": "버림하여 십의 자리까지 나타내면 960이 되는 자연수는 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 10
+      },
+      "steps": [
+        {
+          "desc": "버림하여 십의 자리 → 960이 되는 범위",
+          "expression": "960 ≤ 수 < 970"
+        },
+        {
+          "desc": "자연수 나열",
+          "expression": "960, 961, 962, ..., 969 → 10개"
+        }
+      ],
+      "conceptExplanation": "버림하여 960이 되려면 십의 자리 이하를 0으로 만들었을 때 960이 되는 수예요. 960~969까지 10개입니다."
+    },
+    {
+      "id": "g5-s2-u1-round-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "버림",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "rounding_down",
+      "skills": [
+        "truncation",
+        "decimal_place"
+      ],
+      "mistakeTypes": [
+        "place_error"
+      ],
+      "question": "5.438을 버림하여 소수 첫째 자리까지 나타내면 얼마인가요?",
+      "answerType": "text",
+      "answer": {
+        "text": "5.4"
+      },
+      "steps": [
+        {
+          "desc": "소수 첫째 자리까지 → 소수 둘째 자리 이하 버림",
+          "expression": "5.438에서 소수 둘째 자리 3 이하를 버림"
+        },
+        {
+          "desc": "결과",
+          "expression": "5.4"
+        }
+      ],
+      "conceptExplanation": "버림은 구하려는 자리 아래 숫자를 모두 0(또는 삭제)으로 만들어요."
+    },
+    {
+      "id": "g5-s2-u1-round-003",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "반올림",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "rounding",
+      "skills": [
+        "rounding",
+        "range_understanding"
+      ],
+      "mistakeTypes": [
+        "range_error"
+      ],
+      "question": "반올림하여 백의 자리까지 나타내면 200이 되는 자연수 중 가장 작은 수와 가장 큰 수를 구하세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          150,
+          249
+        ],
+        "labels": [
+          "가장 작은 수",
+          "가장 큰 수"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "반올림하여 200이 되는 범위",
+          "expression": "150 ≤ 수 ≤ 249"
+        },
+        {
+          "desc": "가장 작은 수",
+          "expression": "150"
+        },
+        {
+          "desc": "가장 큰 수",
+          "expression": "249"
+        }
+      ],
+      "conceptExplanation": "반올림하여 백의 자리가 200이 되려면 십의 자리가 0~4(150~249)여야 해요."
+    },
+    {
+      "id": "g5-s2-u1-round-004",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "올림",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "rounding_up",
+      "skills": [
+        "ceiling",
+        "unit_conversion"
+      ],
+      "mistakeTypes": [
+        "ceiling_error"
+      ],
+      "question": "철물점에서 철사를 1m 단위로 판매합니다. 화단의 울타리를 묶는 데 3817cm의 철사가 필요하다면 철사를 최소 몇 m 사야 하나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 39
+      },
+      "steps": [
+        {
+          "desc": "단위 변환",
+          "expression": "3817cm = 38.17m"
+        },
+        {
+          "desc": "1m 단위이므로 올림 필요",
+          "expression": "38.17 → 올림하여 39m"
+        }
+      ],
+      "conceptExplanation": "필요한 양이 딱 떨어지지 않을 때 올림을 사용해요. 1m씩 팔 때 38m로 부족하므로 39m를 사야 해요."
+    },
+    {
+      "id": "g5-s2-u1-range-004",
+      "grade": 5,
+      "semester": 2,
+      "unit": "수의 범위와 어림하기",
+      "subUnit": "이상과 이하",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "number_range",
+      "skills": [
+        "range_understanding"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "20 이상인 수는 모두 몇 개인가요?\n18.5,  18.7,  18.6,  40.2,  27.3,  18.1",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "steps": [
+        {
+          "desc": "20 이상인 수 = 20과 같거나 큰 수",
+          "expression": "40.2, 27.3 → 2개"
+        },
+        {
+          "desc": "나머지는 모두 18점대 → 20 미만",
+          "expression": "18.5, 18.7, 18.6, 18.1은 20보다 작음"
+        }
+      ],
+      "conceptExplanation": "\"이상\"은 그 수를 포함해요. 20 이상인 수는 20, 20.1, 27.3, 40.2처럼 20보다 크거나 같은 수예요."
+    },
+    {
+      "id": "g5-s2-u2-frac-nat-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "분수와 자연수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "frac_mult_natural",
+      "skills": [
+        "fraction_multiplication",
+        "simplification"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "1/9 × 3을 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 1,
+        "denominator": 3
+      },
+      "steps": [
+        {
+          "desc": "분자에 자연수를 곱함",
+          "expression": "1 × 3 = 3"
+        },
+        {
+          "desc": "약분",
+          "expression": "3/9 = 1/3"
+        }
+      ],
+      "conceptExplanation": "분수와 자연수의 곱셈은 분자에 자연수를 곱하고 약분해요."
+    },
+    {
+      "id": "g5-s2-u2-nat-frac-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "자연수와 분수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "frac_mult_natural",
+      "skills": [
+        "fraction_multiplication",
+        "simplification"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "6 × 1/9를 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "steps": [
+        {
+          "desc": "분자에 자연수를 곱함",
+          "expression": "6 × 1 = 6"
+        },
+        {
+          "desc": "약분",
+          "expression": "6/9 = 2/3"
+        }
+      ],
+      "conceptExplanation": "자연수와 분수의 곱셈도 교환법칙이 성립해요. 분자에 6을 곱하고 약분해요."
+    },
+    {
+      "id": "g5-s2-u2-frac-frac-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "진분수끼리의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "frac_mult_frac",
+      "skills": [
+        "fraction_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "1/5 × 6/7을 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 6,
+        "denominator": 35
+      },
+      "steps": [
+        {
+          "desc": "분자끼리, 분모끼리 곱함",
+          "expression": "(1×6) / (5×7)"
+        },
+        {
+          "desc": "결과",
+          "expression": "6/35"
+        }
+      ],
+      "conceptExplanation": "분수의 곱셈은 분자끼리, 분모끼리 곱해요."
+    },
+    {
+      "id": "g5-s2-u2-mixed-nat-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "대분수의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "frac_mult_mixed",
+      "skills": [
+        "mixed_number_conversion",
+        "fraction_multiplication"
+      ],
+      "mistakeTypes": [
+        "conversion_error"
+      ],
+      "question": "2 × 1 7/8을 계산하세요. 답을 대분수로 나타내면 □와 □/4입니다.\n빈칸에 알맞은 수를 써넣으세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          3,
+          3
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 4)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "대분수를 가분수로 변환",
+          "expression": "1 7/8 = 15/8"
+        },
+        {
+          "desc": "곱셈",
+          "expression": "2 × 15/8 = 30/8"
+        },
+        {
+          "desc": "약분 후 대분수로",
+          "expression": "30/8 = 15/4 = 3 3/4"
+        }
+      ],
+      "conceptExplanation": "대분수는 가분수로 바꿔서 계산한 뒤 다시 대분수로 나타내요."
+    },
+    {
+      "id": "g5-s2-u2-frac-word-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "분수의 곱셈 활용",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "frac_mult_frac",
+      "skills": [
+        "fraction_multiplication",
+        "word_problem"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "윤진이는 선물을 포장하는데 끈 6/7 m의 5/6를 사용했습니다. 사용한 끈은 몇 m인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 5,
+        "denominator": 7
+      },
+      "steps": [
+        {
+          "desc": "6/7의 5/6만큼 사용",
+          "expression": "6/7 × 5/6"
+        },
+        {
+          "desc": "약분하며 계산",
+          "expression": "(6×5)/(7×6) = 30/42 = 5/7"
+        }
+      ],
+      "conceptExplanation": "~의 ~를 구할 때는 곱셈을 사용해요. 분자·분모를 약분하여 계산할 수 있어요."
+    },
+    {
+      "id": "g5-s2-u2-mixed-frac-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "대분수끼리의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "frac_mult_mixed",
+      "skills": [
+        "mixed_number_conversion",
+        "fraction_multiplication"
+      ],
+      "mistakeTypes": [
+        "conversion_error"
+      ],
+      "question": "3 2/7 × 2/3를 계산하세요. 답을 대분수로 나타내면 □와 □/21입니다.\n빈칸에 알맞은 수를 써넣으세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          2,
+          4
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 21)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "대분수를 가분수로",
+          "expression": "3 2/7 = 23/7"
+        },
+        {
+          "desc": "곱셈",
+          "expression": "23/7 × 2/3 = 46/21"
+        },
+        {
+          "desc": "대분수로",
+          "expression": "46/21 = 2 4/21"
+        }
+      ],
+      "conceptExplanation": "대분수를 가분수로 바꾸면 분수의 곱셈을 쉽게 계산할 수 있어요."
+    },
+    {
+      "id": "g5-s2-u2-compare-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "분수의 곱셈 비교",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "frac_mult_frac",
+      "skills": [
+        "fraction_comparison",
+        "commutative_law"
+      ],
+      "mistakeTypes": [
+        "comparison_error"
+      ],
+      "question": "다음 크기 비교 중 바르게 된 것을 고르시오.\n① 5/6 × 2/5 = 2/5 × 5/6\n② 5/18 × 1/6 < 5/18 × 1/7",
+      "answerType": "multiple_choice",
+      "choices": [
+        "5/6 × 2/5 = 2/5 × 5/6 (교환법칙 성립)",
+        "5/18 × 1/6 < 5/18 × 1/7 (1/6 > 1/7이므로 불성립)"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "①: 교환법칙",
+          "expression": "5/6 × 2/5 = 2/5 × 5/6 = 1/3 (같음) → 성립"
+        },
+        {
+          "desc": "②: 1/6 > 1/7이므로",
+          "expression": "5/18 × 1/6 > 5/18 × 1/7 → < 가 아닌 > → 틀림"
+        }
+      ],
+      "conceptExplanation": "분수의 곱셈은 교환법칙이 성립해요. 같은 수에 더 큰 수를 곱하면 결과도 커져요."
+    },
+    {
+      "id": "g5-s2-u2-word-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "분수의 곱셈",
+      "subUnit": "대분수의 곱셈 활용",
+      "type": "application",
+      "difficulty": "challenge",
+      "concept": "frac_mult_mixed",
+      "skills": [
+        "mixed_number_multiplication",
+        "word_problem"
+      ],
+      "mistakeTypes": [
+        "conversion_error"
+      ],
+      "question": "1분에 5 3/5 L씩 나오는 수도가 있습니다. 이 수도에서 6 1/4분 동안 받은 물은 모두 몇 L인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 35
+      },
+      "steps": [
+        {
+          "desc": "가분수로 변환",
+          "expression": "5 3/5 = 28/5,  6 1/4 = 25/4"
+        },
+        {
+          "desc": "곱셈",
+          "expression": "28/5 × 25/4 = 700/20 = 35"
+        }
+      ],
+      "conceptExplanation": "단위시간당 양 × 시간 = 전체 양이에요. 약분을 먼저 하면 계산이 쉬워져요."
+    },
+    {
+      "id": "g5-s2-u3-line-sym-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "선대칭도형",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "line_symmetry",
+      "skills": [
+        "symmetry_identification"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 알파벳 중에서 선대칭도형은 모두 몇 개인가요?\nA  F  G  H  X",
+      "answerType": "integer",
+      "answer": {
+        "value": 3
+      },
+      "steps": [
+        {
+          "desc": "A: 세로축 대칭 → 선대칭",
+          "expression": "A ✓"
+        },
+        {
+          "desc": "F, G: 대칭축 없음 → 아님",
+          "expression": "F ✗, G ✗"
+        },
+        {
+          "desc": "H: 가로·세로축 대칭 → 선대칭",
+          "expression": "H ✓"
+        },
+        {
+          "desc": "X: 가로·세로축 대칭 → 선대칭",
+          "expression": "X ✓"
+        }
+      ],
+      "conceptExplanation": "선대칭도형은 한 직선을 기준으로 접었을 때 완전히 겹치는 도형이에요."
+    },
+    {
+      "id": "g5-s2-u3-congruent-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "합동인 도형",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "congruent_shapes",
+      "skills": [
+        "congruence",
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "correspondence_error"
+      ],
+      "question": "두 삼각형은 서로 합동입니다. 삼각형 ABC의 둘레가 25cm일 때, 변 AC는 몇 cm인가요?\n(삼각형 DEF: 변 DE=7cm, EF=8cm)",
+      "answerType": "integer",
+      "answer": {
+        "value": 10
+      },
+      "steps": [
+        {
+          "desc": "합동이므로 대응하는 변의 길이가 같음",
+          "expression": "AB=DE=7, BC=EF=8"
+        },
+        {
+          "desc": "AC 계산",
+          "expression": "25 - 7 - 8 = 10"
+        }
+      ],
+      "conceptExplanation": "합동인 도형은 대응하는 변의 길이와 각도가 모두 같아요."
+    },
+    {
+      "id": "g5-s2-u3-point-sym-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "점대칭도형",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "point_symmetry",
+      "skills": [
+        "point_symmetry_property"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "사각형 ABCD는 점 O를 대칭의 중심으로 하는 점대칭도형입니다. 두 대각선의 길이의 합이 30cm이고 선분 OC=6cm일 때, 선분 DO는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 9
+      },
+      "steps": [
+        {
+          "desc": "점대칭도형에서 대각선은 중심에서 이등분됨",
+          "expression": "AC = 2 × OC = 12cm"
+        },
+        {
+          "desc": "BD 계산",
+          "expression": "BD = 30 - 12 = 18cm"
+        },
+        {
+          "desc": "DO = BD ÷ 2",
+          "expression": "DO = 18 ÷ 2 = 9cm"
+        }
+      ],
+      "conceptExplanation": "점대칭도형에서 두 대각선은 대칭의 중심에서 서로 이등분돼요."
+    },
+    {
+      "id": "g5-s2-u3-line-sym-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "선대칭도형의 성질",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "line_symmetry",
+      "skills": [
+        "symmetry_property",
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직선 EF를 대칭축으로 하는 선대칭도형입니다. 사각형 ABCD의 둘레가 94cm이고 AE=10cm, BC=23cm일 때, 변 DF는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 14
+      },
+      "steps": [
+        {
+          "desc": "대칭이므로 AE=BF=10, AB=2×10=20",
+          "expression": "AB = 20cm"
+        },
+        {
+          "desc": "대칭이므로 AD=BC=23",
+          "expression": "AD = 23cm"
+        },
+        {
+          "desc": "DC 계산",
+          "expression": "DC = 94 - 20 - 23 - 23 = 28cm"
+        },
+        {
+          "desc": "DF = DC ÷ 2",
+          "expression": "DF = 28 ÷ 2 = 14cm"
+        }
+      ],
+      "conceptExplanation": "선대칭도형에서 대칭축을 중심으로 대응하는 변의 길이가 같아요."
+    },
+    {
+      "id": "g5-s2-u3-congruent-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "합동과 둘레",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "congruent_shapes",
+      "skills": [
+        "congruence",
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "correspondence_error"
+      ],
+      "question": "삼각형 ABC와 삼각형 DCB는 서로 합동입니다. 삼각형 ABC의 둘레가 20cm이고 AB=9cm, BD=5cm일 때, 변 BC는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 6
+      },
+      "steps": [
+        {
+          "desc": "합동 ABC≅DCB → 대응관계: A↔D, B↔C, C↔B",
+          "expression": "AC=DB=5cm, AB=DC=9cm"
+        },
+        {
+          "desc": "BC 계산",
+          "expression": "20 = 9 + BC + 5,  BC = 6"
+        }
+      ],
+      "conceptExplanation": "합동인 도형에서 대응하는 변의 길이를 이용해 모르는 변을 구할 수 있어요."
+    },
+    {
+      "id": "g5-s2-u3-point-sym-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "점대칭도형의 성질",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "point_symmetry",
+      "skills": [
+        "point_symmetry_property"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "점 O를 대칭의 중심으로 하는 점대칭도형입니다. 도형의 둘레가 32cm이고 DC=9cm일 때, 변 CB의 길이는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 7
+      },
+      "steps": [
+        {
+          "desc": "점대칭도형에서 대응하는 변 같음: AB=DC=9",
+          "expression": "AB = 9cm"
+        },
+        {
+          "desc": "둘레 = 2×(AB+BC)",
+          "expression": "32 = 2×(9+BC)"
+        },
+        {
+          "desc": "BC 계산",
+          "expression": "16 = 9 + BC,  BC = 7cm"
+        }
+      ],
+      "conceptExplanation": "점대칭도형의 둘레는 대응하는 두 쌍의 변 합의 2배예요."
+    },
+    {
+      "id": "g5-s2-u3-congruent-003",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "합동과 둘레",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "congruent_shapes",
+      "skills": [
+        "congruence",
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "두 삼각형은 서로 합동입니다. 삼각형 DEF의 둘레는 몇 cm인가요?\n(삼각형 ABC: AB=7cm, BC=5cm, 삼각형 DEF: EF=9cm)",
+      "answerType": "integer",
+      "answer": {
+        "value": 21
+      },
+      "steps": [
+        {
+          "desc": "합동이므로 같은 변의 쌍",
+          "expression": "DE=AB=7, DF=BC=5, EF=9"
+        },
+        {
+          "desc": "둘레 계산",
+          "expression": "7 + 5 + 9 = 21"
+        }
+      ],
+      "conceptExplanation": "합동인 두 도형의 둘레는 같아요."
+    },
+    {
+      "id": "g5-s2-u3-sym-letters-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "합동과 대칭",
+      "subUnit": "점대칭도형",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "point_symmetry",
+      "skills": [
+        "symmetry_identification"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 글자 중 점대칭도형은 모두 몇 개인가요?\nㄱ  ㄷ  ㅁ  ㅅ  ㅍ  ㅎ",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "steps": [
+        {
+          "desc": "180° 회전 후 같은 모양인지 확인",
+          "expression": "ㅁ: 180° 회전 → 같음 ✓"
+        },
+        {
+          "desc": "",
+          "expression": "ㅍ: 180° 회전 → 같음 ✓"
+        },
+        {
+          "desc": "나머지는 180° 회전 시 달라짐",
+          "expression": "ㄱ, ㄷ, ㅅ, ㅎ ✗"
+        }
+      ],
+      "conceptExplanation": "점대칭도형은 한 점을 중심으로 180° 돌렸을 때 원래 도형과 완전히 겹치는 도형이에요."
+    },
+    {
+      "id": "g5-s2-u4-place-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수와 자연수의 곱셈",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "decimal_mult_place",
+      "skills": [
+        "decimal_place_value"
+      ],
+      "mistakeTypes": [
+        "place_error"
+      ],
+      "question": "곱의 소수점 아래 자리 수가 다른 것을 고르시오.\n① 51 × 0.4\n② 510 × 0.04\n③ 510 × 0.004\n④ 5100 × 0.004\n⑤ 5.1 × 4",
+      "answerType": "multiple_choice",
+      "choices": [
+        "51 × 0.4",
+        "510 × 0.04",
+        "510 × 0.004",
+        "5100 × 0.004",
+        "5.1 × 4"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "각 계산 결과의 소수 자리",
+          "expression": "① 20.4(1자리), ② 20.4(1자리), ③ 2.04(2자리), ④ 20.4(1자리), ⑤ 20.4(1자리)"
+        }
+      ],
+      "conceptExplanation": "소수점 아래 자리 수는 곱하는 두 수의 소수점 자리 수를 합한 것이에요."
+    },
+    {
+      "id": "g5-s2-u4-mult-nat-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수와 자연수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "decimal_mult_nat",
+      "skills": [
+        "natural_number_use",
+        "decimal_multiplication"
+      ],
+      "mistakeTypes": [
+        "place_error"
+      ],
+      "question": "자연수의 곱을 이용하여 0.18 × 6을 계산하시오.\n(단, 18 × 6 = 108)",
+      "answerType": "text",
+      "answer": {
+        "text": "1.08"
+      },
+      "steps": [
+        {
+          "desc": "0.18은 18의 1/100배",
+          "expression": "0.18 = 18 × (1/100)"
+        },
+        {
+          "desc": "자연수 곱 활용",
+          "expression": "0.18 × 6 = 18 × 6 × (1/100) = 108 × (1/100) = 1.08"
+        }
+      ],
+      "conceptExplanation": "소수를 자연수로 바꿔서 계산한 뒤, 소수점을 알맞게 찍어요."
+    },
+    {
+      "id": "g5-s2-u4-area-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수의 곱셈 활용",
+      "type": "application",
+      "difficulty": "basic",
+      "concept": "decimal_mult_nat",
+      "skills": [
+        "area_calculation",
+        "decimal_multiplication"
+      ],
+      "mistakeTypes": [
+        "place_error"
+      ],
+      "question": "가로가 6m, 세로가 0.9m인 직사각형의 넓이는 몇 m²인지 구하시오.",
+      "answerType": "text",
+      "answer": {
+        "text": "5.4"
+      },
+      "steps": [
+        {
+          "desc": "직사각형 넓이 = 가로 × 세로",
+          "expression": "6 × 0.9"
+        },
+        {
+          "desc": "계산",
+          "expression": "6 × 9 = 54,  소수점 1자리 → 5.4"
+        }
+      ],
+      "conceptExplanation": "넓이를 구할 때 소수가 섞여 있으면 자연수 곱셈 후 소수점을 맞춰요."
+    },
+    {
+      "id": "g5-s2-u4-compare-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수의 곱셈 비교",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "decimal_mult_nat",
+      "skills": [
+        "mental_math",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "다음 곱 중 가장 큰 것은 어느 것인가요?\n① 19 × 0.3\n② 7 × 0.9\n③ 24 × 0.22\n④ 32 × 0.96\n⑤ 13 × 0.37",
+      "answerType": "multiple_choice",
+      "choices": [
+        "19 × 0.3 = 5.7",
+        "7 × 0.9 = 6.3",
+        "24 × 0.22 = 5.28",
+        "32 × 0.96 = 30.72",
+        "13 × 0.37 = 4.81"
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "steps": [
+        {
+          "desc": "각 계산",
+          "expression": "① 5.7  ② 6.3  ③ 5.28  ④ 30.72  ⑤ 4.81"
+        },
+        {
+          "desc": "가장 큰 값",
+          "expression": "④ 32 × 0.96 = 30.72"
+        }
+      ],
+      "conceptExplanation": "각 곱을 계산해 비교해요. 0.96은 1에 가까운 수라 32에 가까운 결과가 나와요."
+    },
+    {
+      "id": "g5-s2-u4-blank-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수의 곱셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "decimal_mult_nat",
+      "skills": [
+        "decimal_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "빈칸에 알맞은 수를 구하시오.\n(20) → (×5.75) → (   )",
+      "answerType": "integer",
+      "answer": {
+        "value": 115
+      },
+      "steps": [
+        {
+          "desc": "계산",
+          "expression": "20 × 5.75 = 20 × 5 + 20 × 0.75 = 100 + 15 = 115"
+        }
+      ],
+      "conceptExplanation": "소수와 자연수의 곱셈은 자연수 부분과 소수 부분을 나눠 계산할 수 있어요."
+    },
+    {
+      "id": "g5-s2-u4-nat-use-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수끼리의 곱셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "decimal_mult_decimal",
+      "skills": [
+        "natural_number_use",
+        "decimal_multiplication"
+      ],
+      "mistakeTypes": [
+        "place_error"
+      ],
+      "question": "다음 계산을 이용하여 41 × 0.072를 계산하시오.\n(단, 41 × 7.2 = 295.2)",
+      "answerType": "text",
+      "answer": {
+        "text": "2.952"
+      },
+      "steps": [
+        {
+          "desc": "0.072는 7.2의 1/100배",
+          "expression": "0.072 = 7.2 × (1/100)"
+        },
+        {
+          "desc": "자연수 곱 활용",
+          "expression": "41 × 0.072 = 295.2 × (1/100) = 2.952"
+        }
+      ],
+      "conceptExplanation": "소수의 크기 관계를 이용해 자연수 곱셈 결과에서 소수점 위치를 조정해요."
+    },
+    {
+      "id": "g5-s2-u4-compare-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수의 곱셈 활용",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "decimal_mult_decimal",
+      "skills": [
+        "area_calculation",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "한 변의 길이가 0.5m인 정사각형과 밑변의 길이가 0.46m, 높이가 0.56m인 평행사변형이 있습니다. 두 도형 중 어느 것의 넓이가 더 넓습니까?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "정사각형 (0.5 × 0.5 = 0.25 m²)",
+        "평행사변형 (0.46 × 0.56 = 0.2576 m²)"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "정사각형 넓이",
+          "expression": "0.5 × 0.5 = 0.25 m²"
+        },
+        {
+          "desc": "평행사변형 넓이",
+          "expression": "0.46 × 0.56 = 0.2576 m²"
+        },
+        {
+          "desc": "비교",
+          "expression": "0.25 > 0.2576 → 정사각형이 더 넓음"
+        }
+      ],
+      "conceptExplanation": "두 도형의 넓이를 각각 계산하여 비교해요."
+    },
+    {
+      "id": "g5-s2-u4-symbol-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "소수의 곱셈",
+      "subUnit": "소수의 곱셈 비교",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "decimal_mult_decimal",
+      "skills": [
+        "comparison",
+        "decimal_multiplication"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "계산 결과를 비교하여 □ 안에 >, =, <를 써넣으려고 합니다. 알맞은 기호를 써넣으시오.\n7 × 0.37  □  2 × 0.85",
+      "answerType": "text",
+      "answer": {
+        "text": ">"
+      },
+      "steps": [
+        {
+          "desc": "왼쪽 계산",
+          "expression": "7 × 0.37 = 2.59"
+        },
+        {
+          "desc": "오른쪽 계산",
+          "expression": "2 × 0.85 = 1.70"
+        },
+        {
+          "desc": "비교",
+          "expression": "2.59 > 1.70"
+        }
+      ],
+      "conceptExplanation": "소수의 곱셈 결과를 비교할 때는 각각 계산한 뒤 크기를 비교해요."
+    },
+    {
+      "id": "g5-s2-u5-cuboid-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체와 정육면체",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "cuboid_properties",
+      "skills": [
+        "edge_calculation",
+        "cuboid_vs_cube"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직육면체와 모든 모서리의 길이의 합이 같은 정육면체가 있습니다. 이 정육면체의 한 모서리의 길이는 몇 cm입니까?\n(직육면체: 가로 6cm, 세로 7cm, 높이 11cm)",
+      "answerType": "integer",
+      "answer": {
+        "value": 8
+      },
+      "steps": [
+        {
+          "desc": "직육면체 모서리 합",
+          "expression": "4 × (6+7+11) = 4 × 24 = 96cm"
+        },
+        {
+          "desc": "정육면체 모서리 수 = 12",
+          "expression": "96 ÷ 12 = 8cm"
+        }
+      ],
+      "conceptExplanation": "직육면체는 같은 길이의 모서리가 4개씩 3종류, 정육면체는 12개 모서리 길이가 모두 같아요."
+    },
+    {
+      "id": "g5-s2-u5-wrong-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체와 정육면체의 관계",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "cuboid_properties",
+      "skills": [
+        "cuboid_vs_cube"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "직육면체와 정육면체에 대하여 잘못 설명한 것은 어느 것입니까?\n① 직육면체는 정육면체라고 할 수 있습니다.\n② 정육면체의 꼭짓점은 8개입니다.\n③ 정육면체는 직육면체입니다.\n④ 직육면체의 면의 모양은 직사각형입니다.\n⑤ 직육면체의 모서리는 12개입니다.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "직육면체는 정육면체라고 할 수 있습니다.",
+        "정육면체의 꼭짓점은 8개입니다.",
+        "정육면체는 직육면체입니다.",
+        "직육면체의 면의 모양은 직사각형입니다.",
+        "직육면체의 모서리는 12개입니다."
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "정육면체는 직육면체의 특수한 경우",
+          "expression": "정육면체 ⊂ 직육면체"
+        },
+        {
+          "desc": "직육면체가 반드시 정육면체인 것은 아님",
+          "expression": "직육면체는 정육면체가 아닐 수 있음 → ①이 잘못됨"
+        }
+      ],
+      "conceptExplanation": "정육면체는 직육면체의 특수한 경우지만, 직육면체가 모두 정육면체인 것은 아니에요."
+    },
+    {
+      "id": "g5-s2-u5-cuboid-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "정육면체의 구성 요소",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "cuboid_properties",
+      "skills": [
+        "cube_elements"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "정육면체의 면은 □개이고, 서로 평행한 면은 □쌍입니다.\n빈칸에 알맞은 수를 써넣으세요.",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          6,
+          3
+        ],
+        "labels": [
+          "면의 수",
+          "서로 평행한 면의 수(쌍)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "정육면체 면 수",
+          "expression": "위·아래·앞·뒤·좌·우 = 6개"
+        },
+        {
+          "desc": "서로 평행한 면 쌍",
+          "expression": "(위-아래), (앞-뒤), (좌-우) = 3쌍"
+        }
+      ],
+      "conceptExplanation": "정육면체의 6개의 면은 서로 마주 보는 3쌍의 평행한 면으로 이루어져요."
+    },
+    {
+      "id": "g5-s2-u5-cuboid-003",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체의 면",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "cuboid_properties",
+      "skills": [
+        "perpendicular_faces"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "직육면체에서 색칠한 한 면과 만나서 이루는 각의 크기가 90°인 면(수직인 면)은 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 4
+      },
+      "steps": [
+        {
+          "desc": "색칠한 면 1개 기준",
+          "expression": "수직인 면 = 앞, 뒤, 좌, 우 = 4개"
+        },
+        {
+          "desc": "평행한 면은 수직이 아님",
+          "expression": "맞은편 1개는 평행 → 제외"
+        }
+      ],
+      "conceptExplanation": "직육면체에서 한 면에 수직인 면은 4개, 평행인 면은 1개예요."
+    },
+    {
+      "id": "g5-s2-u5-cuboid-004",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체의 꼭짓점",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "cuboid_properties",
+      "skills": [
+        "vertex_count"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "직육면체에서 꼭짓점의 수는 직육면체의 한 면의 꼭짓점의 수의 몇 배인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "steps": [
+        {
+          "desc": "직육면체 꼭짓점 수",
+          "expression": "8개"
+        },
+        {
+          "desc": "한 면의 꼭짓점 수",
+          "expression": "4개 (사각형)"
+        },
+        {
+          "desc": "비율",
+          "expression": "8 ÷ 4 = 2배"
+        }
+      ],
+      "conceptExplanation": "직육면체의 꼭짓점은 8개, 한 면(직사각형)의 꼭짓점은 4개라서 2배예요."
+    },
+    {
+      "id": "g5-s2-u5-perimeter-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체의 면",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "cuboid_properties",
+      "skills": [
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직육면체에서 색칠한 면과 평행한 면의 네 변의 길이의 합은 몇 cm인가요?\n(직육면체: 가로 11cm, 세로 9cm, 높이 13cm, 색칠한 면: 가로 11cm × 세로 9cm)",
+      "answerType": "integer",
+      "answer": {
+        "value": 40
+      },
+      "steps": [
+        {
+          "desc": "평행한 면의 크기는 색칠한 면과 같음",
+          "expression": "11cm × 9cm"
+        },
+        {
+          "desc": "네 변의 길이 합",
+          "expression": "2 × (11+9) = 2 × 20 = 40cm"
+        }
+      ],
+      "conceptExplanation": "직육면체에서 평행한 두 면은 크기와 모양이 같아요."
+    },
+    {
+      "id": "g5-s2-u5-edge-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체의 면",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "cuboid_properties",
+      "skills": [
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "직육면체에서 색칠한 면의 둘레는 몇 cm인가요?\n(직육면체: 7cm × 8cm × 4cm, 색칠한 면: 8cm × 4cm)",
+      "answerType": "integer",
+      "answer": {
+        "value": 24
+      },
+      "steps": [
+        {
+          "desc": "둘레 계산",
+          "expression": "2 × (8+4) = 2 × 12 = 24cm"
+        }
+      ],
+      "conceptExplanation": "직사각형의 둘레 = 2 × (가로+세로)예요."
+    },
+    {
+      "id": "g5-s2-u5-wrong-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "직육면체",
+      "subUnit": "직육면체의 구성 요소",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "cuboid_properties",
+      "skills": [
+        "cuboid_elements"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 중에서 직육면체에 대한 설명으로 틀린 것은 어느 것입니까?\n① 모서리는 12개입니다.\n② 크기가 같은 면이 3쌍 있습니다.\n③ 꼭짓점은 8개입니다.\n④ 길이가 같은 모서리는 3개씩 4쌍입니다.\n⑤ 면은 6개입니다.",
+      "answerType": "multiple_choice",
+      "choices": [
+        "모서리는 12개입니다.",
+        "크기가 같은 면이 3쌍 있습니다.",
+        "꼭짓점은 8개입니다.",
+        "길이가 같은 모서리는 3개씩 4쌍입니다.",
+        "면은 6개입니다."
+      ],
+      "answer": {
+        "choice": 4
+      },
+      "steps": [
+        {
+          "desc": "직육면체 모서리 종류",
+          "expression": "4개씩 3종류 (같은 길이가 4개씩)"
+        },
+        {
+          "desc": "④ 3개씩 4쌍이 아님",
+          "expression": "4개씩 3종류 = 12개가 맞는 설명 → ④가 틀림"
+        }
+      ],
+      "conceptExplanation": "직육면체는 길이가 같은 모서리가 4개씩 3종류(가로 4, 세로 4, 높이 4)예요."
+    },
+    {
+      "id": "g5-s2-u6-mean-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "average",
+      "skills": [
+        "mean_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "다음 4개의 수의 평균은 얼마인가요?\n10  8  7  7",
+      "answerType": "integer",
+      "answer": {
+        "value": 8
+      },
+      "steps": [
+        {
+          "desc": "평균 = 합계 ÷ 개수",
+          "expression": "(10+8+7+7) ÷ 4 = 32 ÷ 4 = 8"
+        }
+      ],
+      "conceptExplanation": "평균 = 자료의 합 ÷ 자료의 수예요."
+    },
+    {
+      "id": "g5-s2-u6-mean-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "average",
+      "skills": [
+        "mean_calculation",
+        "group_average"
+      ],
+      "mistakeTypes": [
+        "grouping_error"
+      ],
+      "question": "소희네 반 남학생 12명의 앉은키의 합은 933cm이고 여학생 18명의 앉은키의 합은 1437cm입니다. 소희네 반 전체 학생들의 앉은키의 평균은 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 79
+      },
+      "steps": [
+        {
+          "desc": "전체 합계",
+          "expression": "933 + 1437 = 2370"
+        },
+        {
+          "desc": "전체 학생 수",
+          "expression": "12 + 18 = 30명"
+        },
+        {
+          "desc": "평균",
+          "expression": "2370 ÷ 30 = 79"
+        }
+      ],
+      "conceptExplanation": "두 그룹을 합쳐서 전체 평균을 구할 때는 합계와 전체 수를 각각 더해서 나눠요."
+    },
+    {
+      "id": "g5-s2-u6-mean-003",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균 활용",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "average",
+      "skills": [
+        "reverse_average"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "명주, 현희, 영우 세 사람의 줄넘기 기록의 평균은 63번이고, 덕호의 기록을 포함한 네 사람의 줄넘기 기록의 평균은 68번입니다. 덕호의 줄넘기 기록은 몇 번인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 83
+      },
+      "steps": [
+        {
+          "desc": "3명 합계",
+          "expression": "63 × 3 = 189"
+        },
+        {
+          "desc": "4명 합계",
+          "expression": "68 × 4 = 272"
+        },
+        {
+          "desc": "덕호 기록",
+          "expression": "272 - 189 = 83"
+        }
+      ],
+      "conceptExplanation": "평균에서 합계를 역으로 구하고, 새로운 값을 빼면 추가된 사람의 값을 알 수 있어요."
+    },
+    {
+      "id": "g5-s2-u6-mean-004",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균 활용",
+      "type": "application",
+      "difficulty": "basic",
+      "concept": "average",
+      "skills": [
+        "mean_calculation"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "7월 한 달 동안 어느 동물원 방문자 수는 모두 1302명입니다. 동물원 방문자 수는 하루 평균 몇 명인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 42
+      },
+      "steps": [
+        {
+          "desc": "7월은 31일",
+          "expression": "1302 ÷ 31 = 42"
+        }
+      ],
+      "conceptExplanation": "하루 평균 = 전체 수 ÷ 날짜 수예요."
+    },
+    {
+      "id": "g5-s2-u6-prob-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "가능성",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "probability",
+      "skills": [
+        "probability_expression"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "1부터 10번까지 번호표가 들어 있는 상자에서 번호표 1개를 꺼낼 때 10번 번호를 꺼낼 가능성을 말로 표현한 것으로 알맞은 것은?\n① 불가능하다\n② ~아닐 것 같다\n③ 반반이다\n④ ~일 것 같다\n⑤ 확실하다",
+      "answerType": "multiple_choice",
+      "choices": [
+        "불가능하다",
+        "~아닐 것 같다",
+        "반반이다",
+        "~일 것 같다",
+        "확실하다"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "10번이 나올 확률 = 1/10",
+          "expression": "1/10은 0에 가까운 작은 확률"
+        },
+        {
+          "desc": "가능성 표현",
+          "expression": "1/10 → \"~아닐 것 같다\""
+        }
+      ],
+      "conceptExplanation": "가능성은 불가능(0) < 아닐 것 같다 < 반반이다(1/2) < 일 것 같다 < 확실하다(1)로 표현해요."
+    },
+    {
+      "id": "g5-s2-u6-word-001",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균 활용",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "average",
+      "skills": [
+        "speed_average",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "현지는 자동차를 타고 308km를 가는 데 4시간이 걸렸고, 수아는 자동차를 타고 375km를 가는 데 5시간이 걸렸습니다. 두 사람 중 1시간당 평균 몇 km를 더 갔나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 2
+      },
+      "steps": [
+        {
+          "desc": "현지 평균 속도",
+          "expression": "308 ÷ 4 = 77km/h"
+        },
+        {
+          "desc": "수아 평균 속도",
+          "expression": "375 ÷ 5 = 75km/h"
+        },
+        {
+          "desc": "차이",
+          "expression": "77 - 75 = 2km/h"
+        }
+      ],
+      "conceptExplanation": "평균 속도 = 거리 ÷ 시간이에요. 두 평균을 비교해 차이를 구해요."
+    },
+    {
+      "id": "g5-s2-u6-prob-002",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "가능성",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "probability",
+      "skills": [
+        "probability_expression"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "상자 속에 파란 공만 7개가 들어 있습니다. 상자에서 공 한 개를 꺼낼 때 꺼낸 공이 노란색일 가능성을 수로 나타내면 얼마인가요?\n① 1\n② 0\n③ 1/2\n④ 1/7\n⑤ 7",
+      "answerType": "multiple_choice",
+      "choices": [
+        "1 (확실하다)",
+        "0 (불가능하다)",
+        "1/2 (반반이다)",
+        "1/7 (아닐 것 같다)",
+        "7"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "노란 공이 없음",
+          "expression": "상자 안에 노란 공은 없음"
+        },
+        {
+          "desc": "노란 공이 나올 가능성",
+          "expression": "가능성 = 불가능 → 수로 나타내면 0"
+        }
+      ],
+      "conceptExplanation": "가능성을 수로 나타낼 때 불가능한 사건의 가능성은 0이에요."
+    },
+    {
+      "id": "g5-s2-u6-mean-005",
+      "grade": 5,
+      "semester": 2,
+      "unit": "평균과 가능성",
+      "subUnit": "평균 활용",
+      "type": "application",
+      "difficulty": "applied",
+      "concept": "average",
+      "skills": [
+        "reverse_average"
+      ],
+      "mistakeTypes": [
+        "calculation_error"
+      ],
+      "question": "선우, 신주, 영희 세 사람의 줄넘기 기록의 평균은 62번이고, 희수의 기록을 포함한 네 사람의 평균은 69번입니다. 희수의 줄넘기 기록은 몇 번인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 90
+      },
+      "steps": [
+        {
+          "desc": "3명 합계",
+          "expression": "62 × 3 = 186"
+        },
+        {
+          "desc": "4명 합계",
+          "expression": "69 × 4 = 276"
+        },
+        {
+          "desc": "희수 기록",
+          "expression": "276 - 186 = 90"
+        }
+      ],
+      "conceptExplanation": "평균에서 전체 합을 구한 뒤, 기존 합을 빼면 새로운 사람의 기록을 구할 수 있어요."
     }
   ],
   "templates": [
