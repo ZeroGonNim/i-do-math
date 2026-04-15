@@ -19499,6 +19499,1928 @@
       ],
       "animationAsset": "polygon-shapes",
       "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다."
+    },
+    {
+      "id": "g5-s1-u1-mixed-order-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "덧셈·뺄셈과 곱셈·나눗셈이 섞인 식",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "mixed_calc_order",
+      "skills": [
+        "operation_priority",
+        "arithmetic"
+      ],
+      "mistakeTypes": [
+        "order_error",
+        "calculation_error"
+      ],
+      "question": "48 - 6 × 5를 계산하면 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 18
+      },
+      "steps": [
+        {
+          "desc": "곱셈 먼저",
+          "expression": "6 × 5 = 30"
+        },
+        {
+          "desc": "이제 빼기",
+          "expression": "48 - 30 = 18"
+        }
+      ],
+      "conceptExplanation": "곱셈·나눗셈은 덧셈·뺄셈보다 먼저 계산해요!"
+    },
+    {
+      "id": "g5-s1-u1-mixed-order-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "덧셈·뺄셈과 곱셈·나눗셈이 섞인 식",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "mixed_calc_order",
+      "skills": [
+        "operation_priority",
+        "arithmetic"
+      ],
+      "mistakeTypes": [
+        "order_error",
+        "calculation_error"
+      ],
+      "question": "다음 중 계산 결과가 가장 큰 식을 골라 보세요.\n① 15+3×4\n② 24-6+3\n③ 36÷4+8",
+      "answerType": "multiple_choice",
+      "choices": [
+        "15+3×4 = 27",
+        "24-6+3 = 21",
+        "36÷4+8 = 17"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "① 계산",
+          "expression": "3×4=12, 15+12=27"
+        },
+        {
+          "desc": "② 계산",
+          "expression": "24-6+3=21 (앞에서부터)"
+        },
+        {
+          "desc": "③ 계산",
+          "expression": "36÷4=9, 9+8=17"
+        }
+      ],
+      "conceptExplanation": "곱셈·나눗셈을 먼저 계산한 뒤, 덧셈·뺄셈은 앞에서부터 차례로 해요."
+    },
+    {
+      "id": "g5-s1-u1-mixed-paren-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "괄호가 있는 혼합 계산",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "mixed_calc_parentheses",
+      "skills": [
+        "parentheses_first",
+        "arithmetic"
+      ],
+      "mistakeTypes": [
+        "parentheses_ignored",
+        "order_error"
+      ],
+      "question": "(8+4)×6÷9를 계산하면 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 8
+      },
+      "steps": [
+        {
+          "desc": "괄호 안 먼저",
+          "expression": "8+4=12"
+        },
+        {
+          "desc": "곱셈",
+          "expression": "12×6=72"
+        },
+        {
+          "desc": "나눗셈",
+          "expression": "72÷9=8"
+        }
+      ],
+      "conceptExplanation": "( ) 괄호 안을 가장 먼저 계산해요!"
+    },
+    {
+      "id": "g5-s1-u1-mixed-blank-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "괄호가 있는 혼합 계산",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "mixed_calc_find_blank",
+      "skills": [
+        "inverse_operation",
+        "equation_solving"
+      ],
+      "mistakeTypes": [
+        "order_error",
+        "inverse_error"
+      ],
+      "question": "15 - □ + 16 = 21일 때, □에 들어갈 알맞은 수는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 10
+      },
+      "steps": [
+        {
+          "desc": "뒤에서부터 역추적",
+          "expression": "21 - 16 = 5"
+        },
+        {
+          "desc": "15에서 □을 빼면 5",
+          "expression": "15 - □ = 5 → □ = 10"
+        }
+      ],
+      "conceptExplanation": "□ 값은 식을 역으로 풀어서 찾아요. 뒤에서부터 거꾸로 계산해 보세요."
+    },
+    {
+      "id": "g5-s1-u1-mixed-word-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "덧셈·뺄셈과 곱셈·나눗셈이 섞인 식",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "mixed_calc_word_problem",
+      "skills": [
+        "problem_modeling",
+        "mixed_calculation"
+      ],
+      "mistakeTypes": [
+        "order_error",
+        "model_error"
+      ],
+      "question": "한 봉지에 쿠키가 6개씩 들어 있습니다. 4봉지를 사서 8명이 똑같이 나누면 한 명이 먹을 수 있는 쿠키는 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 3
+      },
+      "steps": [
+        {
+          "desc": "전체 쿠키",
+          "expression": "6×4=24(개)"
+        },
+        {
+          "desc": "한 명 몫",
+          "expression": "24÷8=3(개)"
+        }
+      ],
+      "conceptExplanation": "먼저 전체 개수를 구한 다음, 나누면 돼요."
+    },
+    {
+      "id": "g5-s1-u1-mixed-paren-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "괄호가 있는 혼합 계산",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "mixed_calc_parentheses",
+      "skills": [
+        "parentheses_first",
+        "arithmetic"
+      ],
+      "mistakeTypes": [
+        "parentheses_ignored",
+        "order_error"
+      ],
+      "question": "연필 72자루를 상자에 담으려 합니다. 한 상자에 4줄씩, 한 줄에 3자루씩 담을 수 있다면 몇 상자가 필요한가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 6
+      },
+      "steps": [
+        {
+          "desc": "한 상자의 연필 수",
+          "expression": "4×3=12(자루)"
+        },
+        {
+          "desc": "필요한 상자 수",
+          "expression": "72÷12=6(상자)"
+        }
+      ],
+      "conceptExplanation": "괄호를 써서 식으로 나타내면 72÷(4×3)=6이에요."
+    },
+    {
+      "id": "g5-s1-u1-mixed-word-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "덧셈·뺄셈과 곱셈·나눗셈이 섞인 식",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "mixed_calc_word_problem",
+      "skills": [
+        "problem_modeling",
+        "multi_step_calculation"
+      ],
+      "mistakeTypes": [
+        "order_error",
+        "model_error"
+      ],
+      "question": "섭씨 86도를 화씨로 바꾸는 식은 (□-32)×5÷9입니다. □에 86을 넣어 계산하면 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 30
+      },
+      "steps": [
+        {
+          "desc": "괄호 안 계산",
+          "expression": "86-32=54"
+        },
+        {
+          "desc": "곱셈",
+          "expression": "54×5=270"
+        },
+        {
+          "desc": "나눗셈",
+          "expression": "270÷9=30"
+        }
+      ],
+      "conceptExplanation": "괄호 안 → 곱셈 → 나눗셈 순서로 계산해요."
+    },
+    {
+      "id": "g5-s1-u1-mixed-word-003",
+      "grade": 5,
+      "semester": 1,
+      "unit": "자연수의 혼합 계산",
+      "subUnit": "괄호가 있는 혼합 계산",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "mixed_calc_word_problem",
+      "skills": [
+        "parentheses_first",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "parentheses_ignored",
+        "model_error"
+      ],
+      "question": "리본의 처음 길이는 184cm입니다. 142cm짜리와 9cm짜리를 각각 한 개씩 잘라냈을 때, 남은 리본의 길이는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 33
+      },
+      "steps": [
+        {
+          "desc": "자른 리본의 합",
+          "expression": "142+9=151(cm)"
+        },
+        {
+          "desc": "남은 리본",
+          "expression": "184-151=33(cm)"
+        }
+      ],
+      "conceptExplanation": "184-(142+9)=33 처럼 괄호를 써서 먼저 합을 구할 수 있어요."
+    },
+    {
+      "id": "g5-s1-u2-factors-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "약수와 배수",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "factors_count",
+      "skills": [
+        "factor_listing",
+        "counting"
+      ],
+      "mistakeTypes": [
+        "missing_factor",
+        "include_non_factor"
+      ],
+      "question": "35의 약수는 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 4
+      },
+      "steps": [
+        {
+          "desc": "약수 목록",
+          "expression": "1, 5, 7, 35"
+        },
+        {
+          "desc": "개수 세기",
+          "expression": "4개"
+        }
+      ],
+      "conceptExplanation": "약수는 그 수를 나누어 떨어지게 하는 수예요. 35÷1=35, 35÷5=7, 35÷7=5, 35÷35=1 — 모두 4개!"
+    },
+    {
+      "id": "g5-s1-u2-factors-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "약수와 배수",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "factors_identify",
+      "skills": [
+        "factor_checking"
+      ],
+      "mistakeTypes": [
+        "include_non_factor"
+      ],
+      "question": "다음 중 36의 약수가 아닌 것을 골라 보세요.\n① 4  ② 8  ③ 9  ④ 12  ⑤ 18",
+      "answerType": "multiple_choice",
+      "choices": [
+        "4",
+        "8",
+        "9",
+        "12",
+        "18"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "36÷8 확인",
+          "expression": "36÷8=4 나머지4 → 약수 아님"
+        },
+        {
+          "desc": "나머지 확인",
+          "expression": "36÷4=9, 36÷9=4, 36÷12=3, 36÷18=2 → 모두 약수"
+        }
+      ],
+      "conceptExplanation": "36÷8=4 나머지4 이므로 8은 36의 약수가 아니에요."
+    },
+    {
+      "id": "g5-s1-u2-multiples-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "약수와 배수",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "multiples_count",
+      "skills": [
+        "multiple_listing"
+      ],
+      "mistakeTypes": [
+        "boundary_error",
+        "skip_error"
+      ],
+      "question": "4의 배수 중에서 20보다 크고 50보다 작은 수는 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 7
+      },
+      "steps": [
+        {
+          "desc": "4의 배수 목록 (20초과 50미만)",
+          "expression": "24, 28, 32, 36, 40, 44, 48"
+        },
+        {
+          "desc": "개수 세기",
+          "expression": "7개"
+        }
+      ],
+      "conceptExplanation": "4×6=24부터 4×12=48까지, 20보다 크고 50보다 작은 4의 배수는 7개예요."
+    },
+    {
+      "id": "g5-s1-u2-gcd-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공약수와 최대공약수",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "greatest_common_divisor",
+      "skills": [
+        "gcd_calculation"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "calculation_error"
+      ],
+      "question": "12와 18의 최대공약수는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 6
+      },
+      "steps": [
+        {
+          "desc": "12의 약수",
+          "expression": "1, 2, 3, 4, 6, 12"
+        },
+        {
+          "desc": "18의 약수",
+          "expression": "1, 2, 3, 6, 9, 18"
+        },
+        {
+          "desc": "공약수",
+          "expression": "1, 2, 3, 6"
+        },
+        {
+          "desc": "최대공약수",
+          "expression": "6"
+        }
+      ],
+      "conceptExplanation": "공약수 중 가장 큰 수가 최대공약수예요. 12와 18의 최대공약수는 6!"
+    },
+    {
+      "id": "g5-s1-u2-lcm-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공배수와 최소공배수",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "least_common_multiple",
+      "skills": [
+        "lcm_calculation"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "calculation_error"
+      ],
+      "question": "4와 6의 최소공배수는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 12
+      },
+      "steps": [
+        {
+          "desc": "4의 배수",
+          "expression": "4, 8, 12, 16, ..."
+        },
+        {
+          "desc": "6의 배수",
+          "expression": "6, 12, 18, ..."
+        },
+        {
+          "desc": "공배수 중 가장 작은 것",
+          "expression": "12"
+        }
+      ],
+      "conceptExplanation": "공배수 중 가장 작은 수가 최소공배수예요. 4와 6의 최소공배수는 12!"
+    },
+    {
+      "id": "g5-s1-u2-gcd-word-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공약수와 최대공약수",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "gcd_word_problem",
+      "skills": [
+        "gcd_calculation",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "model_error"
+      ],
+      "question": "연필 35자루와 공책 56권을 최대한 많은 학생에게 남김없이 똑같이 나누어 주려고 합니다. 몇 명에게 나누어 줄 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 7
+      },
+      "steps": [
+        {
+          "desc": "35의 약수",
+          "expression": "1, 5, 7, 35"
+        },
+        {
+          "desc": "56의 약수",
+          "expression": "1, 2, 4, 7, 8, 14, 28, 56"
+        },
+        {
+          "desc": "최대공약수",
+          "expression": "GCD(35, 56) = 7"
+        },
+        {
+          "desc": "결론",
+          "expression": "최대 7명에게 나누어 줄 수 있어요"
+        }
+      ],
+      "conceptExplanation": "남김없이 나누려면 최대공약수를 구해야 해요. 35와 56의 최대공약수는 7이에요."
+    },
+    {
+      "id": "g5-s1-u2-lcm-word-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공배수와 최소공배수",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "lcm_common_multiples",
+      "skills": [
+        "lcm_calculation",
+        "counting"
+      ],
+      "mistakeTypes": [
+        "boundary_error",
+        "lcm_error"
+      ],
+      "question": "3과 4의 공배수 중에서 50 이하인 수는 모두 몇 개인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 4
+      },
+      "steps": [
+        {
+          "desc": "최소공배수",
+          "expression": "LCM(3, 4) = 12"
+        },
+        {
+          "desc": "12의 배수 중 50 이하",
+          "expression": "12, 24, 36, 48"
+        },
+        {
+          "desc": "개수",
+          "expression": "4개"
+        }
+      ],
+      "conceptExplanation": "3과 4의 공배수는 최소공배수 12의 배수예요. 12, 24, 36, 48 — 4개!"
+    },
+    {
+      "id": "g5-s1-u2-gcd-word-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공약수와 최대공약수",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "gcd_area_problem",
+      "skills": [
+        "gcd_calculation",
+        "geometry_application"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "model_error"
+      ],
+      "question": "가로 72 cm, 세로 54 cm인 직사각형 바닥에 정사각형 타일을 빈틈없이 가득 채우려고 합니다. 타일의 한 변의 길이를 가장 크게 하려면 몇 cm로 해야 하나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 18
+      },
+      "steps": [
+        {
+          "desc": "GCD(72, 54) 계산",
+          "expression": "72=2³×3², 54=2×3³"
+        },
+        {
+          "desc": "공약수 중 최대",
+          "expression": "GCD = 2×3² = 18"
+        },
+        {
+          "desc": "확인",
+          "expression": "72÷18=4, 54÷18=3 → 4×3=12장 필요"
+        }
+      ],
+      "conceptExplanation": "직사각형에 정사각형 타일을 빈틈없이 깔려면 가로·세로의 최대공약수가 타일 크기의 최대값이에요."
+    },
+    {
+      "id": "g5-s1-u2-lcm-word-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약수와 배수",
+      "subUnit": "공배수와 최소공배수",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "lcm_cycle_problem",
+      "skills": [
+        "lcm_calculation",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "concept_error",
+        "model_error"
+      ],
+      "question": "지호는 2일마다, 진우는 5일마다 도서관에 갑니다. 오늘 두 사람이 함께 도서관에 갔다면, 다음에 두 사람이 다시 함께 가는 날은 며칠 후인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 10
+      },
+      "steps": [
+        {
+          "desc": "최소공배수 계산",
+          "expression": "LCM(2, 5) = 10"
+        },
+        {
+          "desc": "결론",
+          "expression": "10일 후에 다시 함께 가요"
+        }
+      ],
+      "conceptExplanation": "주기가 다른 두 사건이 함께 일어나는 날은 두 주기의 최소공배수예요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "correspondence_expression",
+      "skills": [
+        "pattern_recognition",
+        "symbolic_expression"
+      ],
+      "mistakeTypes": [
+        "wrong_operator",
+        "symbol_confusion"
+      ],
+      "question": "오징어 수를 ◇, 오징어 다리 수를 △라 할 때, 두 양 사이의 대응 관계를 식으로 나타내면 어떻게 될까요?",
+      "answerType": "text",
+      "answer": {
+        "text": "◇×10=△"
+      },
+      "steps": [
+        {
+          "desc": "오징어 다리 수",
+          "expression": "오징어 1마리 → 다리 10개"
+        },
+        {
+          "desc": "대응 관계",
+          "expression": "◇×10=△"
+        }
+      ],
+      "conceptExplanation": "오징어는 다리가 10개예요. ◇마리이면 다리는 ◇×10=△개예요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-table-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "reasoning",
+      "difficulty": "basic",
+      "concept": "correspondence_table",
+      "skills": [
+        "pattern_recognition",
+        "rule_application"
+      ],
+      "mistakeTypes": [
+        "wrong_pattern",
+        "arithmetic_error"
+      ],
+      "question": "아래 규칙에 따를 때, 배열 순서가 5번째일 때 바둑돌은 몇 개인가요?\n(순서: 1→1개, 2→4개, 3→9개, 4→16개)",
+      "answerType": "integer",
+      "answer": {
+        "value": 25
+      },
+      "steps": [
+        {
+          "desc": "규칙 발견",
+          "expression": "순서×순서=바둑돌 수"
+        },
+        {
+          "desc": "5번째",
+          "expression": "5×5=25"
+        }
+      ],
+      "conceptExplanation": "배열 순서를 ■, 바둑돌 수를 ●라 하면 ■×■=●의 대응 관계가 있어요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "concept",
+      "difficulty": "applied",
+      "concept": "correspondence_age",
+      "skills": [
+        "symbolic_expression",
+        "pattern_recognition"
+      ],
+      "mistakeTypes": [
+        "wrong_operator",
+        "arithmetic_error"
+      ],
+      "question": "올해 현수의 나이는 11살이고 아버지의 나이는 42살입니다. 현수의 나이를 □, 아버지의 나이를 △라 할 때, 두 나이의 대응 관계를 나타낸 식은 무엇인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "□+31=△",
+        "□×4=△",
+        "□+21=△",
+        "△-□=41"
+      ],
+      "answer": {
+        "choice": 1
+      },
+      "steps": [
+        {
+          "desc": "나이 차이",
+          "expression": "42-11=31 (항상 31살 차이)"
+        },
+        {
+          "desc": "대응식",
+          "expression": "□+31=△"
+        }
+      ],
+      "conceptExplanation": "두 사람의 나이 차이는 항상 31살로 일정해요. 현수 나이+31=아버지 나이예요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-003",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "correspondence_apply",
+      "skills": [
+        "rule_application",
+        "arithmetic"
+      ],
+      "mistakeTypes": [
+        "arithmetic_error",
+        "rule_misread"
+      ],
+      "question": "☆=●×3+2 의 관계가 있을 때, ●=9이면 ☆는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 29
+      },
+      "steps": [
+        {
+          "desc": "●에 9 대입",
+          "expression": "☆=9×3+2"
+        },
+        {
+          "desc": "곱셈 먼저",
+          "expression": "9×3=27"
+        },
+        {
+          "desc": "덧셈",
+          "expression": "27+2=29"
+        }
+      ],
+      "conceptExplanation": "대응 관계식에 값을 넣어 계산하면 돼요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-square-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "correspondence_perimeter",
+      "skills": [
+        "rule_application",
+        "geometry"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "arithmetic_error"
+      ],
+      "question": "한 변의 길이가 □cm인 정사각형의 둘레를 △cm라 할 때, □=8이면 △는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 32
+      },
+      "steps": [
+        {
+          "desc": "대응 관계",
+          "expression": "△=□×4"
+        },
+        {
+          "desc": "□=8 대입",
+          "expression": "△=8×4=32"
+        }
+      ],
+      "conceptExplanation": "정사각형 둘레=한 변×4 이에요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-word-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "correspondence_matchstick",
+      "skills": [
+        "reverse_application",
+        "equation_solving"
+      ],
+      "mistakeTypes": [
+        "model_error",
+        "arithmetic_error"
+      ],
+      "question": "성냥개비로 정삼각형을 이어 만들 때, 성냥개비 수(●)와 삼각형 수(■) 사이에 ●=■×2+1의 관계가 있습니다. 성냥개비가 19개일 때 정삼각형을 몇 개 만들 수 있나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 9
+      },
+      "steps": [
+        {
+          "desc": "식 세우기",
+          "expression": "19=■×2+1"
+        },
+        {
+          "desc": "역산",
+          "expression": "■×2=18"
+        },
+        {
+          "desc": "결론",
+          "expression": "■=9"
+        }
+      ],
+      "conceptExplanation": "성냥개비 수를 알 때 삼각형 수를 구하려면 식을 거꾸로 풀어요."
+    },
+    {
+      "id": "g5-s1-u3-correspond-word-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "규칙과 대응",
+      "subUnit": "두 양 사이의 대응 관계",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "correspondence_flour",
+      "skills": [
+        "rule_application",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "model_error",
+        "arithmetic_error"
+      ],
+      "question": "호떡 1개를 만드는 데 밀가루 50g이 필요합니다. 호떡 수를 □, 필요한 밀가루 양(g)을 △라 할 때, 호떡 18개를 만들려면 밀가루가 몇 g 필요한가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 900
+      },
+      "steps": [
+        {
+          "desc": "대응 관계",
+          "expression": "△=□×50"
+        },
+        {
+          "desc": "□=18 대입",
+          "expression": "△=18×50=900"
+        }
+      ],
+      "conceptExplanation": "대응 관계식 △=□×50에 □=18을 넣으면 △=900g이에요."
+    },
+    {
+      "id": "g5-s1-u4-simplify-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "약분",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "fraction_simplify",
+      "skills": [
+        "gcd_calculation",
+        "fraction_reduction"
+      ],
+      "mistakeTypes": [
+        "partial_reduction",
+        "gcd_error"
+      ],
+      "question": "12/18을 기약분수로 나타내면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 2,
+        "denominator": 3
+      },
+      "steps": [
+        {
+          "desc": "최대공약수 계산",
+          "expression": "GCD(12, 18) = 6"
+        },
+        {
+          "desc": "분자·분모를 6으로 나누기",
+          "expression": "12÷6=2, 18÷6=3"
+        },
+        {
+          "desc": "기약분수",
+          "expression": "2/3"
+        }
+      ],
+      "conceptExplanation": "분자와 분모를 최대공약수로 나누면 더 이상 약분되지 않는 기약분수가 돼요."
+    },
+    {
+      "id": "g5-s1-u4-simplify-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "약분",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "fraction_irreducible_check",
+      "skills": [
+        "gcd_calculation"
+      ],
+      "mistakeTypes": [
+        "concept_error"
+      ],
+      "question": "다음 중 기약분수가 아닌 것을 고르세요.\n① 3/5  ② 5/9  ③ 4/8  ④ 7/11",
+      "answerType": "multiple_choice",
+      "choices": [
+        "3/5",
+        "5/9",
+        "4/8",
+        "7/11"
+      ],
+      "answer": {
+        "choice": 3
+      },
+      "steps": [
+        {
+          "desc": "각 분수의 GCD 확인",
+          "expression": "GCD(3,5)=1, GCD(5,9)=1, GCD(4,8)=4, GCD(7,11)=1"
+        },
+        {
+          "desc": "기약분수 아닌 것",
+          "expression": "4/8 → 4÷4=1, 8÷4=2 → 1/2로 약분 가능"
+        }
+      ],
+      "conceptExplanation": "분자와 분모의 최대공약수가 1이어야 기약분수예요. 4/8은 GCD가 4라 기약분수가 아니에요."
+    },
+    {
+      "id": "g5-s1-u4-common-denom-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "통분",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "fraction_common_denominator",
+      "skills": [
+        "lcm_calculation"
+      ],
+      "mistakeTypes": [
+        "lcm_error",
+        "concept_error"
+      ],
+      "question": "1/4과 1/6의 공통분모 중 가장 작은 것(최소공배수)은 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 12
+      },
+      "steps": [
+        {
+          "desc": "4의 배수",
+          "expression": "4, 8, 12, ..."
+        },
+        {
+          "desc": "6의 배수",
+          "expression": "6, 12, ..."
+        },
+        {
+          "desc": "LCM(4, 6)",
+          "expression": "12"
+        }
+      ],
+      "conceptExplanation": "두 분모의 최소공배수가 가장 작은 공통분모예요."
+    },
+    {
+      "id": "g5-s1-u4-compare-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "분수의 크기 비교",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "fraction_compare_different",
+      "skills": [
+        "fraction_denominator_unify",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "numerator_only_compare",
+        "reduction_error"
+      ],
+      "question": "영서는 피자의 3/8을, 민수는 피자의 2/5를 먹었습니다. 피자를 더 많이 먹은 사람은 누구인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "영서",
+        "민수"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "공통분모 40으로 통분",
+          "expression": "3/8=15/40, 2/5=16/40"
+        },
+        {
+          "desc": "비교",
+          "expression": "15/40 < 16/40"
+        },
+        {
+          "desc": "결론",
+          "expression": "민수가 더 많이 먹었어요"
+        }
+      ],
+      "conceptExplanation": "분모가 다를 땐 통분해서 분자끼리 비교해요."
+    },
+    {
+      "id": "g5-s1-u4-common-denom-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "통분",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "fraction_lcm_denominator",
+      "skills": [
+        "lcm_calculation"
+      ],
+      "mistakeTypes": [
+        "lcm_error",
+        "arithmetic_error"
+      ],
+      "question": "5/6과 7/10을 통분할 때 필요한 최소 공통분모(최소공배수)는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 30
+      },
+      "steps": [
+        {
+          "desc": "LCM(6, 10)",
+          "expression": "6=2×3, 10=2×5 → LCM=2×3×5=30"
+        },
+        {
+          "desc": "통분 결과",
+          "expression": "5/6=25/30, 7/10=21/30"
+        }
+      ],
+      "conceptExplanation": "6과 10의 최소공배수는 30이에요. 분모를 30으로 맞추면 돼요."
+    },
+    {
+      "id": "g5-s1-u4-compare-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "분수의 크기 비교",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "fraction_three_compare",
+      "skills": [
+        "fraction_denominator_unify",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "partial_compare",
+        "lcm_error"
+      ],
+      "question": "2/3, 3/4, 7/12 중에서 가장 큰 분수는 어느 것인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "2/3",
+        "3/4",
+        "7/12"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "공통분모 12로 통분",
+          "expression": "2/3=8/12, 3/4=9/12, 7/12=7/12"
+        },
+        {
+          "desc": "비교",
+          "expression": "7/12 < 8/12 < 9/12"
+        },
+        {
+          "desc": "결론",
+          "expression": "3/4이 가장 커요"
+        }
+      ],
+      "conceptExplanation": "세 분수를 같은 분모로 통분한 뒤 분자끼리 비교해요."
+    },
+    {
+      "id": "g5-s1-u4-simplify-003",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "약분",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "fraction_reverse_simplify",
+      "skills": [
+        "proportional_reasoning"
+      ],
+      "mistakeTypes": [
+        "arithmetic_error",
+        "concept_error"
+      ],
+      "question": "어떤 분수를 기약분수로 나타내었더니 4/9가 되었습니다. 이 분수의 분자가 20이라면 분모는 얼마인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 45
+      },
+      "steps": [
+        {
+          "desc": "분자 배수 파악",
+          "expression": "20÷4=5 → 5배"
+        },
+        {
+          "desc": "분모도 5배",
+          "expression": "9×5=45"
+        }
+      ],
+      "conceptExplanation": "기약분수 4/9를 분자가 20이 되도록 키우려면 분자·분모 모두 5배하면 돼요."
+    },
+    {
+      "id": "g5-s1-u4-compare-003",
+      "grade": 5,
+      "semester": 1,
+      "unit": "약분과 통분",
+      "subUnit": "분수의 크기 비교",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "fraction_middle_value",
+      "skills": [
+        "fraction_denominator_unify",
+        "comparison"
+      ],
+      "mistakeTypes": [
+        "lcm_error",
+        "comparison_error"
+      ],
+      "question": "9/20, 7/12, 23/28 중에서 크기가 중간인 분수는 어느 것인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "9/20",
+        "7/12",
+        "23/28"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "LCM(20,12,28)=420으로 통분",
+          "expression": "9/20=189/420, 7/12=245/420, 23/28=345/420"
+        },
+        {
+          "desc": "크기 순서",
+          "expression": "189/420 < 245/420 < 345/420"
+        },
+        {
+          "desc": "중간 값",
+          "expression": "7/12"
+        }
+      ],
+      "conceptExplanation": "세 분수를 통분해 분자끼리 비교하면 크기 순서를 알 수 있어요."
+    },
+    {
+      "id": "g5-s1-u5-add-diff-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 다른 분수의 덧셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "fraction_add_diff_denominator",
+      "skills": [
+        "fraction_denominator_unify",
+        "fraction_add"
+      ],
+      "mistakeTypes": [
+        "denominator_add",
+        "lcm_error"
+      ],
+      "question": "1/2 + 1/3을 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 5,
+        "denominator": 6
+      },
+      "steps": [
+        {
+          "desc": "공통분모 LCM(2,3)=6",
+          "expression": "1/2=3/6, 1/3=2/6"
+        },
+        {
+          "desc": "분자끼리 더하기",
+          "expression": "3/6+2/6=5/6"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "분모가 다르면 통분해서 같은 분모로 만든 뒤 분자끼리 더해요."
+    },
+    {
+      "id": "g5-s1-u5-sub-diff-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 다른 분수의 뺄셈",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "fraction_sub_diff_denominator",
+      "skills": [
+        "fraction_denominator_unify",
+        "fraction_subtract"
+      ],
+      "mistakeTypes": [
+        "denominator_subtract",
+        "lcm_error"
+      ],
+      "question": "3/4 - 1/3을 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 5,
+        "denominator": 12
+      },
+      "steps": [
+        {
+          "desc": "공통분모 LCM(4,3)=12",
+          "expression": "3/4=9/12, 1/3=4/12"
+        },
+        {
+          "desc": "분자끼리 빼기",
+          "expression": "9/12-4/12=5/12"
+        }
+      ],
+      "animationAsset": "fraction-water-sub",
+      "conceptExplanation": "분모가 다르면 통분해서 같은 분모로 만든 뒤 분자끼리 빼요."
+    },
+    {
+      "id": "g5-s1-u5-add-word-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 다른 분수의 덧셈",
+      "type": "reasoning",
+      "difficulty": "basic",
+      "concept": "fraction_add_word_problem",
+      "skills": [
+        "fraction_add",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "denominator_add",
+        "model_error"
+      ],
+      "question": "리본이 2/5m 있었습니다. 1/4m를 더 샀다면 리본은 모두 몇 m인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 13,
+        "denominator": 20
+      },
+      "steps": [
+        {
+          "desc": "공통분모 LCM(5,4)=20",
+          "expression": "2/5=8/20, 1/4=5/20"
+        },
+        {
+          "desc": "덧셈",
+          "expression": "8/20+5/20=13/20"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "분모가 다른 분수를 더할 땐 통분이 먼저예요."
+    },
+    {
+      "id": "g5-s1-u5-add-diff-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분모가 다른 분수의 덧셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "fraction_add_diff_denominator",
+      "skills": [
+        "fraction_denominator_unify",
+        "fraction_add"
+      ],
+      "mistakeTypes": [
+        "denominator_add",
+        "lcm_error"
+      ],
+      "question": "1/2 + 1/9을 계산하면 얼마인가요?",
+      "answerType": "fraction",
+      "answer": {
+        "numerator": 11,
+        "denominator": 18
+      },
+      "steps": [
+        {
+          "desc": "공통분모 LCM(2,9)=18",
+          "expression": "1/2=9/18, 1/9=2/18"
+        },
+        {
+          "desc": "덧셈",
+          "expression": "9/18+2/18=11/18"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "통분할 때 2와 9의 최소공배수는 18이에요."
+    },
+    {
+      "id": "g5-s1-u5-add-mixed-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "대분수의 덧셈",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "fraction_mixed_add",
+      "skills": [
+        "mixed_number_add",
+        "fraction_denominator_unify"
+      ],
+      "mistakeTypes": [
+        "integer_fraction_separate_error",
+        "lcm_error"
+      ],
+      "question": "4와 1/3 + 7과 3/5를 계산하면 얼마인가요? (답을 □과 □/15 형태로 쓰세요)",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          11,
+          14
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 15)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "정수끼리 더하기",
+          "expression": "4+7=11"
+        },
+        {
+          "desc": "분수 통분 LCM(3,5)=15",
+          "expression": "1/3=5/15, 3/5=9/15"
+        },
+        {
+          "desc": "분수끼리 더하기",
+          "expression": "5/15+9/15=14/15"
+        },
+        {
+          "desc": "합치기",
+          "expression": "11과 14/15"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "대분수의 덧셈은 정수끼리, 분수끼리 따로 더한 뒤 합쳐요."
+    },
+    {
+      "id": "g5-s1-u5-compare-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "분수의 크기 비교",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "fraction_compare_sum",
+      "skills": [
+        "comparison",
+        "fraction_denominator_unify"
+      ],
+      "mistakeTypes": [
+        "numerator_only_compare"
+      ],
+      "question": "주스를 수호는 3/8컵, 나영이는 2/5컵 마셨습니다. 주스를 더 많이 마신 사람은 누구인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "수호",
+        "나영"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "공통분모 40으로 통분",
+          "expression": "3/8=15/40, 2/5=16/40"
+        },
+        {
+          "desc": "비교",
+          "expression": "15/40 < 16/40"
+        },
+        {
+          "desc": "결론",
+          "expression": "나영이가 더 많이 마셨어요"
+        }
+      ],
+      "conceptExplanation": "분모가 다른 분수는 통분해서 분자끼리 비교해요."
+    },
+    {
+      "id": "g5-s1-u5-add-mixed-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "대분수의 덧셈",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "fraction_mixed_add_word",
+      "skills": [
+        "mixed_number_add",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "integer_fraction_separate_error",
+        "model_error"
+      ],
+      "question": "주전자에 물이 1과 1/4L, 물통에 물이 1과 2/9L 있습니다. 물은 모두 몇 L인가요? (답을 □과 □/36 L 형태로 쓰세요)",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          2,
+          17
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 36)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "정수 합",
+          "expression": "1+1=2"
+        },
+        {
+          "desc": "분수 통분 LCM(4,9)=36",
+          "expression": "1/4=9/36, 2/9=8/36"
+        },
+        {
+          "desc": "분수 합",
+          "expression": "9/36+8/36=17/36"
+        },
+        {
+          "desc": "결론",
+          "expression": "2와 17/36 L"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "4와 9의 최소공배수는 36이에요. 통분해서 더해요."
+    },
+    {
+      "id": "g5-s1-u5-sub-mixed-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "대분수의 뺄셈",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "fraction_mixed_subtract_word",
+      "skills": [
+        "mixed_number_subtract",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "borrow_error",
+        "model_error"
+      ],
+      "question": "노끈이 3과 5/6m 있습니다. 1과 1/2m를 잘라냈다면 남은 노끈은 몇 m인가요? (답을 □과 □/3 m 형태로 쓰세요)",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          2,
+          1
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 3)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "분수 통분 LCM(6,2)=6",
+          "expression": "5/6, 1/2=3/6"
+        },
+        {
+          "desc": "분수 빼기",
+          "expression": "5/6-3/6=2/6=1/3"
+        },
+        {
+          "desc": "정수 빼기",
+          "expression": "3-1=2"
+        },
+        {
+          "desc": "결론",
+          "expression": "2와 1/3 m"
+        }
+      ],
+      "animationAsset": "fraction-water-sub",
+      "conceptExplanation": "대분수의 뺄셈도 정수끼리, 분수끼리 따로 계산해요."
+    },
+    {
+      "id": "g5-s1-u5-add-mixed-003",
+      "grade": 5,
+      "semester": 1,
+      "unit": "분수의 덧셈과 뺄셈",
+      "subUnit": "대분수의 덧셈",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "fraction_mixed_add_word",
+      "skills": [
+        "mixed_number_add",
+        "problem_modeling"
+      ],
+      "mistakeTypes": [
+        "integer_fraction_separate_error",
+        "lcm_error"
+      ],
+      "question": "민준이는 2와 3/20km, 지수는 3과 1/5km를 걸었습니다. 두 사람이 걸은 거리의 합은 몇 km인가요? (답을 □과 □/20 km 형태로 쓰세요)",
+      "answerType": "multi_blank",
+      "answer": {
+        "values": [
+          5,
+          7
+        ],
+        "labels": [
+          "정수 부분",
+          "분자 (분모: 20)"
+        ]
+      },
+      "steps": [
+        {
+          "desc": "정수 합",
+          "expression": "2+3=5"
+        },
+        {
+          "desc": "분수 통분 LCM(20,5)=20",
+          "expression": "3/20=3/20, 1/5=4/20"
+        },
+        {
+          "desc": "분수 합",
+          "expression": "3/20+4/20=7/20"
+        },
+        {
+          "desc": "결론",
+          "expression": "5와 7/20 km"
+        }
+      ],
+      "animationAsset": "fraction-bar-add",
+      "conceptExplanation": "1/5=4/20으로 통분해서 더해요."
+    },
+    {
+      "id": "g5-s1-u6-rectangle-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "직사각형의 둘레와 넓이",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "rectangle_perimeter_side",
+      "skills": [
+        "perimeter_calculation",
+        "inverse_operation"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "arithmetic_error"
+      ],
+      "question": "세로가 10cm이고 둘레가 54cm인 직사각형의 가로는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 17
+      },
+      "steps": [
+        {
+          "desc": "둘레 공식",
+          "expression": "둘레=(가로+세로)×2"
+        },
+        {
+          "desc": "대입",
+          "expression": "54=(가로+10)×2 → 가로+10=27"
+        },
+        {
+          "desc": "가로 구하기",
+          "expression": "가로=27-10=17"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "직사각형 둘레=(가로+세로)×2 이에요. 역으로 풀면 가로를 구할 수 있어요."
+    },
+    {
+      "id": "g5-s1-u6-rectangle-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "직사각형의 둘레와 넓이",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "rectangle_area",
+      "skills": [
+        "area_calculation"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "perimeter_area_confusion"
+      ],
+      "question": "가로가 17cm, 세로가 10cm인 직사각형의 넓이는 몇 cm²인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 170
+      },
+      "steps": [
+        {
+          "desc": "넓이 공식",
+          "expression": "직사각형 넓이=가로×세로"
+        },
+        {
+          "desc": "계산",
+          "expression": "17×10=170"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "직사각형 넓이=가로×세로예요."
+    },
+    {
+      "id": "g5-s1-u6-rhombus-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "마름모의 넓이",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "rhombus_area",
+      "skills": [
+        "diagonal_area"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "diagonal_confusion"
+      ],
+      "question": "두 대각선의 길이가 각각 7cm, 10cm인 마름모의 넓이는 몇 cm²인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 35
+      },
+      "steps": [
+        {
+          "desc": "마름모 넓이 공식",
+          "expression": "넓이=한 대각선×다른 대각선÷2"
+        },
+        {
+          "desc": "계산",
+          "expression": "7×10÷2=35"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "마름모 넓이=(두 대각선의 곱)÷2예요."
+    },
+    {
+      "id": "g5-s1-u6-polygon-perimeter-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "정다각형의 둘레",
+      "type": "calculation",
+      "difficulty": "basic",
+      "concept": "polygon_perimeter",
+      "skills": [
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "side_count_error",
+        "arithmetic_error"
+      ],
+      "question": "한 변이 4cm인 정팔각형의 둘레는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 32
+      },
+      "steps": [
+        {
+          "desc": "정팔각형의 변 수",
+          "expression": "변이 8개"
+        },
+        {
+          "desc": "둘레 계산",
+          "expression": "4×8=32"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "정다각형 둘레=한 변의 길이×변의 수예요."
+    },
+    {
+      "id": "g5-s1-u6-unit-conv-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "넓이의 단위",
+      "type": "concept",
+      "difficulty": "basic",
+      "concept": "area_unit_conversion",
+      "skills": [
+        "unit_conversion"
+      ],
+      "mistakeTypes": [
+        "conversion_error",
+        "zero_count_error"
+      ],
+      "question": "5 km²는 몇 m²인가요?",
+      "answerType": "multiple_choice",
+      "choices": [
+        "500000",
+        "5000000",
+        "50000000",
+        "500000000"
+      ],
+      "answer": {
+        "choice": 2
+      },
+      "steps": [
+        {
+          "desc": "1 km² 환산",
+          "expression": "1 km²=1000000 m²"
+        },
+        {
+          "desc": "5 km²",
+          "expression": "5×1000000=5000000 m²"
+        }
+      ],
+      "conceptExplanation": "1 km²=1000000 m² (100만 m²) 이에요."
+    },
+    {
+      "id": "g5-s1-u6-triangle-area-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "삼각형의 넓이",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "triangle_area",
+      "skills": [
+        "area_calculation"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "height_base_confusion"
+      ],
+      "question": "밑변이 9cm, 높이가 4cm인 삼각형의 넓이는 몇 cm²인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 18
+      },
+      "steps": [
+        {
+          "desc": "삼각형 넓이 공식",
+          "expression": "넓이=밑변×높이÷2"
+        },
+        {
+          "desc": "계산",
+          "expression": "9×4÷2=18"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "삼각형 넓이=밑변×높이÷2예요. 직사각형의 절반이라 생각해요!"
+    },
+    {
+      "id": "g5-s1-u6-trapezoid-area-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "사다리꼴의 넓이",
+      "type": "calculation",
+      "difficulty": "applied",
+      "concept": "trapezoid_area",
+      "skills": [
+        "area_calculation"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "top_bottom_confusion"
+      ],
+      "question": "윗변이 6cm, 아랫변이 10cm, 높이가 4cm인 사다리꼴의 넓이는 몇 cm²인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 32
+      },
+      "steps": [
+        {
+          "desc": "사다리꼴 넓이 공식",
+          "expression": "넓이=(윗변+아랫변)×높이÷2"
+        },
+        {
+          "desc": "계산",
+          "expression": "(6+10)×4÷2=16×4÷2=32"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "사다리꼴 넓이=(윗변+아랫변)×높이÷2예요."
+    },
+    {
+      "id": "g5-s1-u6-parallelogram-area-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "평행사변형의 넓이",
+      "type": "reasoning",
+      "difficulty": "applied",
+      "concept": "parallelogram_base_from_area",
+      "skills": [
+        "inverse_operation",
+        "area_formula"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "inverse_error"
+      ],
+      "question": "평행사변형의 넓이가 70cm²이고 높이가 7cm일 때, 밑변의 길이는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 10
+      },
+      "steps": [
+        {
+          "desc": "평행사변형 넓이 공식",
+          "expression": "넓이=밑변×높이"
+        },
+        {
+          "desc": "밑변 구하기",
+          "expression": "70=밑변×7 → 밑변=70÷7=10"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "평행사변형 넓이=밑변×높이. 역으로 풀면 밑변=넓이÷높이예요."
+    },
+    {
+      "id": "g5-s1-u6-rectangle-perimeter-001",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "직사각형의 둘레와 넓이",
+      "type": "calculation",
+      "difficulty": "challenge",
+      "concept": "rectangle_perimeter",
+      "skills": [
+        "perimeter_calculation"
+      ],
+      "mistakeTypes": [
+        "formula_error",
+        "arithmetic_error"
+      ],
+      "question": "가로 16cm, 세로 19cm인 직사각형 모양의 액자의 둘레는 몇 cm인가요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 70
+      },
+      "steps": [
+        {
+          "desc": "둘레 공식",
+          "expression": "둘레=(가로+세로)×2"
+        },
+        {
+          "desc": "계산",
+          "expression": "(16+19)×2=35×2=70"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "직사각형 둘레=(가로+세로)×2예요."
+    },
+    {
+      "id": "g5-s1-u6-unit-conv-002",
+      "grade": 5,
+      "semester": 1,
+      "unit": "다각형의 둘레와 넓이",
+      "subUnit": "넓이의 단위",
+      "type": "reasoning",
+      "difficulty": "challenge",
+      "concept": "area_unit_conversion_word",
+      "skills": [
+        "unit_conversion",
+        "division"
+      ],
+      "mistakeTypes": [
+        "conversion_error",
+        "calculation_error"
+      ],
+      "question": "한 변이 6m인 정사각형 모양의 땅에는 100cm² 크기의 타일이 몇 장 들어가나요?",
+      "answerType": "integer",
+      "answer": {
+        "value": 3600
+      },
+      "steps": [
+        {
+          "desc": "땅 넓이 cm² 변환",
+          "expression": "6m=600cm → 600×600=360000cm²"
+        },
+        {
+          "desc": "타일 장수",
+          "expression": "360000÷100=3600"
+        }
+      ],
+      "animationAsset": "polygon-shapes",
+      "conceptExplanation": "단위를 cm로 통일한 뒤 나눠요. 6m=600cm이에요."
     }
   ],
   "templates": [
