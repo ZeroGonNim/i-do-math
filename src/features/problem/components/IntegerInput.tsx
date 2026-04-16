@@ -12,8 +12,8 @@ export function IntegerInput({ value, unit }: Props) {
         className="min-w-[160px] min-h-[64px] flex items-center justify-center px-4"
         style={{
           backgroundColor: '#000',
-          border: '2px solid #81ecff',
-          boxShadow: '0 0 12px rgba(129,236,255,0.2)',
+          border: '2px solid #38bdf8',
+          boxShadow: '0 0 12px rgba(56,189,248,0.2)',
         }}
       >
         <span className="text-4xl font-bold tracking-widest" style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}>

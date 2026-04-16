@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { LockIcon, SwordIcon } from '@/shared/components/PixelIcons'
 
 interface Props {
   onClose: () => void
@@ -33,16 +34,16 @@ export function DifficultyUnlockModal({ onClose }: Props) {
         onClick={e => e.stopPropagation()}
       >
         {/* Pixel corner accents */}
-        <div className="absolute top-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(129,236,255,0.3)' }} />
-        <div className="absolute top-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(129,236,255,0.3)' }} />
-        <div className="absolute bottom-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(193,128,255,0.3)' }} />
-        <div className="absolute bottom-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(193,128,255,0.3)' }} />
+        <div className="absolute top-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(56,189,248,0.3)' }} />
+        <div className="absolute top-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(56,189,248,0.3)' }} />
+        <div className="absolute bottom-2 left-2 w-1 h-1" style={{ backgroundColor: 'rgba(139,92,246,0.3)' }} />
+        <div className="absolute bottom-2 right-2 w-1 h-1" style={{ backgroundColor: 'rgba(139,92,246,0.3)' }} />
 
         {/* Top tag */}
         <div className="flex justify-center -mt-3.5">
           <div
             className="px-8 py-1.5"
-            style={{ backgroundColor: '#81ecff' }}
+            style={{ backgroundColor: '#38bdf8' }}
           >
             <span
               className="text-sm font-bold"
@@ -61,18 +62,18 @@ export function DifficultyUnlockModal({ onClose }: Props) {
               width: '96px',
               height: '111px',
               backgroundColor: '#23233f',
-              border: '2px solid #c180ff',
-              boxShadow: '0 0 32px rgba(193,128,255,0.4)',
+              border: '2px solid #8b5cf6',
+              boxShadow: '0 0 32px rgba(139,92,246,0.4)',
             }}
           >
-            <span style={{ fontSize: '48px', lineHeight: 1 }}>🔒</span>
+            <LockIcon color="#8b5cf6" size={56} />
           </div>
 
           {/* 난이도 해금! */}
           <p
             className="text-4xl font-bold text-center"
             style={{
-              color: '#c180ff',
+              color: '#8b5cf6',
               fontFamily: 'var(--font-sans)',
               letterSpacing: '-1.8px',
               lineHeight: '40px',
@@ -96,13 +97,14 @@ export function DifficultyUnlockModal({ onClose }: Props) {
             style={{
               width: '270px',
               height: '68px',
-              backgroundColor: '#81ecff',
+              backgroundColor: '#38bdf8',
               color: '#005762',
               fontFamily: 'var(--font-sans)',
               letterSpacing: '-0.5px',
             }}
           >
-            도전하기 ⚔️
+            <SwordIcon color="#005762" size={22} />
+            도전하기
           </button>
 
           {/* 나중에 하기 */}

@@ -1,8 +1,13 @@
+import { useState, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
+import { useTheme } from '@/shared/hooks/useTheme'
 import { useDiary } from '@/features/diary/hooks/useDiary'
 import { BottomNavBar } from '@/shared/components/BottomNavBar'
+import { MainTabHeader } from '@/shared/components/MainTabHeader'
 import { formatConceptName } from '@/shared/constants/problemConstants'
+import { BookIcon, LockIcon, PlayIcon, HintIcon, TrophyIcon } from '@/shared/components/PixelIcons'
+import { DifficultyBadge } from '@/shared/components/DifficultyBadge'
 
 function getCurrentMonthLabel() {
   const d = new Date()
@@ -18,15 +23,28 @@ function formatMinutes(seconds: number): string {
 export function DiaryRoute() {
   const navigate = useNavigate()
   const profile = useUserProfile()
+  const theme = useTheme()
+  const [activeSemester, setActiveSemester] = useState<0 | 1 | 2>(0) // 0: 전체, 1: 1학기, 2: 2학기
+
   const days = useDiary(profile?.userId)
+
+  // 학기 필터링된 일기 데이터
+  const filteredDays = useMemo(() => {
+    if (!days) return []
+    if (activeSemester === 0) return days
+    return days.map(day => ({
+      ...day,
+      logs: day.logs.filter(l => l.semester === activeSemester)
+    })).filter(day => day.logs.length > 0)
+  }, [days, activeSemester])
 
   // Monthly stats
   const now = new Date()
   const thisMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`
-  const monthDays = (days ?? []).filter(d => d.date.startsWith(thisMonth))
+  const monthDays = filteredDays.filter(d => d.date.startsWith(thisMonth))
 
-  const totalProblems = monthDays.reduce((s, d) => s + d.totalProblems, 0)
-  const totalCorrect = monthDays.reduce((s, d) => s + d.correctCount, 0)
+  const totalProblems = monthDays.reduce((s, d) => s + d.logs.length, 0)
+  const totalCorrect = monthDays.reduce((s, d) => s + d.logs.filter(l => l.isCorrect).length, 0)
   const accuracy = totalProblems > 0 ? Math.round((totalCorrect / totalProblems) * 100) : 0
   const totalStars = monthDays.reduce((s, d) => s + d.stars, 0)
   const totalTimeSec = monthDays.reduce(
@@ -34,37 +52,52 @@ export function DiaryRoute() {
     0,
   )
 
+  // 난이도 분포 (이번 달)
+  const diffBreakdown = { basic: 0, applied: 0, challenge: 0 }
+  for (const day of monthDays) {
+    for (const log of day.logs) {
+      if (log.difficulty === 'basic') diffBreakdown.basic++
+      else if (log.difficulty === 'applied') diffBreakdown.applied++
+      else if (log.difficulty === 'challenge') diffBreakdown.challenge++
+    }
+  }
+
   const isEmpty = !days || days.length === 0
+  const [showAll, setShowAll] = useState(false)
+  // 최종 노출 데이터
+  const hasOtherMonths = filteredDays.length > monthDays.length
+  const displayedDays = showAll ? filteredDays : monthDays
 
   return (
-    <div className="flex h-dvh flex-col" style={{ backgroundColor: '#0c0c1f' }}>
+    <div className="flex h-dvh flex-col" style={{ backgroundColor: '#0f172a' }}>
 
-      {/* Top App Bar */}
-      <div
-        className="shrink-0 flex items-center justify-between px-6 h-16"
-        style={{
-          backgroundColor: 'rgba(12,12,31,0.6)',
-          borderBottom: '1px solid #1c1c3a',
-        }}
-      >
-        <div className="flex items-center gap-2">
-          <span className="text-base" style={{ color: '#81ecff' }}>🎮</span>
-          <span
-            className="text-xl font-medium"
-            style={{ color: '#81ecff', fontFamily: 'var(--font-sans)', letterSpacing: '0.05em' }}
-          >
-            수학 일기
-          </span>
-        </div>
-        <div
-          className="w-10 h-10 flex items-center justify-center text-lg overflow-hidden"
-          style={{ backgroundColor: '#1d1d37', border: '1.5px solid #81ecff' }}
-        >
-          {profile?.avatarId ? '🧙' : '👤'}
-        </div>
-      </div>
+      <MainTabHeader title="수학 일기" />
 
       <div className="flex-1 overflow-y-auto">
+        {/* 학기 필터 바 */}
+        {!isEmpty && (
+          <div className="flex px-5 pt-4 gap-2">
+            {([
+              { id: 0, label: '전체' },
+              { id: 1, label: '1학기' },
+              { id: 2, label: '2학기' }
+            ] as const).map(item => (
+              <button
+                key={item.id}
+                onClick={() => setActiveSemester(item.id)}
+                className="flex-1 py-2 text-[10px] font-bold border-2 transition-all"
+                style={{
+                  backgroundColor: activeSemester === item.id ? theme.primary : '#17172f',
+                  color: activeSemester === item.id ? '#000' : '#64748b',
+                  borderColor: activeSemester === item.id ? theme.primary : '#23233f',
+                }}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+        )}
+
         <div className="px-5 pt-5 pb-24 space-y-5">
 
           {/* Dashboard Header */}
@@ -93,7 +126,7 @@ export function DiaryRoute() {
               >
                 <p
                   className="text-xs font-bold mb-3"
-                  style={{ color: '#81ecff', fontFamily: 'var(--font-game)' }}
+                  style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}
                 >
                   이번 달 현황
                 </p>
@@ -106,7 +139,7 @@ export function DiaryRoute() {
                   </span>
                   <span
                     className="text-base font-bold"
-                    style={{ color: '#81ecff', fontFamily: 'var(--font-game)' }}
+                    style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}
                   >
                     전체 정확도
                   </span>
@@ -117,8 +150,8 @@ export function DiaryRoute() {
                     className="h-full rounded-sm transition-all"
                     style={{
                       width: `${accuracy}%`,
-                      backgroundColor: '#81ecff',
-                      boxShadow: '0 0 8px rgba(129,236,255,0.6)',
+                      backgroundColor: theme.primary,
+                      boxShadow: `0 0 8px ${theme.primary}60`,
                     }}
                   />
                 </div>
@@ -132,7 +165,7 @@ export function DiaryRoute() {
                 >
                   <p
                     className="text-[10px] font-bold mb-2"
-                    style={{ color: '#c180ff', fontFamily: 'var(--font-game)' }}
+                    style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}
                   >
                     학습 시간
                   </p>
@@ -161,6 +194,31 @@ export function DiaryRoute() {
                   </p>
                 </div>
               </div>
+
+              {/* 난이도 분포 */}
+              {(diffBreakdown.basic + diffBreakdown.applied + diffBreakdown.challenge) > 0 && (
+                <div className="grid grid-cols-3 gap-2">
+                  {([
+                    { key: 'basic',     count: diffBreakdown.basic },
+                    { key: 'applied',   count: diffBreakdown.applied },
+                    { key: 'challenge', count: diffBreakdown.challenge },
+                  ] as { key: 'basic' | 'applied' | 'challenge'; count: number }[]).map(d => (
+                    <div
+                      key={d.key}
+                      className="px-4 py-3 flex flex-col gap-1.5"
+                      style={{ backgroundColor: '#17172f', border: '1px solid #000' }}
+                    >
+                      <DifficultyBadge difficulty={d.key} />
+                      <p
+                        className="text-base font-bold leading-none"
+                        style={{ color: d.count > 0 ? '#e5e3ff' : '#64748b', fontFamily: 'var(--font-game)' }}
+                      >
+                        {d.count}문제
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -177,14 +235,14 @@ export function DiaryRoute() {
                     className="flex items-center justify-center"
                     style={{ width: '80px', height: '80px', backgroundColor: '#7c3aed' }}
                   >
-                    <span style={{ fontSize: '44px', lineHeight: 1 }}>📖</span>
+                    <BookIcon color="#c4b5fd" size={52} />
                   </div>
                 </div>
                 <div
                   className="absolute -top-2 -right-2 flex items-center justify-center"
                   style={{ width: '36px', height: '36px', backgroundColor: '#ffe792' }}
                 >
-                  <span style={{ fontSize: '20px', lineHeight: 1 }}>🔒</span>
+                  <LockIcon color="#000" size={18} />
                 </div>
               </div>
 
@@ -202,7 +260,7 @@ export function DiaryRoute() {
                 style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)' }}
               >
                 문제를 풀면 멋진{' '}
-                <span style={{ color: '#81ecff' }}>수학 일기</span>가{' '}
+                <span style={{ color: theme.primary }}>수학 일기</span>가{' '}
                 자동으로 생겨요!
               </p>
 
@@ -211,14 +269,14 @@ export function DiaryRoute() {
                 className="w-full flex items-center justify-center gap-2 text-xl font-bold transition-all active:scale-[0.97]"
                 style={{
                   height: '68px',
-                  backgroundColor: '#81ecff',
-                  color: '#003840',
+                  backgroundColor: theme.primary,
+                  color: '#000',
                   fontFamily: 'var(--font-sans)',
                   letterSpacing: '-0.5px',
                 }}
                 onClick={() => navigate('/home')}
               >
-                ▶ 문제 풀러 가기
+                <PlayIcon color="#000" size={16} /> 문제 풀러 가기
               </button>
 
               {/* 학습 팁 */}
@@ -226,18 +284,18 @@ export function DiaryRoute() {
                 className="w-full px-4 py-4 flex gap-4"
                 style={{
                   backgroundColor: '#111127',
-                  borderLeft: '3px solid #c180ff',
+                  borderLeft: `3px solid ${theme.primary}`,
                   border: '1px solid #23233f',
                   borderLeftWidth: '3px',
-                  borderLeftColor: '#c180ff',
+                  borderLeftColor: theme.primary,
                 }}
               >
                 <div>
                   <p
                     className="text-xs font-bold mb-1 flex items-center gap-1"
-                    style={{ color: '#c180ff', fontFamily: 'var(--font-sans)' }}
+                    style={{ color: theme.primary, fontFamily: 'var(--font-sans)' }}
                   >
-                    💡 학습 팁
+                    <HintIcon color={theme.primary} size={10} /> 학습 팁
                   </p>
                   <p
                     className="text-sm leading-relaxed"
@@ -256,18 +314,21 @@ export function DiaryRoute() {
                   className="text-lg font-bold"
                   style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}
                 >
-                  일별 기록
+                  {showAll ? '전체 기록' : `${now.getMonth() + 1}월 기록`}
                 </h2>
-                <span
-                  className="text-xs font-bold"
-                  style={{ color: '#c180ff', fontFamily: 'var(--font-game)' }}
-                >
-                  전체 보기
-                </span>
+                {hasOtherMonths && (
+                  <button
+                    onClick={() => setShowAll(prev => !prev)}
+                    className="text-xs font-bold active:opacity-60 transition-opacity"
+                    style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}
+                  >
+                    {showAll ? '접기' : '전체 보기'}
+                  </button>
+                )}
               </div>
 
               {/* Day Cards */}
-              {days!.map((day, dayIdx) => {
+              {displayedDays.map((day, dayIdx) => {
                 const dayAccuracy = day.totalProblems > 0
                   ? Math.round((day.correctCount / day.totalProblems) * 100)
                   : 0
@@ -299,20 +360,32 @@ export function DiaryRoute() {
                   ([, a], [, b]) => b.total - a.total,
                 )[0]?.[0] ?? ''
 
+                // Primary difficulty
+                const diffMap: Record<string, number> = {}
+                for (const log of day.logs) {
+                  diffMap[log.difficulty] = (diffMap[log.difficulty] ?? 0) + 1
+                }
+                const primaryDiff = Object.entries(diffMap).sort(([,a],[,b]) => b - a)[0]?.[0] ?? 'basic'
+                {/* ... (removed unused DIFF_CONFIG) */}
+                // const diffCfg = DIFF_CONFIG[primaryDiff as keyof typeof DIFF_CONFIG] ?? DIFF_CONFIG.basic
                 return (
-                  <div
+                  <button
                     key={day.date}
-                    className="overflow-hidden"
+                    className="w-full overflow-hidden text-left active:opacity-80 transition-opacity"
                     style={{ backgroundColor: '#1d1d37', border: '1px solid #000' }}
+                    onClick={() => navigate(`/diary/${day.date}`, { state: { day } })}
                   >
                     {/* Card header */}
                     <div className="relative px-5 pt-5 pb-3">
-                      <p
-                        className="text-[10px] font-bold mb-1"
-                        style={{ color: '#aaa8c3', fontFamily: 'var(--font-game)' }}
-                      >
-                        {day.date}
-                      </p>
+                      <div className="flex items-center gap-2 mb-1">
+                        <p
+                          className="text-[10px] font-bold"
+                          style={{ color: '#aaa8c3', fontFamily: 'var(--font-game)' }}
+                        >
+                          {day.date}
+                        </p>
+                        <DifficultyBadge difficulty={primaryDiff as 'basic' | 'applied' | 'challenge'} />
+                      </div>
                       <p
                         className="text-xl font-bold leading-[28px] tracking-[-0.5px]"
                         style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}
@@ -332,8 +405,8 @@ export function DiaryRoute() {
                     {/* Stats row */}
                     <div className="grid grid-cols-3 mx-5 mb-3 overflow-hidden" style={{ gap: '1px', backgroundColor: '#000' }}>
                       {[
-                        { label: '정확도', value: `${dayAccuracy}%`, color: '#81ecff' },
-                        { label: '시간', value: formatMinutes(dayTimeSec), color: '#c180ff' },
+                        { label: '정확도', value: `${dayAccuracy}%`, color: '#38bdf8' },
+                        { label: '시간', value: formatMinutes(dayTimeSec), color: '#8b5cf6' },
                         { label: '별', value: `+${day.stars}`, color: '#ffe792' },
                       ].map(stat => (
                         <div
@@ -390,7 +463,7 @@ export function DiaryRoute() {
                           <div>
                             <p
                               className="text-[10px] font-bold mb-1"
-                              style={{ color: '#81ecff', fontFamily: 'var(--font-game)' }}
+                              style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}
                             >
                               완벽 습득
                             </p>
@@ -400,9 +473,9 @@ export function DiaryRoute() {
                                   key={c}
                                   className="text-[10px] font-bold px-2.5 py-1 rounded"
                                   style={{
-                                    backgroundColor: 'rgba(129,236,255,0.1)',
-                                    color: '#81ecff',
-                                    border: '1px solid rgba(129,236,255,0.3)',
+                                    backgroundColor: `${theme.primary}15`,
+                                    color: theme.primary,
+                                    border: `1px solid ${theme.primary}40`,
                                     fontFamily: 'var(--font-game)',
                                   }}
                                 >
@@ -414,7 +487,7 @@ export function DiaryRoute() {
                         )}
                       </div>
                     )}
-                  </div>
+                  </button>
                 )
               })}
 
@@ -426,10 +499,10 @@ export function DiaryRoute() {
                 >
                   <div className="flex items-center gap-4 mb-4">
                     <div
-                      className="w-16 h-16 flex items-center justify-center text-3xl shrink-0"
+                      className="w-16 h-16 flex items-center justify-center shrink-0"
                       style={{ backgroundColor: '#1d1d37', border: '1.5px solid #ffe792' }}
                     >
-                      🏆
+                      <TrophyIcon color="#ffe792" size={32} />
                     </div>
                     <div>
                       <h3
@@ -453,9 +526,9 @@ export function DiaryRoute() {
                       color: '#655400',
                       fontFamily: 'var(--font-sans)',
                     }}
-                    onClick={() => navigate('/home')}
+                    onClick={() => navigate('/settings')}
                   >
-                    보상 받기
+                    보상 사용하기
                   </button>
                 </div>
               )}

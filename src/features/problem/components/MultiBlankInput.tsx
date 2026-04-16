@@ -25,8 +25,8 @@ export function MultiBlankInput({ values, labels, activeIndex, onFocus }: Props)
             className="min-w-[80px] min-h-[56px] px-3 flex items-center justify-center text-3xl font-bold transition-all active:scale-[0.97]"
             style={{
               backgroundColor: '#000',
-              border: `2px solid ${activeIndex === i ? '#81ecff' : '#23233f'}`,
-              boxShadow: activeIndex === i ? '0 0 12px rgba(129,236,255,0.25)' : 'none',
+              border: `2px solid ${activeIndex === i ? '#38bdf8' : '#23233f'}`,
+              boxShadow: activeIndex === i ? '0 0 12px rgba(56,189,248,0.25)' : 'none',
               color: '#e5e3ff',
               fontFamily: 'var(--font-game)',
             }}

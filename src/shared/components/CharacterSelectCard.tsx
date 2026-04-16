@@ -1,5 +1,6 @@
 import { AVATARS } from '@/types/avatar'
 import type { AvatarDef, AvatarId } from '@/types/avatar'
+import { LockIcon, StarIcon } from '@/shared/components/PixelIcons'
 
 export { AVATARS }
 export type { AvatarDef }
@@ -34,7 +35,7 @@ export function CharacterSelectCard({ avatar, selected, onSelect, locked = false
       {isDefault && !selected && (
         <span
           className="absolute top-2 left-2 text-[9px] font-black px-1.5 py-0.5 z-10"
-          style={{ backgroundColor: 'rgba(125,232,255,0.15)', color: '#81ecff', border: '1px solid rgba(125,232,255,0.3)' }}
+          style={{ backgroundColor: 'rgba(56,189,248,0.15)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.3)' }}
         >
           기본
         </span>
@@ -44,7 +45,7 @@ export function CharacterSelectCard({ avatar, selected, onSelect, locked = false
       {selected && (
         <span
           className="absolute top-2 right-2 w-6 h-6 text-xs flex items-center justify-center font-bold z-10"
-          style={{ backgroundColor: avatar.accentColor, color: '#0c0c1f' }}
+          style={{ backgroundColor: avatar.accentColor, color: '#0f172a' }}
         >
           ✓
         </span>
@@ -67,11 +68,12 @@ export function CharacterSelectCard({ avatar, selected, onSelect, locked = false
         />
         {/* 잠금 오버레이 */}
         {locked && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-0.5">
-            <span className="text-xl">🔒</span>
-            <span className="text-[10px] font-bold" style={{ color: '#ffe792' }}>
-              ⭐{avatar.starCost}
-            </span>
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-1">
+            <LockIcon color="#ffe792" size={22} />
+            <div className="flex items-center gap-0.5">
+              <StarIcon color="#ffe792" size={10} />
+              <span className="text-[10px] font-bold" style={{ color: '#ffe792' }}>{avatar.starCost}</span>
+            </div>
           </div>
         )}
       </div>
@@ -84,7 +86,7 @@ export function CharacterSelectCard({ avatar, selected, onSelect, locked = false
         >
           {avatar.name}
         </p>
-        <p className="text-[10px] mt-0.5" style={{ color: locked ? '#23233f' : '#81ecff' }}>
+        <p className="text-[10px] mt-0.5" style={{ color: locked ? '#23233f' : '#38bdf8' }}>
           {avatar.trait}
         </p>
       </div>

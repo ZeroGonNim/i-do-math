@@ -11,6 +11,10 @@ describe('normalizeFraction', () => {
     expect(normalizeFraction(2, 4)).toEqual({ numerator: 1, denominator: 2 }))
   it('keeps 5/8 as 5/8', () =>
     expect(normalizeFraction(5, 8)).toEqual({ numerator: 5, denominator: 8 }))
+  it('negative denominator: -3/-6 → 1/2', () =>
+    expect(normalizeFraction(-3, -6)).toEqual({ numerator: 1, denominator: 2 }))
+  it('negative numerator only: -1/2 stays -1/2', () =>
+    expect(normalizeFraction(-1, 2)).toEqual({ numerator: -1, denominator: 2 }))
 })
 
 describe('isFractionEqual', () => {

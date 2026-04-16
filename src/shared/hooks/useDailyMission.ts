@@ -9,7 +9,7 @@ function getTodayString(): string {
   return `${year}-${month}-${day}`
 }
 
-export const DAILY_PROBLEM_GOAL = 5
+export const DAILY_PROBLEM_GOAL = 20
 
 export async function recordMissionProblemSolved(userId: string): Promise<void> {
   const profile = await db.userProfile.get(userId)

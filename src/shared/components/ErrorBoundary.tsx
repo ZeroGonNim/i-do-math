@@ -33,7 +33,7 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div className="flex h-screen flex-col items-center justify-center gap-4 p-6"
-             style={{ backgroundColor: '#0c0c1f' }}>
+             style={{ backgroundColor: '#0f172a' }}>
           <div className="text-5xl">😵</div>
           <h2 className="text-xl font-bold" style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}>앗, 문제가 생겼어요!</h2>
           <p className="text-sm text-center" style={{ color: '#aaa8c3' }}>{this.state.message}</p>
@@ -41,7 +41,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <button
               onClick={this.handleRetry}
               className="w-full min-h-[48px] font-bold -translate-y-1"
-              style={{ backgroundColor: '#81ecff', color: '#0c0c1f', fontFamily: 'var(--font-game)', border: '2px solid #005762' }}
+              style={{ backgroundColor: '#38bdf8', color: '#0f172a', fontFamily: 'var(--font-game)', border: '2px solid #005762' }}
             >
               다시 시도
             </button>

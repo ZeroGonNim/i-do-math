@@ -37,11 +37,13 @@ export function useOnboarding() {
         missionProblemsSolved: 0,
         missionWrongReviewed: false,
         unlockedDifficulty: 'basic',
+        currentSemester: 1,
+        difficultyMode: 'auto',
       })
       navigate('/home', { replace: true })
     } catch (error) {
       console.error('Failed to complete onboarding:', error)
-      alert('시작하는 중에 문제가 생겼어. 다시 한번 눌러봐!')
+      throw error
     }
   }
 

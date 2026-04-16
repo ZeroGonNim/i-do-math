@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { GamepadIcon, PersonIcon } from '@/shared/components/PixelIcons'
 
 interface Props {
   title: string
@@ -38,35 +39,36 @@ export function PinInputModal({
   const displayHeader = headerTitle ?? title
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#0c0c1f' }}>
+    <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#0f172a' }}>
 
       {/* AppHeader */}
       <div
-        className="shrink-0 flex items-center justify-between px-6 h-16"
-        style={{ backgroundColor: '#0c0c1f', borderBottom: '1px solid #1c1c3a' }}
+        className="shrink-0 flex items-center justify-between px-4 h-16"
+        style={{ backgroundColor: 'rgba(12,12,31,0.6)', borderBottom: '1px solid #1c1c3a', boxShadow: '0 4px 0 rgba(6,6,20,1)', backdropFilter: 'blur(24px)' }}
       >
-        <div className="flex items-center gap-3">
-          {showBack && (
-            <button
-              onClick={onCancel}
-              className="text-xl leading-none"
-              style={{ color: '#e5e3ff' }}
-            >
-              ←
-            </button>
-          )}
+        {showBack ? (
+          <button
+            onClick={onCancel}
+            className="w-8 h-8 flex items-center justify-center transition-all active:opacity-60 active:scale-95 text-base font-bold shrink-0"
+            style={{ color: '#aaa8c3', backgroundColor: '#17172f', border: '1px solid #23233f' }}
+          >‹</button>
+        ) : (
+          <div className="w-8 h-8 shrink-0" />
+        )}
+        <div className="flex items-center gap-2">
+          <GamepadIcon color="#38bdf8" size={18} />
           <span
             className="text-xl font-medium"
-            style={{ color: '#e5e3ff', fontFamily: 'var(--font-sans)' }}
+            style={{ color: '#38bdf8', fontFamily: 'var(--font-sans)', letterSpacing: '0.05em' }}
           >
             {displayHeader}
           </span>
         </div>
         <div
-          className="w-10 h-10 flex items-center justify-center"
-          style={{ backgroundColor: '#1d1d37', border: '1.5px solid #23233f' }}
+          className="w-8 h-8 flex items-center justify-center overflow-hidden shrink-0"
+          style={{ backgroundColor: '#1d1d37', border: '1.5px solid #38bdf8' }}
         >
-          <span style={{ fontSize: '20px' }}>👤</span>
+          <PersonIcon color="#38bdf8" size={16} />
         </div>
       </div>
 
@@ -90,7 +92,7 @@ export function PinInputModal({
         <div className="text-center">
           <h2
             className="text-2xl font-bold mb-2"
-            style={{ color: '#81ecff', fontFamily: 'var(--font-sans)', letterSpacing: '-0.5px' }}
+            style={{ color: '#38bdf8', fontFamily: 'var(--font-sans)', letterSpacing: '-0.5px' }}
           >
             {displayHeader}
           </h2>
@@ -112,8 +114,8 @@ export function PinInputModal({
                 width: '64px',
                 height: '64px',
                 backgroundColor: '#000',
-                border: `2px solid ${i === pin.length ? '#81ecff' : '#23233f'}`,
-                boxShadow: i === pin.length ? '0 0 8px rgba(129,236,255,0.4)' : 'none',
+                border: `2px solid ${i === pin.length ? '#38bdf8' : '#23233f'}`,
+                boxShadow: i === pin.length ? '0 0 8px rgba(56,189,248,0.4)' : 'none',
               }}
             >
               {i < pin.length && (
@@ -121,7 +123,7 @@ export function PinInputModal({
                   style={{
                     width: '16px',
                     height: '16px',
-                    backgroundColor: '#81ecff',
+                    backgroundColor: '#38bdf8',
                     transform: 'rotate(45deg)',
                   }}
                 />
@@ -131,7 +133,7 @@ export function PinInputModal({
                   style={{
                     width: '8px',
                     height: '2px',
-                    backgroundColor: '#46465c',
+                    backgroundColor: '#64748b',
                   }}
                 />
               )}

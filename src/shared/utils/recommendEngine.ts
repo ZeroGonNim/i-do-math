@@ -16,6 +16,7 @@ interface Params {
   unit?: string
   concept: string
   currentDifficulty: Difficulty
+  difficultyMode?: 'auto' | 'manual'
   currentId: string
   isCorrect: boolean
   recentIds: string[]
@@ -24,11 +25,19 @@ interface Params {
   timeSpent?: number
 }
 
+function shuffle<T>(array: T[]): T[] {
+  const result = [...array]
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[result[i], result[j]] = [result[j], result[i]]
+  }
+  return result
+}
+
 export function selectRecommendedProblem(params: Params): Problem | null {
-  const { unit, concept, currentDifficulty, currentId, isCorrect, recentIds, pool, avgTimeSpent, timeSpent } = params
+  const { unit, concept, currentDifficulty, difficultyMode = 'auto', currentId, isCorrect, recentIds, pool, avgTimeSpent, timeSpent } = params
   
-  // 강력한 제외 목록: 현재 문제 + 최근 학습 이력 전체
-  // 이 이력에 포함된 문제는 절대 뽑지 않는 것을 원칙으로 함
+  // 강력한 제외 목록: 현재 문제 + 최근 학습 이력 전체 (최대 100개)
   const excludeIds = new Set([...recentIds, currentId])
 
   // 1. 같은 개념(concept) 내에서 안 푼 문제 찾기
@@ -40,18 +49,31 @@ export function selectRecommendedProblem(params: Params): Problem | null {
   }
 
   // 3. 만약 모든 문제를 다 풀었다면? 
-  // 그나마 가장 오래전에 풀었던 문제(recentIds의 앞부분)부터 다시 허용하되, 최소 최근 10개는 절대 보호
+  // 그나마 가장 오래전에 풀었던 문제(recentIds의 앞부분)부터 다시 허용하되, 최소 최근 20개는 절대 보호
   if (available.length === 0) {
-    const safeZoneCount = Math.min(recentIds.length, 10)
-    const safeExcludeIds = new Set([...recentIds.slice(0, safeZoneCount), currentId])
+    const safeZoneCount = Math.min(recentIds.length, 20)
+    const safeExcludeIds = new Set([...recentIds.slice(recentIds.length - safeZoneCount), currentId])
     available = pool.filter(p => !safeExcludeIds.has(p.id))
   }
 
-  // 4. 마지막 보루: 현재 문제만 제외 (정말 풀이 없을 때)
+  // 4. 마지막 보루: 현재 문제만 제외
   if (available.length === 0) {
     available = pool.filter(p => p.id !== currentId)
   }
 
+  // [Manual Mode] 수동 모드인 경우 현재 난이도만 고집
+  if (difficultyMode === 'manual') {
+    const candidates = available.filter(p => p.difficulty === currentDifficulty)
+    if (candidates.length > 0) {
+      const shuffled = shuffle(candidates)
+      return shuffled[0]
+    }
+    // 해당 난이도 문제가 바닥났을 때만 전체에서 섞어 반환
+    const shuffled = shuffle(available)
+    return shuffled[0]
+  }
+
+  // [Auto Mode] 기존 추천 로직 수행
   const isHard = timeSpent != null && avgTimeSpent != null && timeSpent > avgTimeSpent * 2
   const isFast = timeSpent != null && avgTimeSpent != null && timeSpent <= avgTimeSpent * 1.5
 
@@ -68,13 +90,15 @@ export function selectRecommendedProblem(params: Params): Problem | null {
   for (const d of priorities) {
     const candidates = available.filter(p => p.difficulty === d)
     if (candidates.length > 0) {
-      return candidates[Math.floor(Math.random() * candidates.length)]
+      const shuffled = shuffle(candidates)
+      return shuffled[0]
     }
   }
 
-  // 난이도 상관없이 선택
+  // 난이도 상관없이 무작위 섞어서 선택
   if (available.length > 0) {
-    return available[Math.floor(Math.random() * available.length)]
+    const shuffled = shuffle(available)
+    return shuffled[0]
   }
 
   return null

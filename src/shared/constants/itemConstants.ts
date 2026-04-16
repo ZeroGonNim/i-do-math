@@ -3,7 +3,7 @@ import type { Item } from '@/types/item'
 export const RARITY_COLOR: Record<Item['rarity'], string> = {
   common: '#a8a29e',
   rare:   '#60a5fa',
-  epic:   '#a855f7',
+  epic:   '#8b5cf6',
   legend: '#f59e0b',
 }
 

@@ -1,15 +1,34 @@
 import { db } from './db'
 import type { LearningLog } from '@/types/learningLog'
+import { supabase, isSupabaseConfigured } from '../lib/supabase'
 
 export const learningLogRepo = {
   async add(log: LearningLog): Promise<void> {
     await db.learningLogs.add(log)
+
+    // Cloud Sync (Safe Guard)
+    if (isSupabaseConfigured() && supabase) {
+      try {
+        await supabase.from('learning_logs').insert({
+          user_id: log.userId,
+          problem_id: log.problemId,
+          concept: log.concept,
+          difficulty: log.difficulty,
+          is_correct: log.isCorrect,
+          time_spent: log.timeSpent,
+          hint_used: log.hintUsed,
+          timestamp: new Date(log.timestamp).toISOString()
+        })
+      } catch (err) {
+        console.error('Supabase log sync failed:', err)
+      }
+    }
   },
   async getRecentByUser(userId: string, limit: number): Promise<LearningLog[]> {
-    return db.learningLogs
+    const logs = await db.learningLogs
       .where('userId').equals(userId)
-      .reverse().sortBy('timestamp')
-      .then(logs => logs.slice(0, limit))
+      .toArray()
+    return logs.sort((a, b) => b.timestamp - a.timestamp).slice(0, limit)
   },
   async getRecentTimeSpent(userId: string, count = 20): Promise<number[]> {
     const logs = await learningLogRepo.getRecentByUser(userId, count)
@@ -19,15 +38,22 @@ export const learningLogRepo = {
     const logs = await learningLogRepo.getRecentByUser(userId, count)
     return logs.map(l => l.problemId)
   },
+  async getRecentConcepts(userId: string, count = 10): Promise<string[]> {
+    const logs = await learningLogRepo.getRecentByUser(userId, count)
+    return logs.map(l => l.concept)
+  },
   async getRecentForUnlockCheck(
     userId: string,
     concept: string,
     limit = 20
   ): Promise<{ isCorrect: boolean }[]> {
-    return db.learningLogs
+    const logs = await db.learningLogs
       .where('userId').equals(userId)
       .filter(l => l.concept === concept)
-      .reverse().sortBy('timestamp')
-      .then(logs => logs.slice(0, limit).map(l => ({ isCorrect: l.isCorrect })))
+      .toArray()
+    return logs
+      .sort((a, b) => b.timestamp - a.timestamp)
+      .slice(0, limit)
+      .map(l => ({ isCorrect: l.isCorrect }))
   },
 }

@@ -173,6 +173,7 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
             <div className="shrink-0 h-[420px] px-4 pb-4">
               <DrawProblem
                 referenceImage={isDrawAnswer(problem.answer) ? getAssetPath(problem.answer.referenceImage) : ''}
+                referenceText={isTextAnswer(problem.answer) ? problem.answer.text : undefined}
                 onSelfAssess={handleHandwritingAssess}
               />
             </div>

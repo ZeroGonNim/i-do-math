@@ -20,6 +20,8 @@ const mockProfile: UserProfile = {
   totalStars: 0,
   totalXP: 0,
   noDropStreak: 0,
+  currentSemester: 1,
+  difficultyMode: 'manual',
   currentStreak: 0,
   longestStreak: 0,
   lastStudyDate: '2026-03-31',

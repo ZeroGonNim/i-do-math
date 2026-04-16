@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { LEVEL_TITLES } from '@/types/user'
+import { MedalIcon, BoxIcon } from '@/shared/components/PixelIcons'
 
 interface Props {
   newLevel: number
@@ -69,7 +70,7 @@ export function LevelUpModal({ newLevel, onClose, hasBox, onOpenBox }: Props) {
               boxShadow: '0 0 32px rgba(255,231,146,0.4)',
             }}
           >
-            <span style={{ fontSize: '48px', lineHeight: 1 }}>🎖️</span>
+            <MedalIcon color="#5b4b00" size={56} />
           </div>
 
           {/* 업적 달성! label */}
@@ -114,7 +115,7 @@ export function LevelUpModal({ newLevel, onClose, hasBox, onOpenBox }: Props) {
           <div className="flex w-full gap-3 mb-6">
             <div
               className="flex-1 flex flex-col items-center py-4"
-              style={{ backgroundColor: '#17172f', border: '1px solid #46465c' }}
+              style={{ backgroundColor: '#17172f', border: '1px solid #64748b' }}
             >
               <span
                 className="text-[10px] font-bold mb-2"
@@ -124,14 +125,14 @@ export function LevelUpModal({ newLevel, onClose, hasBox, onOpenBox }: Props) {
               </span>
               <span
                 className="text-base font-medium text-center"
-                style={{ color: '#81ecff', fontFamily: 'var(--font-sans)' }}
+                style={{ color: '#38bdf8', fontFamily: 'var(--font-sans)' }}
               >
                 {title}
               </span>
             </div>
             <div
               className="flex-1 flex flex-col items-center py-4"
-              style={{ backgroundColor: '#17172f', border: '1px solid #46465c' }}
+              style={{ backgroundColor: '#17172f', border: '1px solid #64748b' }}
             >
               <span
                 className="text-[10px] font-bold mb-2"
@@ -164,7 +165,8 @@ export function LevelUpModal({ newLevel, onClose, hasBox, onOpenBox }: Props) {
                   letterSpacing: '2px',
                 }}
               >
-                📦 레벨업 박스 열기
+                <BoxIcon color="#5b4b00" size={22} />
+                레벨업 박스 열기
               </button>
               <button
                 onClick={handleClose}
@@ -191,14 +193,6 @@ export function LevelUpModal({ newLevel, onClose, hasBox, onOpenBox }: Props) {
               계속하기 →
             </button>
           )}
-
-          {/* Share link */}
-          <button
-            className="mt-4 mb-2 flex items-center gap-1 text-sm font-medium"
-            style={{ color: '#aaa8c3', fontFamily: 'var(--font-sans)', letterSpacing: '0.7px' }}
-          >
-            공유하기
-          </button>
         </div>
       </div>
     </div>

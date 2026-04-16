@@ -6,7 +6,12 @@ export function gcd(a: number, b: number): number {
 
 export function normalizeFraction(numerator: number, denominator: number): FractionAnswer {
   const d = gcd(numerator, denominator)
-  return { numerator: numerator / d, denominator: denominator / d }
+  const n = numerator / d
+  const den = denominator / d
+  // 분모가 음수이면 부호를 분자로 이동 (-3/-6 → 1/2)
+  return den < 0
+    ? { numerator: -n, denominator: -den }
+    : { numerator: n, denominator: den }
 }
 
 export function isFractionEqual(a: FractionAnswer, b: FractionAnswer): boolean {

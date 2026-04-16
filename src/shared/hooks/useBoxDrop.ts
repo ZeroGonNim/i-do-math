@@ -36,7 +36,7 @@ export function useBoxDrop(isCorrect: boolean): UseBoxDropResult {
       }
     }
 
-    processBoxDrop()
+    processBoxDrop().catch(err => console.error('박스 드롭 처리 오류:', err))
   }, [isCorrect, profile])
 
   return { boxDropped }

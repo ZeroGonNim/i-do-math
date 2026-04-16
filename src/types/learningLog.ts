@@ -4,6 +4,7 @@ export interface LearningLog {
   logId: string
   userId: string
   grade: number
+  semester: 1 | 2
   problemId: string
   concept: string
   difficulty: Difficulty // 난이도 필드 추가

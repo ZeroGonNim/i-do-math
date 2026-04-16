@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react'
+import { StarIcon } from '@/shared/components/PixelIcons'
+import { useTheme } from '@/shared/hooks/useTheme'
 
 interface Props {
   stars: number
@@ -11,7 +13,7 @@ interface Particle {
   rotation: number; rotSpeed: number; alpha: number
 }
 
-const COLORS = ['#81ecff', '#ffe792', '#c180ff', '#ff716c', '#69DB7C', '#FF922B']
+const COLORS = ['#38bdf8', '#ffe792', '#8b5cf6', '#ff716c', '#69DB7C', '#FF922B']
 
 function createParticles(w: number, h: number): Particle[] {
   return Array.from({ length: 70 }, (_, i) => {
@@ -35,8 +37,15 @@ function createParticles(w: number, h: number): Particle[] {
 export function CorrectOverlay({ stars, onDone }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const rafRef = useRef<number>(0)
+  const theme = useTheme()
 
-  // Run confetti animation (decorative only, doesn't auto-close)
+  // Auto-close after 1 second
+  useEffect(() => {
+    const timer = setTimeout(onDone, 1000)
+    return () => clearTimeout(timer)
+  }, [onDone])
+
+  // Run confetti animation
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
@@ -90,7 +99,7 @@ export function CorrectOverlay({ stars, onDone }: Props) {
   return (
     <div
       className="fixed inset-0 z-40 flex items-center justify-center"
-      style={{ backgroundColor: 'rgba(0,255,136,0.07)' }}
+      style={{ backgroundColor: 'rgba(12,12,31,0.85)', backdropFilter: 'blur(8px)' }}
     >
       {/* Confetti canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" />
@@ -100,9 +109,9 @@ export function CorrectOverlay({ stars, onDone }: Props) {
         className="relative z-10 flex flex-col items-center mx-6"
         style={{
           width: '342px',
-          backgroundColor: '#0c0c1f',
-          border: '2px solid #81ecff',
-          boxShadow: '0 0 40px rgba(129,236,255,0.3)',
+          backgroundColor: '#0f172a',
+          border: `2px solid ${theme.primary}`,
+          boxShadow: `0 0 40px ${theme.primary}40`,
           animation: 'correctPop 0.4s cubic-bezier(0.34,1.56,0.64,1) forwards',
         }}
       >
@@ -110,7 +119,7 @@ export function CorrectOverlay({ stars, onDone }: Props) {
         <div
           className="w-full h-2"
           style={{
-            background: 'repeating-linear-gradient(90deg, #81ecff 0px, #81ecff 8px, transparent 8px, transparent 16px)',
+            background: `repeating-linear-gradient(90deg, ${theme.primary} 0px, ${theme.primary} 8px, transparent 8px, transparent 16px)`,
             opacity: 0.3,
           }}
         />
@@ -122,13 +131,13 @@ export function CorrectOverlay({ stars, onDone }: Props) {
             style={{
               width: '128px',
               height: '128px',
-              backgroundColor: '#81ecff',
+              backgroundColor: theme.primary,
             }}
           >
             <svg width="64" height="52" viewBox="0 0 64 52" fill="none">
               <path
                 d="M4 26L22 44L60 6"
-                stroke="#005762"
+                stroke="#000"
                 strokeWidth="10"
                 strokeLinecap="square"
                 strokeLinejoin="miter"
@@ -138,8 +147,8 @@ export function CorrectOverlay({ stars, onDone }: Props) {
 
           {/* 정답! text */}
           <p
-            className="text-5xl font-medium text-center"
-            style={{ color: '#81ecff', fontFamily: 'var(--font-sans)', lineHeight: '48px' }}
+            className="text-5xl font-black text-center"
+            style={{ color: theme.primary, fontFamily: 'var(--font-sans)', lineHeight: '48px' }}
           >
             정답!
           </p>
@@ -149,7 +158,7 @@ export function CorrectOverlay({ stars, onDone }: Props) {
             className="w-full flex items-center justify-center gap-3 py-4"
             style={{ backgroundColor: '#ffe792' }}
           >
-            <span className="text-2xl">⭐</span>
+            <StarIcon color="#655400" size={24} />
             <span
               className="text-2xl font-bold"
               style={{ color: '#655400', fontFamily: 'var(--font-game)' }}
@@ -157,29 +166,13 @@ export function CorrectOverlay({ stars, onDone }: Props) {
               +{stars}별 획득!
             </span>
           </div>
-
-          {/* 다음 문제 button */}
-          <button
-            onClick={onDone}
-            className="flex items-center justify-center font-medium text-xl transition-all active:scale-[0.97]"
-            style={{
-              width: '238px',
-              height: '60px',
-              backgroundColor: '#81ecff',
-              color: '#005762',
-              fontFamily: 'var(--font-sans)',
-              letterSpacing: '2px',
-            }}
-          >
-            다음 문제
-          </button>
         </div>
 
         {/* Bottom pixel strip */}
         <div
           className="w-full h-2"
           style={{
-            background: 'repeating-linear-gradient(90deg, #81ecff 0px, #81ecff 8px, transparent 8px, transparent 16px)',
+            background: `repeating-linear-gradient(90deg, ${theme.primary} 0px, ${theme.primary} 8px, transparent 8px, transparent 16px)`,
             opacity: 0.3,
           }}
         />

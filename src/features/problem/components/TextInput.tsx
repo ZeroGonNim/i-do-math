@@ -14,7 +14,7 @@ export function TextInput({ value, onChange, isDescriptive }: Props) {
           border: '2px solid #23233f',
           color: '#e5e3ff',
           minHeight: isDescriptive ? '140px' : '80px',
-          caretColor: '#81ecff',
+          caretColor: '#38bdf8',
         }}
         value={value}
         onChange={e => onChange(e.target.value)}

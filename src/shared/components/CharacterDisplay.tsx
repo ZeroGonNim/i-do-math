@@ -1,5 +1,6 @@
 import { AVATARS } from '@/types/avatar'
 import type { AvatarId } from '@/types/avatar'
+import { BoxIcon } from '@/shared/components/PixelIcons'
 
 interface EquippedSlots {
   hat?: string      // item imagePath
@@ -51,14 +52,14 @@ export function CharacterDisplay({
       {/* 박스 뱃지 */}
       {boxCount > 0 && (
         <span
-          className="absolute top-2.5 right-3 text-xs font-bold px-2 py-0.5"
+          className="absolute top-2.5 right-3 flex items-center gap-1 text-xs font-bold px-2 py-0.5"
           style={{
-            backgroundColor: '#c180ff',
+            backgroundColor: '#8b5cf6',
             color: '#fff',
-            boxShadow: '0 0 12px rgba(193,128,255,0.5)',
+            boxShadow: '0 0 12px rgba(139,92,246,0.5)',
           }}
         >
-          📦 {boxCount}
+          <BoxIcon color="#fff" size={12} /> {boxCount}
         </span>
       )}
 
@@ -105,7 +106,7 @@ export function CharacterDisplay({
       {showHint && (
         <p
           className="absolute bottom-2 right-3 text-[10px] font-medium"
-          style={{ color: '#46465c' }}
+          style={{ color: '#64748b' }}
         >
           인벤토리 →
         </p>

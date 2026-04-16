@@ -94,9 +94,7 @@ export function useProblemSession(problem: Problem) {
     if (activeField === 'numerator') {
       setNumerator(n => {
         if (n.length >= MAX_FRACTION_LENGTH) return n
-        const next = n + key
-        if (next.length === 1) setActiveField('denominator')
-        return next
+        return n + key
       })
     } else {
       setDenominator(d => (d.length >= MAX_FRACTION_LENGTH ? d : d + key))

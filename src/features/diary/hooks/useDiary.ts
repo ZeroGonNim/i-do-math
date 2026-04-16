@@ -43,10 +43,12 @@ function groupByDate(logs: LearningLog[]): DiaryDay[] {
 export function useDiary(userId: string | undefined) {
   return useLiveQuery(async () => {
     if (!userId) return []
-    const logs = await db.learningLogs
+    const all = await db.learningLogs
       .where('userId').equals(userId)
-      .reverse().sortBy('timestamp')
-      .then(all => all.slice(0, 500)) // 기록 제한 상향
+      .toArray()
+    const logs = all
+      .sort((a, b) => b.timestamp - a.timestamp)
+      .slice(0, 500) // 기록 제한 상향
     return groupByDate(logs)
   }, [userId], [])
 }

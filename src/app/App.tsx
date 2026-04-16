@@ -6,10 +6,10 @@ import { ProblemRoute } from './routes/problem'
 import { ResultRoute } from './routes/result'
 import { RemindRoute } from './routes/remind'
 import { DiaryRoute } from './routes/diary'
+import { DiaryDetailRoute } from './routes/diary-detail'
 import { ParentRoute } from './routes/parent'
 import { SettingsRoute } from './routes/settings'
 import { BoxOpenRoute } from './routes/box-open'
-import { InventoryRoute } from './routes/inventory'
 import { StatsRoute } from './routes/stats'
 import { ErrorBoundary } from '@/shared/components/ErrorBoundary'
 
@@ -24,10 +24,10 @@ export function App() {
         <Route path="/result" element={<ResultRoute />} />
         <Route path="/remind" element={<RemindRoute />} />
         <Route path="/diary" element={<DiaryRoute />} />
+        <Route path="/diary/:date" element={<DiaryDetailRoute />} />
         <Route path="/parent" element={<ParentRoute />} />
         <Route path="/settings" element={<SettingsRoute />} />
         <Route path="/box-open" element={<BoxOpenRoute />} />
-        <Route path="/inventory" element={<InventoryRoute />} />
         <Route path="/stats" element={<StatsRoute />} />
       </Routes>
     </ErrorBoundary>

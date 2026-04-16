@@ -21,6 +21,12 @@ export async function loadProblems(): Promise<ProblemsData> {
   return cache
 }
 
+/** 특정 학기 및 학년의 문제만 필터링하여 가져오기 */
+export async function getSemesterProblems(grade: number, semester: 1 | 2): Promise<Problem[]> {
+  const data = await loadProblems()
+  return data.problems.filter(p => p.grade === grade && p.semester === semester)
+}
+
 export async function getProblemsByFilter(params: {
   grade: number
   concept?: string

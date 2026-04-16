@@ -11,7 +11,7 @@ export function SubmitFeedback({ isCorrect }: Props) {
     <div className="fixed inset-0 z-50 flex items-center justify-center pointer-events-none">
       <div
         className="w-32 h-32 flex items-center justify-center shadow-2xl"
-        style={{ backgroundColor: isCorrect ? '#22c55e' : '#ff716c', animation: 'submitPop 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards' }}
+        style={{ backgroundColor: isCorrect ? '#10b981' : '#ff716c', animation: 'submitPop 0.35s cubic-bezier(0.34,1.56,0.64,1) forwards' }}
       >
         <span className="text-6xl text-white font-black">
           {isCorrect ? '✓' : '✗'}

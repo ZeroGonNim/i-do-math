@@ -6,6 +6,7 @@ const makeLog = (isCorrect: boolean): LearningLog => ({
   logId: 'x',
   userId: 'u',
   grade: 4,
+  semester: 1,
   problemId: 'p',
   concept: 'c',
   difficulty: 'basic',
@@ -33,9 +34,10 @@ describe('canUnlockNextDifficulty', () => {
   })
 
   it('returns false when recent 5 have fewer than 4 correct', () => {
+    // newest-first: 앞 5개가 최근 → 오답, 뒤 15개 → 정답
     const logs = [
-      ...(Array(15).fill(makeLog(true)) as LearningLog[]),
       ...(Array(5).fill(makeLog(false)) as LearningLog[]),
+      ...(Array(15).fill(makeLog(true)) as LearningLog[]),
     ]
     expect(canUnlockNextDifficulty(logs)).toBe(false)
   })

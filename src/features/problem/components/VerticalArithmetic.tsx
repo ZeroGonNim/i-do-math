@@ -14,9 +14,9 @@ export function VerticalArithmetic({ expression, steps, result, className = '' }
   const hasSteps = steps && steps.length > 0
 
   return (
-    <div className={`px-5 py-4 ${className}`} style={{ border: '1px solid #c180ff', backgroundColor: '#000' }}>
+    <div className={`px-5 py-4 ${className}`} style={{ border: '1px solid #8b5cf6', backgroundColor: '#000' }}>
       {/* 수식 헤더 */}
-      <div className="border-b border-[#46465c] pb-2 text-right font-sans text-lg text-[#e5e3ff]">
+      <div className="border-b border-[#64748b] pb-2 text-right font-sans text-lg text-[#e5e3ff]">
         {expression}
       </div>
 
@@ -28,7 +28,7 @@ export function VerticalArithmetic({ expression, steps, result, className = '' }
               key={i}
               className={`flex items-center justify-between gap-2 py-0.5 text-sm ${
                 i === steps.length - 1
-                  ? 'border-b border-[#46465c] pb-2'
+                  ? 'border-b border-[#64748b] pb-2'
                   : ''
               }`}
             >
@@ -44,7 +44,7 @@ export function VerticalArithmetic({ expression, steps, result, className = '' }
       )}
 
       {/* 최종 정답 */}
-      <div className={`text-right font-game text-xl font-bold text-[#81ecff] ${hasSteps ? 'mt-2' : 'mt-2 border-t border-[#46465c] pt-2'}`}>
+      <div className={`text-right font-game text-xl font-bold text-[#38bdf8] ${hasSteps ? 'mt-2' : 'mt-2 border-t border-[#64748b] pt-2'}`}>
         {result}
       </div>
     </div>

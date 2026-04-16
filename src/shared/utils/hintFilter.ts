@@ -14,26 +14,23 @@ export function filterHintText(text: string): string {
   const sentences = text.split(/[.!?]\s+/)
   
   const filteredSentences = sentences.filter(s => {
-    // 1. 정답이나 답이라는 직접적인 언급이 있는 문장 제외
-    if (/(정답|답|결과)은?\s*[:=]?\s*/.test(s)) return false
-    
-    // 2. 부등호와 숫자가 결합되어 정답을 알려주는 문장 제외 (예: 361 < 363)
-    if (/[\d,]+\s*[<>=]\s*[\d,]+/.test(s)) return false
-    
-    // 3. 문장 자체가 특정 숫자로 끝나는 경우 (예: "결과는 123입니다.")
-    if (/\d+(번|입니다|예요|가|이|개|원|분|cm|도|°)$/.test(s.trim())) return false
+    // 1. 정답이나 답이라는 직접적인 언급이 있는 문장 제외 (너무 노골적인 경우만)
+    if (/(정답|답)은?\s*[:=]?\s*\d+/.test(s)) return false
+
+    // 2. 필터링 로직 완화: 단순히 숫자가 있다고 지우지 않고, 너무 짧은 정답 문장만 제외
+    if (s.trim().length < 5 && /\d+/.test(s)) return false
 
     return true
   })
 
   let result = filteredSentences.join('. ')
-    // 4. 남아있는 객관식 번호 및 기호 개별 제거
+    // 3. 수식 내의 최종 결과값 등을 '?'로 부드럽게 마스킹 (선택적)
+    .replace(/=\s*\d+/g, '= ?')
     .replace(/[①②③④⑤ㄱㄴㄷㄹ]/g, '')
     .trim()
-
   // 만약 필터링 후 너무 짧아지거나 알맹이가 없으면 기본 가이드로 대체
   if (result.length < 10) {
-    return '천천히 원리를 생각해보자! 그림이나 식을 다시 한번 살펴보면 답을 찾을 수 있을 거야.'
+    return '문제의 풀이 단계를 차근차근 읽어보세요. 각 계산 과정을 다시 한번 확인하면 스스로 정답을 찾을 수 있습니다.'
   }
 
   // 문장 끝에 마침표 보정

@@ -1,3 +1,4 @@
+
 interface Props {
   choices?: string[]
   choiceImages?: string[]
@@ -26,8 +27,8 @@ export function MultipleChoiceInput({ choices, choiceImages, selected, onSelect 
               className="flex flex-col items-center gap-2 p-3 transition-all active:scale-[0.96]"
               style={{
                 backgroundColor: isSelected ? '#0d1f2a' : '#1d1d37',
-                border: `2px solid ${isSelected ? '#81ecff' : '#23233f'}`,
-                boxShadow: isSelected ? '0 0 12px rgba(129,236,255,0.2)' : 'none',
+                border: `2px solid ${isSelected ? '#38bdf8' : '#23233f'}`,
+                boxShadow: isSelected ? '0 0 12px rgba(56,189,248,0.2)' : 'none',
               }}
             >
               <div className="w-full aspect-square flex items-center justify-center overflow-hidden"
@@ -43,7 +44,7 @@ export function MultipleChoiceInput({ choices, choiceImages, selected, onSelect 
               </div>
               <span
                 className="text-base font-bold"
-                style={{ color: isSelected ? '#81ecff' : '#aaa8c3', fontFamily: 'var(--font-game)' }}
+                style={{ color: isSelected ? '#38bdf8' : '#aaa8c3', fontFamily: 'var(--font-game)' }}
               >
                 {LABELS[i]}
               </span>
@@ -67,13 +68,13 @@ export function MultipleChoiceInput({ choices, choiceImages, selected, onSelect 
             className="flex items-center gap-4 w-full min-h-[56px] px-5 py-3 text-left text-lg font-bold transition-all active:scale-[0.98]"
             style={{
               backgroundColor: isSelected ? '#0d1f2a' : '#1d1d37',
-              border: `2px solid ${isSelected ? '#81ecff' : '#23233f'}`,
-              boxShadow: isSelected ? '0 0 12px rgba(129,236,255,0.2)' : 'none',
+              border: `2px solid ${isSelected ? '#38bdf8' : '#23233f'}`,
+              boxShadow: isSelected ? '0 0 12px rgba(56,189,248,0.2)' : 'none',
             }}
           >
             <span
               className="text-xl font-bold shrink-0"
-              style={{ color: isSelected ? '#81ecff' : '#46465c', fontFamily: 'var(--font-game)' }}
+              style={{ color: isSelected ? '#38bdf8' : '#64748b', fontFamily: 'var(--font-game)' }}
             >
               {LABELS[i]}
             </span>

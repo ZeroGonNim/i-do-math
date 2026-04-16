@@ -55,9 +55,30 @@ export const CONCEPT_LABELS: Record<string, string> = {
   
   // 도형 및 데이터
   'plane-shape-movement': '평면도형의 이동',
+  shape_transformation: '도형 변환',
   'bar-graph': '막대그래프',
+  bar_graph_interpretation: '막대그래프 해석',
   'number-pattern': '수 배열의 규칙',
   pattern_find: '규칙 찾기',
+  pattern_recognition: '규칙 찾기',
+
+  // 2학기 추가 개념
+  fraction_addition: '분수의 덧셈',
+  triangle_angles: '삼각형의 각도',
+  decimal_addition: '소수의 덧셈',
+  line_graph_reading: '꺾은선그래프 해석',
+  polygon_definition: '다각형의 정의',
+  quadrilateral_property: '사각형의 성질',
+
+  // 각도 응용
+  angle_sum_application: '각도 응용',
+
+  // 큰 수 응용
+  big_number_application: '큰 수 응용',
+  big_number_step_count: '뛰어 세기',
+
+  // 곱셈과 나눗셈 응용
+  multiplication_division_application: '곱셈과 나눗셈 응용',
 }
 
 /**

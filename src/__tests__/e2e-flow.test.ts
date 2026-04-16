@@ -42,6 +42,8 @@ const mockProfile: UserProfile = {
   boxCount: 0,
   pittyCount: 0,
   noDropStreak: 0,
+  currentSemester: 1,
+  difficultyMode: 'manual',
 }
 
 const mockProblem: Problem = {
@@ -126,6 +128,7 @@ describe('학습 로그 저장', () => {
       logId: 'log-001',
       userId: TEST_USER_ID,
       grade: 4,
+      semester: 1,
       problemId: mockProblem.id,
       concept: mockProblem.concept,
       difficulty: 'basic',
@@ -147,6 +150,8 @@ describe('오답 노트', () => {
   it('3회 틀리면 isWeak=true', async () => {
     for (let i = 0; i < 3; i++) {
       await wrongNoteRepo.upsertWrong(TEST_USER_ID, mockProblem.concept, 'numerator_error', {
+        questionText: mockProblem.question,
+        correctAnswer: mockProblem.answer,
         lastWrongAnswer: { numerator: 4, denominator: 8 },
         replayData: { inputSequence: ['4', '/', '8'] },
       })
@@ -158,6 +163,8 @@ describe('오답 노트', () => {
   it('정답 2회 연속이면 isWeak 해제', async () => {
     for (let i = 0; i < 3; i++) {
       await wrongNoteRepo.upsertWrong(TEST_USER_ID, mockProblem.concept, 'numerator_error', {
+        questionText: mockProblem.question,
+        correctAnswer: mockProblem.answer,
         lastWrongAnswer: { numerator: 4, denominator: 8 },
         replayData: { inputSequence: [] },
       })
@@ -213,8 +220,8 @@ describe('일일 미션', () => {
     expect(result.isComplete).toBe(false)
   })
 
-  it('DAILY_PROBLEM_GOAL은 5', () => {
-    expect(DAILY_PROBLEM_GOAL).toBe(5)
+  it('DAILY_PROBLEM_GOAL은 20', () => {
+    expect(DAILY_PROBLEM_GOAL).toBe(20)
   })
 })
 
@@ -254,6 +261,8 @@ describe('스마트 리마인드', () => {
   it('약점 개념 있으면 가장 많이 틀린 것 반환', async () => {
     for (let i = 0; i < 3; i++) {
       await wrongNoteRepo.upsertWrong(TEST_USER_ID, 'fraction_add_same_denominator', 'numerator_error', {
+        questionText: 'Mock Question',
+        correctAnswer: { numerator: 5, denominator: 8 },
         lastWrongAnswer: { numerator: 4, denominator: 8 },
         replayData: { inputSequence: [] },
       })

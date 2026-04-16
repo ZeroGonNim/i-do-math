@@ -101,7 +101,7 @@ export function Scratchpad({ onClear }: Props) {
         onPointerDown={e => e.stopPropagation()}
         onClick={handleClear}
         className="absolute bottom-2 right-2 px-3 py-1 text-xs font-bold active:opacity-70"
-        style={{ backgroundColor: '#17172f', color: '#aaa8c3', border: '1px solid #46465c', fontFamily: 'var(--font-game)' }}
+        style={{ backgroundColor: '#17172f', color: '#aaa8c3', border: '1px solid #64748b', fontFamily: 'var(--font-game)' }}
       >
         지우기 🧹
       </button>

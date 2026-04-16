@@ -2,12 +2,13 @@ import React, { useState, useRef, useCallback, useEffect } from 'react'
 
 interface Props {
   referenceImage: string
+  referenceText?: string
   onSelfAssess: (isCorrect: boolean, drawingData?: string) => void
 }
 
 type Phase = 'drawing' | 'comparing'
 
-export function DrawProblem({ referenceImage, onSelfAssess }: Props) {
+export function DrawProblem({ referenceImage, referenceText, onSelfAssess }: Props) {
   const [phase, setPhase] = useState<Phase>('drawing')
   const [capturedImage, setCapturedImage] = useState<string | undefined>(undefined)
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -165,15 +166,21 @@ export function DrawProblem({ referenceImage, onSelfAssess }: Props) {
           <div className="flex-1 flex flex-col gap-1.5 min-h-0">
             <span
               className="text-xs font-bold text-center"
-              style={{ color: '#81ecff', fontFamily: 'var(--font-sans)' }}
+              style={{ color: '#38bdf8', fontFamily: 'var(--font-sans)' }}
             >
               정답
             </span>
             <div
-              className="flex-1 w-full overflow-hidden bg-white flex items-center justify-center"
-              style={{ border: '1px solid #81ecff' }}
+              className="flex-1 w-full overflow-hidden bg-white flex items-center justify-center p-3"
+              style={{ border: '1px solid #38bdf8' }}
             >
-              <img src={referenceImage} alt="정답 그림" className="max-w-full max-h-full object-contain" />
+              {referenceText ? (
+                <p className="text-base font-bold text-center break-all" style={{ color: '#1e293b', fontFamily: 'var(--font-sans)', whiteSpace: 'pre-wrap' }}>
+                  {referenceText}
+                </p>
+              ) : (
+                <img src={referenceImage} alt="정답 그림" className="max-w-full max-h-full object-contain" />
+              )}
             </div>
           </div>
         </div>
@@ -186,8 +193,8 @@ export function DrawProblem({ referenceImage, onSelfAssess }: Props) {
             style={{
               height: '60px',
               backgroundColor: 'transparent',
-              color: '#81ecff',
-              border: '2px solid #81ecff',
+              color: '#38bdf8',
+              border: '2px solid #38bdf8',
               fontFamily: 'var(--font-sans)',
               letterSpacing: '-0.5px',
             }}
@@ -199,7 +206,7 @@ export function DrawProblem({ referenceImage, onSelfAssess }: Props) {
             className="w-full flex items-center justify-center text-xl font-medium transition-all active:scale-[0.97]"
             style={{
               height: '60px',
-              backgroundColor: '#81ecff',
+              backgroundColor: '#38bdf8',
               color: '#005762',
               fontFamily: 'var(--font-sans)',
               letterSpacing: '-0.5px',
@@ -261,7 +268,7 @@ export function DrawProblem({ referenceImage, onSelfAssess }: Props) {
             className="w-full flex items-center justify-center text-xl font-medium transition-all active:opacity-80 -translate-y-1"
             style={{
               height: '60px',
-              backgroundColor: '#81ecff',
+              backgroundColor: '#38bdf8',
               color: '#003840',
               fontFamily: 'var(--font-sans)',
               letterSpacing: '-0.5px',
