@@ -7,7 +7,7 @@ import { userProfileRepo } from '@/shared/db/userProfileRepo'
 import { ConfirmModal } from '@/shared/components/ConfirmModal'
 import { PersonIcon, SwordIcon, LeafIcon, TreeIcon, AppleIcon, DiamondIcon, RocketIcon } from '@/shared/components/PixelIcons'
 
-const AVAILABLE_GRADES = new Set([4, 5])
+const AVAILABLE_GRADES = new Set([4, 5, 6])
 
 const STEP_LABELS = ['영웅 만들기', '학년 설정', '동료 선택']
 const STEP_NUMBERS = ['01단계', '02단계', '03단계']

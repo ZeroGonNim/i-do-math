@@ -16,7 +16,7 @@ import { AVATARS } from '@/types/avatar'
 import { isIntegerAnswer, isFractionAnswer, type Answer, type Problem } from '@/types/problem'
 import { loadProblems } from '@/shared/services/problemLoader'
 
-const AVAILABLE_GRADES = new Set([4, 5])
+const AVAILABLE_GRADES = new Set([4, 5, 6])
 
 function formatAnswer(answer?: Answer): string {
   if (!answer) return '—'
