@@ -19,16 +19,64 @@ const WORLDS = {
   2: { name: '신비의 던전', color: '#8b5cf6', bgColor: '#1d0c2d' },
 }
 
-// 4학년 1학기 교육과정 단원 (피그마 기준)
-const GRADE4_UNITS = [
-  { chapter: 1, unit: '큰 수' },
-  { chapter: 2, unit: '각도' },
-  { chapter: 3, unit: '곱셈과 나눗셈' },
-  { chapter: 4, unit: '평면도형의 이동' },
-  { chapter: 5, unit: '막대그래프' },
-  { chapter: 6, unit: '규칙 찾기' },
-  { chapter: 7, unit: '분수의 덧셈과 뺄셈' },
-]
+// 학년/학기별 단원 매핑
+const GRADE_UNITS: Record<number, Record<number, { chapter: number; unit: string }[]>> = {
+  4: {
+    1: [
+      { chapter: 1, unit: '큰 수' },
+      { chapter: 2, unit: '각도' },
+      { chapter: 3, unit: '곱셈과 나눗셈' },
+      { chapter: 4, unit: '평면도형의 이동' },
+      { chapter: 5, unit: '막대그래프' },
+      { chapter: 6, unit: '규칙 찾기' },
+      { chapter: 7, unit: '분수의 덧셈과 뺄셈' },
+    ],
+    2: [
+      { chapter: 1, unit: '분수의 덧셈과 뺄셈' },
+      { chapter: 2, unit: '삼각형' },
+      { chapter: 3, unit: '소수의 덧셈과 뺄셈' },
+      { chapter: 4, unit: '사각형' },
+      { chapter: 5, unit: '꺾은선그래프' },
+      { chapter: 6, unit: '다각형' },
+    ],
+  },
+  5: {
+    1: [
+      { chapter: 1, unit: '자연수의 혼합 계산' },
+      { chapter: 2, unit: '약수와 배수' },
+      { chapter: 3, unit: '규칙과 대응' },
+      { chapter: 4, unit: '약분과 통분' },
+      { chapter: 5, unit: '분수의 덧셈과 뺄셈' },
+      { chapter: 6, unit: '다각형의 둘레와 넓이' },
+    ],
+    2: [
+      { chapter: 1, unit: '수의 범위와 어림하기' },
+      { chapter: 2, unit: '분수의 곱셈' },
+      { chapter: 3, unit: '합동과 대칭' },
+      { chapter: 4, unit: '소수의 곱셈' },
+      { chapter: 5, unit: '직육면체' },
+      { chapter: 6, unit: '평균과 가능성' },
+    ],
+  },
+  6: {
+    1: [
+      { chapter: 1, unit: '분수의 나눗셈' },
+      { chapter: 2, unit: '각기둥과 각뿔' },
+      { chapter: 3, unit: '소수의 나눗셈' },
+      { chapter: 4, unit: '비와 비율' },
+      { chapter: 5, unit: '여러 가지 그래프' },
+      { chapter: 6, unit: '직육면체의 겉넓이와 부피' },
+    ],
+    2: [
+      { chapter: 1, unit: '분수의 나눗셈' },
+      { chapter: 2, unit: '소수의 나눗셈' },
+      { chapter: 3, unit: '공간과 입체' },
+      { chapter: 4, unit: '비례식과 비례배분' },
+      { chapter: 5, unit: '원의 넓이' },
+      { chapter: 6, unit: '원기둥, 원뿔, 구' },
+    ],
+  },
+}
 
 const DIFFICULTY_CHAPTER: Record<string, number> = {
   basic: 1,
@@ -125,7 +173,8 @@ export function HomeRoute() {
   const boxCount = profile?.boxCount ?? 0
   const missionPct = profile ? Math.min(100, (mission.problemsSolved / DAILY_PROBLEM_GOAL) * 100) : 0
   const chapterIdx = profile ? (DIFFICULTY_CHAPTER[profile.unlockedDifficulty] ?? 1) : 1
-  const dungeonUnit = GRADE4_UNITS.find(u => u.chapter === chapterIdx) ?? GRADE4_UNITS[0]
+  const gradeUnits = GRADE_UNITS[profile.grade]?.[profile.currentSemester ?? 1] ?? GRADE_UNITS[4][1]
+  const dungeonUnit = gradeUnits.find(u => u.chapter === chapterIdx) ?? gradeUnits[0]
   const hasStreak = profile ? profile.currentStreak > 0 : false
 
   return (
@@ -205,12 +254,12 @@ export function HomeRoute() {
               <button onClick={() => handleSwitchSemester(1)} className={`relative flex flex-col gap-1 p-5 border-4 transition-all active:scale-[0.98] ${profile.currentSemester === 1 ? 'border-[#10b981]' : 'border-[#23233f]'}`} style={{ backgroundColor: profile.currentSemester === 1 ? '#0c2d15' : '#17172f' }}>
                 <span className="text-xs font-black tracking-widest text-[#10b981]" style={{ fontFamily: 'var(--font-game)' }}>WORLD 01</span>
                 <h3 className="text-xl font-bold text-white mt-1">평원의 왕국</h3>
-                <p className="text-xs text-[#aaa8c3]">4학년 1학기 교육과정</p>
+                <p className="text-xs text-[#aaa8c3]">{profile.grade}학년 1학기 교육과정</p>
               </button>
               <button onClick={() => handleSwitchSemester(2)} className={`relative flex flex-col gap-1 p-5 border-4 transition-all active:scale-[0.98] ${profile.currentSemester === 2 ? 'border-[#8b5cf6]' : 'border-[#23233f]'}`} style={{ backgroundColor: profile.currentSemester === 2 ? '#1d0c2d' : '#17172f' }}>
                 <span className="text-xs font-black tracking-widest text-[#8b5cf6]" style={{ fontFamily: 'var(--font-game)' }}>WORLD 02</span>
                 <h3 className="text-xl font-bold text-white mt-1">신비의 던전</h3>
-                <p className="text-xs text-[#aaa8c3]">4학년 2학기 교육과정</p>
+                <p className="text-xs text-[#aaa8c3]">{profile.grade}학년 2학기 교육과정</p>
               </button>
             </div>
             <div className="px-5 pb-6"><button onClick={() => setShowWorldMap(false)} className="w-full py-3 text-sm font-bold text-[#aaa8c3] bg-[#17172f] border-2 border-[#23233f]">닫기</button></div>
