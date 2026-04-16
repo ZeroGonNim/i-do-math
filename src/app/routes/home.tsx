@@ -29,7 +29,6 @@ const GRADE_UNITS: Record<number, Record<number, { chapter: number; unit: string
       { chapter: 4, unit: '평면도형의 이동' },
       { chapter: 5, unit: '막대그래프' },
       { chapter: 6, unit: '규칙 찾기' },
-      { chapter: 7, unit: '분수의 덧셈과 뺄셈' },
     ],
     2: [
       { chapter: 1, unit: '분수의 덧셈과 뺄셈' },
