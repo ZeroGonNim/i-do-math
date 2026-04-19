@@ -138,6 +138,18 @@ fill=#FFF, stroke=#E0E0E0 1px, r=4
 | 불릿(·) / ※주석 | 364 | 28 |
 | 서브항목(N-1.) | 352 | 40 |
 
+### [CSS] 힌트 처리
+
+기획서 Description에 `[CSS]` 힌트 줄이 있으면:
+- `create_text`로 **그대로** 포함 (불릿 없이, 회색 `#888` 14px Regular)
+- 삭제·생략 금지 — 코드 생성 AI가 구현 구조를 읽는다
+
+```
+예시:
+ㆍ캐릭터 이미지 우측 배치
+[CSS] relative 컨테이너 / 캐릭터: absolute right:0 bottom:0
+```
+
 ### ⛔ Description 텍스트 처리 (HARD RULE)
 
 > Description 항목은 **기획서 원문을 그대로 복사**. 추론·요약·의역·재작성 절대 금지.

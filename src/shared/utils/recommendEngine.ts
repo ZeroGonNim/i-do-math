@@ -34,46 +34,52 @@ function shuffle<T>(array: T[]): T[] {
   return result
 }
 
+function calculateSkillSimilarity(p1: Problem, p2: Problem): number {
+  if (!p1.skills || !p2.skills) return 0
+  const set1 = new Set(p1.skills)
+  const set2 = new Set(p2.skills)
+  let intersect = 0
+  for (const s of set1) {
+    if (set2.has(s)) intersect++
+  }
+  return intersect / Math.max(set1.size, set2.size)
+}
+
 export function selectRecommendedProblem(params: Params): Problem | null {
   const { unit, concept, currentDifficulty, difficultyMode = 'auto', currentId, isCorrect, recentIds, pool, avgTimeSpent, timeSpent } = params
   
-  // 강력한 제외 목록: 현재 문제 + 최근 학습 이력 전체 (최대 100개)
   const excludeIds = new Set([...recentIds, currentId])
+  const currentProblem = pool.find(p => p.id === currentId)
 
   // 1. 같은 개념(concept) 내에서 안 푼 문제 찾기
   let available = pool.filter(p => p.concept === concept && !excludeIds.has(p.id))
 
-  // 2. 같은 단원(unit) 내에서 안 푼 문제 찾기
-  if (available.length === 0 && unit) {
-    available = pool.filter(p => p.unit === unit && !excludeIds.has(p.id))
+  // 2. [추가] 같은 단원(unit) 내에서 Skills 유사도가 높은 문제 찾기
+  if (available.length === 0 && currentProblem && unit) {
+    available = pool
+      .filter(p => p.unit === unit && !excludeIds.has(p.id))
+      .slice()
+      .sort((a, b) => calculateSkillSimilarity(currentProblem, b) - calculateSkillSimilarity(currentProblem, a))
   }
 
-  // 3. 만약 모든 문제를 다 풀었다면? 
-  // 그나마 가장 오래전에 풀었던 문제(recentIds의 앞부분)부터 다시 허용하되, 최소 최근 20개는 절대 보호
+  // 3. 만약 모든 문제를 다 풀었다면?
   if (available.length === 0) {
     const safeZoneCount = Math.min(recentIds.length, 20)
     const safeExcludeIds = new Set([...recentIds.slice(recentIds.length - safeZoneCount), currentId])
     available = pool.filter(p => !safeExcludeIds.has(p.id))
   }
 
-  // 4. 마지막 보루: 현재 문제만 제외
+  // 4. 마지막 보루
   if (available.length === 0) {
     available = pool.filter(p => p.id !== currentId)
   }
 
-  // [Manual Mode] 수동 모드인 경우 현재 난이도만 고집
   if (difficultyMode === 'manual') {
     const candidates = available.filter(p => p.difficulty === currentDifficulty)
-    if (candidates.length > 0) {
-      const shuffled = shuffle(candidates)
-      return shuffled[0]
-    }
-    // 해당 난이도 문제가 바닥났을 때만 전체에서 섞어 반환
-    const shuffled = shuffle(available)
-    return shuffled[0]
+    return candidates.length > 0 ? shuffle(candidates)[0] : shuffle(available)[0]
   }
 
-  // [Auto Mode] 기존 추천 로직 수행
+  // [Auto Mode] 난이도 결정 로직 강화
   const isHard = timeSpent != null && avgTimeSpent != null && timeSpent > avgTimeSpent * 2
   const isFast = timeSpent != null && avgTimeSpent != null && timeSpent <= avgTimeSpent * 1.5
 
@@ -82,24 +88,23 @@ export function selectRecommendedProblem(params: Params): Problem | null {
     const target = isFast ? higherDifficulty(currentDifficulty) : currentDifficulty
     priorities = [target, currentDifficulty]
   } else {
-    const target = isHard ? lowerDifficulty(currentDifficulty) : currentDifficulty
-    priorities = [target, currentDifficulty, 'basic']
+    // 오답 시: 심각한 지연 시 난이도 2단계 하향 고려
+    const target = isHard ? lowerDifficulty(lowerDifficulty(currentDifficulty)) : lowerDifficulty(currentDifficulty)
+    priorities = [target, 'basic', currentDifficulty]
   }
 
-  // 우선순위 난이도 적용
   for (const d of priorities) {
     const candidates = available.filter(p => p.difficulty === d)
     if (candidates.length > 0) {
-      const shuffled = shuffle(candidates)
-      return shuffled[0]
+      // 같은 난이도 내에서도 Skill 유사도가 높은 것을 최상단으로
+      if (currentProblem) {
+        return candidates.slice().sort((a, b) => 
+          calculateSkillSimilarity(currentProblem, b) - calculateSkillSimilarity(currentProblem, a)
+        )[0]
+      }
+      return shuffle(candidates)[0]
     }
   }
 
-  // 난이도 상관없이 무작위 섞어서 선택
-  if (available.length > 0) {
-    const shuffled = shuffle(available)
-    return shuffled[0]
-  }
-
-  return null
+  return available.length > 0 ? shuffle(available)[0] : null
 }

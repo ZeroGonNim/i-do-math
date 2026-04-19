@@ -41407,8 +41407,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각기둥/각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
@@ -41432,8 +41432,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각기둥/각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "5 + 2 = 7"
         }
       ],
       "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
@@ -41482,8 +41482,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각기둥/각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "6 + 2 = 8"
         }
       ],
       "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
@@ -41507,8 +41507,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각기둥/각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "8 + 2 = 10"
         }
       ],
       "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
@@ -41532,8 +41532,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "꼭짓점 수 구하기",
+          "expression": "3 * 2 = 6"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41557,8 +41557,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "모서리 수 구하기",
+          "expression": "4 * 3 = 12"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41582,8 +41582,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "면의 수 구하기",
+          "expression": "5 + 2 = 7"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41607,8 +41607,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "꼭짓점 수 구하기",
+          "expression": "7 * 2 = 14"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41632,8 +41632,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "모서리 수 구하기",
+          "expression": "9 * 3 = 27"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41657,8 +41657,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "면의 수 구하기",
+          "expression": "6 + 2 = 8"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41732,8 +41732,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "한 밑면의 변의 수(n) 활용"
+          "desc": "면의 수 구하기",
+          "expression": "4 + 2 = 6"
         }
       ],
       "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
@@ -41782,8 +41782,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "4 + 2 = 6"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41807,8 +41807,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41857,8 +41857,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41882,8 +41882,8 @@
       },
       "steps": [
         {
-          "desc": "도형 관찰",
-          "expression": "각뿔의 밑면 모양 확인"
+          "desc": "면의 수 구하기",
+          "expression": "5 + 2 = 7"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41907,8 +41907,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -41932,8 +41932,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "꼭짓점 수 구하기",
+          "expression": "4 * 2 = 8"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -41957,8 +41957,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "모서리 수 구하기",
+          "expression": "5 * 3 = 15"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -41982,8 +41982,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "꼭짓점 수 구하기",
+          "expression": "6 * 2 = 12"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -42007,8 +42007,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "면의 수 구하기",
+          "expression": "7 + 2 = 9"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -42032,8 +42032,8 @@
       },
       "steps": [
         {
-          "desc": "공식 적용",
-          "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
+          "desc": "모서리 수 구하기",
+          "expression": "10 * 3 = 30"
         }
       ],
       "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
@@ -42228,8 +42228,8 @@
       },
       "steps": [
         {
-          "desc": "성질 비교",
-          "expression": "각기둥과 각뿔의 공통점/차이점 확인"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각기둥은 옆면이 사각형, 각뿔은 삼각형이에요."
@@ -42260,8 +42260,8 @@
       },
       "steps": [
         {
-          "desc": "성질 비교",
-          "expression": "각기둥과 각뿔의 공통점/차이점 확인"
+          "desc": "면의 수 구하기",
+          "expression": "4 + 2 = 6"
         }
       ],
       "conceptExplanation": "각기둥은 옆면이 사각형, 각뿔은 삼각형이에요."
@@ -42374,16 +42374,8 @@
       },
       "steps": [
         {
-          "desc": "사각기둥 면",
-          "expression": "4+2=6"
-        },
-        {
-          "desc": "삼각뿔 모서리",
-          "expression": "2×3=6"
-        },
-        {
-          "desc": "합계",
-          "expression": "6+6=12"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각 도형의 구성 요소 개수를 각각 구한 뒤 더해요."
@@ -42404,16 +42396,8 @@
       },
       "steps": [
         {
-          "desc": "각뿔의 옆면 수",
-          "expression": "옆면 수 = 밑면의 변의 수"
-        },
-        {
-          "desc": "육각뿔 밑면",
-          "expression": "육각형 → 변의 수 = 6"
-        },
-        {
-          "desc": "결론",
-          "expression": "삼각형 옆면 = 6개"
+          "desc": "면의 수 구하기",
+          "expression": "3 + 2 = 5"
         }
       ],
       "conceptExplanation": "각뿔의 옆면 수는 밑면의 변의 수와 항상 같아요."
@@ -42464,20 +42448,8 @@
       },
       "steps": [
         {
-          "desc": "꼭짓점",
-          "expression": "10"
-        },
-        {
-          "desc": "모서리",
-          "expression": "15"
-        },
-        {
-          "desc": "면",
-          "expression": "7"
-        },
-        {
-          "desc": "계산",
-          "expression": "10 - 15 + 7 = 2"
+          "desc": "면의 수 구하기",
+          "expression": "5 + 2 = 7"
         }
       ],
       "conceptExplanation": "모든 다면체에서 (꼭짓점)-(모서리)+(면)은 항상 2가 돼요 (오일러의 정리)."
@@ -49223,7 +49195,7 @@
       "steps": [
         {
           "desc": "세로셈 설정",
-          "expression": "규칙에 따라"
+          "expression": "37.7 ÷ 3 = "
         },
         {
           "desc": "나눗셈 계산",
@@ -49231,7 +49203,7 @@
         },
         {
           "desc": "계산",
-          "expression": "규칙에 따라"
+          "expression": "37.7 ÷ 3 = "
         }
       ],
       "conceptExplanation": "나머지의 소수점 위치에 주의하세요."
@@ -49260,7 +49232,7 @@
       "steps": [
         {
           "desc": "세로셈 설정",
-          "expression": "규칙에 따라"
+          "expression": "38.7 ÷ 3 = "
         },
         {
           "desc": "나눗셈 계산",
@@ -49268,7 +49240,7 @@
         },
         {
           "desc": "계산",
-          "expression": "규칙에 따라"
+          "expression": "38.7 ÷ 3 = "
         }
       ],
       "conceptExplanation": "나머지의 소수점 위치에 주의하세요."
@@ -49297,7 +49269,7 @@
       "steps": [
         {
           "desc": "세로셈 설정",
-          "expression": "규칙에 따라"
+          "expression": "39.7 ÷ 3 = "
         },
         {
           "desc": "나눗셈 계산",
@@ -49305,7 +49277,7 @@
         },
         {
           "desc": "계산",
-          "expression": "규칙에 따라"
+          "expression": "39.7 ÷ 3 = "
         }
       ],
       "conceptExplanation": "나머지의 소수점 위치에 주의하세요."
@@ -49334,7 +49306,7 @@
       "steps": [
         {
           "desc": "세로셈 설정",
-          "expression": "규칙에 따라"
+          "expression": "40.7 ÷ 3 = "
         },
         {
           "desc": "나눗셈 계산",
@@ -49342,7 +49314,7 @@
         },
         {
           "desc": "계산",
-          "expression": "규칙에 따라"
+          "expression": "40.7 ÷ 3 = "
         }
       ],
       "conceptExplanation": "나머지의 소수점 위치에 주의하세요."
@@ -54405,16 +54377,8 @@
       },
       "steps": [
         {
-          "desc": "오각기둥 모서리",
-          "expression": "5 × 3 = 15"
-        },
-        {
-          "desc": "사각뿔 모서리",
-          "expression": "4 × 2 = 8, 합=4+4=8 → 4×3=12? 아니: 4+4+4=12? 밑4+옆4=8+4... 사각뿔: 밑4+옆4=8"
-        },
-        {
-          "desc": "합",
-          "expression": "15 + 12 = 27"
+          "desc": "면의 수 구하기",
+          "expression": "4 + 2 = 6"
         }
       ],
       "conceptExplanation": "n각기둥 모서리: 3n개, n각뿔 모서리: 2n개"

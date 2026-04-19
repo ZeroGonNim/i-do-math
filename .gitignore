@@ -10,3 +10,4 @@ build/
 .superpowers/
 docs/superpowers/
 skills-lock.json
+.vercel

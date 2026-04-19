@@ -16,8 +16,18 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\/data\/problems-v\d+\.json/,
+            handler: 'NetworkFirst',
+            options: { cacheName: 'problems-data' },
+          },
+          {
+            urlPattern: /\/images\/.*\.(png|jpg|jpeg|svg|webp)/,
             handler: 'CacheFirst',
-            options: { cacheName: 'problems-cache' },
+            options: { cacheName: 'images-cache' },
+          },
+          {
+            urlPattern: /\/generated\/.*\.svg/,
+            handler: 'CacheFirst',
+            options: { cacheName: 'generated-svg-cache' },
           },
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -35,18 +45,21 @@ export default defineConfig({
         name: 'I Do Math',
         short_name: 'I Do Math',
         description: '초등학생을 위한 수학 학습 앱',
-        theme_color: '#4F46E5',
-        background_color: '#ffffff',
+        theme_color: '#0f172a',
+        background_color: '#0f172a',
         display: 'standalone',
         orientation: 'portrait',
         icons: [
-          { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
-          { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },
+          { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
+          { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any' },
+          { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
+          { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
     }),
   ],
   server: {
+    host: true,
     allowedHosts: true,
   },
   resolve: {

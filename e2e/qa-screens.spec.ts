@@ -28,11 +28,11 @@ async function completeOnboarding(page: Page) {
   // Step 1: 학년 선택
   await expect(page.getByText('몇 학년이야?')).toBeVisible()
   await page.getByRole('button', { name: '4학년' }).click()
-  await page.getByRole('button', { name: '다음 →' }).click()
+  await page.getByRole('button', { name: '다음 단계로 이동 →' }).click()
   // Step 2: 캐릭터 선택
   await expect(page.getByText('함께할 친구를 골라봐!')).toBeVisible()
   await page.locator('.grid').first().locator('> *').first().click()
-  await page.getByRole('button', { name: '🟢 시작하기!' }).click()
+  await page.getByRole('button', { name: /시작하기/ }).click()
   await page.waitForURL('**/home', { timeout: 8000 })
 }
 
@@ -98,7 +98,7 @@ test.describe('2. 온보딩 화면', () => {
     await page.screenshot({ path: SS('05-onboarding-step1') })
     // Step 1
     await page.getByRole('button', { name: '4학년' }).click()
-    await page.getByRole('button', { name: '다음 →' }).click()
+    await page.getByRole('button', { name: '다음 단계로 이동 →' }).click()
     await expect(page.getByText('함께할 친구를 골라봐!')).toBeVisible()
     await page.screenshot({ path: SS('06-onboarding-step2') })
   })
@@ -146,7 +146,7 @@ test.describe('3. 홈 화면', () => {
     // 문제 시작 관련 버튼/텍스트 탐색
     await page.screenshot({ path: SS('11-home-start') })
     const bodyText = await page.locator('body').innerText()
-    expect(bodyText).toContain('학습 시작하기')
+    expect(bodyText).toContain('모험 시작하기')
   })
 })
 
@@ -176,19 +176,19 @@ test.describe('5. 부모 대시보드 — PIN 입력 UX', () => {
     await expect(page.getByText(/PIN 4자리를 설정/)).toBeVisible()
   })
 
-  test('[P1-3] 3자리 입력 시 확인 버튼 비활성', async ({ page }) => {
+  test('[P1-3] 3자리 입력 시 4번째 단계 미진입', async ({ page }) => {
     await completeOnboarding(page)
     await page.goto('/parent')
     await page.waitForLoadState('networkidle')
     await page.getByRole('button', { name: '1' }).click()
     await page.getByRole('button', { name: '2' }).click()
     await page.getByRole('button', { name: '3' }).click()
-    const confirmBtn = page.getByRole('button', { name: '확인' })
-    await expect(confirmBtn).toBeDisabled()
+    // 3자리 입력 후 아직 설정 화면에 머물러야 함 (자동 제출 안 됨)
+    await expect(page.getByText(/PIN 4자리를 설정/)).toBeVisible()
     await page.screenshot({ path: SS('14-pin-3digits-disabled') })
   })
 
-  test('[P1-3] 4자리 완성 시 확인 버튼 활성화', async ({ page }) => {
+  test('[P1-3] 4자리 완성 시 자동 제출 → 확인 단계 이동', async ({ page }) => {
     await completeOnboarding(page)
     await page.goto('/parent')
     await page.waitForLoadState('networkidle')
@@ -196,12 +196,12 @@ test.describe('5. 부모 대시보드 — PIN 입력 UX', () => {
     await page.getByRole('button', { name: '2' }).click()
     await page.getByRole('button', { name: '3' }).click()
     await page.getByRole('button', { name: '4' }).click()
-    const confirmBtn = page.getByRole('button', { name: '확인' })
-    await expect(confirmBtn).toBeEnabled()
+    // 4자리 입력 시 자동 제출되어 확인 단계로 이동
+    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible({ timeout: 3000 })
     await page.screenshot({ path: SS('15-pin-4digits-enabled') })
   })
 
-  test('[P1-3] 4자리 후 자동 전송 없음 (확인 버튼 클릭 전 화면 유지)', async ({ page }) => {
+  test('[P1-3] 4자리 자동 제출 → 다음 단계 정상 진입', async ({ page }) => {
     await completeOnboarding(page)
     await page.goto('/parent')
     await page.waitForLoadState('networkidle')
@@ -209,10 +209,8 @@ test.describe('5. 부모 대시보드 — PIN 입력 UX', () => {
     await page.getByRole('button', { name: '2' }).click()
     await page.getByRole('button', { name: '3' }).click()
     await page.getByRole('button', { name: '4' }).click()
-    // 500ms 대기 — 이전 100ms 자동전송보다 충분히 대기
-    await page.waitForTimeout(500)
-    // 아직 setup 화면 (확인 버튼 클릭 안 했으므로)
-    await expect(page.getByRole('button', { name: '확인' })).toBeVisible()
+    // 자동 제출 후 다음 단계(PIN 재확인) 화면으로 전환
+    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible({ timeout: 3000 })
     await page.screenshot({ path: SS('16-pin-no-autosend') })
   })
 
@@ -220,19 +218,17 @@ test.describe('5. 부모 대시보드 — PIN 입력 UX', () => {
     await completeOnboarding(page)
     await page.goto('/parent')
     await page.waitForLoadState('networkidle')
-    // PIN 설정 Step 1
+    // PIN 설정 Step 1 — 4자리 입력 시 자동 제출
     await page.getByRole('button', { name: '1' }).click()
     await page.getByRole('button', { name: '2' }).click()
     await page.getByRole('button', { name: '3' }).click()
     await page.getByRole('button', { name: '4' }).click()
-    await page.getByRole('button', { name: '확인' }).click()
     // PIN 확인 Step 2
-    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible()
+    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible({ timeout: 3000 })
     await page.getByRole('button', { name: '1' }).click()
     await page.getByRole('button', { name: '2' }).click()
     await page.getByRole('button', { name: '3' }).click()
     await page.getByRole('button', { name: '4' }).click()
-    await page.getByRole('button', { name: '확인' }).click()
     // 대시보드 진입 확인
     await expect(page.getByText(/부모님 대시보드/)).toBeVisible({ timeout: 5000 })
     await page.screenshot({ path: SS('17-parent-dashboard') })
@@ -249,7 +245,7 @@ test.describe('6. 오답 복습', () => {
     await page.waitForLoadState('networkidle')
     await page.screenshot({ path: SS('18-remind') })
     // 오답 없으면 빈 상태 표시
-    await expect(page.getByText('모든 오답 정복!')).toBeVisible({ timeout: 5000 })
+    await expect(page.getByText(/틀린 문제가 없어요|오답복습 완료/).first()).toBeVisible({ timeout: 5000 })
   })
 })
 

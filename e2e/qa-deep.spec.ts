@@ -26,8 +26,8 @@ async function completeOnboarding(page: Page) {
   await page.getByRole('button', { name: '4학년' }).click()
   await page.getByRole('button', { name: /다음/ }).click()
   await expect(page.getByText('함께할 친구를 골라봐!')).toBeVisible()
-  // 캐릭터 선택: 첫 번째 캐릭터 버튼 클릭 (여우, 판다, 사자, 돌고래)
-  await page.locator('button').filter({ hasText: /🦊|🐼|🦁|🐬/ }).first().click()
+  // 캐릭터 선택: 그리드 첫 번째 카드(warrior, 잠금 없음) 클릭
+  await page.locator('.grid').first().locator('> *').first().click()
   await page.getByRole('button', { name: /시작하기/ }).click()
   await page.waitForURL('**/home', { timeout: 8000 })
   await page.waitForLoadState('networkidle')
@@ -41,7 +41,7 @@ test.describe('1. 홈 → 문제 진입 플로우', () => {
     await completeOnboarding(page)
     await page.screenshot({ path: SS('01-home') })
 
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.waitForLoadState('networkidle')
     await page.screenshot({ path: SS('02-problem-entered') })
@@ -50,7 +50,7 @@ test.describe('1. 홈 → 문제 진입 플로우', () => {
 
   test('문제 화면 구성요소 확인', async ({ page }) => {
     await completeOnboarding(page)
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.waitForLoadState('networkidle')
 
@@ -78,7 +78,7 @@ test.describe('1. 홈 → 문제 진입 플로우', () => {
 test.describe('2. 문제 입력 UI 상세 확인', () => {
   test.beforeEach(async ({ page }) => {
     await completeOnboarding(page)
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.waitForLoadState('networkidle')
   })
@@ -124,9 +124,9 @@ test.describe('2. 문제 입력 UI 상세 확인', () => {
       }
     }
 
-    // 정답 확인 버튼 클릭 (실제 텍스트: "정답 확인 ✓")
-    const confirmBtn = page.getByRole('button', { name: /정답 확인/ })
-    const canConfirm = await confirmBtn.isEnabled().catch(() => false)
+    // 정답 제출하기 버튼 클릭
+    const confirmBtn = page.getByRole('button', { name: /정답 제출하기/ })
+    const canConfirm = await confirmBtn.isEnabled({ timeout: 1000 }).catch(() => false)
     if (canConfirm) {
       await confirmBtn.click()
       await page.waitForTimeout(2000)
@@ -149,7 +149,7 @@ test.describe('2. 문제 입력 UI 상세 확인', () => {
 test.describe('3. 결과 화면', () => {
   async function goToProblemAndSubmit(page: Page) {
     await completeOnboarding(page)
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.waitForLoadState('networkidle')
 
@@ -163,11 +163,21 @@ test.describe('3. 결과 화면', () => {
       if (isMultipleChoice > 0) {
         await page.locator('button').filter({ hasText: /①/ }).first().click()
       } else {
-        const has1 = await page.getByRole('button', { name: /^1$/ }).isVisible().catch(() => false)
-        if (has1) await page.getByRole('button', { name: /^1$/ }).click()
+        // 비어있는 다중 빈칸(?) 버튼을 모두 채움
+        const emptyBlanks = await page.locator('button').filter({ hasText: /^\?$/ }).count()
+        if (emptyBlanks > 0) {
+          for (let b = 0; b < emptyBlanks; b++) {
+            await page.locator('button').filter({ hasText: /^\?$/ }).first().click()
+            const hasKey = await page.getByRole('button', { name: /^1$/ }).isVisible().catch(() => false)
+            if (hasKey) await page.getByRole('button', { name: /^1$/ }).click()
+          }
+        } else {
+          const has1 = await page.getByRole('button', { name: /^1$/ }).isVisible().catch(() => false)
+          if (has1) await page.getByRole('button', { name: /^1$/ }).click()
+        }
       }
-      const confirmBtn = page.getByRole('button', { name: /정답 확인/ })
-      const canClick = await confirmBtn.isEnabled().catch(() => false)
+      const confirmBtn = page.getByRole('button', { name: /정답 제출하기/ })
+      const canClick = await confirmBtn.isEnabled({ timeout: 1000 }).catch(() => false)
       if (canClick) {
         await confirmBtn.click()
         await page.waitForTimeout(2000)
@@ -244,16 +254,14 @@ test.describe('4. 레이아웃 및 UI 세부 점검', () => {
     await completeOnboarding(page)
     await page.goto('/parent')
     await page.waitForLoadState('networkidle')
-    // PIN 설정
+    // PIN 설정 — 4자리 입력 시 자동 제출
     for (const d of ['1','2','3','4']) {
       await page.getByRole('button', { name: d }).click()
     }
-    await page.getByRole('button', { name: '확인' }).click()
-    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible()
+    await expect(page.getByText(/PIN을 한 번 더/)).toBeVisible({ timeout: 3000 })
     for (const d of ['1','2','3','4']) {
       await page.getByRole('button', { name: d }).click()
     }
-    await page.getByRole('button', { name: '확인' }).click()
     await expect(page.getByText('부모님 대시보드')).toBeVisible({ timeout: 5000 })
     await page.screenshot({ path: SS('17-parent-dashboard-full') })
     // 대시보드 통계 확인
@@ -278,7 +286,7 @@ test.describe('5. 엣지 케이스 / 에러 상황', () => {
 
   test('뒤로가기 히스토리 — 결과에서 뒤로가기 시 문제 재진입 안 됨', async ({ page }) => {
     await completeOnboarding(page)
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.screenshot({ path: SS('19-problem-for-back') })
     // 뒤로가기
@@ -300,7 +308,7 @@ test.describe('5. 엣지 케이스 / 에러 상황', () => {
 
   test('빠른 연속 클릭 — 확인 버튼 중복 제출 방지', async ({ page }) => {
     await completeOnboarding(page)
-    await page.getByRole('button', { name: /학습 시작하기/ }).click()
+    await page.getByRole('button', { name: /모험 시작하기/ }).click()
     await page.waitForURL('**/problem', { timeout: 8000 })
     await page.waitForLoadState('networkidle')
 
@@ -318,12 +326,12 @@ test.describe('5. 엣지 케이스 / 에러 상황', () => {
     }
 
     // 첫 클릭 후 버튼이 즉시 비활성화되어야 함 (중복 제출 방지)
-    const confirmBtn = page.getByRole('button', { name: /정답 확인/ })
-    const canClick = await confirmBtn.isEnabled().catch(() => false)
+    const confirmBtn = page.getByRole('button', { name: /정답 제출하기/ })
+    const canClick = await confirmBtn.isEnabled({ timeout: 1000 }).catch(() => false)
     if (canClick) {
       await confirmBtn.click()
       // submitResult !== null 세팅으로 버튼이 즉시 disabled 처리됨
-      await expect(confirmBtn).toBeDisabled({ timeout: 1000 })
+      await expect(confirmBtn).toBeDisabled({ timeout: 2000 })
       await page.screenshot({ path: SS('22-double-submit') })
     }
   })

@@ -6,6 +6,7 @@ export interface LearningLog {
   grade: number
   semester: 1 | 2
   problemId: string
+  unit?: string // 단원 정보 추가
   concept: string
   difficulty: Difficulty // 난이도 필드 추가
   mistakeType: MistakeType

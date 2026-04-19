@@ -15,6 +15,13 @@ import { GamepadIcon, TrashIcon, LockIcon } from '@/shared/components/PixelIcons
 import { AVATARS } from '@/types/avatar'
 import { isIntegerAnswer, isFractionAnswer, type Answer, type Problem } from '@/types/problem'
 import { loadProblems } from '@/shared/services/problemLoader'
+import { useDashboardData } from '@/features/parent/hooks/useDashboardData'
+import { StatRadarChart } from '@/features/parent/components/StatRadarChart'
+import { AccuracyLineChart } from '@/features/parent/components/AccuracyLineChart'
+import { WeakConceptList } from '@/features/parent/components/WeakConceptList'
+import { getMistakeFeedback } from '@/shared/utils/mistakeFeedback'
+import { RetryPieChart } from '@/features/parent/components/RetryPieChart'
+import { UnitAvgTimeList } from '@/features/parent/components/UnitAvgTimeList'
 
 const AVAILABLE_GRADES = new Set([4, 5, 6])
 
@@ -107,32 +114,14 @@ export function ParentRoute() {
     }
   }, [profile?.userId, profile?.parentalPinHash])
 
+  const dashboardData = useDashboardData(profile?.userId)
+
   const stats = useMemo(() => {
     const allLogs = (filteredDays || []).flatMap(d => d.logs || [])
     const tProblems = allLogs.length
     const tCorrect = allLogs.filter(l => l.isCorrect).length
     const acc = tProblems > 0 ? Math.round((tCorrect / tProblems) * 100) : 0
-    const oneShotCount = allLogs.filter(l => l.isCorrect && (l.retryCount === 0 || l.retryCount === undefined)).length
-    const retryCountNum = allLogs.filter(l => l.isCorrect && typeof l.retryCount === 'number' && l.retryCount > 0).length
-    const failedCount = allLogs.filter(l => !l.isCorrect).length
-    const rStats = tProblems === 0 ? { oneShot: 0, retry: 0, failed: 0 } : {
-      oneShot: Math.round((oneShotCount / tProblems) * 100),
-      retry: Math.round((retryCountNum / tProblems) * 100),
-      failed: Math.round((failedCount / tProblems) * 100),
-    }
-
-    const weeklyData = Array.from({ length: 7 }).map((_, i) => {
-      const d = new Date()
-      d.setDate(d.getDate() - (6 - i))
-      const dateStr = d.toISOString().split('T')[0]
-      const monthDay = `${d.getMonth() + 1}.${d.getDate()}`
-      const dayLabel = ['일', '월', '화', '수', '목', '금', '토'][d.getDay()]
-      const dayData = (filteredDays || []).find(fd => fd.date === dateStr)
-      const dayLogs = dayData?.logs || []
-      const dayAcc = dayLogs.length > 0 ? Math.round((dayLogs.filter(l => l.isCorrect).length / dayLogs.length) * 100) : 0
-      return { label: dayLabel, dateText: monthDay, acc: dayAcc, isToday: i === 6 }
-    })
-    return { totalProblems: tProblems, totalCorrect: tCorrect, accuracy: acc, retryStats: rStats, weeklyAccuracy: weeklyData }
+    return { totalProblems: tProblems, totalCorrect: tCorrect, accuracy: acc }
   }, [filteredDays])
 
   async function performResetData() {
@@ -350,28 +339,139 @@ export function ParentRoute() {
         </div>
 
         <div className="px-5 pt-5 space-y-5">
-          {/* 주간 정확도 패턴 */}
+          {/* 단원별 성취도 분석 (Radar + Time) */}
+          <div className="px-6 py-6 border" style={{ backgroundColor: '#1d1d37', borderColor: '#23233f' }}>
+            <p className="text-sm font-bold text-[#e5e3ff] mb-6">단원별 성취도 분석</p>
+            <StatRadarChart data={dashboardData.unitStats} color={theme.primary} />
+            <div className="mt-8">
+              <p className="text-[10px] font-bold text-[#64748b] mb-4">단원별 평균 소요 시간</p>
+              <UnitAvgTimeList data={dashboardData.unitStats} />
+            </div>
+          </div>
+
+          {/* 학습 성취도 비율 (Pie) */}
+          <div className="px-6 py-6 border" style={{ backgroundColor: '#1d1d37', borderColor: '#23233f' }}>
+            <p className="text-sm font-bold text-[#e5e3ff] mb-6">학습 성취도 분석</p>
+            <RetryPieChart data={dashboardData.retryStats} />
+            <p className="text-[10px] text-[#64748b] mt-4 leading-relaxed text-center">
+              한 번에 맞힌 비율이 높을수록 개념 이해도가 높은 상태입니다.
+            </p>
+          </div>
+
+          {/* 실력 향상 추이 (Line) */}
           <div className="px-6 py-6 border" style={{ backgroundColor: '#1d1d37', borderColor: '#23233f' }}>
             <div className="flex items-center justify-between mb-6">
-              <p className="text-sm font-bold text-[#e5e3ff]">주간 정확도 패턴</p>
-              <p className="text-xs font-bold" style={{ color: theme.primary }}>평균 {stats.accuracy}%</p>
+              <p className="text-sm font-bold text-[#e5e3ff]">실력 향상 추이</p>
+              <p className="text-[10px] font-bold" style={{ color: theme.primary }}>최근 7일</p>
             </div>
-            <div className="flex items-end gap-2 h-24">
-              {stats.weeklyAccuracy.map(w => (
-                <div key={w.dateText} className="flex-1 flex flex-col items-center">
-                  <div className="w-full flex items-end h-16 mb-2">
-                    <div style={{ height: `${Math.max(w.acc, 6)}%`, backgroundColor: w.acc > 0 ? (w.isToday ? theme.primary : '#3b426e') : '#23233f', border: w.acc > 0 ? (w.isToday ? '2px solid #fff' : 'none') : '1px dashed #333' }} className="w-full" />
-                  </div>
-                  <p className="text-[10px] font-bold" style={{ color: w.isToday ? '#fff' : '#64748b' }}>{w.label}</p>
-                  <p className="text-[8px]" style={{ color: '#64748b' }}>{w.dateText}</p>
-                </div>
-              ))}
-            </div>
+            <AccuracyLineChart data={dashboardData.trendStats} color={theme.primary} />
+          </div>
+
+          {/* 취약 단원 분석 리스트 */}
+          <div className="px-6 py-6 border" style={{ backgroundColor: '#1d1d37', borderColor: '#23233f' }}>
+            <p className="text-sm font-bold text-[#e5e3ff] mb-6">집중 보충 필요 영역</p>
+            <WeakConceptList 
+              concepts={dashboardData.weakConcepts} 
+              onConceptSelect={setSelectedWeakConcept} 
+              primaryColor={theme.primary} 
+            />
           </div>
 
           {/* 시스템 관리 */}
           <div className="px-6 py-6 space-y-4" style={{ backgroundColor: '#17172f', border: '1px solid #1c1c3a' }}>
             <p className="text-xs font-bold text-[#64748b]">시스템 관리</p>
+            
+            {/* 데모 데이터 생성 버튼 (개발용) */}
+            <button 
+              onClick={async () => {
+                if (!profile) return;
+                try {
+                  const now = Date.now();
+                  const ONE_DAY = 24 * 60 * 60 * 1000;
+                  
+                  // 0. 기존 시드 데이터 청소 (중요!)
+                  await db.learningLogs.filter(l => l.logId.startsWith('seed-')).delete();
+                  await db.wrongNotes.filter(n => n.id.includes('::seed-')).delete();
+
+                  // 100% 한글 번역이 보장된 공식 키값들
+                  const realConcepts = [
+                    { unit: '큰 수', concept: 'big_number_read_write', semester: 1 },
+                    { unit: '각도', concept: 'angle_calculation', semester: 1 },
+                    { unit: '분수의 덧셈', concept: 'fraction_addition', semester: 2 },
+                    { unit: '나눗셈', concept: 'two_digit_division', semester: 1 },
+                    { unit: '소수의 덧셈', concept: 'decimal_addition', semester: 2 }
+                  ];
+
+                  // 1. 학습 로그 주입 (30개)
+                  const logs = [];
+                  for (let i = 0; i < 30; i++) {
+                    const dayOffset = Math.floor(i / 4);
+                    const isCorrect = Math.random() > 0.35; // 65% 정답률 유도
+                    const cInfo = realConcepts[i % realConcepts.length];
+                    logs.push({
+                      logId: `seed-log-${i}-${now}`,
+                      userId: profile.userId,
+                      grade: profile.grade,
+                      problemId: `seed-prob-${i}`,
+                      unit: cInfo.unit,
+                      concept: cInfo.concept,
+                      difficulty: 'basic',
+                      isCorrect,
+                      userAnswer: isCorrect ? { value: 100 } : { value: 99 },
+                      timeSpent: Math.round(15 + Math.random() * 40),
+                      semester: cInfo.semester as (1 | 2),
+                      hintUsed: Math.random() > 0.8,
+                      mistakeType: isCorrect ? null : 'calculation_error',
+                      retryCount: isCorrect && Math.random() > 0.7 ? 1 : 0,
+                      timestamp: now - (dayOffset * ONE_DAY)
+                    });
+                  }
+                  await db.learningLogs.bulkPut(logs);
+
+                  // 2. 오답 노트 주입
+                  const wrongNotes = [
+                    { 
+                      id: `${profile.userId}::seed-w1::precision_error`,
+                      userId: profile.userId, concept: 'big_number_read_write', mistakeType: 'precision_error', 
+                      questionText: '삼억 육백만 오천을 수로 써보세요.', 
+                      lastWrongAnswer: { text: '300060500' }, correctAnswer: { text: '306005000' },
+                      wrongCount: 2, consecutiveWrong: 2, consecutiveCorrect: 0,
+                      replayData: { inputSequence: [] },
+                      isWeak: true, lastAttemptAt: now 
+                    },
+                    { 
+                      id: `${profile.userId}::seed-w2::calculation_error`,
+                      userId: profile.userId, concept: 'angle_calculation', mistakeType: 'calculation_error', 
+                      questionText: '삼각형의 세 각의 합은 몇 도인가요?', 
+                      lastWrongAnswer: { value: 170 }, correctAnswer: { value: 180 },
+                      wrongCount: 1, consecutiveWrong: 1, consecutiveCorrect: 0,
+                      replayData: { inputSequence: [] },
+                      isWeak: true, lastAttemptAt: now - ONE_DAY 
+                    },
+                    { 
+                      id: `${profile.userId}::seed-w3::concept_error`,
+                      userId: profile.userId, concept: 'fraction_addition', mistakeType: 'concept_error', 
+                      questionText: '1/4 + 2/4 를 계산하세요.', 
+                      lastWrongAnswer: { numerator: 3, denominator: 8 }, correctAnswer: { numerator: 3, denominator: 4 },
+                      wrongCount: 3, consecutiveWrong: 1, consecutiveCorrect: 0,
+                      replayData: { inputSequence: [] },
+                      isWeak: true, lastAttemptAt: now - (2 * ONE_DAY) 
+                    }
+                  ];
+                  await db.wrongNotes.bulkPut(wrongNotes);
+                  
+                  alert('모든 데이터가 한글로 정화되어 새로 생성되었습니다!');
+                  window.location.reload();
+                } catch (err) {
+                  console.error('데이터 정화 오류:', err);
+                  alert('데이터 생성 중 오류가 발생했습니다.');
+                }
+              }}
+              className="w-full py-3 flex items-center justify-center gap-2 border-2 border-dashed border-[#38bdf840] text-[#38bdf8] text-xs font-bold"
+            >
+              ✨ 데모용 샘플 데이터 생성 (30개)
+            </button>
+
             <button onClick={() => setShowPinResetModal(true)} className="w-full py-3 flex items-center justify-center gap-2 border-2 border-[#23233f] text-[#e5e3ff] text-sm font-bold">
               <LockIcon color={theme.primary} size={16} /> 부모님 PIN 재설정
             </button>
@@ -424,19 +524,37 @@ export function ParentRoute() {
               <button onClick={() => setSelectedWeakConcept(null)} className="text-[#64748b] font-bold">×</button>
             </div>
             <div className="flex-1 overflow-y-auto p-5 space-y-4">
-              {selectedWeakDetails?.map(note => (
-                <div key={note.id} className="p-4 border-2 border-[#23233f] bg-[#17172f]">
-                  <p className="text-sm text-[#e5e3ff] mb-2">{note.questionText}</p>
-                  <div className="flex gap-2 text-[11px]">
-                    <div className="flex-1 p-2 bg-[#000] border border-[#ff716c]/30">
-                      <p className="text-[#ff716c]">내 답: {formatAnswer(note.lastWrongAnswer)}</p>
+              {selectedWeakDetails?.map(note => {
+                const feedback = getMistakeFeedback(note.mistakeType)
+                return (
+                  <div key={note.id} className="p-4 border-2 border-[#23233f] bg-[#17172f] relative overflow-hidden">
+                    {/* 실수 유형 뱃지 */}
+                    <div className="absolute top-0 right-0 px-2 py-0.5 text-[9px] font-bold" style={{ backgroundColor: feedback.color, color: '#000' }}>
+                      {feedback.label}
                     </div>
-                    <div className="flex-1 p-2 bg-[#000] border border-[#10b981]/30">
-                      <p className="text-[#10b981]">정답: {formatAnswer(note.correctAnswer)}</p>
+
+                    <p className="text-sm text-[#e5e3ff] mb-3 pr-14 leading-relaxed">{note.questionText}</p>
+                    
+                    <div className="flex gap-2 text-[11px] mb-3">
+                      <div className="flex-1 p-2 bg-[#000] border border-[#ff716c]/30">
+                        <p className="text-[#64748b] mb-1">제출한 답</p>
+                        <p className="text-[#ff716c] font-bold">{formatAnswer(note.lastWrongAnswer)}</p>
+                      </div>
+                      <div className="flex-1 p-2 bg-[#000] border border-[#10b981]/30">
+                        <p className="text-[#64748b] mb-1">정답</p>
+                        <p className="text-[#10b981] font-bold">{formatAnswer(note.correctAnswer)}</p>
+                      </div>
+                    </div>
+
+                    {/* 맞춤 처방 메시지 */}
+                    <div className="p-2.5 bg-[#1e1e3a] rounded border border-[#2d2d50]">
+                      <p className="text-[10px] text-[#aaa8c3] leading-relaxed italic">
+                        " {feedback.advice} "
+                      </p>
                     </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
             <div className="p-5 border-t border-[#23233f]">
               <button onClick={() => setSelectedWeakConcept(null)} className="w-full py-3 text-[#64748b] bg-[#17172f]">닫기</button>
