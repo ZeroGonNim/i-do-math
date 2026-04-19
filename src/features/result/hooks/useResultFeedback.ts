@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { classifyMistake } from '@/shared/utils/mistakeClassifier'
 import { learningLogRepo } from '@/shared/db/learningLogRepo'
 import { wrongNoteRepo } from '@/shared/db/wrongNoteRepo'
@@ -57,8 +57,12 @@ export function useResultFeedback({
   const [xpGained, setXpGained] = useState(0)
   const [starsGained, setStarsGained] = useState(0)
   const [xpMultiplierApplied, setXpMultiplierApplied] = useState(false)
+  const hasProcessed = useRef(false)
 
   useEffect(() => {
+    if (hasProcessed.current) return
+    hasProcessed.current = true
+
     async function processResult() {
       const profile = await userProfileRepo.get()
       if (!profile) return
