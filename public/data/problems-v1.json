@@ -42315,15 +42315,15 @@
       "steps": [
         {
           "desc": "n 구하기",
-          "expression": "3n=18 → n=6 (육각기둥)"
+          "expression": "3n = 18 → n = 6 (육각기둥)"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "면의 수 공식",
+          "expression": "면의 수 = n + 2 (위, 아래 + 옆면 n개)"
         },
         {
-          "desc": "면의 수",
-          "expression": "6+2=8개"
+          "desc": "계산",
+          "expression": "6 + 2 = 8개"
         }
       ],
       "conceptExplanation": "모서리 수에서 n을 먼저 구한 뒤 면의 수(n+2)를 구해요."
@@ -42345,15 +42345,15 @@
       "steps": [
         {
           "desc": "n 구하기",
-          "expression": "n+1=10 → n=9 (구각뿔)"
+          "expression": "n + 1 = 10 → n = 9 (구각뿔)"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "모서리 수 공식",
+          "expression": "모서리 수 = 2n"
         },
         {
-          "desc": "모서리 수",
-          "expression": "2×9=18개"
+          "desc": "계산",
+          "expression": "2 × 9 = 18개"
         }
       ],
       "conceptExplanation": "꼭짓점 수에서 n을 구한 뒤 모서리 수(2n)를 구해요."
@@ -42404,16 +42404,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "각뿔의 옆면 수",
+          "expression": "옆면 수 = 밑면의 변의 수"
         },
         {
-          "desc": "식 세우기",
-          "expression": "밑면의 변의 수와 같음 → 6개"
+          "desc": "육각뿔 밑면",
+          "expression": "육각형 → 변의 수 = 6"
         },
         {
-          "desc": "옆면의 수",
-          "expression": "밑면의 변의 수와 같음 → 6개"
+          "desc": "결론",
+          "expression": "삼각형 옆면 = 6개"
         }
       ],
       "conceptExplanation": "각뿔의 옆면 수는 밑면의 변의 수와 항상 같아요."
@@ -42434,16 +42434,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "각기둥의 높이 정의",
+          "expression": "두 밑면은 서로 평행하고 합동"
         },
         {
-          "desc": "식 세우기",
-          "expression": "두 밑면 사이의 거리 "
+          "desc": "두 밑면 사이의 거리",
+          "expression": "밑면에 수직인 선분의 길이"
         },
         {
-          "desc": "정의 확인",
-          "expression": "두 밑면 사이의 거리 = 높이"
+          "desc": "결론",
+          "expression": "이를 각기둥의 \"높이\"라 함 → 정답 3"
         }
       ],
       "conceptExplanation": "각기둥의 높이는 두 밑면 사이의 수직 거리를 의미해요."
@@ -44741,16 +44741,16 @@
       },
       "steps": [
         {
-          "desc": "문제 분석",
-          "expression": "주어진 조건 정리"
+          "desc": "비율 계산 1",
+          "expression": "2:5 → 2 ÷ 5 = 0.4"
         },
         {
-          "desc": "각 비율",
-          "expression": "2/5=0.4, 5/10=0.5"
+          "desc": "비율 계산 2",
+          "expression": "5:10 → 5 ÷ 10 = 0.5"
         },
         {
-          "desc": "검증",
-          "expression": "답 확인"
+          "desc": "비교",
+          "expression": "0.4 < 0.5 → 5:10이 더 큰 비율"
         }
       ],
       "conceptExplanation": "비율을 소수나 백분율로 바꿔서 비교해요."
@@ -45882,16 +45882,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "나머지 합 계산",
+          "expression": "100% - 20% = 80%"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "4개 항목 균등 분배",
+          "expression": "80% ÷ 4 = 20%"
         },
         {
-          "desc": "식",
-          "expression": "(100-20) / 4 = 20%"
+          "desc": "결론",
+          "expression": "한 항목의 백분율 = 20%"
         }
       ],
       "conceptExplanation": "전체에서 기타를 뺀 나머지를 개수로 나눠요."
@@ -45916,8 +45916,16 @@
       },
       "steps": [
         {
-          "desc": "데이터 분석",
-          "expression": "주어진 수치 확인 및 비교"
+          "desc": "비례식 세우기",
+          "expression": "전체 × 0.36 = 180"
+        },
+        {
+          "desc": "전체 구하기",
+          "expression": "전체 = 180 ÷ 0.36"
+        },
+        {
+          "desc": "계산",
+          "expression": "= 500명"
         }
       ],
       "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
@@ -46034,8 +46042,16 @@
       },
       "steps": [
         {
-          "desc": "데이터 분석",
-          "expression": "주어진 수치 확인 및 비교"
+          "desc": "원그래프 원리",
+          "expression": "각도 비율 = 전체 중 차지하는 비율"
+        },
+        {
+          "desc": "비율 비교",
+          "expression": "A 각도 = 2 × B 각도 → A 비율 = 2 × B 비율"
+        },
+        {
+          "desc": "결론",
+          "expression": "A 인원 = 2 × B 인원"
         }
       ],
       "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
@@ -46060,8 +46076,16 @@
       },
       "steps": [
         {
-          "desc": "데이터 분석",
-          "expression": "주어진 수치 확인 및 비교"
+          "desc": "합 계산",
+          "expression": "40 + 25 + 20 = 85%"
+        },
+        {
+          "desc": "D 구하기",
+          "expression": "100% - 85% = 15%"
+        },
+        {
+          "desc": "확인",
+          "expression": "40+25+20+15 = 100% ✓"
         }
       ],
       "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
@@ -46567,16 +46591,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "부피 공식",
+          "expression": "부피 = 가로 × 세로 × 높이"
         },
         {
-          "desc": "식 세우기",
-          "expression": "120 / (6×5) "
+          "desc": "높이 구하기 식",
+          "expression": "120 = 6 × 5 × 높이 → 높이 = 120 ÷ 30"
         },
         {
-          "desc": "식",
-          "expression": "120 / (6×5) = 4cm"
+          "desc": "계산",
+          "expression": "= 4cm"
         }
       ],
       "conceptExplanation": "부피를 밑면의 넓이(가로×세로)로 나누면 높이가 돼요."
@@ -46597,16 +46621,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "정육면체 부피 공식",
+          "expression": "부피 = 한 모서리³"
         },
         {
-          "desc": "식 세우기",
-          "expression": "4 × 4 × 4 "
+          "desc": "모서리 길이 구하기",
+          "expression": "□³ = 64 → □ = ∛64"
         },
         {
-          "desc": "식",
-          "expression": "4 × 4 × 4 = 64"
+          "desc": "계산",
+          "expression": "4 × 4 × 4 = 64 → 한 모서리 = 4cm"
         }
       ],
       "conceptExplanation": "세 번 곱해서 64가 되는 수를 찾아요."
@@ -46627,16 +46651,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "정육면체 겉넓이 공식",
+          "expression": "겉넓이 = 한 면의 넓이 × 6"
         },
         {
-          "desc": "식 세우기",
-          "expression": "150 / 6 "
+          "desc": "한 면의 넓이",
+          "expression": "한 면의 넓이 = 150 ÷ 6"
         },
         {
-          "desc": "식",
-          "expression": "150 / 6 = 25"
+          "desc": "계산",
+          "expression": "= 25cm²"
         }
       ],
       "conceptExplanation": "정육면체는 모양과 크기가 같은 면이 6개예요."
@@ -46687,16 +46711,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "옆면 둘레 계산",
+          "expression": "옆면 4개의 둘레 합 = (가로+세로) × 2 = (5+4) × 2 = 18cm"
         },
         {
-          "desc": "식 세우기",
-          "expression": "(5+4+5+4) × 3 "
+          "desc": "옆면 넓이 공식",
+          "expression": "옆면 넓이 합 = 둘레 합 × 높이"
         },
         {
-          "desc": "옆면 계산",
-          "expression": "(5+4+5+4) × 3 = 54"
+          "desc": "계산",
+          "expression": "18 × 3 = 54cm²"
         }
       ],
       "conceptExplanation": "밑면의 둘레에 높이를 곱하면 옆면의 넓이 합을 구할 수 있어요."
@@ -50256,16 +50280,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "앞면 높이 해석",
+          "expression": "3열의 높이: 2층, 1층, 2층"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "최소 배치 원칙",
+          "expression": "각 열에서 최솟값 = 해당 열 최소 블록 수"
         },
         {
-          "desc": "논리 전개",
-          "expression": "주어진 조건을 조합해 모양 유추"
+          "desc": "합산",
+          "expression": "2 + 1 + 2 = 5개"
         }
       ],
       "conceptExplanation": "위, 앞, 옆 모습을 동시에 고려해 가능한 쌓기나무의 위치를 찾아야 해요."
@@ -50290,16 +50314,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "옆면 높이 해석",
+          "expression": "2열의 높이: 3층, 2층"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "최소 배치 원칙",
+          "expression": "각 열에서 필요한 최소 블록 = 해당 열 높이"
         },
         {
-          "desc": "논리 전개",
-          "expression": "주어진 조건을 조합해 모양 유추"
+          "desc": "합산",
+          "expression": "3 + 2 = 5개"
         }
       ],
       "conceptExplanation": "위, 앞, 옆 모습을 동시에 고려해 가능한 쌓기나무의 위치를 찾아야 해요."
@@ -50325,15 +50349,15 @@
       "steps": [
         {
           "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "expression": "위에서 보면 4칸, 앞에서 보면 1줄(1행)로 보임"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "구조 추론",
+          "expression": "1줄로 보인다 = 가로로 1행만 있음 → 세로 방향으로만 배열"
         },
         {
-          "desc": "논리 전개",
-          "expression": "주어진 조건을 조합해 모양 유추"
+          "desc": "최대 층수",
+          "expression": "1줄 배열의 최대 층수 = 1층 (가로 펼친 구조)"
         }
       ],
       "conceptExplanation": "위, 앞, 옆 모습을 동시에 고려해 가능한 쌓기나무의 위치를 찾아야 해요."
@@ -50358,16 +50382,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "회전 원리",
+          "expression": "쌓기나무 회전 → 형태는 변하지만 블록 수는 동일"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "방향 변화",
+          "expression": "90° 회전 시 높이와 깊이가 교환될 수 있음"
         },
         {
-          "desc": "논리 전개",
-          "expression": "주어진 조건을 조합해 모양 유추"
+          "desc": "결론",
+          "expression": "층수 = 3층 (블록 개수 불변)"
         }
       ],
       "conceptExplanation": "위, 앞, 옆 모습을 동시에 고려해 가능한 쌓기나무의 위치를 찾아야 해요."
@@ -52506,16 +52530,16 @@
       },
       "steps": [
         {
-          "desc": "원의 넓이 공식 적용",
-          "expression": "넓이 = π × r²"
+          "desc": "반지름 구하기",
+          "expression": "r = 지름 ÷ 2 = 10 ÷ 2 = 5cm"
         },
         {
-          "desc": "주어진 넓이 대입",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "넓이 공식 적용",
+          "expression": "넓이 = 3.14 × r² = 3.14 × 5²"
         },
         {
-          "desc": "계산 단계",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "계산",
+          "expression": "= 3.14 × 25 = 78.5cm²"
         }
       ],
       "conceptExplanation": "복합적인 모양은 기본 도형으로 나누어 생각해요."
@@ -52539,16 +52563,16 @@
       },
       "steps": [
         {
-          "desc": "원의 넓이 공식 적용",
-          "expression": "넓이 = π × r²"
+          "desc": "반원 공식",
+          "expression": "반원 넓이 = 원 넓이 ÷ 2 = (π × r²) ÷ 2"
         },
         {
-          "desc": "주어진 넓이 대입",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "대입",
+          "expression": "(3 × 4²) ÷ 2 = (3 × 16) ÷ 2"
         },
         {
-          "desc": "계산 단계",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "계산",
+          "expression": "= 48 ÷ 2 = 24cm²"
         }
       ],
       "conceptExplanation": "복합적인 모양은 기본 도형으로 나누어 생각해요."
@@ -52572,16 +52596,16 @@
       },
       "steps": [
         {
-          "desc": "원의 넓이 공식 적용",
-          "expression": "넓이 = π × r²"
+          "desc": "4분의 1원 공식",
+          "expression": "1/4원 넓이 = (π × r²) ÷ 4"
         },
         {
-          "desc": "주어진 넓이 대입",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "대입",
+          "expression": "(3.1 × 10²) ÷ 4 = (3.1 × 100) ÷ 4"
         },
         {
-          "desc": "계산 단계",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "계산",
+          "expression": "= 310 ÷ 4 = 77.5cm²"
         }
       ],
       "conceptExplanation": "복합적인 모양은 기본 도형으로 나누어 생각해요."
@@ -52605,16 +52629,16 @@
       },
       "steps": [
         {
-          "desc": "원의 넓이 공식 적용",
-          "expression": "넓이 = π × r²"
+          "desc": "반지름 구하기",
+          "expression": "원주 = 2 × π × r → 31.4 = 2 × 3.14 × r → r = 31.4 ÷ 6.28 = 5cm"
         },
         {
-          "desc": "주어진 넓이 대입",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "넓이 공식",
+          "expression": "넓이 = 3.14 × r² = 3.14 × 5²"
         },
         {
-          "desc": "계산 단계",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "계산",
+          "expression": "= 3.14 × 25 = 78.5cm²"
         }
       ],
       "conceptExplanation": "복합적인 모양은 기본 도형으로 나누어 생각해요."
@@ -52631,23 +52655,23 @@
       "skills": [
         "circle_calculation_advanced"
       ],
-      "question": "둘레가 12cm인 정사각형 안에 꼭 맞는 원의 넓이는 몇 cm²인가요? (원주율: 3)",
+      "question": "둘레가 24cm인 정사각형 안에 꼭 맞는 원의 넓이는 몇 cm²인가요? (원주율: 3)",
       "answerType": "text",
       "answer": {
         "text": "27"
       },
       "steps": [
         {
-          "desc": "원의 넓이 공식 적용",
-          "expression": "넓이 = π × r²"
+          "desc": "정사각형 한 변의 길이",
+          "expression": "둘레 = 4 × 변 → 24 = 4 × 변 → 변 = 6cm"
         },
         {
-          "desc": "주어진 넓이 대입",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "원의 반지름",
+          "expression": "원이 꼭 맞으므로 지름 = 변 = 6cm → r = 3cm"
         },
         {
-          "desc": "계산 단계",
-          "expression": "조건에 맞춰 공식 적용"
+          "desc": "넓이 계산",
+          "expression": "3 × r² = 3 × 3² = 3 × 9 = 27cm²"
         }
       ],
       "conceptExplanation": "복합적인 모양은 기본 도형으로 나누어 생각해요."
@@ -53639,16 +53663,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "원기둥 구조",
+          "expression": "원기둥: 원형 밑면 + 직사각형 옆면"
         },
         {
-          "desc": "식 세우기",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "수직 단면",
+          "expression": "밑면에 수직인 평면 → 원기둥을 세로로 자름"
         },
         {
-          "desc": "관찰 및 추론",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "단면 모양",
+          "expression": "세로 단면 = 직사각형 (가로: 지름, 높이: 높이)"
         }
       ],
       "conceptExplanation": "입체도형을 어떻게 자르는지에 따라 단면의 모양이 달라져요."
@@ -53673,16 +53697,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "원뿔 구조",
+          "expression": "원뿔: 원형 밑면 + 꼭짓점"
         },
         {
-          "desc": "식 세우기",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "수직 단면 (꼭짓점 통과)",
+          "expression": "꼭짓점을 지나는 수직 단면 → 원뿔을 반으로 자름"
         },
         {
-          "desc": "관찰 및 추론",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "단면 모양",
+          "expression": "두 모선 + 지름 → 이등변삼각형"
         }
       ],
       "conceptExplanation": "입체도형을 어떻게 자르는지에 따라 단면의 모양이 달라져요."
@@ -53707,16 +53731,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "구의 단면",
+          "expression": "구의 중심을 지나는 평면으로 자를 때"
         },
         {
-          "desc": "식 세우기",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "가장 큰 원",
+          "expression": "반지름 = 구의 반지름 (최대값)"
         },
         {
-          "desc": "관찰 및 추론",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "결론",
+          "expression": "이 원을 대원(Great Circle)이라 함"
         }
       ],
       "conceptExplanation": "입체도형을 어떻게 자르는지에 따라 단면의 모양이 달라져요."
@@ -53741,16 +53765,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "전개도 옆면이 정사각형",
+          "expression": "정사각형 → 가로 = 세로"
         },
         {
-          "desc": "식 세우기",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "옆면 치수",
+          "expression": "가로 = 밑면 원주, 세로 = 원기둥 높이"
         },
         {
-          "desc": "관찰 및 추론",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "결론",
+          "expression": "원주 = 높이 → 같다"
         }
       ],
       "conceptExplanation": "입체도형을 어떻게 자르는지에 따라 단면의 모양이 달라져요."
@@ -53775,16 +53799,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "원뿔 높이의 의미",
+          "expression": "높이 = 꼭짓점에서 밑면까지 수직 거리"
         },
         {
-          "desc": "식 세우기",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "수직 측정 방법",
+          "expression": "자(밑면 기준) + 삼각자(수직 확인)로 수직 거리 측정"
         },
         {
-          "desc": "관찰 및 추론",
-          "expression": "입체도형의 단면 또는 성질 분석"
+          "desc": "결론",
+          "expression": "수직 거리를 정확히 재기 위해 삼각자 필요 → 정답 1"
         }
       ],
       "conceptExplanation": "입체도형을 어떻게 자르는지에 따라 단면의 모양이 달라져요."
@@ -54351,16 +54375,16 @@
       },
       "steps": [
         {
-          "desc": "오일러 공식 적용",
+          "desc": "오일러 공식",
+          "expression": "면 - 모서리 + 꼭짓점 = 2"
+        },
+        {
+          "desc": "대입",
           "expression": "7 - □ + 7 = 2"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
-        },
-        {
           "desc": "모서리 구하기",
-          "expression": "□ = 12"
+          "expression": "□ = 7 + 7 - 2 = 12"
         }
       ],
       "conceptExplanation": "오일러 공식: 면의 수 - 모서리의 수 + 꼭짓점의 수 = 2"
@@ -54411,16 +54435,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "각 칸의 블록 수",
+          "expression": "2, 3, 1, 2, 2, 1 (위에서 본 6칸)"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "모두 합산",
+          "expression": "2+3+1+2+2+1"
         },
         {
-          "desc": "각 칸 합산",
-          "expression": "2+3+1+2+2+1 = 11"
+          "desc": "계산",
+          "expression": "= 11개"
         }
       ],
       "conceptExplanation": "위에서 본 모양에 적힌 수가 쌓기나무의 층 수예요. 모든 수를 더하면 됩니다."
@@ -54471,16 +54495,16 @@
       },
       "steps": [
         {
-          "desc": "최소 배치",
-          "expression": "2×2 바닥에 조건 만족하는 최소: 각 꼭짓점 1개 + 필요한 2층"
+          "desc": "조건 정리",
+          "expression": "앞: 2층×2칸, 옆: 2층×2칸 (2×2 바닥)"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "최소 배치",
+          "expression": "앞·옆 모두 2층으로 보이려면 각 모서리에 2층 1개씩이면 충분"
         },
         {
           "desc": "계산",
-          "expression": "모서리 2곳만 2층으로 쌓으면 됨 → 2+2 = 4"
+          "expression": "2층 블록 2개 = 4개 (최소)"
         }
       ],
       "conceptExplanation": "최소 쌓기나무는 각 방향에서 본 모양을 모두 만족시키는 가장 적은 배치를 찾아야 해요."
@@ -54501,16 +54525,16 @@
       },
       "steps": [
         {
-          "desc": "가운데 숨겨진 나무",
-          "expression": "3×3×3 정육면체의 가운데 1개는 보이지 않음"
+          "desc": "겉면 블록 수",
+          "expression": "3×3×3 = 27개, 겉면 = 27-1 = 26개"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "숨겨진 블록",
+          "expression": "정육면체 가운데 = 어떤 면에서도 보이지 않는 1개"
         },
         {
           "desc": "확인",
-          "expression": "27 - 26 = 1"
+          "expression": "27 - 26 = 1개"
         }
       ],
       "conceptExplanation": "3×3×3 정육면체에서 6면 모두에서 보이지 않는 것은 정중앙의 1개뿐이에요."
@@ -55211,16 +55235,16 @@
       },
       "steps": [
         {
-          "desc": "식",
+          "desc": "비례식 세우기",
           "expression": "전체 × 0.36 = 180"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "전체 구하기",
+          "expression": "전체 = 180 ÷ 0.36"
         },
         {
           "desc": "계산",
-          "expression": "전체 = 180 ÷ 0.36 = 500"
+          "expression": "= 500명"
         }
       ],
       "conceptExplanation": "(항목 수) ÷ (비율) = (전체 수)"
@@ -55241,16 +55265,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "백분율→각도 비율",
+          "expression": "원그래프 전체 = 360°"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "식 세우기",
+          "expression": "360° × 55/100 = 360° × 0.55"
         },
         {
-          "desc": "각도 계산",
-          "expression": "360° × 0.55 = 198°"
+          "desc": "계산",
+          "expression": "= 198°"
         }
       ],
       "conceptExplanation": "원그래프에서 각도 = 360° × 비율"
@@ -55271,16 +55295,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
-        },
-        {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "식 세우기",
+          "expression": "600 × 25/100 = 600 × 0.25"
         },
         {
           "desc": "계산",
-          "expression": "600 × 0.25 = 150"
+          "expression": "= 150명"
+        },
+        {
+          "desc": "확인",
+          "expression": "150/600 = 0.25 = 25% ✓"
         }
       ],
       "conceptExplanation": "(전체) × (비율) = (항목 수)"
@@ -55301,16 +55325,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "각도→백분율 변환",
+          "expression": "원그래프 전체 = 360° = 100%"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "식 세우기",
+          "expression": "90° ÷ 360° × 100"
         },
         {
           "desc": "계산",
-          "expression": "90 ÷ 360 × 100 = 25%"
+          "expression": "= 25%"
         }
       ],
       "conceptExplanation": "백분율 = (각도) ÷ 360 × 100"
@@ -55361,16 +55385,16 @@
       },
       "steps": [
         {
-          "desc": "논리",
-          "expression": "원그래프에서 각도 비율 = 인원 비율"
+          "desc": "원그래프 원리",
+          "expression": "각도 비율 = 전체 중 차지하는 비율"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "비율 비교",
+          "expression": "A 각도 = 2 × B 각도 → A 비율 = 2 × B 비율"
         },
         {
           "desc": "결론",
-          "expression": "A 각도가 B의 2배 → A 인원도 B의 2배"
+          "expression": "A 인원 = 2 × B 인원"
         }
       ],
       "conceptExplanation": "원그래프에서 각도의 비율 = 자료의 비율이에요."
@@ -55391,16 +55415,16 @@
       },
       "steps": [
         {
-          "desc": "조건 분석",
-          "expression": "주어진 정보 정리"
+          "desc": "합 계산",
+          "expression": "40 + 25 + 20 = 85%"
         },
         {
-          "desc": "경우의 수 탐색",
-          "expression": "가능성 검토"
+          "desc": "D 구하기",
+          "expression": "100% - 85% = 15%"
         },
         {
-          "desc": "계산",
-          "expression": "100 - (40+25+20) = 100-85 = 15%"
+          "desc": "확인",
+          "expression": "40+25+20+15 = 100% ✓"
         }
       ],
       "conceptExplanation": "원그래프의 모든 항목 백분율의 합은 100%예요."
@@ -55421,16 +55445,16 @@
       },
       "steps": [
         {
-          "desc": "옆면 넓이",
-          "expression": "2 × 3.14 × 5 × 8"
+          "desc": "옆면 넓이 공식",
+          "expression": "옆면 = 원주 × 높이 = 2πr × h"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "대입",
+          "expression": "= 2 × 3.14 × 5 × 8"
         },
         {
           "desc": "계산",
-          "expression": "= 251.2 ≈ 251"
+          "expression": "= 31.4 × 8 = 251.2 ≈ 251cm²"
         }
       ],
       "conceptExplanation": "원기둥 옆면 넓이 = (밑면 둘레) × (높이) = 2πr × h"
@@ -55481,16 +55505,16 @@
       },
       "steps": [
         {
-          "desc": "주어진 조건 정리",
-          "expression": "부피/넓이 공식 확인"
+          "desc": "회전 기준축",
+          "expression": "직각을 낀 한 변을 축으로 회전"
         },
         {
-          "desc": "식 세우기",
-          "expression": "직각삼각형의 빗변이 회전하면 경사면 → 원뿔"
+          "desc": "빗변의 역할",
+          "expression": "빗변 = 기울어진 선 → 원뿔의 모선(母線)이 됨"
         },
         {
-          "desc": "회전체 판단",
-          "expression": "직각삼각형의 빗변이 회전하면 경사면 → 원뿔"
+          "desc": "결론",
+          "expression": "꼭짓점 1개 + 원형 밑면 = 원뿔"
         }
       ],
       "conceptExplanation": "직각삼각형을 한 변을 축으로 회전시키면 원뿔이 만들어져요."
@@ -55512,15 +55536,15 @@
       "steps": [
         {
           "desc": "반지름 구하기",
-          "expression": "3.14 × r² = 113.04 → r² = 36 → r=6"
+          "expression": "3.14 × r² = 113.04 → r² = 113.04 ÷ 3.14 = 36"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "제곱근",
+          "expression": "r = √36 = 6cm"
         },
         {
-          "desc": "지름",
-          "expression": "6 × 2 = 12cm"
+          "desc": "지름 계산",
+          "expression": "지름 = 2 × r = 2 × 6 = 12cm"
         }
       ],
       "conceptExplanation": "원의 넓이 = π×r²이므로 r²= 넓이÷π로 역산해요."
@@ -55541,16 +55565,16 @@
       },
       "steps": [
         {
-          "desc": "원 넓이",
-          "expression": "3.14 × 36 = 113.04 cm²"
+          "desc": "원 넓이 계산",
+          "expression": "3.14 × r² = 3.14 × 6² = 3.14 × 36 = 113.04cm²"
         },
         {
-          "desc": "계산 진행",
-          "expression": "단계별 계산"
+          "desc": "절반 구하기",
+          "expression": "113.04 ÷ 2 = 56.52cm²"
         },
         {
-          "desc": "반",
-          "expression": "113.04 ÷ 2 = 56.52 ≈ 56"
+          "desc": "결론",
+          "expression": "≈ 56cm² (소수점 이하 버림)"
         }
       ],
       "conceptExplanation": "반원의 넓이 = πr² ÷ 2"
