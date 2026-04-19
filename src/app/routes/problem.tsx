@@ -119,7 +119,7 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
               <span className="text-[8px] leading-none">연습장</span>
             </button>
           )}
-          <button onClick={() => { setShowHint(s => !s); if (!showHint) session.setHintUsed(true); }} className="flex flex-col items-center gap-0.5 text-xs font-bold px-2 py-1 border transition-colors" style={showHint ? { backgroundColor: '#23233f', borderColor: '#ffe792', color: '#ffe792' } : { backgroundColor: '#1d1d37', borderColor: '#23233f', color: theme.primary }}>
+          <button onClick={() => { setShowHint(true); if (!showHint) session.setHintUsed(true); }} className="flex flex-col items-center gap-0.5 text-xs font-bold px-2 py-1 border transition-colors" style={showHint ? { backgroundColor: '#23233f', borderColor: '#ffe792', color: '#ffe792' } : { backgroundColor: '#1d1d37', borderColor: '#23233f', color: theme.primary }}>
             <HintIcon color={showHint ? '#ffe792' : theme.primary} size={14} />
             <span className="text-[8px] leading-none">힌트</span>
           </button>
@@ -168,7 +168,6 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
               <div className="px-5 py-2">
                 <p className="text-xs font-bold text-yellow-400 mb-2">아래 빈 칸에 풀이 과정과 답을 써 보세요!</p>
               </div>
-              {showHint && <HintBox text={problem.conceptExplanation} />}
             </div>
             <div className="shrink-0 h-[420px] px-4 pb-4">
               <DrawProblem
@@ -183,7 +182,6 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
             {/* 질문 패널: 항상 flex-1, 스크롤 가능 */}
             <div className="flex-1 overflow-y-auto min-h-0">
               {questionContent}
-              {showHint && <HintBox text={problem.conceptExplanation} />}
               {currentAnswerType === 'multiple_choice' && (
                 <div className="py-3"><MultipleChoiceInput choices={problem.choices} choiceImages={problem.choiceImages} selected={session.selectedChoice} onSelect={session.setSelectedChoice} /></div>
               )}
@@ -253,6 +251,16 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
         )}
       </div>
 
+      {/* 힌트 팝업 (모든 문제 타입 공통) */}
+      {showHint && (
+        <HintPopup
+          text={problem.conceptExplanation}
+          imageUrl={problem.questionImage ? getAssetPath(problem.questionImage) : undefined}
+          answerValues={extractAnswerValues(problem.answer)}
+          onClose={() => setShowHint(false)}
+        />
+      )}
+
       {showScratchpad && (
         <div className="fixed inset-0 z-50 flex flex-col" style={{ backgroundColor: '#0f172a' }}>
           <div className="flex items-center justify-between px-4 py-3" style={{ backgroundColor: '#17172f', borderBottom: '1px solid #23233f' }}>
@@ -269,12 +277,64 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
   )
 }
 
-function HintBox({ text }: { text: string }) {
+function extractAnswerValues(answer: Problem['answer']): number[] {
+  if (!answer) return []
+  if (isIntegerAnswer(answer)) return [answer.value]
+  if (isFractionAnswer(answer)) return [] // 분수는 분자/분모가 힌트에서 개념 숫자로 쓰여 과잉 마스킹 위험
+  if (isMultiBlankAnswer(answer)) return answer.values
+  return []
+}
+
+function HintPopup({ text, imageUrl, answerValues, onClose }: { text: string; imageUrl?: string; answerValues: number[]; onClose: () => void }) {
   return (
-    <div className="mx-4 mt-2 mb-4 px-4 py-3 text-sm animate-in fade-in slide-in-from-top-2"
-         style={{ backgroundColor: '#23233f', border: '1px solid #ffe792', color: '#e5e3ff' }}>
-      <p className="font-bold text-yellow-400 mb-1 flex items-center gap-1"><HintIcon color="#ffe792" size={12} /> 힌트</p>
-      {filterHintText(text)}
+    <div
+      className="fixed inset-0 z-50 flex items-end justify-center animate-in fade-in duration-200"
+      style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
+      onClick={onClose}
+    >
+      <div
+        className="w-full max-h-[70vh] overflow-y-auto flex flex-col animate-in slide-in-from-bottom-4 duration-250"
+        style={{ backgroundColor: '#1a1a35', borderTop: '2px solid #ffe792', borderRadius: '20px 20px 0 0' }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* 헤더 */}
+        <div className="flex items-center justify-between px-5 pt-5 pb-3 shrink-0">
+          <p className="font-bold text-base flex items-center gap-2" style={{ color: '#ffe792' }}>
+            <HintIcon color="#ffe792" size={16} /> 힌트
+          </p>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 flex items-center justify-center text-base font-bold"
+            style={{ backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '50%', color: '#aaa8c3' }}
+          >✕</button>
+        </div>
+
+        {/* 이미지 (이미지 문제일 때만) */}
+        {imageUrl && (
+          <div className="px-5 pb-4 shrink-0">
+            <div
+              className="w-full flex items-center justify-center overflow-hidden"
+              style={{ backgroundColor: '#ffffff', borderRadius: '12px', border: '2px solid #2e2e55' }}
+            >
+              <img
+                src={imageUrl}
+                alt="문제 그림"
+                style={{ maxWidth: '100%', maxHeight: '220px', width: 'auto', height: 'auto', display: 'block', objectFit: 'contain' }}
+              />
+            </div>
+          </div>
+        )}
+
+        {/* 힌트 텍스트 */}
+        <div className="px-5 pb-6 text-sm shrink-0" style={{ color: '#e5e3ff' }}>
+          <div
+            className="px-4 py-3"
+            style={{ backgroundColor: '#23233f', borderRadius: '10px', border: '1px solid #2e2e55', lineHeight: '1.7' }}
+          >
+            {filterHintText(text, answerValues)}
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
