@@ -20,7 +20,7 @@ describe('Advanced Recommend Engine (Skills Similarity)', () => {
   ]
 
   it('prioritizes high skill similarity when concept differs', () => {
-    selectRecommendedProblem({
+    const result = selectRecommendedProblem({
       unit: '나눗셈',
       concept: 'concept_X', // pool에 concept_X 없음 -> Unit 검색으로 넘어감
       currentDifficulty: 'basic',

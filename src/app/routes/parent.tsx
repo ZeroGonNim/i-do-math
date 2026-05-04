@@ -14,6 +14,8 @@ import { formatConceptName } from '@/shared/constants/problemConstants'
 import { GamepadIcon, TrashIcon, LockIcon } from '@/shared/components/PixelIcons'
 import { AVATARS } from '@/types/avatar'
 import { isIntegerAnswer, isFractionAnswer, type Answer, type Problem } from '@/types/problem'
+import type { LearningLog } from '@/types/learningLog'
+import type { WrongNote } from '@/types/wrongNote'
 import { loadProblems } from '@/shared/services/problemLoader'
 import { useDashboardData } from '@/features/parent/hooks/useDashboardData'
 import { StatRadarChart } from '@/features/parent/components/StatRadarChart'
@@ -403,7 +405,7 @@ export function ParentRoute() {
                   ];
 
                   // 1. 학습 로그 주입 (30개)
-                  const logs = [];
+                  const logs: LearningLog[] = [];
                   for (let i = 0; i < 30; i++) {
                     const dayOffset = Math.floor(i / 4);
                     const isCorrect = Math.random() > 0.35; // 65% 정답률 유도
@@ -429,7 +431,7 @@ export function ParentRoute() {
                   await db.learningLogs.bulkPut(logs);
 
                   // 2. 오답 노트 주입
-                  const wrongNotes = [
+                  const wrongNotes: WrongNote[] = [
                     { 
                       id: `${profile.userId}::seed-w1::precision_error`,
                       userId: profile.userId, concept: 'big_number_read_write', mistakeType: 'precision_error', 
