@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { userProfileRepo } from '@/shared/db/userProfileRepo'
 import { generateUUID } from '@/shared/utils/uuid'
+import { ensureAnonSession } from '@/shared/lib/supabase'
 import type { AvatarId } from '@/types/avatar'
 
 export function useOnboarding() {
@@ -14,8 +15,10 @@ export function useOnboarding() {
   async function complete() {
     try {
       const today = new Date().toISOString().split('T')[0]
+      const authUid = await ensureAnonSession()
+      const userId = authUid ?? generateUUID() // dev/offline fallback (Supabase 미연동 시)
       await userProfileRepo.save({
-        userId: generateUUID(),
+        userId,
         displayName: name.trim(),
         grade,
         characterId: 'char-01',  // @deprecated, kept for DB compat

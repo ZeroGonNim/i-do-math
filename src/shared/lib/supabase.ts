@@ -1,32 +1,56 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient, type SupabaseClient } from '@supabase/supabase-js'
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
 
-// 1. 설정값 유효성 검사
-// 2. 개발 환경(DEV)인 경우 연동 비활성화 (운영 배포 환경에서만 작동)
 const isDev = import.meta.env.DEV
 const isValidConfig = supabaseUrl.startsWith('http') && supabaseAnonKey.length > 10
 
 /**
- * Supabase 클라이언트 생성
- * 개발 모드이거나 설정이 없으면 가짜 클라이언트를 반환합니다.
+ * Supabase 클라이언트.
+ * 개발 모드 또는 설정 누락 시 null. 호출부는 반드시 null-체크 필요.
  */
-export const supabase = (isValidConfig && !isDev)
-  ? createClient(supabaseUrl, supabaseAnonKey)
-  : (null as any)
+export const supabase: SupabaseClient | null = (isValidConfig && !isDev)
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: false,
+      },
+    })
+  : null
 
-/**
- * 서비스 작동 여부 판단 가드
- */
-export const isSupabaseConfigured = () => {
-  if (isDev) {
-    // 로컬 개발 중에는 연동 안 함 (콘솔 노이즈 방지)
-    return false
-  }
+export const isSupabaseConfigured = (): boolean => {
+  if (isDev) return false
   if (!isValidConfig) {
     console.warn('Supabase configuration is missing. Sync disabled.')
     return false
   }
   return true
+}
+
+/**
+ * 익명 세션 보장. 세션이 있으면 그 user.id, 없으면 signInAnonymously 호출 후 user.id 반환.
+ * 클라이언트가 없거나 로그인 실패 시 null.
+ *
+ * RLS 정책이 auth.uid() = user_id 형태라 cloud sync 직전에 호출해 세션을 보장한다.
+ *
+ * @param client 의존성 주입용 (테스트에서 모킹). 기본값 = 모듈 레벨 supabase
+ */
+export async function ensureAnonSession(
+  client: SupabaseClient | null = supabase,
+): Promise<string | null> {
+  if (!client) return null
+
+  const { data: sessionData } = await client.auth.getSession()
+  if (sessionData.session) {
+    return sessionData.session.user.id
+  }
+
+  const { data, error } = await client.auth.signInAnonymously()
+  if (error) {
+    console.error('Anonymous sign-in failed:', error.message)
+    return null
+  }
+  return data.user?.id ?? null
 }

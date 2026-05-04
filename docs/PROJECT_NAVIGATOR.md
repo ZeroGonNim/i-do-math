@@ -66,6 +66,15 @@
 
 ## 📋 5. 남은 작업
 
+### 긴급 (보안)
+- [x] **Supabase RLS 활성화** (옵션 A — 임시 차단, 2026-05-04)
+  - `learning_logs`, `problem_reports`, `profiles` 3개 테이블에 RLS ON + anon insert/update만 허용
+  - 트리거: Supabase 보안 경고 메일 (`rls_disabled_in_public`)
+- [ ] **Supabase Auth 익명 로그인 + auth.uid() 기반 RLS 마이그레이션** (옵션 B — 정공법)
+  - 온보딩 시 `signInAnonymously()` 호출 → `auth.uid()`를 `userId`로 채택
+  - RLS 정책을 `auth.uid()::text = user_id` 기반으로 강화 → 본인 데이터만 read/write
+  - 영향 파일: `src/shared/lib/supabase.ts`, `src/features/onboarding/hooks/useOnboarding.ts`, repo 3종 (`learningLogRepo`, `problemReportRepo`, `userProfileRepo`)
+
 ### 단기
 - [ ] Figma Phase A 디자인 실제 컴포넌트 이식 (UI 고도화)
 - [ ] 6학년 문항 중 고난도 문장제 수동 정밀 QA
@@ -78,4 +87,4 @@
 - [ ] 앱스토어/플레이스토어 공식 배포 및 심사
 
 ---
-*마지막 업데이트: 2026-04-16 (Session 26)*
+*마지막 업데이트: 2026-05-04 (Supabase RLS 보안 조치)*

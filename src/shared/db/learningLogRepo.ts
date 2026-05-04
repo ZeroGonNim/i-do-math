@@ -1,13 +1,17 @@
 import { db } from './db'
 import type { LearningLog } from '@/types/learningLog'
-import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { supabase, isSupabaseConfigured, ensureAnonSession } from '../lib/supabase'
 
 export const learningLogRepo = {
   async add(log: LearningLog): Promise<void> {
     await db.learningLogs.add(log)
 
-    // Cloud Sync (Safe Guard)
+    // Cloud Sync (Safe Guard) — RLS: auth.uid() = user_id
     if (isSupabaseConfigured() && supabase) {
+      const authUid = await ensureAnonSession()
+      if (!authUid || authUid !== log.userId) {
+        return // 세션 없거나 user_id 불일치 → 로컬만 저장
+      }
       try {
         await supabase.from('learning_logs').insert({
           user_id: log.userId,

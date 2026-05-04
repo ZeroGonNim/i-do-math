@@ -3,6 +3,7 @@ export type ReportStatus = 'pending' | 'fixed' | 'dismissed'
 
 export interface ProblemReport {
   reportId: string
+  userId: string
   problemId: string
   problemUnit: string
   reportType: ReportType

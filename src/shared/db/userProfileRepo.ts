@@ -1,6 +1,6 @@
 import { db } from './db'
 import type { UserProfile } from '@/types/user'
-import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { supabase, isSupabaseConfigured, ensureAnonSession } from '../lib/supabase'
 
 export const userProfileRepo = {
   async get(): Promise<UserProfile | undefined> {
@@ -8,8 +8,12 @@ export const userProfileRepo = {
   },
   async save(profile: UserProfile): Promise<void> {
     await db.userProfile.put(profile)
-    
+
     if (isSupabaseConfigured() && supabase) {
+      const authUid = await ensureAnonSession()
+      if (!authUid || authUid !== profile.userId) {
+        return // 세션 없거나 id 불일치 → 로컬만 저장
+      }
       const { error } = await supabase.from('profiles').upsert({
         id: profile.userId,
         display_name: profile.displayName,
@@ -27,9 +31,13 @@ export const userProfileRepo = {
     const profile = await userProfileRepo.get()
     if (!profile) return
     await db.userProfile.update(profile.userId, changes)
-    
+
     if (isSupabaseConfigured() && supabase) {
       const updated = { ...profile, ...changes }
+      const authUid = await ensureAnonSession()
+      if (!authUid || authUid !== updated.userId) {
+        return // 세션 없거나 id 불일치 → 로컬만 저장
+      }
       const { error } = await supabase.from('profiles').upsert({
         id: updated.userId,
         display_name: updated.displayName,

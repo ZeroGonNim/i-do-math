@@ -1,15 +1,20 @@
 import { db } from './db'
 import type { ProblemReport, ReportStatus } from '@/types/problemReport'
-import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { supabase, isSupabaseConfigured, ensureAnonSession } from '../lib/supabase'
 
 export const problemReportRepo = {
   async add(report: ProblemReport): Promise<void> {
     await db.problemReports.add(report)
 
     if (isSupabaseConfigured() && supabase) {
+      const authUid = await ensureAnonSession()
+      if (!authUid || authUid !== report.userId) {
+        return // 세션 없거나 user_id 불일치 → 로컬만 저장
+      }
       try {
         await supabase.from('problem_reports').insert({
           report_id: report.reportId,
+          user_id: report.userId,
           problem_id: report.problemId,
           problem_unit: report.problemUnit,
           report_type: report.reportType,

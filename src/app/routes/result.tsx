@@ -180,9 +180,10 @@ export function ResultRoute() {
   }
 
   async function handleReport(type: ReportType) {
-    if (!problem) return
+    if (!problem || !profile) return
     await problemReportRepo.add({
       reportId: `${problem.id}-${Date.now()}`,
+      userId: profile.userId,
       problemId: problem.id,
       problemUnit: problem.unit,
       reportType: type,
