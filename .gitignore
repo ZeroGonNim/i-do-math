@@ -11,3 +11,7 @@ build/
 docs/superpowers/
 skills-lock.json
 .vercel
+
+# 베타 홍보 자료 (자동 생성, scripts/promo/로 재생성 가능)
+docs/promo/
+scripts/promo/

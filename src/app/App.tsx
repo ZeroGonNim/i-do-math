@@ -12,10 +12,15 @@ import { SettingsRoute } from './routes/settings'
 import { BoxOpenRoute } from './routes/box-open'
 import { StatsRoute } from './routes/stats'
 import { ErrorBoundary } from '@/shared/components/ErrorBoundary'
+import { useOnlineStatus } from '@/shared/hooks/useOnlineStatus'
+import { OfflineBanner } from '@/shared/components/OfflineBanner'
 
 export function App() {
+  const isOnline = useOnlineStatus()
+
   return (
     <ErrorBoundary>
+      {!isOnline && <OfflineBanner />}
       <Routes>
         <Route path="/" element={<IndexRoute />} />
         <Route path="/onboarding" element={<OnboardingRoute />} />

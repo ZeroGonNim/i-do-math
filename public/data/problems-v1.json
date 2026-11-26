@@ -164,7 +164,7 @@
       "mistakeTypes": [
         "calculation_error"
       ],
-      "question": "사각형의 네 각의 크기의 합을 구해 봐요.\n세 각이 90°, 90°, 75°이고 나머지 한 각이 □°일 때, 합은 몇 도인가요?",
+      "question": "사각형의 네 각의 합을 구해 봐요.\n세 각이 90°, 90°, 75°일 때, 나머지 각(□°)과 합(□°)을 구해 봐요.",
       "answerType": "multi_blank",
       "answer": {
         "values": [
@@ -770,7 +770,7 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "예각은 0°보다 크고 90°보다 작은 각입니다. 50°, 10°, 20°가 예각입니다. 이 문제의 정답은 3입니다.",
-      "answerUnit": "°",
+      "answerUnit": "개",
       "questionImage": "/images/angle/angle-020.svg"
     },
     {
@@ -906,7 +906,7 @@
       "question": "삼각형의 각의 크기에 대한 설명 중 옳은 것을 골라 봐요.",
       "answerType": "multiple_choice",
       "choices": [
-        "두 변이 벌어진 정도가 가장 큰 가의 각의 크기가 가장 큽니다.",
+        "두 변이 벌어진 정도가 가장 큰 각의 크기가 가장 큽니다.",
         "각의 크기는 삼각형의 높이에 따라 결정됩니다.",
         "변의 길이와 관계없이 각의 크기는 모두 같습니다."
       ],
@@ -1061,7 +1061,7 @@
       ],
       "animationAsset": "angle",
       "conceptExplanation": "0°보다 크고 90°보다 작은 각이 예각입니다. 20°와 30°가 예각입니다.",
-      "answerUnit": "°",
+      "answerUnit": "개",
       "questionImage": "/images/angle/angle-028.svg"
     },
     {
@@ -1469,7 +1469,8 @@
       ],
       "animationAsset": "angle-geometry",
       "conceptExplanation": "삼각형은 180°, 사각형은 360°! 이것만 알면 어떤 각도도 구할 수 있어.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u2-angle-051",
@@ -1511,7 +1512,8 @@
       ],
       "animationAsset": "angle-geometry",
       "conceptExplanation": "삼각형은 180°, 사각형은 360°! 이것만 알면 어떤 각도도 구할 수 있어.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s1-u3-divide-applied-001",
@@ -3002,7 +3004,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,101입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-042",
@@ -3044,7 +3047,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,304입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-043",
@@ -3086,7 +3090,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,509입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-044",
@@ -3128,7 +3133,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,716입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-045",
@@ -3170,7 +3176,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 1,950입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-046",
@@ -3212,7 +3219,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,156입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-047",
@@ -3254,7 +3262,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,364입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-048",
@@ -3296,7 +3305,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,574입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-049",
@@ -3338,7 +3348,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,786입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-050",
@@ -3380,7 +3391,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,000입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-051",
@@ -3422,7 +3434,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,211입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-052",
@@ -3464,7 +3477,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,424입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-053",
@@ -3506,7 +3520,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,639입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-054",
@@ -3548,7 +3563,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,856입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-055",
@@ -3590,7 +3606,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,050입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-056",
@@ -3632,7 +3649,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,266입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-057",
@@ -3674,7 +3692,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,484입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-058",
@@ -3716,7 +3735,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,704입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-059",
@@ -3758,7 +3778,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,926입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-basic-060",
@@ -3800,7 +3821,8 @@
       ],
       "animationAsset": "multiply-animation",
       "conceptExplanation": "자릿수 곱하기를 할 때는 각 자리가 나타내는 값을 잘 생각해서 더해주면 돼!. 이 문제의 정답은 2,100입니다.",
-      "answerType": "integer"
+      "answerType": "integer",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s1-u3-multiply-reverse-001",
@@ -11128,7 +11150,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-002",
@@ -11163,7 +11186,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 칠각형의 변은 7개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 칠각형의 변은 7개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-003",
@@ -11198,7 +11222,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-004",
@@ -11233,7 +11258,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형에서 변의 수와 꼭짓점의 수는 항상 같습니다. 사각형의 꼭짓점은 4개입니다."
+      "conceptExplanation": "다각형에서 변의 수와 꼭짓점의 수는 항상 같습니다. 사각형의 꼭짓점은 4개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-005",
@@ -11273,7 +11299,8 @@
         }
       ],
       "animationAsset": "polygon-diagonal",
-      "conceptExplanation": "삼각형의 세 꼭짓점은 모두 서로 이웃하고 있으므로 대각선을 그을 수 없습니다. 대각선의 수는 0개입니다."
+      "conceptExplanation": "삼각형의 세 꼭짓점은 모두 서로 이웃하고 있으므로 대각선을 그을 수 없습니다. 대각선의 수는 0개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-006",
@@ -11308,7 +11335,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-007",
@@ -11348,7 +11376,8 @@
         }
       ],
       "animationAsset": "polygon-diagonal",
-      "conceptExplanation": "사각형에서 서로 이웃하지 않는 두 꼭짓점을 이으면 대각선이 2개 생깁니다."
+      "conceptExplanation": "사각형에서 서로 이웃하지 않는 두 꼭짓점을 이으면 대각선이 2개 생깁니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-008",
@@ -11388,7 +11417,8 @@
         }
       ],
       "animationAsset": "polygon-diagonal",
-      "conceptExplanation": "오각형에서 서로 이웃하지 않는 두 꼭짓점을 이으면 대각선이 5개 생깁니다. 공식: n(n-3)÷2 = 5(5-3)÷2 = 5"
+      "conceptExplanation": "오각형에서 서로 이웃하지 않는 두 꼭짓점을 이으면 대각선이 5개 생깁니다. 공식: n(n-3)÷2 = 5(5-3)÷2 = 5",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-009",
@@ -11477,7 +11507,8 @@
           "expression": "180 - 78 = 102"
         }
       ],
-      "conceptExplanation": "직사각형의 두 대각선은 서로 같고 서로를 이등분하므로 삼각형 ㄹㅁㄷ은 이등변삼각형입니다. 각 ㄷㅁㄹ = 180-51-51 = 78°이고, 맞꼭지각 ㅇ = 180-78 = 102°입니다."
+      "conceptExplanation": "직사각형의 두 대각선은 서로 같고 서로를 이등분하므로 삼각형 ㄹㅁㄷ은 이등변삼각형입니다. 각 ㄷㅁㄹ = 180-51-51 = 78°이고, 맞꼭지각 ㅇ = 180-78 = 102°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u6-polygon-011",
@@ -11547,7 +11578,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "정삼각형은 정다각형의 하나로, 변이 3개이고 모든 변의 길이가 같습니다."
+      "conceptExplanation": "정삼각형은 정다각형의 하나로, 변이 3개이고 모든 변의 길이가 같습니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-013",
@@ -11582,7 +11614,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "정오각형은 변이 5개이고, 꼭짓점도 5개입니다."
+      "conceptExplanation": "정오각형은 변이 5개이고, 꼭짓점도 5개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-021",
@@ -11617,7 +11650,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-022",
@@ -11652,7 +11686,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-023",
@@ -11687,7 +11722,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-024",
@@ -11872,7 +11908,8 @@
           "expression": "180 - 82 = 98"
         }
       ],
-      "conceptExplanation": "직사각형의 두 대각선은 서로 같고 서로를 이등분하므로 이등변삼각형이 생깁니다. 각 ㄷㅁㄹ = 180-49-49 = 82°이고, 맞꼭지각 ㅇ = 180-82 = 98°입니다."
+      "conceptExplanation": "직사각형의 두 대각선은 서로 같고 서로를 이등분하므로 이등변삼각형이 생깁니다. 각 ㄷㅁㄹ = 180-49-49 = 82°이고, 맞꼭지각 ㅇ = 180-82 = 98°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u6-polygon-029",
@@ -11992,7 +12029,8 @@
           "expression": "26 ÷ 2 = 13"
         }
       ],
-      "conceptExplanation": "직사각형의 두 대각선은 길이가 같습니다. 두 대각선 합이 26cm이므로 대각선 하나의 길이 = 26÷2 = 13cm입니다."
+      "conceptExplanation": "직사각형의 두 대각선은 길이가 같습니다. 두 대각선 합이 26cm이므로 대각선 하나의 길이 = 26÷2 = 13cm입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u6-polygon-041",
@@ -12027,7 +12065,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 팔각형의 변은 8개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-042",
@@ -12062,7 +12101,8 @@
           "expression": "40 ÷ 5 = 8"
         }
       ],
-      "conceptExplanation": "정오각형의 모든 변의 길이가 같으므로 한 변의 길이 = 40 ÷ 5 = 8cm입니다."
+      "conceptExplanation": "정오각형의 모든 변의 길이가 같으므로 한 변의 길이 = 40 ÷ 5 = 8cm입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u6-polygon-043",
@@ -12097,7 +12137,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 오각형의 변은 5개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-044",
@@ -12138,7 +12179,8 @@
           "expression": "15 × 14 = 210"
         }
       ],
-      "conceptExplanation": "180×(n-2) = 2160이면 n = 14(정십사각형). 모든 변의 합 = 15×14 = 210cm입니다."
+      "conceptExplanation": "180×(n-2) = 2160이면 n = 14(정십사각형). 모든 변의 합 = 15×14 = 210cm입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u6-polygon-045",
@@ -12213,7 +12255,8 @@
           "expression": "7 × 4 ÷ 2 = 14"
         }
       ],
-      "conceptExplanation": "정칠각형의 대각선 수 = 7(7-3)÷2 = 7×4÷2 = 14개입니다."
+      "conceptExplanation": "정칠각형의 대각선 수 = 7(7-3)÷2 = 7×4÷2 = 14개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u6-polygon-047",
@@ -12254,7 +12297,8 @@
           "expression": "130 ÷ 10 = 13"
         }
       ],
-      "conceptExplanation": "n(n-3)÷2 = 35이면 n=10(정십각형). 한 변의 길이 = 130÷10 = 13cm입니다."
+      "conceptExplanation": "n(n-3)÷2 = 35이면 n=10(정십각형). 한 변의 길이 = 130÷10 = 13cm입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u6-polygon-048",
@@ -12289,7 +12333,8 @@
           "expression": "180 × 3 = 540"
         }
       ],
-      "conceptExplanation": "오각형을 삼각형 3개로 나누면 모든 각의 크기의 합 = 180°×3 = 540°입니다."
+      "conceptExplanation": "오각형을 삼각형 3개로 나누면 모든 각의 크기의 합 = 180°×3 = 540°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u6-polygon-049",
@@ -12368,7 +12413,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다."
+      "conceptExplanation": "다각형은 변의 개수에 따라 이름이 정해집니다. 육각형의 변은 6개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g4-s2-u1-fraction-011",
@@ -14872,7 +14918,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 7 × 4 = 28cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 7 × 4 = 28cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-002",
@@ -14907,7 +14954,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-003",
@@ -14942,7 +14990,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 6 × 4 = 24cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 6 × 4 = 24cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-004",
@@ -14977,7 +15026,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 12 × 4 = 48cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 12 × 4 = 48cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-005",
@@ -15012,7 +15062,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 5 × 4 = 20cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 5 × 4 = 20cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-006",
@@ -15047,7 +15098,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-007",
@@ -15082,7 +15134,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-009",
@@ -15117,7 +15170,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 15 × 4 = 60cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 15 × 4 = 60cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-010",
@@ -15152,7 +15206,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-011",
@@ -15187,7 +15242,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-015",
@@ -15222,7 +15278,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-021",
@@ -15257,7 +15314,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-022",
@@ -15292,7 +15350,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 12 × 4 = 48cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 12 × 4 = 48cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-024",
@@ -15327,7 +15386,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-025",
@@ -15362,7 +15422,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-026",
@@ -15397,7 +15458,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-027",
@@ -15432,7 +15494,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-029",
@@ -15467,7 +15530,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 15 × 4 = 60cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 15 × 4 = 60cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-031",
@@ -15502,7 +15566,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-041",
@@ -15537,7 +15602,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 13 × 4 = 52cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-042",
@@ -15572,7 +15638,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 8 × 4 = 32cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-043",
@@ -15607,7 +15674,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 9 × 4 = 36cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-044",
@@ -15642,7 +15710,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 11 × 4 = 44cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-047",
@@ -15677,7 +15746,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 7 × 4 = 28cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 7 × 4 = 28cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-048",
@@ -15712,7 +15782,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 14 × 4 = 56cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-049",
@@ -15747,7 +15818,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 5 × 4 = 20cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 5 × 4 = 20cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-050",
@@ -15782,7 +15854,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 6 × 4 = 24cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 6 × 4 = 24cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u4-quadrangle-058",
@@ -15817,7 +15890,8 @@
         }
       ],
       "animationAsset": "shape-quad",
-      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다."
+      "conceptExplanation": "마름모는 네 변의 길이가 모두 같습니다. 따라서 10 × 4 = 40cm가 정답입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g4-s2-u2-triangle-001",
@@ -15857,7 +15931,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 56 + 56 = 112이므로, 180 - 112 = 68입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 56 + 56 = 112이므로, 180 - 112 = 68입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-002",
@@ -15897,7 +15972,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 32 + 32 = 64이므로, 180 - 64 = 116입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 32 + 32 = 64이므로, 180 - 64 = 116입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-003",
@@ -15937,7 +16013,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 42 + 42 = 84이므로, 180 - 84 = 96입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 42 + 42 = 84이므로, 180 - 84 = 96입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-004",
@@ -15977,7 +16054,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 39 = 78이므로, 180 - 78 = 102입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 39 = 78이므로, 180 - 78 = 102입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-005",
@@ -16017,7 +16095,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 53 + 53 = 106이므로, 180 - 106 = 74입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 53 + 53 = 106이므로, 180 - 106 = 74입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-007",
@@ -16057,7 +16136,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 49 + 49 = 98이므로, 180 - 98 = 82입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 49 + 49 = 98이므로, 180 - 98 = 82입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-008",
@@ -16097,7 +16177,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 55 + 55 = 110이므로, 180 - 110 = 70입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 55 + 55 = 110이므로, 180 - 110 = 70입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-009",
@@ -16137,7 +16218,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 31 + 31 = 62이므로, 180 - 62 = 118입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 31 + 31 = 62이므로, 180 - 62 = 118입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-010",
@@ -16177,7 +16259,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 34 + 34 = 68이므로, 180 - 68 = 112입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 34 + 34 = 68이므로, 180 - 68 = 112입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-012",
@@ -16217,7 +16300,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 68 + 68 = 136이므로, 180 - 136 = 44입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 68 + 68 = 136이므로, 180 - 136 = 44입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-013",
@@ -16257,7 +16341,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 63 + 63 = 126이므로, 180 - 126 = 54입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 63 + 63 = 126이므로, 180 - 126 = 54입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-014",
@@ -16297,7 +16382,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 66 + 66 = 132이므로, 180 - 132 = 48입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 66 + 66 = 132이므로, 180 - 132 = 48입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-015",
@@ -16337,7 +16423,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 37 + 37 = 74이므로, 180 - 74 = 106입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 37 + 37 = 74이므로, 180 - 74 = 106입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-016",
@@ -16377,7 +16464,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 57 + 57 = 114이므로, 180 - 114 = 66입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 57 + 57 = 114이므로, 180 - 114 = 66입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-017",
@@ -16417,7 +16505,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 61 + 61 = 122이므로, 180 - 122 = 58입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 61 + 61 = 122이므로, 180 - 122 = 58입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-019",
@@ -16457,7 +16546,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 30 + 30 = 60이므로, 180 - 60 = 120입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 30 + 30 = 60이므로, 180 - 60 = 120입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-020",
@@ -16497,7 +16587,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 41 = 82이므로, 180 - 82 = 98입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 41 = 82이므로, 180 - 82 = 98입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-021",
@@ -16537,7 +16628,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 36 + 36 = 72이므로, 180 - 72 = 108입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 36 + 36 = 72이므로, 180 - 72 = 108입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-022",
@@ -16577,7 +16669,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 75 + 75 = 150이므로, 180 - 150 = 30입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 75 + 75 = 150이므로, 180 - 150 = 30입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-023",
@@ -16617,7 +16710,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 72 + 72 = 144이므로, 180 - 144 = 36입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 72 + 72 = 144이므로, 180 - 144 = 36입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-025",
@@ -16657,7 +16751,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 61 + 61 = 122이므로, 180 - 122 = 58입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 61 + 61 = 122이므로, 180 - 122 = 58입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-026",
@@ -16697,7 +16792,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 41 = 82이므로, 180 - 82 = 98입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 41 = 82이므로, 180 - 82 = 98입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-027",
@@ -16737,7 +16833,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 39 = 78이므로, 180 - 78 = 102입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 39 = 78이므로, 180 - 78 = 102입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-028",
@@ -16777,7 +16874,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 78 + 78 = 156이므로, 180 - 156 = 24입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 78 + 78 = 156이므로, 180 - 156 = 24입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-029",
@@ -16817,7 +16915,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 50 + 50 = 100이므로, 180 - 100 = 80입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 50 + 50 = 100이므로, 180 - 100 = 80입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-030",
@@ -16857,7 +16956,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 43 + 43 = 86이므로, 180 - 86 = 94입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 43 + 43 = 86이므로, 180 - 86 = 94입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-031",
@@ -16897,7 +16997,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 35 + 52 = 87이므로, 180 - 87 = 93입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 35 + 52 = 87이므로, 180 - 87 = 93입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-032",
@@ -16937,7 +17038,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 76 + 49 = 125이므로, 180 - 125 = 55입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 76 + 49 = 125이므로, 180 - 125 = 55입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-033",
@@ -16977,7 +17079,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 74 + 41 = 115이므로, 180 - 115 = 65입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 74 + 41 = 115이므로, 180 - 115 = 65입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-034",
@@ -17017,7 +17120,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 36 + 43 = 79이므로, 180 - 79 = 101입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 36 + 43 = 79이므로, 180 - 79 = 101입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-035",
@@ -17057,7 +17161,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 50 + 53 = 103이므로, 180 - 103 = 77입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 50 + 53 = 103이므로, 180 - 103 = 77입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-036",
@@ -17097,7 +17202,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 45 + 61 = 106이므로, 180 - 106 = 74입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 45 + 61 = 106이므로, 180 - 106 = 74입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-037",
@@ -17137,7 +17243,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 37 + 63 = 100이므로, 180 - 100 = 80입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 37 + 63 = 100이므로, 180 - 100 = 80입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-038",
@@ -17177,7 +17284,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 47 + 65 = 112이므로, 180 - 112 = 68입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 47 + 65 = 112이므로, 180 - 112 = 68입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-039",
@@ -17217,7 +17325,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 52 + 60 = 112이므로, 180 - 112 = 68입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 52 + 60 = 112이므로, 180 - 112 = 68입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-040",
@@ -17257,7 +17366,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 33 + 60 = 93이므로, 180 - 93 = 87입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 33 + 60 = 93이므로, 180 - 93 = 87입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-041",
@@ -17297,7 +17407,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 68 + 59 = 127이므로, 180 - 127 = 53입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 68 + 59 = 127이므로, 180 - 127 = 53입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-042",
@@ -17337,7 +17448,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 76 + 45 = 121이므로, 180 - 121 = 59입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 76 + 45 = 121이므로, 180 - 121 = 59입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-043",
@@ -17377,7 +17489,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 51 + 40 = 91이므로, 180 - 91 = 89입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 51 + 40 = 91이므로, 180 - 91 = 89입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-044",
@@ -17417,7 +17530,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 58 = 99이므로, 180 - 99 = 81입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 58 = 99이므로, 180 - 99 = 81입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-045",
@@ -17457,7 +17571,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 58 = 122이므로, 180 - 122 = 58입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 58 = 122이므로, 180 - 122 = 58입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-046",
@@ -17497,7 +17612,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 48 + 47 = 95이므로, 180 - 95 = 85입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 48 + 47 = 95이므로, 180 - 95 = 85입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-047",
@@ -17537,7 +17653,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 66 + 54 = 120이므로, 180 - 120 = 60입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 66 + 54 = 120이므로, 180 - 120 = 60입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-048",
@@ -17577,7 +17694,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 49 = 88이므로, 180 - 88 = 92입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 39 + 49 = 88이므로, 180 - 88 = 92입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-049",
@@ -17617,7 +17735,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 78 + 59 = 137이므로, 180 - 137 = 43입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 78 + 59 = 137이므로, 180 - 137 = 43입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-050",
@@ -17657,7 +17776,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 51 = 92이므로, 180 - 92 = 88입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 41 + 51 = 92이므로, 180 - 92 = 88입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-051",
@@ -17697,7 +17817,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 67 = 131이므로, 180 - 131 = 49입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 67 = 131이므로, 180 - 131 = 49입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-052",
@@ -17737,7 +17858,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 72 + 45 = 117이므로, 180 - 117 = 63입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 72 + 45 = 117이므로, 180 - 117 = 63입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-053",
@@ -17777,7 +17899,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 51 + 47 = 98이므로, 180 - 98 = 82입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 51 + 47 = 98이므로, 180 - 98 = 82입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-054",
@@ -17817,7 +17940,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 75 + 44 = 119이므로, 180 - 119 = 61입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 75 + 44 = 119이므로, 180 - 119 = 61입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-055",
@@ -17857,7 +17981,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 61 = 125이므로, 180 - 125 = 55입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 61 = 125이므로, 180 - 125 = 55입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-056",
@@ -17897,7 +18022,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 73 + 41 = 114이므로, 180 - 114 = 66입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 73 + 41 = 114이므로, 180 - 114 = 66입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-057",
@@ -17937,7 +18063,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 48 = 112이므로, 180 - 112 = 68입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 64 + 48 = 112이므로, 180 - 112 = 68입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-058",
@@ -17977,7 +18104,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 48 + 55 = 103이므로, 180 - 103 = 77입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 48 + 55 = 103이므로, 180 - 103 = 77입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-059",
@@ -18017,7 +18145,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 53 + 70 = 123이므로, 180 - 123 = 57입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 53 + 70 = 123이므로, 180 - 123 = 57입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u2-triangle-060",
@@ -18057,7 +18186,8 @@
         }
       ],
       "animationAsset": "triangle-angle",
-      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 74 + 41 = 115이므로, 180 - 115 = 65입니다."
+      "conceptExplanation": "삼각형의 세 각의 크기의 합은 항상 180°가 됩니다. 74 + 41 = 115이므로, 180 - 115 = 65입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g4-s2-u3-decimal-001",
@@ -18857,7 +18987,8 @@
         }
       ],
       "animationAsset": "decimal-ruler",
-      "conceptExplanation": "소수의 덧셈은 소수점의 자리를 맞추어 세로로 계산하면 편리합니다. 2.17 + 0.83 = 3.0입니다."
+      "conceptExplanation": "소수의 덧셈은 소수점의 자리를 맞추어 세로로 계산하면 편리합니다. 2.17 + 0.83 = 3.0입니다.",
+      "answerUnit": "m"
     },
     {
       "id": "g4-s2-u3-decimal-021",
@@ -20637,7 +20768,8 @@
           "expression": "5×5=25"
         }
       ],
-      "conceptExplanation": "배열 순서를 ■, 바둑돌 수를 ●라 하면 ■×■=●의 대응 관계가 있어요."
+      "conceptExplanation": "배열 순서를 ■, 바둑돌 수를 ●라 하면 ■×■=●의 대응 관계가 있어요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u3-correspond-word-001",
@@ -20744,7 +20876,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "평행사변형 넓이=밑변×높이. 역으로 풀면 밑변=넓이÷높이예요."
+      "conceptExplanation": "평행사변형 넓이=밑변×높이. 역으로 풀면 밑변=넓이÷높이예요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s1-u6-polygon-perimeter-001",
@@ -20778,7 +20911,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "정다각형 둘레=한 변의 길이×변의 수예요."
+      "conceptExplanation": "정다각형 둘레=한 변의 길이×변의 수예요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s1-u6-rectangle-001",
@@ -20817,7 +20951,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "직사각형 둘레=(가로+세로)×2 이에요. 역으로 풀면 가로를 구할 수 있어요."
+      "conceptExplanation": "직사각형 둘레=(가로+세로)×2 이에요. 역으로 풀면 가로를 구할 수 있어요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s1-u6-rectangle-002",
@@ -20885,7 +21020,8 @@
         }
       ],
       "animationAsset": "polygon-shapes",
-      "conceptExplanation": "직사각형 둘레=(가로+세로)×2예요."
+      "conceptExplanation": "직사각형 둘레=(가로+세로)×2예요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s1-u6-rhombus-001",
@@ -21788,7 +21924,8 @@
           "expression": "4개"
         }
       ],
-      "conceptExplanation": "약수는 그 수를 나누어 떨어지게 하는 수예요. 35÷1=35, 35÷5=7, 35÷7=5, 35÷35=1 — 모두 4개!"
+      "conceptExplanation": "약수는 그 수를 나누어 떨어지게 하는 수예요. 35÷1=35, 35÷5=7, 35÷7=5, 35÷35=1 — 모두 4개!",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u2-factors-002",
@@ -22023,7 +22160,8 @@
           "expression": "4개"
         }
       ],
-      "conceptExplanation": "3과 4의 공배수는 최소공배수 12의 배수예요. 12, 24, 36, 48 — 4개!"
+      "conceptExplanation": "3과 4의 공배수는 최소공배수 12의 배수예요. 12, 24, 36, 48 — 4개!",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u2-lcm-word-002",
@@ -22090,7 +22228,8 @@
           "expression": "7개"
         }
       ],
-      "conceptExplanation": "4×6=24부터 4×12=48까지, 20보다 크고 50보다 작은 4의 배수는 7개예요."
+      "conceptExplanation": "4×6=24부터 4×12=48까지, 20보다 크고 50보다 작은 4의 배수는 7개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u1-mixed-blank-001",
@@ -22307,7 +22446,8 @@
           "expression": "24÷8=3(개)"
         }
       ],
-      "conceptExplanation": "먼저 전체 개수를 구한 다음, 나누면 돼요."
+      "conceptExplanation": "먼저 전체 개수를 구한 다음, 나누면 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u1-mixed-word-002",
@@ -22379,7 +22519,8 @@
           "expression": "184-151=33(cm)"
         }
       ],
-      "conceptExplanation": "184-(142+9)=33 처럼 괄호를 써서 먼저 합을 구할 수 있어요."
+      "conceptExplanation": "184-(142+9)=33 처럼 괄호를 써서 먼저 합을 구할 수 있어요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u2-compare-001",
@@ -22672,7 +22813,8 @@
           "expression": "28/5 × 25/4 = 700/20 = 35"
         }
       ],
-      "conceptExplanation": "단위시간당 양 × 시간 = 전체 양이에요. 약분을 먼저 하면 계산이 쉬워져요."
+      "conceptExplanation": "단위시간당 양 × 시간 = 전체 양이에요. 약분을 먼저 하면 계산이 쉬워져요.",
+      "answerUnit": "L"
     },
     {
       "id": "g5-s2-u4-area-001",
@@ -23086,7 +23228,8 @@
           "expression": "18.5, 18.7, 18.6, 18.1은 20보다 작음"
         }
       ],
-      "conceptExplanation": "\"이상\"은 그 수를 포함해요. 20 이상인 수는 20, 20.1, 27.3, 40.2처럼 20보다 크거나 같은 수예요."
+      "conceptExplanation": "\"이상\"은 그 수를 포함해요. 20 이상인 수는 20, 20.1, 27.3, 40.2처럼 20보다 크거나 같은 수예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-001",
@@ -23118,7 +23261,8 @@
           "expression": "960, 961, 962, ..., 969 → 10개"
         }
       ],
-      "conceptExplanation": "버림하여 960이 되려면 십의 자리 이하를 0으로 만들었을 때 960이 되는 수예요. 960~969까지 10개입니다."
+      "conceptExplanation": "버림하여 960이 되려면 십의 자리 이하를 0으로 만들었을 때 960이 되는 수예요. 960~969까지 10개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-002",
@@ -23261,7 +23405,8 @@
           "expression": "96 ÷ 12 = 8cm"
         }
       ],
-      "conceptExplanation": "직육면체는 같은 길이의 모서리가 4개씩 3종류, 정육면체는 12개 모서리 길이가 모두 같아요."
+      "conceptExplanation": "직육면체는 같은 길이의 모서리가 4개씩 3종류, 정육면체는 12개 모서리 길이가 모두 같아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-cuboid-002",
@@ -23332,7 +23477,8 @@
           "expression": "맞은편 1개는 평행 → 제외"
         }
       ],
-      "conceptExplanation": "직육면체에서 한 면에 수직인 면은 4개, 평행인 면은 1개예요."
+      "conceptExplanation": "직육면체에서 한 면에 수직인 면은 4개, 평행인 면은 1개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u5-cuboid-004",
@@ -23396,7 +23542,8 @@
           "expression": "2 × (8+4) = 2 × 12 = 24cm"
         }
       ],
-      "conceptExplanation": "직사각형의 둘레 = 2 × (가로+세로)예요."
+      "conceptExplanation": "직사각형의 둘레 = 2 × (가로+세로)예요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-perimeter-001",
@@ -23428,7 +23575,8 @@
           "expression": "2 × (11+9) = 2 × 20 = 40cm"
         }
       ],
-      "conceptExplanation": "직육면체에서 평행한 두 면은 크기와 모양이 같아요."
+      "conceptExplanation": "직육면체에서 평행한 두 면은 크기와 모양이 같아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-wrong-001",
@@ -23571,7 +23719,8 @@
           "expression": "2370 ÷ 30 = 79"
         }
       ],
-      "conceptExplanation": "두 그룹을 합쳐서 전체 평균을 구할 때는 합계와 전체 수를 각각 더해서 나눠요."
+      "conceptExplanation": "두 그룹을 합쳐서 전체 평균을 구할 때는 합계와 전체 수를 각각 더해서 나눠요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u6-mean-003",
@@ -23635,7 +23784,8 @@
           "expression": "1302 ÷ 31 = 42"
         }
       ],
-      "conceptExplanation": "하루 평균 = 전체 수 ÷ 날짜 수예요."
+      "conceptExplanation": "하루 평균 = 전체 수 ÷ 날짜 수예요.",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u6-mean-005",
@@ -23819,7 +23969,8 @@
           "expression": "25 - 7 - 8 = 10"
         }
       ],
-      "conceptExplanation": "합동인 도형은 대응하는 변의 길이와 각도가 모두 같아요."
+      "conceptExplanation": "합동인 도형은 대응하는 변의 길이와 각도가 모두 같아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-002",
@@ -23852,7 +24003,8 @@
           "expression": "20 = 9 + BC + 5,  BC = 6"
         }
       ],
-      "conceptExplanation": "합동인 도형에서 대응하는 변의 길이를 이용해 모르는 변을 구할 수 있어요."
+      "conceptExplanation": "합동인 도형에서 대응하는 변의 길이를 이용해 모르는 변을 구할 수 있어요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-003",
@@ -23885,7 +24037,8 @@
           "expression": "7 + 5 + 9 = 21"
         }
       ],
-      "conceptExplanation": "합동인 두 도형의 둘레는 같아요."
+      "conceptExplanation": "합동인 두 도형의 둘레는 같아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-001",
@@ -23925,7 +24078,8 @@
           "expression": "X ✓"
         }
       ],
-      "conceptExplanation": "선대칭도형은 한 직선을 기준으로 접었을 때 완전히 겹치는 도형이에요."
+      "conceptExplanation": "선대칭도형은 한 직선을 기준으로 접었을 때 완전히 겹치는 도형이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u3-line-sym-002",
@@ -23966,7 +24120,8 @@
           "expression": "DF = 28 ÷ 2 = 14cm"
         }
       ],
-      "conceptExplanation": "선대칭도형에서 대칭축을 중심으로 대응하는 변의 길이가 같아요."
+      "conceptExplanation": "선대칭도형에서 대칭축을 중심으로 대응하는 변의 길이가 같아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-001",
@@ -24002,7 +24157,8 @@
           "expression": "DO = 18 ÷ 2 = 9cm"
         }
       ],
-      "conceptExplanation": "점대칭도형에서 두 대각선은 대칭의 중심에서 서로 이등분돼요."
+      "conceptExplanation": "점대칭도형에서 두 대각선은 대칭의 중심에서 서로 이등분돼요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-002",
@@ -24038,7 +24194,8 @@
           "expression": "16 = 9 + BC,  BC = 7cm"
         }
       ],
-      "conceptExplanation": "점대칭도형의 둘레는 대응하는 두 쌍의 변 합의 2배예요."
+      "conceptExplanation": "점대칭도형의 둘레는 대응하는 두 쌍의 변 합의 2배예요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-sym-letters-001",
@@ -24074,7 +24231,8 @@
           "expression": "ㄱ, ㄷ, ㅅ, ㅎ ✗"
         }
       ],
-      "conceptExplanation": "점대칭도형은 한 점을 중심으로 180° 돌렸을 때 원래 도형과 완전히 겹치는 도형이에요."
+      "conceptExplanation": "점대칭도형은 한 점을 중심으로 180° 돌렸을 때 원래 도형과 완전히 겹치는 도형이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-005",
@@ -24247,7 +24405,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "'초과'는 기준값을 포함하지 않고 더 큰 수를 말합니다. 7권 초과는 8권 이상과 같습니다."
+      "conceptExplanation": "'초과'는 기준값을 포함하지 않고 더 큰 수를 말합니다. 7권 초과는 8권 이상과 같습니다.",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u1-round-005",
@@ -24392,7 +24551,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "이상인 수는 기준값과 같거나 더 큰 수입니다. 20 이상이면 20, 20.1, 21, 27.3, 40.2 등이 해당됩니다."
+      "conceptExplanation": "이상인 수는 기준값과 같거나 더 큰 수입니다. 20 이상이면 20, 20.1, 21, 27.3, 40.2 등이 해당됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-007",
@@ -24480,7 +24640,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "올림하여 십의 자리가 80이 되는 자연수는 71부터 80까지입니다. 경계값 80은 포함됩니다."
+      "conceptExplanation": "올림하여 십의 자리가 80이 되는 자연수는 71부터 80까지입니다. 경계값 80은 포함됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-010",
@@ -24517,7 +24678,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "이하는 기준값을 포함합니다. 5 이하인 자연수는 1, 2, 3, 4, 5로 5개입니다."
+      "conceptExplanation": "이하는 기준값을 포함합니다. 5 이하인 자연수는 1, 2, 3, 4, 5로 5개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-011",
@@ -24672,7 +24834,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "버림하여 십의 자리까지 나타내면 960이 되는 수는 960부터 969까지 10개입니다."
+      "conceptExplanation": "버림하여 십의 자리까지 나타내면 960이 되는 수는 960부터 969까지 10개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-010",
@@ -24923,7 +25086,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "60 이상인 수는 60과 같거나 60보다 큰 수입니다. 59.9도 60보다 작으므로 포함되지 않습니다."
+      "conceptExplanation": "60 이상인 수는 60과 같거나 60보다 큰 수입니다. 59.9도 60보다 작으므로 포함되지 않습니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-013",
@@ -25157,7 +25321,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "48□11을 올림하여 천의 자리가 49000이 되려면 48001~49000 범위여야 합니다. □가 0~8이면 48011~48811로 모두 해당됩니다."
+      "conceptExplanation": "48□11을 올림하여 천의 자리가 49000이 되려면 48001~49000 범위여야 합니다. □가 0~8이면 48011~48811로 모두 해당됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-018",
@@ -25392,7 +25557,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "자연수 부분이 7이고 소수 첫째 자리가 1~9인 소수 한 자리 수는 7.1~7.9입니다. 이 중 7.2 미만은 7.1 하나뿐입니다."
+      "conceptExplanation": "자연수 부분이 7이고 소수 첫째 자리가 1~9인 소수 한 자리 수는 7.1~7.9입니다. 이 중 7.2 미만은 7.1 하나뿐입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-020",
@@ -25433,7 +25599,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "이상은 기준값 포함, 미만은 기준값 미포함입니다. 25~34까지 10개입니다."
+      "conceptExplanation": "이상은 기준값 포함, 미만은 기준값 미포함입니다. 25~34까지 10개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-range-021",
@@ -25466,7 +25633,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "이상과 이하는 모두 기준값을 포함합니다. 100부터 200까지의 자연수 개수는 200 - 100 + 1 = 101개입니다."
+      "conceptExplanation": "이상과 이하는 모두 기준값을 포함합니다. 100부터 200까지의 자연수 개수는 200 - 100 + 1 = 101개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u1-round-020",
@@ -27190,7 +27358,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭은 180° 회전 후 원래 도형과 겹치는지 확인합니다."
+      "conceptExplanation": "점대칭은 180° 회전 후 원래 도형과 겹치는지 확인합니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u3-congruent-vertex-001",
@@ -27269,7 +27438,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "선대칭도형은 접었을 때 완전히 겹치는 도형입니다."
+      "conceptExplanation": "선대칭도형은 접었을 때 완전히 겹치는 도형입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u3-line-sym-angle-001",
@@ -27344,7 +27514,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "합동 도형에서 대응변의 길이가 같습니다."
+      "conceptExplanation": "합동 도형에서 대응변의 길이가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-side-001",
@@ -27381,7 +27552,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭 평행사변형에서 대변의 길이가 같습니다."
+      "conceptExplanation": "점대칭 평행사변형에서 대변의 길이가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-diag-001",
@@ -27422,7 +27594,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 서로 이등분합니다."
+      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 서로 이등분합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-side-001",
@@ -27463,7 +27636,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "선대칭도형에서 대응변과 대응점까지의 거리가 같습니다."
+      "conceptExplanation": "선대칭도형에서 대응변과 대응점까지의 거리가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-side-002",
@@ -27500,7 +27674,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "합동 삼각형에서 대응변의 길이가 같음을 이용합니다."
+      "conceptExplanation": "합동 삼각형에서 대응변의 길이가 같음을 이용합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-find-001",
@@ -27647,7 +27822,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "마름모는 선대칭도형이며 네 변의 길이가 모두 같습니다."
+      "conceptExplanation": "마름모는 선대칭도형이며 네 변의 길이가 모두 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-find-002",
@@ -27809,7 +27985,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭도형에서 대변의 길이가 같습니다."
+      "conceptExplanation": "점대칭도형에서 대변의 길이가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-area-001",
@@ -27883,7 +28060,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "대응변의 길이가 같음을 이용하여 나머지 변을 구합니다."
+      "conceptExplanation": "대응변의 길이가 같음을 이용하여 나머지 변을 구합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-side-003",
@@ -27932,7 +28110,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "EF 대칭축으로 이등분된 변 길이를 이용합니다."
+      "conceptExplanation": "EF 대칭축으로 이등분된 변 길이를 이용합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-side-004",
@@ -27969,7 +28148,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "BC는 두 삼각형의 공통변으로 대응변에서 나머지를 구합니다."
+      "conceptExplanation": "BC는 두 삼각형의 공통변으로 대응변에서 나머지를 구합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-diag-002",
@@ -28006,7 +28186,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 이등분됩니다."
+      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 이등분됩니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-area-001",
@@ -28124,7 +28305,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "대응변의 순서를 정확히 읽어 변의 길이를 구합니다."
+      "conceptExplanation": "대응변의 순서를 정확히 읽어 변의 길이를 구합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-angle-003",
@@ -28207,7 +28389,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "합동인 두 도형의 둘레는 같습니다."
+      "conceptExplanation": "합동인 두 도형의 둘레는 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-area-002",
@@ -28277,7 +28460,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭도형에서 대변의 길이가 같음을 이용합니다."
+      "conceptExplanation": "점대칭도형에서 대변의 길이가 같음을 이용합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-congruent-side-006",
@@ -28314,7 +28498,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "대응변의 길이가 같음을 이용하여 공통변 BC를 구합니다."
+      "conceptExplanation": "대응변의 길이가 같음을 이용하여 공통변 BC를 구합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-side-004",
@@ -28351,7 +28536,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "EF 대칭축에 의해 AE=BF 관계를 이용합니다."
+      "conceptExplanation": "EF 대칭축에 의해 AE=BF 관계를 이용합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-area-002",
@@ -28441,7 +28627,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 이등분됩니다."
+      "conceptExplanation": "점대칭도형의 두 대각선은 대칭의 중심에서 이등분됩니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-line-sym-side-005",
@@ -28498,7 +28685,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직선 AD가 대칭축이면 BD=DC이고 AD⊥BC임을 이용합니다."
+      "conceptExplanation": "직선 AD가 대칭축이면 BD=DC이고 AD⊥BC임을 이용합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u3-point-sym-find-001",
@@ -28615,7 +28803,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "정n각형의 대칭축은 n개입니다."
+      "conceptExplanation": "정n각형의 대칭축은 n개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u4-dec-ten-001",
@@ -30010,7 +30199,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직육면체에서 이웃한 두 면이 만나는 각도는 항상 90°입니다."
+      "conceptExplanation": "직육면체에서 이웃한 두 면이 만나는 각도는 항상 90°입니다.",
+      "answerUnit": "°"
     },
     {
       "id": "g5-s2-u5-vertex-ratio-001",
@@ -30114,7 +30304,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "정육면체는 12개의 모서리가 모두 같으므로 (한 모서리 길이)×12입니다."
+      "conceptExplanation": "정육면체는 12개의 모서리가 모두 같으므로 (한 모서리 길이)×12입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-rect-edge-sum-001",
@@ -30146,7 +30337,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직육면체의 모든 모서리 합 = (가로+세로+높이)×4"
+      "conceptExplanation": "직육면체의 모든 모서리 합 = (가로+세로+높이)×4",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-face-perimeter-001",
@@ -30178,7 +30370,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직사각형의 둘레 = (가로+세로)×2"
+      "conceptExplanation": "직사각형의 둘레 = (가로+세로)×2",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-wrong-desc-001",
@@ -30358,7 +30551,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "정육면체의 모서리 합 = (한 모서리)×12"
+      "conceptExplanation": "정육면체의 모서리 합 = (한 모서리)×12",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-parallel-face-find-001",
@@ -30423,7 +30617,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직육면체에서 임의의 한 면에 수직인 면은 4개입니다."
+      "conceptExplanation": "직육면체에서 임의의 한 면에 수직인 면은 4개입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u5-die-parallel-001",
@@ -30524,7 +30719,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "겨냥도에서 보이지 않는 모서리(점선) 3개, 보이는 꼭짓점 7개."
+      "conceptExplanation": "겨냥도에서 보이지 않는 모서리(점선) 3개, 보이는 꼭짓점 7개.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u5-vertex-face-edge-001",
@@ -30593,7 +30789,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "겨냥도에서 보이는 모서리 9개 = 각 종류 3개씩. 합 = (가+세+높)×3"
+      "conceptExplanation": "겨냥도에서 보이는 모서리 9개 = 각 종류 3개씩. 합 = (가+세+높)×3",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-parallel-face-sum-001",
@@ -30630,7 +30827,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직육면체에서 마주 보는 평행한 두 면은 크기가 같습니다."
+      "conceptExplanation": "직육면체에서 마주 보는 평행한 두 면은 크기가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-die-stack-001",
@@ -30740,7 +30938,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "겨냥도에서 보이는 모서리 합 = (가로+세로+높이)×3"
+      "conceptExplanation": "겨냥도에서 보이는 모서리 합 = (가로+세로+높이)×3",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-perpendicular-common-001",
@@ -30776,7 +30975,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "두 면에 공통으로 수직인 면은 두 면의 교선(만나는 모서리) 방향의 면들입니다."
+      "conceptExplanation": "두 면에 공통으로 수직인 면은 두 면의 교선(만나는 모서리) 방향의 면들입니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u5-invisible-visible-sum-001",
@@ -30812,7 +31012,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "겨냥도에서 보이는 모서리 9개 + 보이지 않는 꼭짓점 1개 = 10."
+      "conceptExplanation": "겨냥도에서 보이는 모서리 9개 + 보이지 않는 꼭짓점 1개 = 10.",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u5-rect-describe-001",
@@ -30876,7 +31077,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "전개도에서 각 선분은 직육면체의 어느 변에 해당하는지 파악해야 합니다."
+      "conceptExplanation": "전개도에서 각 선분은 직육면체의 어느 변에 해당하는지 파악해야 합니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-ribbon-001",
@@ -30917,7 +31119,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "상자를 한 바퀴 두르는 리본의 최솟값은 (짧은 두 면의 합)×2입니다."
+      "conceptExplanation": "상자를 한 바퀴 두르는 리본의 최솟값은 (짧은 두 면의 합)×2입니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-tape-remain-001",
@@ -30954,7 +31157,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "사용한 테이프 = 포장 둘레 + 겹치는 길이. 남은 = 전체 - 사용."
+      "conceptExplanation": "사용한 테이프 = 포장 둘레 + 겹치는 길이. 남은 = 전체 - 사용.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-net-perpendicular-001",
@@ -31032,7 +31236,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "직육면체에서 평행한 면은 크기가 같습니다."
+      "conceptExplanation": "직육면체에서 평행한 면은 크기가 같습니다.",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u5-net-vertex-001",
@@ -31501,7 +31706,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "전체 수확량 = 총 그루 수 × 그루당 평균 수확량"
+      "conceptExplanation": "전체 수확량 = 총 그루 수 × 그루당 평균 수확량",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u6-mean-error-001",
@@ -31630,7 +31836,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "하루 평균 = 월 총 방문자 ÷ 날 수 (7월=31일)"
+      "conceptExplanation": "하루 평균 = 월 총 방문자 ÷ 날 수 (7월=31일)",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u6-mean-height-001",
@@ -31667,7 +31874,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "두 그룹 평균 = (전체 합) ÷ (전체 인원)"
+      "conceptExplanation": "두 그룹 평균 = (전체 합) ÷ (전체 인원)",
+      "answerUnit": "cm"
     },
     {
       "id": "g5-s2-u6-rope-mean-001",
@@ -32097,7 +32305,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "전체 수확량 = 총 그루 수 × 그루당 평균"
+      "conceptExplanation": "전체 수확량 = 총 그루 수 × 그루당 평균",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s2-u6-zoo-mean-002",
@@ -32129,7 +32338,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "하루 평균 = 월 총 방문자 ÷ 날 수 (8월=31일)"
+      "conceptExplanation": "하루 평균 = 월 총 방문자 ÷ 날 수 (8월=31일)",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u6-target-score-001",
@@ -32239,7 +32449,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "추가된 사람의 값 = 새 합계 - 기존 합계"
+      "conceptExplanation": "추가된 사람의 값 = 새 합계 - 기존 합계",
+      "answerUnit": "kg"
     },
     {
       "id": "g5-s2-u6-prob-compare-001",
@@ -32320,7 +32531,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "기간이 다른 두 그룹의 평균은 각 합산 후 전체 날수로 나눕니다."
+      "conceptExplanation": "기간이 다른 두 그룹의 평균은 각 합산 후 전체 날수로 나눕니다.",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u6-mean-missing-001",
@@ -32463,7 +32675,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "평균보다 많은 = 평균 초과인 값의 개수"
+      "conceptExplanation": "평균보다 많은 = 평균 초과인 값의 개수",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s2-u6-mean-benchmark-001",
@@ -33273,7 +33486,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "6×8÷2-5+4 = 23"
+      "conceptExplanation": "6×8÷2-5+4 = 23",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u1-op-symbol-001",
@@ -33341,7 +33555,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "미착용 = 전체 - 착용"
+      "conceptExplanation": "미착용 = 전체 - 착용",
+      "answerUnit": "명"
     },
     {
       "id": "g5-s1-u1-combine-expr-001",
@@ -33668,7 +33883,8 @@
           "expression": ""
         }
       ],
-      "conceptExplanation": "4×7÷7-3+8 = 9"
+      "conceptExplanation": "4×7÷7-3+8 = 9",
+      "answerUnit": "개"
     },
     {
       "id": "g5-s1-u1-temp-convert-001",
@@ -41348,7 +41564,7 @@
         },
         {
           "desc": "계산",
-          "expression": "18/5 × 2 ÷ 3 = 6/5 m"
+          "expression": "9/5 × 2 ÷ 3 = 18/5 ÷ 3 = 6/5 m"
         }
       ],
       "conceptExplanation": "어떤 수를 구할 때는 계산을 거꾸로 생각해요."
@@ -41486,7 +41702,8 @@
           "expression": "6 + 2 = 8"
         }
       ],
-      "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
+      "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-005",
@@ -41511,7 +41728,8 @@
           "expression": "8 + 2 = 10"
         }
       ],
-      "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요."
+      "conceptExplanation": "도형의 밑면이 어떤 다각형인지에 따라 이름이 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-006",
@@ -41536,7 +41754,8 @@
           "expression": "3 * 2 = 6"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-007",
@@ -41561,7 +41780,8 @@
           "expression": "4 * 3 = 12"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-008",
@@ -41586,7 +41806,8 @@
           "expression": "5 + 2 = 7"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-009",
@@ -41611,7 +41832,8 @@
           "expression": "7 * 2 = 14"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-010",
@@ -41636,7 +41858,8 @@
           "expression": "9 * 3 = 27"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-011",
@@ -41736,7 +41959,8 @@
           "expression": "4 + 2 = 6"
         }
       ],
-      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요."
+      "conceptExplanation": "각기둥에서 n각기둥의 꼭짓점은 2n개, 면은 n+2개, 모서리는 3n개예요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-prism-015",
@@ -41782,8 +42006,12 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "4 + 2 = 6"
+          "desc": "각뿔 이름 규칙",
+          "expression": "밑면이 n각형인 각뿔 → n각뿔"
+        },
+        {
+          "desc": "이름 정하기",
+          "expression": "밑면이 사각형 → 사각뿔 (4)"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41807,8 +42035,12 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "3 + 2 = 5"
+          "desc": "각뿔 이름 규칙",
+          "expression": "밑면이 n각형인 각뿔 → n각뿔"
+        },
+        {
+          "desc": "이름 정하기",
+          "expression": "밑면이 팔각형 → 팔각뿔 (8)"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41857,8 +42089,8 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "3 + 2 = 5"
+          "desc": "각뿔의 옆면",
+          "expression": "각뿔의 옆면은 모두 삼각형이다 → 2"
         }
       ],
       "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
@@ -41882,11 +42114,12 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "5 + 2 = 7"
+          "desc": "각뿔의 밑면",
+          "expression": "각뿔의 밑면은 항상 1개"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요."
+      "conceptExplanation": "각뿔은 밑면이 하나이고 옆면이 모두 삼각형인 입체도형이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-021",
@@ -41907,11 +42140,16 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "3 + 2 = 5"
+          "desc": "각뿔 면의 수 공식",
+          "expression": "각뿔의 면 = 옆면 n개 + 밑면 1개 = n + 1"
+        },
+        {
+          "desc": "계산",
+          "expression": "삼각뿔: 3 + 1 = 4"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-022",
@@ -41936,7 +42174,8 @@
           "expression": "4 * 2 = 8"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-023",
@@ -41961,7 +42200,8 @@
           "expression": "5 * 3 = 15"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-024",
@@ -41986,7 +42226,8 @@
           "expression": "6 * 2 = 12"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-025",
@@ -42007,11 +42248,16 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "7 + 2 = 9"
+          "desc": "각뿔 면의 수 공식",
+          "expression": "각뿔의 면 = 옆면 n개 + 밑면 1개 = n + 1"
+        },
+        {
+          "desc": "계산",
+          "expression": "칠각뿔: 7 + 1 = 8"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-026",
@@ -42036,7 +42282,8 @@
           "expression": "10 * 3 = 30"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-pyramid-027",
@@ -42136,7 +42383,8 @@
           "expression": "n각뿔 규칙: 면 n+1, 꼭짓점 n+1, 모서리 2n"
         }
       ],
-      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요."
+      "conceptExplanation": "각뿔은 밑면의 변의 수(n)에 따라 면, 꼭짓점, 모서리의 개수가 정해져요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-compare-031",
@@ -42326,7 +42574,8 @@
           "expression": "6 + 2 = 8개"
         }
       ],
-      "conceptExplanation": "모서리 수에서 n을 먼저 구한 뒤 면의 수(n+2)를 구해요."
+      "conceptExplanation": "모서리 수에서 n을 먼저 구한 뒤 면의 수(n+2)를 구해요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-adv-042",
@@ -42356,7 +42605,8 @@
           "expression": "2 × 9 = 18개"
         }
       ],
-      "conceptExplanation": "꼭짓점 수에서 n을 구한 뒤 모서리 수(2n)를 구해요."
+      "conceptExplanation": "꼭짓점 수에서 n을 구한 뒤 모서리 수(2n)를 구해요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-adv-043",
@@ -42374,8 +42624,16 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "3 + 2 = 5"
+          "desc": "사각기둥 면의 수",
+          "expression": "4 + 2 = 6"
+        },
+        {
+          "desc": "삼각뿔 모서리 수",
+          "expression": "3 × 2 = 6"
+        },
+        {
+          "desc": "합 계산",
+          "expression": "6 + 6 = 12"
         }
       ],
       "conceptExplanation": "각 도형의 구성 요소 개수를 각각 구한 뒤 더해요."
@@ -42396,11 +42654,20 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "3 + 2 = 5"
+          "desc": "각뿔의 옆면 수 공식",
+          "expression": "n각뿔의 옆면 수 = n (밑면 변의 수)"
+        },
+        {
+          "desc": "육각뿔에 적용",
+          "expression": "n = 6"
+        },
+        {
+          "desc": "결론",
+          "expression": "옆면 = 6개"
         }
       ],
-      "conceptExplanation": "각뿔의 옆면 수는 밑면의 변의 수와 항상 같아요."
+      "conceptExplanation": "각뿔의 옆면 수는 밑면의 변의 수와 항상 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-adv-045",
@@ -42448,8 +42715,20 @@
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "5 + 2 = 7"
+          "desc": "오각기둥 꼭짓점 수",
+          "expression": "V = 5 × 2 = 10"
+        },
+        {
+          "desc": "오각기둥 모서리 수",
+          "expression": "E = 5 × 3 = 15"
+        },
+        {
+          "desc": "오각기둥 면의 수",
+          "expression": "F = 5 + 2 = 7"
+        },
+        {
+          "desc": "V - E + F 계산",
+          "expression": "10 - 15 + 7 = 2"
         }
       ],
       "conceptExplanation": "모든 다면체에서 (꼭짓점)-(모서리)+(면)은 항상 2가 돼요 (오일러의 정리)."
@@ -44608,7 +44887,8 @@
           "expression": "비율 × 100"
         }
       ],
-      "conceptExplanation": "백분율을 활용해 할인율이나 득표율을 구할 수 있어요."
+      "conceptExplanation": "백분율을 활용해 할인율이나 득표율을 구할 수 있어요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u4-percent-word-038",
@@ -44815,7 +45095,8 @@
           "expression": "200 + 30 = 230명"
         }
       ],
-      "conceptExplanation": "전체 인원에 늘어난 비율을 곱해 증가분을 구한 뒤 더해요."
+      "conceptExplanation": "전체 인원에 늘어난 비율을 곱해 증가분을 구한 뒤 더해요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u4-adv-045",
@@ -45181,7 +45462,8 @@
           "expression": "200 × 0.4 = 80명"
         }
       ],
-      "conceptExplanation": "전체 수에 백분율을 곱하면 해당 항목의 수를 구할 수 있어요."
+      "conceptExplanation": "전체 수에 백분율을 곱하면 해당 항목의 수를 구할 수 있어요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u5-graph-012",
@@ -45269,7 +45551,8 @@
           "expression": "200 / 0.4 = 500명"
         }
       ],
-      "conceptExplanation": "항목의 수를 백분율로 나누면 전체를 구할 수 있어요."
+      "conceptExplanation": "항목의 수를 백분율로 나누면 전체를 구할 수 있어요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u5-graph-016",
@@ -45732,7 +46015,8 @@
           "expression": "주어진 수치 확인 및 비교"
         }
       ],
-      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
+      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요.",
+      "answerUnit": "°"
     },
     {
       "id": "g6-s1-u5-graph-logic-035",
@@ -45784,7 +46068,8 @@
           "expression": "주어진 수치 확인 및 비교"
         }
       ],
-      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
+      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u5-graph-logic-037",
@@ -46060,7 +46345,8 @@
           "expression": "40+25+20+15 = 100% ✓"
         }
       ],
-      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요."
+      "conceptExplanation": "그래프의 수치를 비교해 변화를 파악하거나 숨겨진 정보를 찾아요.",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u6-vol-001",
@@ -46575,7 +46861,8 @@
           "expression": "= 4cm"
         }
       ],
-      "conceptExplanation": "부피를 밑면의 넓이(가로×세로)로 나누면 높이가 돼요."
+      "conceptExplanation": "부피를 밑면의 넓이(가로×세로)로 나누면 높이가 돼요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s1-u6-adv-022",
@@ -46605,7 +46892,8 @@
           "expression": "4 × 4 × 4 = 64 → 한 모서리 = 4cm"
         }
       ],
-      "conceptExplanation": "세 번 곱해서 64가 되는 수를 찾아요."
+      "conceptExplanation": "세 번 곱해서 64가 되는 수를 찾아요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s1-u6-adv-023",
@@ -46721,7 +47009,8 @@
           "expression": "8000 / 1000 = 8"
         }
       ],
-      "conceptExplanation": "부피를 구한 뒤 단위를 L로 바꿔요."
+      "conceptExplanation": "부피를 구한 뒤 단위를 L로 바꿔요.",
+      "answerUnit": "L"
     },
     {
       "id": "g6-s1-u6-adv-027",
@@ -49098,12 +49387,16 @@
       "question": "2.3 ÷ 3 의 몫을 반올림하여 소수 둘째 자리까지 나타내세요.",
       "answerType": "text",
       "answer": {
-        "text": "0.38"
+        "text": "0.77"
       },
       "steps": [
         {
-          "desc": "계산",
-          "expression": "2.3 ÷ 3 ≈ 0.38"
+          "desc": "나눗셈",
+          "expression": "2.3 ÷ 3 = 0.7666..."
+        },
+        {
+          "desc": "반올림",
+          "expression": "소수 둘째 자리까지: 0.77"
         }
       ],
       "conceptExplanation": "구하려는 자리의 다음 자리에서 반올림해요."
@@ -49918,7 +50211,8 @@
           "expression": "(4) + 2 + 2 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-008",
@@ -49940,7 +50234,8 @@
           "expression": "(4) + 1 + 3 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-009",
@@ -49962,7 +50257,8 @@
           "expression": "(3) + 2 + 1 = 6"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-010",
@@ -49984,7 +50280,8 @@
           "expression": "(3) + 1 + 2 = 6"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-011",
@@ -50006,7 +50303,8 @@
           "expression": "(5) + 2 + 3 = 10"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-012",
@@ -50028,7 +50326,8 @@
           "expression": "(2) + 1 + 1 = 4"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-013",
@@ -50050,7 +50349,8 @@
           "expression": "(4) + 2 + 2 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-014",
@@ -50072,7 +50372,8 @@
           "expression": "(4) + 1 + 3 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-015",
@@ -50094,7 +50395,8 @@
           "expression": "(3) + 2 + 1 = 6"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-016",
@@ -50116,7 +50418,8 @@
           "expression": "(3) + 1 + 2 = 6"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-017",
@@ -50138,7 +50441,8 @@
           "expression": "(5) + 2 + 3 = 10"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-018",
@@ -50160,7 +50464,8 @@
           "expression": "(2) + 1 + 1 = 4"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-019",
@@ -50182,7 +50487,8 @@
           "expression": "(4) + 2 + 2 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-space-020",
@@ -50204,7 +50510,8 @@
           "expression": "(4) + 1 + 3 = 8"
         }
       ],
-      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요."
+      "conceptExplanation": "각 층별 사용된 개수를 모두 더하면 전체 개수가 돼요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-logic-021",
@@ -50388,7 +50695,8 @@
           "expression": "7"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-027",
@@ -50410,7 +50718,8 @@
           "expression": "8"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-028",
@@ -50432,7 +50741,8 @@
           "expression": "9"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-029",
@@ -50454,7 +50764,8 @@
           "expression": "10"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-030",
@@ -50476,7 +50787,8 @@
           "expression": "6"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-031",
@@ -50498,7 +50810,8 @@
           "expression": "7"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-032",
@@ -50520,7 +50833,8 @@
           "expression": "8"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-033",
@@ -50542,7 +50856,8 @@
           "expression": "9"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-034",
@@ -50564,7 +50879,8 @@
           "expression": "10"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-035",
@@ -50586,7 +50902,8 @@
           "expression": "6"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-036",
@@ -50608,7 +50925,8 @@
           "expression": "7"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-037",
@@ -50630,7 +50948,8 @@
           "expression": "8"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-038",
@@ -50652,7 +50971,8 @@
           "expression": "9"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-039",
@@ -50674,7 +50994,8 @@
           "expression": "10"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-040",
@@ -50696,7 +51017,8 @@
           "expression": "6"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-041",
@@ -50718,7 +51040,8 @@
           "expression": "7"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-042",
@@ -50740,7 +51063,8 @@
           "expression": "8"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-043",
@@ -50762,7 +51086,8 @@
           "expression": "9"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-044",
@@ -50784,7 +51109,8 @@
           "expression": "10"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-045",
@@ -50806,7 +51132,8 @@
           "expression": "6"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-extra-046",
@@ -50828,7 +51155,8 @@
           "expression": "7"
         }
       ],
-      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요."
+      "conceptExplanation": "위에서 본 각 칸의 숫자는 그 자리에 쌓인 쌓기나무의 개수와 같아요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u4-ratio-001",
@@ -51865,7 +52193,8 @@
           "expression": "35 × 4/7 = 20개"
         }
       ],
-      "conceptExplanation": "전체 수량을 비례배분하여 각각의 몫을 구해요."
+      "conceptExplanation": "전체 수량을 비례배분하여 각각의 몫을 구해요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u4-prop-043",
@@ -53233,7 +53562,8 @@
           "expression": "입체도형의 특징 확인"
         }
       ],
-      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요."
+      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u6-cylinder-006",
@@ -53258,7 +53588,8 @@
           "expression": "입체도형의 특징 확인"
         }
       ],
-      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요."
+      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u6-cylinder-007",
@@ -53613,7 +53944,8 @@
           "expression": "입체도형의 특징 확인"
         }
       ],
-      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요."
+      "conceptExplanation": "원기둥, 원뿔, 구는 평면도형을 한 직선을 축으로 회전시켜 만든 도형이에요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s2-u6-logic-021",
@@ -54359,7 +54691,8 @@
           "expression": "□ = 7 + 7 - 2 = 12"
         }
       ],
-      "conceptExplanation": "오일러 공식: 면의 수 - 모서리의 수 + 꼭짓점의 수 = 2"
+      "conceptExplanation": "오일러 공식: 면의 수 - 모서리의 수 + 꼭짓점의 수 = 2",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u2-adv-048",
@@ -54373,15 +54706,24 @@
       "question": "밑면이 오각형인 각기둥과 밑면이 사각형인 각뿔의 모서리 수의 합은 몇 개인가요?",
       "answerType": "integer",
       "answer": {
-        "value": 27
+        "value": 23
       },
       "steps": [
         {
-          "desc": "면의 수 구하기",
-          "expression": "4 + 2 = 6"
+          "desc": "오각기둥 모서리 수",
+          "expression": "5 × 3 = 15"
+        },
+        {
+          "desc": "사각뿔 모서리 수",
+          "expression": "4 × 2 = 8"
+        },
+        {
+          "desc": "합 계산",
+          "expression": "15 + 8 = 23"
         }
       ],
-      "conceptExplanation": "n각기둥 모서리: 3n개, n각뿔 모서리: 2n개"
+      "conceptExplanation": "n각기둥 모서리: 3n개, n각뿔 모서리: 2n개",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-logic-026",
@@ -54411,7 +54753,8 @@
           "expression": "= 11개"
         }
       ],
-      "conceptExplanation": "위에서 본 모양에 적힌 수가 쌓기나무의 층 수예요. 모든 수를 더하면 됩니다."
+      "conceptExplanation": "위에서 본 모양에 적힌 수가 쌓기나무의 층 수예요. 모든 수를 더하면 됩니다.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-logic-027",
@@ -54471,7 +54814,8 @@
           "expression": "2층 블록 2개 = 4개 (최소)"
         }
       ],
-      "conceptExplanation": "최소 쌓기나무는 각 방향에서 본 모양을 모두 만족시키는 가장 적은 배치를 찾아야 해요."
+      "conceptExplanation": "최소 쌓기나무는 각 방향에서 본 모양을 모두 만족시키는 가장 적은 배치를 찾아야 해요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s2-u3-logic-029",
@@ -54501,7 +54845,8 @@
           "expression": "27 - 26 = 1개"
         }
       ],
-      "conceptExplanation": "3×3×3 정육면체에서 6면 모두에서 보이지 않는 것은 정중앙의 1개뿐이에요."
+      "conceptExplanation": "3×3×3 정육면체에서 6면 모두에서 보이지 않는 것은 정중앙의 1개뿐이에요.",
+      "answerUnit": "개"
     },
     {
       "id": "g6-s1-u1-frac-div-047",
@@ -54565,7 +54910,7 @@
       "conceptExplanation": "(한 일의 양) ÷ (하루에 하는 양) = 걸린 날수"
     },
     {
-      "id": "g6-s2-u1-frac-div-038",
+      "id": "g6-s2-u1-frac-div-047",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54596,7 +54941,7 @@
       "conceptExplanation": "나눗셈을 역산하여 곱셈으로 구해요."
     },
     {
-      "id": "g6-s2-u1-frac-div-039",
+      "id": "g6-s2-u1-frac-div-048",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54627,7 +54972,7 @@
       "conceptExplanation": "속력 = 거리 ÷ 시간. 분수 나눗셈을 역수의 곱셈으로 바꿔요."
     },
     {
-      "id": "g6-s2-u1-frac-div-040",
+      "id": "g6-s2-u1-frac-div-049",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54657,7 +55002,7 @@
       "conceptExplanation": "나머지가 나오면 몫의 자연수 부분만 명수로 취해요."
     },
     {
-      "id": "g6-s2-u1-frac-div-041",
+      "id": "g6-s2-u1-frac-div-050",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54688,7 +55033,7 @@
       "conceptExplanation": "(넓이) ÷ (가로) = (세로). 분수 나눗셈으로 구해요."
     },
     {
-      "id": "g6-s2-u1-frac-div-042",
+      "id": "g6-s2-u1-frac-div-051",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54719,7 +55064,7 @@
       "conceptExplanation": "(작은 양) ÷ (전체 양)으로 비율을 구해요."
     },
     {
-      "id": "g6-s2-u1-frac-div-043",
+      "id": "g6-s2-u1-frac-div-052",
       "grade": 6,
       "semester": 2,
       "unit": "분수의 나눗셈",
@@ -54848,7 +55193,7 @@
       "type": "reasoning",
       "difficulty": "challenge",
       "concept": "simplifying_ratio",
-      "question": "0.6 : 0.9를 가장 간단한 자연수의 비로 나타내면?",
+      "question": "0.6 : 0.9를 가장 간단한 자연수의 비 □ : □ 로 나타내세요.",
       "answerType": "multi_blank",
       "answer": {
         "values": [
@@ -54934,7 +55279,8 @@
           "expression": "15 × □ = 3 × 25 = 75 → □ = 5"
         }
       ],
-      "conceptExplanation": "지도 비례식은 (지도 거리):(실제 거리)의 비율이 일정해요."
+      "conceptExplanation": "지도 비례식은 (지도 거리):(실제 거리)의 비율이 일정해요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s1-u4-adv-047",
@@ -55065,15 +55411,15 @@
       "type": "reasoning",
       "difficulty": "challenge",
       "concept": "reverse_calculation",
-      "question": "어떤 수를 2.4로 나누었더니 3.5가 되었습니다. 어떤 수는 얼마인가요?",
+      "question": "어떤 수를 2.5로 나누었더니 3.2가 되었습니다. 어떤 수는 얼마인가요?",
       "answerType": "integer",
       "answer": {
-        "value": 84
+        "value": 8
       },
       "steps": [
         {
           "desc": "역산",
-          "expression": "□ = 3.5 × 2.4"
+          "expression": "□ = 3.2 × 2.5"
         },
         {
           "desc": "자릿수 처리",
@@ -55081,7 +55427,7 @@
         },
         {
           "desc": "계산",
-          "expression": "= 8.4"
+          "expression": "= 8"
         }
       ],
       "conceptExplanation": "나눗셈의 역연산은 곱셈이에요."
@@ -55184,7 +55530,7 @@
       "conceptExplanation": "각 소수 나눗셈을 직접 계산하여 비교해요."
     },
     {
-      "id": "g6-s1-u5-graph-logic-040",
+      "id": "g6-s1-u5-graph-logic-047",
       "grade": 6,
       "semester": 1,
       "unit": "여러 가지 그래프",
@@ -55211,7 +55557,8 @@
           "expression": "= 500명"
         }
       ],
-      "conceptExplanation": "(항목 수) ÷ (비율) = (전체 수)"
+      "conceptExplanation": "(항목 수) ÷ (비율) = (전체 수)",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u5-graph-logic-041",
@@ -55241,7 +55588,8 @@
           "expression": "= 198°"
         }
       ],
-      "conceptExplanation": "원그래프에서 각도 = 360° × 비율"
+      "conceptExplanation": "원그래프에서 각도 = 360° × 비율",
+      "answerUnit": "°"
     },
     {
       "id": "g6-s1-u5-graph-logic-042",
@@ -55271,7 +55619,8 @@
           "expression": "150/600 = 0.25 = 25% ✓"
         }
       ],
-      "conceptExplanation": "(전체) × (비율) = (항목 수)"
+      "conceptExplanation": "(전체) × (비율) = (항목 수)",
+      "answerUnit": "명"
     },
     {
       "id": "g6-s1-u5-graph-logic-043",
@@ -55304,7 +55653,7 @@
       "conceptExplanation": "백분율 = (각도) ÷ 360 × 100"
     },
     {
-      "id": "g6-s1-u5-graph-logic-044",
+      "id": "g6-s1-u5-graph-logic-048",
       "grade": 6,
       "semester": 1,
       "unit": "여러 가지 그래프",
@@ -55334,7 +55683,7 @@
       "conceptExplanation": "각 항목의 각도 = 360° × (항목 수 ÷ 전체 수)"
     },
     {
-      "id": "g6-s1-u5-graph-logic-045",
+      "id": "g6-s1-u5-graph-logic-049",
       "grade": 6,
       "semester": 1,
       "unit": "여러 가지 그래프",
@@ -55364,7 +55713,7 @@
       "conceptExplanation": "원그래프에서 각도의 비율 = 자료의 비율이에요."
     },
     {
-      "id": "g6-s1-u5-graph-logic-046",
+      "id": "g6-s1-u5-graph-logic-050",
       "grade": 6,
       "semester": 1,
       "unit": "여러 가지 그래프",
@@ -55402,7 +55751,7 @@
       "type": "reasoning",
       "difficulty": "challenge",
       "concept": "cylinder_net_calculation",
-      "question": "반지름이 5cm이고 높이가 8cm인 원기둥의 옆면의 넓이는 몇 cm²인가요? (원주율=3.14)",
+      "question": "반지름이 5cm이고 높이가 8cm인 원기둥의 옆면의 넓이는 몇 cm²인가요? (원주율=3.14, 소수점 아래 버림)",
       "answerType": "integer",
       "answer": {
         "value": 251
@@ -55418,7 +55767,7 @@
         },
         {
           "desc": "계산",
-          "expression": "= 31.4 × 8 = 251.2 ≈ 251cm²"
+          "expression": "= 31.4 × 8 = 251.2 → 버림하여 251cm²"
         }
       ],
       "conceptExplanation": "원기둥 옆면 넓이 = (밑면 둘레) × (높이) = 2πr × h"
@@ -55511,7 +55860,8 @@
           "expression": "지름 = 2 × r = 2 × 6 = 12cm"
         }
       ],
-      "conceptExplanation": "원의 넓이 = π×r²이므로 r²= 넓이÷π로 역산해요."
+      "conceptExplanation": "원의 넓이 = π×r²이므로 r²= 넓이÷π로 역산해요.",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s2-u5-circle-027",
@@ -55522,7 +55872,7 @@
       "type": "reasoning",
       "difficulty": "challenge",
       "concept": "semi_circle_area",
-      "question": "반지름 6cm인 원의 넓이의 반은 몇 cm²인가요? (원주율=3.14)",
+      "question": "반지름 6cm인 원의 넓이의 반은 몇 cm²인가요? (원주율=3.14, 소수점 아래 버림)",
       "answerType": "integer",
       "answer": {
         "value": 56
@@ -55574,7 +55924,7 @@
       "conceptExplanation": "지름이 2배가 되면 넓이는 4배가 돼요. (반지름²에 비례)"
     },
     {
-      "id": "g6-s1-u6-adv-026",
+      "id": "g6-s1-u6-adv-029",
       "grade": 6,
       "semester": 1,
       "unit": "직육면체의 겉넓이와 부피",
@@ -55604,7 +55954,7 @@
       "conceptExplanation": "부피로 높이를 역산한 뒤 겉넓이를 구해요."
     },
     {
-      "id": "g6-s1-u6-adv-027",
+      "id": "g6-s1-u6-adv-030",
       "grade": 6,
       "semester": 1,
       "unit": "직육면체의 겉넓이와 부피",
@@ -55631,7 +55981,8 @@
           "expression": "높이 = 1440 ÷ 120 = 12cm"
         }
       ],
-      "conceptExplanation": "부피 = 가로×세로×높이. 높이 = 부피÷(가로×세로)"
+      "conceptExplanation": "부피 = 가로×세로×높이. 높이 = 부피÷(가로×세로)",
+      "answerUnit": "cm"
     },
     {
       "id": "g6-s1-u6-adv-028",

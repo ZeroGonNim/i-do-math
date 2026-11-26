@@ -11,6 +11,7 @@ import { formatNumber } from '@/shared/utils/format'
 import { useState } from 'react'
 import { FlameIcon, BoxIcon, SwordIcon, RetryIcon, GlobeIcon, StarIcon } from '@/shared/components/PixelIcons'
 import { DifficultyBadge } from '@/shared/components/DifficultyBadge'
+import { useTodayReviewCount } from '@/features/remind/hooks/useRemindList'
 import type { Problem } from '@/types/problem'
 
 // World Map 정보
@@ -91,6 +92,7 @@ export function HomeRoute() {
   const [loading, setLoading] = useState(false)
   const [loadError, setLoadError] = useState(false)
   const [showWorldMap, setShowWorldMap] = useState(false)
+  const todayReviewCount = useTodayReviewCount(profile?.userId)
 
   const currentWorld = (profile && profile.currentSemester === 2) ? WORLDS[2] : WORLDS[1]
   const worldColor = currentWorld?.color || '#10b981'
@@ -235,7 +237,12 @@ export function HomeRoute() {
               <p className="text-[24px] font-medium text-[#e5e3ff]" style={{ lineHeight: '32px', marginBottom: '24px' }}>{dungeonUnit.unit}</p>
               <button onClick={startProblem} disabled={loading} className="w-full flex items-center justify-center gap-2 border-2 disabled:opacity-50 active:scale-[0.98] transition-transform" style={{ height: '68px', backgroundColor: theme.primary, borderColor: 'rgba(0,0,0,0.3)', color: '#000' }}><SwordIcon color="#000" size={22} /><span className="text-[18px] font-medium">{loading ? '불러오는 중...' : '모험 시작하기!'}</span></button>
               {loadError && <p className="text-[12px] text-center text-[#ff716c] mt-2">문제를 불러오지 못했어요. 다시 시도해주세요.</p>}
-              <button onClick={() => navigate('/remind')} className="w-full flex items-center justify-center gap-2 border-2 border-[#23233f] text-[#aaa8c3] active:scale-[0.98] transition-transform mt-2" style={{ height: '48px', backgroundColor: '#17172f' }}><RetryIcon color="#ff716c" size={16} /><span className="text-[14px] font-medium" style={{ lineHeight: '20px' }}>오답 다시 도전하기</span></button>
+              <button onClick={() => navigate('/remind')} className="w-full flex items-center justify-center gap-2 border-2 active:scale-[0.98] transition-transform mt-2" style={{ height: '48px', backgroundColor: todayReviewCount > 0 ? '#ff716c20' : '#17172f', borderColor: todayReviewCount > 0 ? '#ff716c' : '#23233f' }}>
+                <RetryIcon color={todayReviewCount > 0 ? '#ff716c' : '#aaa8c3'} size={16} />
+                <span className="text-[14px] font-medium" style={{ color: todayReviewCount > 0 ? '#ff716c' : '#aaa8c3', lineHeight: '20px' }}>
+                  {todayReviewCount > 0 ? `오늘 복습할 문제 ${todayReviewCount}개 있어요!` : '오답 다시 도전하기'}
+                </span>
+              </button>
             </div>
           </div>
         </div>

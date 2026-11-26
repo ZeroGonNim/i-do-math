@@ -16,4 +16,5 @@ export interface WrongNote {
   replayData: { inputSequence: string[] }
   lastAttemptAt: number
   drawingData?: string     // 가장 최근 오답 시 사용자가 그린 이미지 (Base64)
+  nextReviewAt?: number    // 다음 복습 예정 타임스탬프 (Spaced Repetition)
 }

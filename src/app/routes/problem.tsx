@@ -108,7 +108,10 @@ export function ProblemScreen({ problem, isRemind }: { problem: Problem; isRemin
       <div className="flex items-center justify-between px-5 h-16 gap-2" style={{ backgroundColor: 'rgba(12,12,31,0.6)', borderBottom: '1px solid #1c1c3a', boxShadow: '0 4px 0 rgba(6,6,20,1)', backdropFilter: 'blur(24px)', zIndex: 20 }}>
         <button onClick={() => navigate('/home')} className="shrink-0 w-8 h-8 flex items-center justify-center transition-all active:opacity-60 active:scale-95 text-base font-bold" style={{ color: '#aaa8c3', backgroundColor: '#17172f' }}>‹</button>
         <div className="flex-1 min-w-0 flex items-center gap-2">
-          <p className="text-sm font-bold truncate" style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}>{problem.unit} / 문제 {problemNum}/{DAILY_PROBLEM_GOAL}</p>
+          {isRemind
+            ? <p className="text-sm font-bold truncate" style={{ color: '#ff716c', fontFamily: 'var(--font-game)' }}>오답 유사 문제 복습</p>
+            : <p className="text-sm font-bold truncate" style={{ color: '#e5e3ff', fontFamily: 'var(--font-game)' }}>{problem.unit} / 문제 {problemNum}/{DAILY_PROBLEM_GOAL}</p>
+          }
           <DifficultyBadge difficulty={problem.difficulty} showLabel={false} />
         </div>
         <div className="flex items-center gap-2 shrink-0">

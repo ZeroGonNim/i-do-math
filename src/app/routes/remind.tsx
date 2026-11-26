@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useUserProfile } from '@/shared/hooks/useUserProfile'
-import { useRemindList } from '@/features/remind/hooks/useRemindList'
+import { useTheme } from '@/shared/hooks/useTheme'
+import { useRemindList, isDueToday } from '@/features/remind/hooks/useRemindList'
 import { loadProblems } from '@/shared/services/problemLoader'
 import { MISTAKE_LABELS, formatConceptName } from '@/shared/constants/problemConstants'
 import { AppHeader } from '@/shared/components/AppHeader'
@@ -10,7 +11,7 @@ import type { WrongNote } from '@/types/wrongNote'
 import type { Problem, Difficulty } from '@/types/problem'
 import { CelebrationIcon, HomeIcon, WarningIcon, PlayIcon, SwordIcon } from '@/shared/components/PixelIcons'
 
-function DifficultyDots({ difficulty }: { difficulty: Difficulty }) {
+function DifficultyDots({ difficulty, color }: { difficulty: Difficulty; color: string }) {
   const count = difficulty === 'basic' ? 1 : difficulty === 'applied' ? 2 : 3
   return (
     <div className="flex gap-1">
@@ -20,7 +21,7 @@ function DifficultyDots({ difficulty }: { difficulty: Difficulty }) {
           style={{
             width: '8px',
             height: '8px',
-            backgroundColor: i <= count ? '#8b5cf6' : '#23233f',
+            backgroundColor: i <= count ? color : '#23233f',
           }}
         />
       ))}
@@ -31,6 +32,7 @@ function DifficultyDots({ difficulty }: { difficulty: Difficulty }) {
 export function RemindRoute() {
   const navigate = useNavigate()
   const profile = useUserProfile()
+  const theme = useTheme()
   const remindDays = useRemindList(profile?.userId)
   const [toastMsg, setToastMsg] = useState<string | null>(null)
   const [allProblems, setAllProblems] = useState<Problem[]>([])
@@ -55,19 +57,18 @@ export function RemindRoute() {
   async function handleStartReview(note: WrongNote) {
     try {
       const data = await loadProblems()
-      // problemId가 있으면 정확히 틀렸던 문제로, 없으면 랜덤 fallback (구 데이터 호환)
-      let problem = note.problemId
-        ? data.problems.find(p => p.id === note.problemId)
+      const grade = profile?.grade ?? 4
+      // 같은 concept + 같은 학년의 다른 문제를 랜덤 선택 (유사 유형 복습)
+      const candidates = data.problems.filter(
+        p => p.concept === note.concept && p.grade === grade && p.id !== note.problemId
+      )
+      const fallback = data.problems.filter(
+        p => p.concept === note.concept && p.id !== note.problemId
+      )
+      const pool = candidates.length > 0 ? candidates : fallback
+      const problem = pool.length > 0
+        ? pool[Math.floor(Math.random() * pool.length)]
         : undefined
-      if (!problem) {
-        const grade = profile?.grade ?? 4
-        const candidates = data.problems.filter(
-          p => p.concept === note.concept && p.grade === grade
-        )
-        problem = candidates.length > 0
-          ? candidates[Math.floor(Math.random() * candidates.length)]
-          : data.problems.find(p => p.concept === note.concept)
-      }
       if (problem) {
         navigate('/problem', { state: { problem, isRemind: true } })
       } else {
@@ -133,12 +134,11 @@ export function RemindRoute() {
         ) : (
           <div className="space-y-4">
             {/* 취약 개념 발견 배너 */}
-            <div className="px-4 py-4"
-                 style={{ backgroundColor: '#8b5cf6', border: '2px solid #9d5fe8' }}>
-              <p className="text-xs font-bold mb-1 flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.7)', fontFamily: 'var(--font-game)' }}>
-                <WarningIcon color="rgba(255,255,255,0.7)" size={10} /> 주의
+            <div className="px-4 py-4" style={{ border: `2px solid ${theme.primary}` }}>
+              <p className="text-xs font-bold mb-1 flex items-center gap-1" style={{ color: 'rgba(255,255,255,0.5)', fontFamily: 'var(--font-game)' }}>
+                <WarningIcon color="rgba(255,255,255,0.5)" size={10} /> 주의
               </p>
-              <p className="text-xl font-bold" style={{ color: '#fff', fontFamily: 'var(--font-game)' }}>
+              <p className="text-xl font-bold" style={{ color: theme.primary, fontFamily: 'var(--font-game)' }}>
                 취약 개념 발견!
               </p>
             </div>
@@ -153,8 +153,8 @@ export function RemindRoute() {
               <div className="space-y-3">
                 {allNotes.map(note => {
                   const representative = conceptMap.get(note.concept)
-                  const unitLabel = representative?.unit ?? note.concept
-                  const questionPreview = representative?.question ?? formatConceptName(note.concept)
+                  const unitLabel = representative?.unit ?? formatConceptName(note.concept)
+                  const questionPreview = note.questionText || representative?.question || formatConceptName(note.concept)
                   const difficulty = representative?.difficulty ?? 'basic'
                   const mistakeLabel = (note.mistakeType && MISTAKE_LABELS[note.mistakeType]) || '복습 필요'
 
@@ -174,8 +174,14 @@ export function RemindRoute() {
                               style={{ backgroundColor: 'rgba(255,107,107,0.15)', color: '#ff716c', border: '1px solid rgba(255,107,107,0.2)' }}>
                           {mistakeLabel}
                         </span>
+                        {isDueToday(note) && (
+                          <span className="text-[10px] font-bold px-2 py-0.5"
+                                style={{ backgroundColor: '#ff716c', color: '#fff' }}>
+                            오늘 복습
+                          </span>
+                        )}
                         <div className="ml-auto">
-                          <DifficultyDots difficulty={difficulty} />
+                          <DifficultyDots difficulty={difficulty} color={theme.primary} />
                         </div>
                       </div>
 
@@ -192,9 +198,9 @@ export function RemindRoute() {
                       <button
                         onClick={() => handleStartReview(note)}
                         className="flex items-center justify-center gap-2 text-sm font-bold transition-all active:opacity-80"
-                        style={{ height: '44px', backgroundColor: '#8b5cf6', color: '#fff', fontFamily: 'var(--font-game)' }}
+                        style={{ height: '44px', backgroundColor: theme.primary, color: '#fff', fontFamily: 'var(--font-game)' }}
                       >
-                        <PlayIcon color="#fff" size={12} /> 재도전
+                        <PlayIcon color="#fff" size={12} /> 유사 문제 도전
                       </button>
                     </div>
                   )
@@ -212,9 +218,9 @@ export function RemindRoute() {
           <button
             onClick={handleStartAll}
             className="w-full min-h-[56px] text-xl font-bold transition-all active:scale-[0.98] flex items-center justify-center gap-2"
-            style={{ backgroundColor: '#8b5cf6', color: '#fff', fontFamily: 'var(--font-game)' }}
+            style={{ backgroundColor: theme.primary, color: '#fff', fontFamily: 'var(--font-game)' }}
           >
-            <SwordIcon color="#fff" size={18} /> 전체 복습 시작!
+            <SwordIcon color="#fff" size={18} /> 유사 문제로 전체 복습!
           </button>
         </div>
       )}

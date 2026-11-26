@@ -2,14 +2,21 @@ import { useLiveQuery } from 'dexie-react-hooks'
 import { db } from '@/shared/db/db'
 import type { WrongNote } from '@/types/wrongNote'
 
-interface RemindDay {
+export interface RemindDay {
   date: string
   notes: WrongNote[]
 }
 
-/**
- * 타임스탬프를 로컬 시간 기준 YYYY-MM-DD 문자열로 변환합니다.
- */
+function todayStartTs(): number {
+  const d = new Date()
+  d.setHours(0, 0, 0, 0)
+  return d.getTime()
+}
+
+function todayEndTs(): number {
+  return todayStartTs() + 24 * 60 * 60 * 1000
+}
+
 function formatDate(ts: number): string {
   const d = new Date(ts)
   const year = d.getFullYear()
@@ -18,35 +25,55 @@ function formatDate(ts: number): string {
   return `${year}-${month}-${day}`
 }
 
+export function isDueToday(note: WrongNote): boolean {
+  if (!note.nextReviewAt) return true
+  return note.nextReviewAt < todayEndTs()
+}
+
 function groupByDate(notes: WrongNote[]): RemindDay[] {
+  const todayStr = formatDate(Date.now())
+  const dueNotes = notes.filter(isDueToday)
+  const pendingNotes = notes.filter(n => !isDueToday(n))
+
   const map = new Map<string, WrongNote[]>()
-  
-  // 최근에 틀린 날짜가 위로 오도록 정렬된 상태로 처리
-  for (const note of notes) {
-    const date = formatDate(note.lastAttemptAt)
+
+  // 오늘 복습 대상은 'today' 그룹으로 맨 위에
+  if (dueNotes.length > 0) {
+    map.set(todayStr, dueNotes.sort((a, b) => (a.nextReviewAt ?? 0) - (b.nextReviewAt ?? 0)))
+  }
+
+  // 나머지는 nextReviewAt 기준 날짜별 그룹
+  for (const note of pendingNotes) {
+    const date = note.nextReviewAt ? formatDate(note.nextReviewAt) : formatDate(note.lastAttemptAt)
+    if (date === todayStr) continue
     const arr = map.get(date) ?? []
     arr.push(note)
     map.set(date, arr)
   }
-  
+
   return Array.from(map.entries())
-    .sort(([a], [b]) => b.localeCompare(a)) // 날짜 내림차순
-    .map(([date, dayNotes]) => ({
-      date,
-      notes: dayNotes.sort((a, b) => b.lastAttemptAt - a.lastAttemptAt) // 같은 날짜 내에서도 최신순
-    }))
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, dayNotes]) => ({ date, notes: dayNotes }))
 }
 
 export function useRemindList(userId: string | undefined) {
   return useLiveQuery(async () => {
     if (!userId) return []
-    
-    // 2번 연속 맞추지 못한(아직 약점인) 오답들만 가져오기
     const notes = await db.wrongNotes
       .where('userId').equals(userId)
       .filter(n => n.isWeak)
       .toArray()
-      
     return groupByDate(notes)
   }, [userId], [])
+}
+
+export function useTodayReviewCount(userId: string | undefined): number {
+  return useLiveQuery(async () => {
+    if (!userId) return 0
+    const notes = await db.wrongNotes
+      .where('userId').equals(userId)
+      .filter(n => n.isWeak && isDueToday(n))
+      .toArray()
+    return notes.length
+  }, [userId], 0) ?? 0
 }

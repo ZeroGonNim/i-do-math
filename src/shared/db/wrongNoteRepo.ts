@@ -2,6 +2,13 @@ import { db } from './db'
 import type { WrongNote } from '@/types/wrongNote'
 import type { MistakeType } from '@/types/problem'
 
+const REVIEW_INTERVALS_DAYS = [1, 3, 7, 14, 30]
+
+function calcNextReviewAt(consecutiveCorrect: number): number {
+  const days = REVIEW_INTERVALS_DAYS[Math.min(consecutiveCorrect, REVIEW_INTERVALS_DAYS.length - 1)]
+  return Date.now() + days * 24 * 60 * 60 * 1000
+}
+
 export const wrongNoteRepo = {
   async upsertWrong(
     userId: string,
@@ -20,8 +27,9 @@ export const wrongNoteRepo = {
         wrongCount,
         consecutiveWrong,
         consecutiveCorrect: 0,
-        isWeak: true, // 한 번이라도 틀리면 일단 리스트에 나오도록 true로 설정
+        isWeak: true,
         lastAttemptAt: Date.now(),
+        nextReviewAt: calcNextReviewAt(0),
       })
     } else {
       await db.wrongNotes.add({
@@ -32,8 +40,9 @@ export const wrongNoteRepo = {
         wrongCount: 1,
         consecutiveWrong: 1,
         consecutiveCorrect: 0,
-        isWeak: true, // 새 오답도 바로 표시
+        isWeak: true,
         lastAttemptAt: Date.now(),
+        nextReviewAt: calcNextReviewAt(0),
         ...updates,
       })
     }
@@ -50,6 +59,8 @@ export const wrongNoteRepo = {
         consecutiveWrong: 0,
         consecutiveCorrect,
         isWeak,
+        lastAttemptAt: Date.now(),
+        nextReviewAt: isWeak ? calcNextReviewAt(consecutiveCorrect) : undefined,
       })
     }
   },
