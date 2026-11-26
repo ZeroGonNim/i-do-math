@@ -177,7 +177,7 @@ describe('오답 노트', () => {
 })
 
 describe('추천 문제 엔진', () => {
-  it('틀렸을 때 시간 정보 없으면 현재 난이도 유지', () => {
+  it('틀렸을 때 시간 정보 없으면 난이도 한 단계 낮춤', () => {
     const pool: Problem[] = [
       { ...mockProblem, id: 'p-basic', difficulty: 'basic' },
       { ...mockProblem, id: 'p-applied', difficulty: 'applied' },
@@ -190,17 +190,18 @@ describe('추천 문제 엔진', () => {
       recentIds: [],
       pool,
     })
-    expect(rec?.difficulty).toBe('applied')
+    expect(rec?.difficulty).toBe('basic')
   })
 
-  it('틀렸을 때 시간이 평균의 2배 초과(isHard)면 난이도 낮춤', () => {
+  it('틀렸을 때 시간이 평균의 2배 초과(isHard)면 난이도 두 단계 낮춤', () => {
     const pool: Problem[] = [
       { ...mockProblem, id: 'p-basic', difficulty: 'basic' },
       { ...mockProblem, id: 'p-applied', difficulty: 'applied' },
     ]
     const rec = selectRecommendedProblem({
       concept: mockProblem.concept,
-      currentDifficulty: 'applied',
+      // challenge에서 시작해야 일반 오답(applied)과 isHard(basic)가 구분된다
+      currentDifficulty: 'challenge',
       currentId: mockProblem.id,
       isCorrect: false,
       recentIds: [],

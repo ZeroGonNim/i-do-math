@@ -27,7 +27,8 @@ describe('Advanced Recommend Engine (Skills Similarity)', () => {
       currentId: 'p0',
       isCorrect: true,
       recentIds: [],
-      pool,
+      // 유사도 비교 기준인 현재 문제는 pool에 있어야 한다 (실제 앱과 동일)
+      pool: [...pool, makeProblem('p0', 'basic', 'concept_X', ['division', 'fraction'])],
     })
     // p3가 p2보다 유사도가 높음 (division, fraction 2개 겹침 vs division 1개)
     expect(result?.id).toBe('p3')
